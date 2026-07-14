@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CTABand } from "@/components/CTABand";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
@@ -288,11 +287,6 @@ export default async function CaseStudyDetail({ params }: { params: Promise<Para
         </div>
       </section>
 
-      <section className="section pt-0">
-        <div className="container-page">
-          <CTABand />
-        </div>
-      </section>
     </>
   );
 }

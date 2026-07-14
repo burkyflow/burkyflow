@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CTABand } from "@/components/CTABand";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
@@ -84,11 +83,6 @@ export default function CaseStudiesIndex() {
         </div>
       </section>
 
-      <section className="section pt-0">
-        <div className="container-page">
-          <CTABand />
-        </div>
-      </section>
     </>
   );
 }

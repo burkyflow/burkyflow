@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Wrench, Megaphone } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CTABand } from "@/components/CTABand";
 import { Reveal } from "@/components/Reveal";
 import { services } from "@/content/services";
 import { branches } from "@/content/catalogue";
@@ -142,11 +141,6 @@ export default function ServicesIndex() {
         </div>
       </section>
 
-      <section className="section pt-0">
-        <div className="container-page">
-          <CTABand />
-        </div>
-      </section>
     </>
   );
 }

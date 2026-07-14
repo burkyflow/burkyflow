@@ -5,7 +5,6 @@ import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AlternatingFeatureBlock } from "@/components/AlternatingFeatureBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
-import { CTABand } from "@/components/CTABand";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
@@ -220,11 +219,6 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
         </div>
       </section>
 
-      <section className="section pt-0">
-        <div className="container-page">
-          <CTABand />
-        </div>
-      </section>
     </>
   );
 }

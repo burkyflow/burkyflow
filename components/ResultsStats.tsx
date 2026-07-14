@@ -1,29 +1,23 @@
 // "Results that matter" — homepage stat cards.
 // Each card has a slot for a progress-bar / chart background image.
 import { LineChart, Users, Clock, Zap, TrendingUp, ShieldCheck, User, type LucideIcon } from "lucide-react";
+import { CountUp } from "@/components/CountUp";
+import { Reveal } from "@/components/Reveal";
 
-// ── Paste your progress-bar / chart background image per card here ──
-// Use a /images/... path (file in public/images) or a full URL. Leave "" for none.
-const cardBg: Record<Accent, string> = {
-  blue: "/images/pro1.png",
-  emerald: "/images/pro2.png",
-  violet: "/images/pro1.png",
-};
+type Accent = "brand" | "accent";
 
-type Accent = "blue" | "emerald" | "violet";
-
+// Two-tone BurkyFlow palette (blue / orange), echoing the logo mark.
 // Static class strings so Tailwind keeps them in the build.
 const accents: Record<Accent, { badge: string; icon: string; value: string; box: string; boxText: string }> = {
-  blue: { badge: "bg-blue-50", icon: "text-blue-600", value: "text-blue-600", box: "bg-blue-50", boxText: "text-blue-700" },
-  emerald: { badge: "bg-emerald-50", icon: "text-emerald-600", value: "text-emerald-600", box: "bg-emerald-50", boxText: "text-emerald-700" },
-  violet: { badge: "bg-violet-50", icon: "text-violet-600", value: "text-violet-600", box: "bg-violet-50", boxText: "text-violet-700" },
+  brand: { badge: "bg-brand/10", icon: "text-brand", value: "text-brand", box: "bg-brand/5", boxText: "text-brand" },
+  accent: { badge: "bg-accent/10", icon: "text-accent", value: "text-accent", box: "bg-accent/5", boxText: "text-accent" },
 };
 
 const avatarTints = [
-  "from-blue-200 to-blue-300",
-  "from-rose-200 to-rose-300",
-  "from-amber-200 to-amber-300",
-  "from-emerald-200 to-emerald-300",
+  "from-brand/30 to-brand/60",
+  "from-accent/30 to-accent/60",
+  "from-brand/40 to-brand/70",
+  "from-accent/40 to-accent/70",
 ];
 
 type InfoBox = { icon: LucideIcon; title: string; sub: string };
@@ -33,30 +27,35 @@ type Card = {
   icon: LucideIcon;
   value: string;
   label: string;
+  // Progress-bar / chart background image. A /images/... path or full URL; "" for none.
+  image?: string;
   avatars?: { count: string; caption: string };
   info?: InfoBox;
 };
 
 const cards: Card[] = [
   {
-    accent: "blue",
+    accent: "brand",
     icon: Users,
     value: "25+",
     label: "Businesses served",
+    image: "/images/pro1.png",
     avatars: { count: "+21", caption: "Join 25+ growing businesses" },
   },
   {
-    accent: "emerald",
+    accent: "accent",
     icon: Clock,
     value: "10,000+",
     label: "Hours of automation deployed",
+    image: "/images/pro2.png",
     info: { icon: TrendingUp, title: "That's 416+ days saved", sub: "Back to your business" },
   },
   {
-    accent: "violet",
+    accent: "brand",
     icon: Zap,
     value: "Under 60s",
     label: "Average lead response time",
+    image: "/images/pro1.png",
     info: { icon: Clock, title: "3x faster than industry average", sub: "Respond before your competitors even see it" },
   },
 ];
@@ -64,10 +63,10 @@ const cards: Card[] = [
 function StatCard({ card }: { card: Card }) {
   const a = accents[card.accent];
   const Icon = card.icon;
-  const bg = cardBg[card.accent];
+  const bg = card.image;
 
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-white p-7 shadow-soft ring-1 ring-border/60">
+    <div className="group relative h-full overflow-hidden rounded-3xl bg-white p-7 shadow-soft ring-1 ring-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30">
       {/* Background chart/progress image slot */}
       {bg ? (
         // eslint-disable-next-line @next/next/no-img-element
@@ -75,16 +74,20 @@ function StatCard({ card }: { card: Card }) {
           src={bg}
           alt=""
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 -top-2 w-full"
+          className="pointer-events-none absolute inset-x-0 -top-2 w-full transition-transform duration-500 group-hover:scale-105"
         />
       ) : null}
 
       <div className="relative z-10">
-        <div className={`flex size-12 items-center justify-center rounded-2xl ${a.badge} ${a.icon}`}>
+        <div
+          className={`flex size-12 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-110 ${a.badge} ${a.icon}`}
+        >
           <Icon className="size-6" strokeWidth={1.75} />
         </div>
 
-        <p className={`mt-8 text-4xl font-bold tracking-tight font-heading ${a.value}`}>{card.value}</p>
+        <p className={`mt-8 text-4xl font-bold tracking-tight font-heading ${a.value}`}>
+          <CountUp value={card.value} />
+        </p>
         <p className="mt-2 font-semibold text-foreground">{card.label}</p>
 
         <hr className="my-5 border-border/60" />
@@ -143,8 +146,10 @@ export function ResultsStats() {
         </div>
 
         <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-3">
-          {cards.map((card) => (
-            <StatCard key={card.label} card={card} />
+          {cards.map((card, i) => (
+            <Reveal key={card.label} delay={i * 0.1} className="h-full">
+              <StatCard card={card} />
+            </Reveal>
           ))}
         </div>
 

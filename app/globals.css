@@ -4,20 +4,26 @@
 
 @layer base {
   :root {
-    /* ── Brand accent: placeholder. Swap these two pairs to rebrand. ── */
-    --brand: 221 83% 53%; /* blue-600 #2563EB — matches navbar design */
+    /* ── BurkyFlow brand palette (from the brand guide) ── */
+    /* ── BurkyFlow brand palette ── */
+    --brand: 216 47% 48%; /* #4170B6 — brand blue (headings, icons, links) */
     --brand-foreground: 0 0% 100%;
-    --brand-cta: 221 83% 53%; /* keep == brand or set a warm CTA hue */
+    /* Buttons are brand coral, deepening on hover. */
+    --brand-cta: 11 85% 62%; /* #F16B4D — coral (all buttons) */
+    --brand-cta-hover: 11 72% 52%; /* ~#DD4D2C — deeper coral on hover */
     --brand-cta-foreground: 0 0% 100%;
+    --accent: 11 85% 62%; /* #F16B4D — coral (highlights) */
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 13 80% 80%; /* #F5B5A3 — soft peach (tints) */
 
-    /* ── Neutrals (light theme only) ── */
-    --background: 0 0% 100%; /* #FFFFFF */
-    --surface: 210 40% 98%; /* #F8FAFC off-white */
-    --foreground: 222 47% 11%; /* slate-900 #0F172A */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 19% 35%; /* slate-600 #475569 */
-    --border: 214 32% 91%; /* slate-200 hairline */
-    --ring: 221 83% 53%;
+    /* ── Neutrals ── */
+    --background: 0 0% 100%; /* #FEFEFE */
+    --surface: 0 0% 95%; /* #F2F2F2 */
+    --foreground: 0 0% 10%; /* #1A1A1A */
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 41%; /* #686868 */
+    --border: 0 0% 90%; /* hairline */
+    --ring: 11 85% 62%; /* coral, matching the buttons */
   }
 
   * {
@@ -59,6 +65,24 @@
   .eyebrow {
     @apply text-sm font-semibold uppercase tracking-wider text-brand;
   }
+  /* Two-tone brand gradient (blue → orange), echoing the logo mark. */
+  .text-gradient-brand {
+    @apply bg-gradient-to-r from-brand to-accent bg-clip-text text-transparent;
+  }
+}
+
+/* Typewriter caret (hero heading) */
+@keyframes caret-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.animate-caret {
+  animation: caret-blink 1s step-end infinite;
 }
 
 /* Infinite marquee (used by the mobile "trusted by" strip) */

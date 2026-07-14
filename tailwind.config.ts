@@ -15,12 +15,19 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Single source of truth: swap --brand / --brand-cta in globals.css.
+        // Single source of truth: swap --brand / --accent in globals.css.
         brand: {
           DEFAULT: "hsl(var(--brand))",
           fg: "hsl(var(--brand-foreground))",
           cta: "hsl(var(--brand-cta))",
+          "cta-hover": "hsl(var(--brand-cta-hover))",
           "cta-fg": "hsl(var(--brand-cta-foreground))",
+        },
+        // BurkyFlow coral — the second half of the two-tone brand.
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          fg: "hsl(var(--accent-foreground))",
+          soft: "hsl(var(--accent-soft))",
         },
         background: "hsl(var(--background))",
         surface: "hsl(var(--surface))",

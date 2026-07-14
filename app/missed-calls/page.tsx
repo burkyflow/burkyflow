@@ -11,7 +11,6 @@ import {
   Sparkles,
   Workflow,
 } from "lucide-react";
-import { CTABand } from "@/components/CTABand";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
@@ -511,14 +510,6 @@ export default function MissedCallsPage() {
         </div>
       </section>
 
-      <section className="section pt-0">
-        <div className="container-page">
-          <CTABand
-            heading="Build Funnel 1 with the same system behind the rest of the site"
-            lead="If the phone is already ringing, the fastest revenue is the call you recover first. We map the leak, build the stack, and make sure the result lands in your CRM."
-          />
-        </div>
-      </section>
     </>
   );
 }

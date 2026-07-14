@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { CTABand } from "@/components/CTABand";
 import { posts, getPost } from "@/content/blog";
 import { pageMetadata } from "@/lib/seo";
 
@@ -54,11 +53,6 @@ export default async function BlogPost({ params }: { params: Promise<Params> }) 
         </div>
       </article>
 
-      <section className="section pt-0">
-        <div className="container-page">
-          <CTABand />
-        </div>
-      </section>
     </>
   );
 }

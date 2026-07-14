@@ -3,9 +3,10 @@ import { ArrowRight } from "lucide-react";
 import { site } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 
+// Centered pre-footer CTA. Rendered by <Footer /> on its shared gradient — no box.
 export function CTABand({
-  heading = "Ready to stop losing jobs to a voicemail?",
-  lead = "Book a short call and we will map exactly where revenue is leaking and what we would automate first.",
+  heading = "Ready to grow revenue without growing headcount?",
+  lead = "Book a short call and we will quantify exactly how much revenue you are leaking today, and show you the highest-value gap to close first.",
   primaryHref = site.ctaHref,
   primaryLabel = site.ctaLabel,
   secondaryHref = "/services",
@@ -19,26 +20,21 @@ export function CTABand({
   secondaryLabel?: string;
 }) {
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-brand px-6 py-16 text-center sm:px-12">
-      <div className="relative mx-auto max-w-2xl">
-        <h2 className="text-3xl font-semibold text-brand-fg sm:text-4xl">{heading}</h2>
-        <p className="mt-4 text-lg text-brand-fg/85">{lead}</p>
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Button asChild variant="secondary" size="lg">
-            <Link href={primaryHref}>
-              {primaryLabel}
-              <ArrowRight className="size-4" />
-            </Link>
-          </Button>
-          <Button
-            asChild
-            variant="ghost"
-            size="lg"
-            className="text-brand-fg hover:bg-white/10"
-          >
-            <Link href={secondaryHref}>{secondaryLabel}</Link>
-          </Button>
-        </div>
+    <div className="mx-auto max-w-2xl text-center">
+      <h2 className="text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-5xl">
+        {heading}
+      </h2>
+      <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">{lead}</p>
+      <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <Button asChild size="lg">
+          <Link href={primaryHref}>
+            {primaryLabel}
+            <ArrowRight className="size-4" />
+          </Link>
+        </Button>
+        <Button asChild variant="secondary" size="lg">
+          <Link href={secondaryHref}>{secondaryLabel}</Link>
+        </Button>
       </div>
     </div>
   );

@@ -9,17 +9,18 @@ import {
 } from "lucide-react";
 import { wedges, type Wedge } from "@/content/wedges";
 import { WedgeCardImage } from "@/components/WedgeCardImage";
+import { Reveal } from "@/components/Reveal";
 
-// Per-wedge accent + highlight icon. Letters map A→blue, B→violet, C→emerald, D→blue.
-// Class strings are static literals so Tailwind keeps them in the build.
+// Per-wedge accent + highlight icon. Alternates the two BurkyFlow brand colors
+// (blue / orange) so the cards echo the two-tone logo mark.
 const accents: Record<
   Wedge["letter"],
   { badge: string; text: string; chip: string; icon: LucideIcon }
 > = {
-  A: { badge: "bg-blue-100 text-blue-600", text: "text-blue-600", chip: "bg-blue-50 text-blue-600", icon: DollarSign },
-  B: { badge: "bg-violet-100 text-violet-600", text: "text-violet-600", chip: "bg-violet-50 text-violet-600", icon: TrendingUp },
-  C: { badge: "bg-emerald-100 text-emerald-600", text: "text-emerald-600", chip: "bg-emerald-50 text-emerald-600", icon: User },
-  D: { badge: "bg-blue-100 text-blue-600", text: "text-blue-600", chip: "bg-blue-50 text-blue-600", icon: ShieldCheck },
+  A: { badge: "bg-brand/10 text-brand", text: "text-brand", chip: "bg-brand/10 text-brand", icon: DollarSign },
+  B: { badge: "bg-accent/10 text-accent", text: "text-accent", chip: "bg-accent/10 text-accent", icon: TrendingUp },
+  C: { badge: "bg-brand/10 text-brand", text: "text-brand", chip: "bg-brand/10 text-brand", icon: User },
+  D: { badge: "bg-accent/10 text-accent", text: "text-accent", chip: "bg-accent/10 text-accent", icon: ShieldCheck },
 };
 
 function WedgeCard({ wedge }: { wedge: Wedge }) {
@@ -27,7 +28,7 @@ function WedgeCard({ wedge }: { wedge: Wedge }) {
   const HighlightIcon = a.icon;
 
   return (
-    <article className="grid overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-border/60 transition-shadow duration-200 hover:shadow-soft-lg sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
+    <article className="group grid h-full overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30 sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
       {/* Image — paste a URL into the wedge's `image` field; placeholder until then */}
       <div className="p-5 sm:p-6 sm:pr-0">
         <WedgeCardImage src={wedge.image} alt={wedge.name} />
@@ -95,8 +96,10 @@ export function WedgeGrid({
       </div>
 
       <div className="mt-14 grid gap-6 lg:grid-cols-2">
-        {wedges.map((w) => (
-          <WedgeCard key={w.slug} wedge={w} />
+        {wedges.map((w, i) => (
+          <Reveal key={w.slug} delay={(i % 2) * 0.08} className="h-full">
+            <WedgeCard wedge={w} />
+          </Reveal>
         ))}
       </div>
     </div>

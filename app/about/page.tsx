@@ -1,5 +1,4 @@
 import { StatBlock } from "@/components/StatBlock";
-import { CTABand } from "@/components/CTABand";
 import { Reveal } from "@/components/Reveal";
 import { stats } from "@/content/stats";
 import { pageMetadata } from "@/lib/seo";
@@ -64,11 +63,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section pt-0">
-        <div className="container-page">
-          <CTABand />
-        </div>
-      </section>
     </>
   );
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Play, PhoneCall, Repeat2, CalendarDays, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Typewriter } from "@/components/Typewriter";
 import { site } from "@/lib/site";
 
 const pills = [
@@ -9,6 +10,14 @@ const pills = [
   { icon: Repeat2, label: "Smart Follow-ups" },
   { icon: CalendarDays, label: "Calendar Booking" },
   { icon: Database, label: "CRM Integration" },
+];
+
+// Cycled by the hero typewriter. The first one is what search engines see.
+const headlinePhrases = [
+  "booked revenue",
+  "booked jobs",
+  "predictable growth",
+  "revenue you already own",
 ];
 
 export function Hero() {
@@ -33,13 +42,13 @@ export function Hero() {
         <div className="max-w-xl">
           <h1 className="text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl">
             Turn missed calls and dormant leads into{" "}
-            <span className="text-brand">booked revenue</span> with AI
+            <Typewriter phrases={headlinePhrases} className="text-gradient-brand" />
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            BurkyFlow builds and runs the AI voice, reactivation, and follow-up systems that
-            capture every call and wake up the customers already in your database, so you book
-            more jobs without adding headcount.
+            BurkyFlow is the revenue operations layer for service businesses. We quantify exactly
+            where your revenue is leaking, capture every call and dormant lead, and optimise the
+            follow-up that converts them — so you grow revenue without adding headcount.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">

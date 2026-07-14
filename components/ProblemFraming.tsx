@@ -1,7 +1,8 @@
 // Problem-framing section — the "you're losing the leads you already have" pitch.
 import { PhoneOff, Voicemail, CircleDollarSign, Info, type LucideIcon } from "lucide-react";
+import { CountUp } from "@/components/CountUp";
 
-type Accent = "blue" | "emerald" | "violet";
+type Accent = "brand" | "accent";
 
 type Stat = { stat: string; label: string; icon: LucideIcon; accent: Accent; image?: string };
 
@@ -10,36 +11,35 @@ const stats: Stat[] = [
     stat: "62%",
     label: "of calls to contractors go unanswered while crews are on jobs",
     icon: PhoneOff,
-    accent: "blue",
+    accent: "brand",
     image: "/images/c1.png", // ← card background (full cover)
   },
   {
     stat: "78%",
     label: "of callers will not leave a voicemail, they call the next business",
     icon: Voicemail,
-    accent: "emerald",
+    accent: "accent",
     image: "/images/c2.png", // ← card background (full cover)
   },
   {
     stat: "$1,200",
     label: "average lost revenue per missed call for home services",
     icon: CircleDollarSign,
-    accent: "violet",
+    accent: "brand",
     image: "/images/c1.png", // ← add e.g. "/images/c3.png" once you have it
   },
 ];
 
 // Static class strings so Tailwind keeps them in the build.
 const accents: Record<Accent, { icon: string; wave: string }> = {
-  blue: { icon: "text-blue-500", wave: "from-blue-100/70" },
-  emerald: { icon: "text-emerald-500", wave: "from-emerald-100/70" },
-  violet: { icon: "text-violet-500", wave: "from-violet-100/70" },
+  brand: { icon: "text-brand", wave: "from-brand/10" },
+  accent: { icon: "text-accent", wave: "from-accent/10" },
 };
 
 function StatCard({ stat, label, icon: Icon, accent, image }: Stat) {
   const a = accents[accent];
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-white to-surface/50 p-8 text-center shadow-soft ring-1 ring-border/60">
+    <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-b from-white to-surface/50 p-8 text-center shadow-soft ring-1 ring-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30">
       {image ? (
         // Full-cover card background
         // eslint-disable-next-line @next/next/no-img-element
@@ -54,12 +54,14 @@ function StatCard({ stat, label, icon: Icon, accent, image }: Stat) {
 
       <div className="relative">
         <div
-          className={`mx-auto flex size-14 items-center justify-center rounded-full bg-white shadow-soft ring-1 ring-border/50 ${a.icon}`}
+          className={`mx-auto flex size-14 items-center justify-center rounded-full bg-white shadow-soft ring-1 ring-border/50 transition-transform duration-300 group-hover:scale-110 ${a.icon}`}
         >
           <Icon className="size-6" strokeWidth={1.75} />
         </div>
 
-        <p className="mt-6 text-5xl font-bold tracking-tight text-brand font-heading">{stat}</p>
+        <p className="mt-6 text-5xl font-bold tracking-tight text-brand font-heading">
+          <CountUp value={stat} />
+        </p>
         <div className="mx-auto mt-3 h-1 w-8 rounded-full bg-brand/30" />
 
         <p className="mx-auto mt-4 max-w-[16rem] text-sm leading-relaxed text-muted-foreground">
@@ -76,7 +78,7 @@ export function ProblemFraming() {
       {/* Decorations — soft pink glow + fading dot grid on the left */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-40 top-0 size-[32rem] rounded-full bg-pink-300/25 blur-3xl"
+        className="pointer-events-none absolute -left-40 top-0 size-[32rem] rounded-full bg-accent/20 blur-3xl"
       />
       <div
         aria-hidden

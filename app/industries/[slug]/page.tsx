@@ -5,7 +5,6 @@ import { ArrowRight, Check, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FAQAccordion } from "@/components/FAQAccordion";
-import { CTABand } from "@/components/CTABand";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { StatBlock } from "@/components/StatBlock";
 import { Reveal } from "@/components/Reveal";
@@ -241,11 +240,6 @@ export default async function IndustryDetail({ params }: { params: Promise<Param
         </div>
       </section>
 
-      <section className="section">
-        <div className="container-page">
-          <CTABand />
-        </div>
-      </section>
     </>
   );
 }

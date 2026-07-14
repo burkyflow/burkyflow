@@ -189,7 +189,7 @@ export function Navbar() {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => setScrolled(window.scrollY > 100);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -211,19 +211,24 @@ export function Navbar() {
     <>
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-colors duration-200",
-        scrolled
-          ? "border-b border-border bg-white/90 backdrop-blur-md"
-          : "border-b border-transparent bg-white/0"
+        "sticky top-0 z-50 w-full transition-all duration-300 ease-out",
+        scrolled ? "px-3 pt-3 sm:px-4" : "px-0 pt-0"
       )}
     >
-      <nav className="container-page grid h-16 grid-cols-[auto_1fr_auto] items-center gap-4">
+      <nav
+        className={cn(
+          "mx-auto grid h-16 grid-cols-[auto_1fr_auto] items-center gap-4 transition-all duration-300 ease-out md:h-[4.75rem]",
+          scrolled
+            ? "max-w-6xl rounded-full border border-border/70 bg-white/80 px-5 shadow-soft-lg backdrop-blur-xl sm:px-6"
+            : "container-page max-w-7xl border border-transparent bg-transparent"
+        )}
+      >
         <Link href="/" className="inline-flex items-center">
           <Image
-            src="/images/burkylogo.png"
+            src="/images/logo1.png"
             alt={site.name}
-            width={2205}
-            height={713}
+            width={3136}
+            height={760}
             priority
             className="h-8 w-auto"
           />
@@ -283,10 +288,10 @@ export function Navbar() {
           <div className="flex items-center justify-between border-b border-border/70 px-5 py-4">
             <Link href="/" onClick={() => setOpen(false)} className="inline-flex items-center">
               <Image
-                src="/images/burkylogo.png"
+                src="/images/logo1.png"
                 alt={site.name}
-                width={2205}
-                height={713}
+                width={3136}
+                height={760}
                 className="h-8 w-auto"
               />
             </Link>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CTABand } from "@/components/CTABand";
 import { Reveal } from "@/components/Reveal";
 import { industries } from "@/content/industries";
 import { pageMetadata } from "@/lib/seo";
@@ -52,11 +51,6 @@ export default function IndustriesIndex() {
         </div>
       </section>
 
-      <section className="section pt-0">
-        <div className="container-page">
-          <CTABand />
-        </div>
-      </section>
     </>
   );
 }

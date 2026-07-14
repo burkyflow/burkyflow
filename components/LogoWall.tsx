@@ -40,11 +40,15 @@ export function LogoWall({
         {logos.map((item) => (
           <div
             key={item.name}
-            className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-border/70 bg-white px-4 py-7"
+            className="group flex flex-col items-center justify-center gap-3 rounded-2xl border border-border/70 bg-white px-4 py-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-soft"
           >
             {item.logo ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={item.logo} alt={item.name} className="h-10 w-10 object-contain" />
+              <img
+                src={item.logo}
+                alt={item.name}
+                className="h-10 w-10 object-contain grayscale transition-all duration-300 group-hover:scale-110 group-hover:grayscale-0"
+              />
             ) : (
               <div className="flex size-10 items-center justify-center rounded-lg bg-surface text-muted-foreground/50">
                 <ImageIcon className="size-5" strokeWidth={1.5} />

@@ -1,13 +1,13 @@
 import { Hero } from "@/components/Hero";
 import { TrustedBy } from "@/components/TrustedBy";
 import { ProblemFraming } from "@/components/ProblemFraming";
+import { RevenueOps } from "@/components/RevenueOps";
 import { AlternatingFeatureBlock } from "@/components/AlternatingFeatureBlock";
 import { WedgeGrid } from "@/components/WedgeGrid";
 import { ResultsStats } from "@/components/ResultsStats";
 import { IndustryStrip } from "@/components/IndustryStrip";
 import { LogoWall } from "@/components/LogoWall";
 import { FAQAccordion } from "@/components/FAQAccordion";
-import { CTABand } from "@/components/CTABand";
 import { Reveal } from "@/components/Reveal";
 import { services } from "@/content/services";
 import { homeFaqs } from "@/content/stats";
@@ -15,7 +15,7 @@ import { site } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "AI automation that books revenue for service businesses",
+  title: "Revenue operations and AI automation for service businesses",
   description: site.tagline,
   path: "/",
 });
@@ -35,6 +35,9 @@ export default function HomePage() {
       </section>
 
       <ProblemFraming />
+
+      {/* Revenue operations — how we actually grow the number, not just automate */}
+      <RevenueOps />
 
       {/* Services as alternating M360-style sections */}
       <section id="services" className="section">
@@ -58,7 +61,7 @@ export default function HomePage() {
       <ResultsStats />
 
       {/* Industries strip */}
-      <section id="industries" className="section bg-surface">
+      <section id="industries" className="section">
         <div className="container-page">
           <IndustryStrip />
         </div>
@@ -78,14 +81,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Final CTA band */}
-      <section className="section">
-        <div className="container-page">
-          <Reveal>
-            <CTABand />
-          </Reveal>
-        </div>
-      </section>
     </>
   );
 }

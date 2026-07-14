@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlternatingFeatureBlock } from "@/components/AlternatingFeatureBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
-import { CTABand } from "@/components/CTABand";
 import { Reveal } from "@/components/Reveal";
 import type { City, Niche, Offer, GeoFaq } from "@/content/geo";
 import { industryForNiche } from "@/content/industries";
@@ -210,15 +209,6 @@ export function GeoLandingTemplate({
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="section pt-0">
-        <div className="container-page">
-          <CTABand
-            heading={`Book more ${niche.name} jobs in ${city.name}`}
-            lead={`Tell us what you run today and we will map exactly where ${city.name} ${niche.plural} are leaking revenue and what we would automate first.`}
-          />
-        </div>
-      </section>
 
       {/* Sticky mobile CTA bar */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-white/90 p-3 backdrop-blur-md md:hidden">

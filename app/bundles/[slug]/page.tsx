@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CTABand } from "@/components/CTABand";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { JsonLd } from "@/components/JsonLd";
 import { allBundles, getBundle } from "@/content/catalogue";
@@ -170,11 +169,6 @@ export default async function BundleDetail({ params }: { params: Promise<Params>
         </section>
       )}
 
-      <section className="section pt-0">
-        <div className="container-page">
-          <CTABand />
-        </div>
-      </section>
     </>
   );
 }
