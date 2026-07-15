@@ -9,17 +9,15 @@ export const site = {
   ctaHref: "/contact",
   ctaLabel: "Book a call",
   secondaryCtaLabel: "See how it works",
-  email: "hello@burkyflow.com", // TODO(you): confirm
-  // Phone shown in the navbar. TODO(you): replace with the real number.
-  phone: { display: "(702) 900-1234", href: "tel:+17029001234" },
-  // Real registered address — used ONLY for LocalBusiness/Organization on Contact.
-  // TODO(you): confirm exact address. UNITZERO is registered in Karachi (later Wyoming, US).
+  email: "atta@burkyflow.com",
+  phone: { display: "+1 (407) 978-3798", href: "tel:+14079783798" },
+  // Registered address — used for LocalBusiness/Organization schema + Contact.
   address: {
-    streetAddress: "",
-    addressLocality: "Karachi",
-    addressRegion: "Sindh",
-    postalCode: "",
-    addressCountry: "PK",
+    streetAddress: "30 N Gould St Ste R",
+    addressLocality: "Sheridan",
+    addressRegion: "WY",
+    postalCode: "82801",
+    addressCountry: "US",
   },
   // Metros we serve remotely (declared via Service.areaServed, never as a local presence).
   serviceAreas: ["Houston", "San Antonio", "Charleston", "Greenville"],

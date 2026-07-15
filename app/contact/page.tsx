@@ -1,4 +1,4 @@
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { JsonLd } from "@/components/JsonLd";
 import { localBusinessLd } from "@/lib/seo";
 import { pageMetadata } from "@/lib/seo";
@@ -32,17 +32,30 @@ export default function ContactPage() {
                 href={`mailto:${site.email}`}
                 className="flex items-center gap-3 text-foreground transition-colors hover:text-brand"
               >
-                <span className="flex size-10 items-center justify-center rounded-2xl bg-white shadow-soft">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-white shadow-soft">
                   <Mail className="size-5 text-brand" />
                 </span>
                 {site.email}
               </a>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <span className="flex size-10 items-center justify-center rounded-2xl bg-white shadow-soft">
+              <a
+                href={site.phone.href}
+                className="flex items-center gap-3 text-foreground transition-colors hover:text-brand"
+              >
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-white shadow-soft">
+                  <Phone className="size-5 text-brand" />
+                </span>
+                {site.phone.display}
+              </a>
+              <div className="flex items-start gap-3 text-muted-foreground">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-white shadow-soft">
                   <MapPin className="size-5 text-brand" />
                 </span>
-                {/* TODO(you): real registered address. */}
-                {site.address.addressLocality}, {site.address.addressCountry}
+                <span className="leading-relaxed">
+                  {site.address.streetAddress}
+                  <br />
+                  {site.address.addressLocality}, {site.address.addressRegion}{" "}
+                  {site.address.postalCode}, USA
+                </span>
               </div>
             </div>
           </div>
