@@ -13,6 +13,8 @@ export const site = {
   phone: { display: "+1 (407) 978-3798", href: "tel:+14079783798" },
   // Calendly scheduler (used on /contact and the ad funnels).
   calendly: "https://calendly.com/hilalaziz-unitzero/30min",
+  // Google Tag Manager container.
+  gtmId: "GTM-TBPZZQBN",
   // Registered address — used for LocalBusiness/Organization schema + Contact.
   address: {
     streetAddress: "30 N Gould St Ste R",
