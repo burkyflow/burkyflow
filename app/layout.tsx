@@ -3,6 +3,7 @@ import { Lexend, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ChromeGate } from "@/components/ChromeGate";
 import { JsonLd } from "@/components/JsonLd";
 import { organizationLd } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -50,9 +51,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${heading.variable} ${body.variable}`}>
       <body>
         <JsonLd data={organizationLd()} />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <ChromeGate navbar={<Navbar />} footer={<Footer />}>
+          {children}
+        </ChromeGate>
       </body>
     </html>
   );

@@ -11,6 +11,8 @@ export const site = {
   secondaryCtaLabel: "See how it works",
   email: "atta@burkyflow.com",
   phone: { display: "+1 (407) 978-3798", href: "tel:+14079783798" },
+  // Calendly scheduler (used on /contact and the ad funnels).
+  calendly: "https://calendly.com/hilalaziz-unitzero/30min",
   // Registered address — used for LocalBusiness/Organization schema + Contact.
   address: {
     streetAddress: "30 N Gould St Ste R",

@@ -61,14 +61,12 @@ export default function ContactPage() {
           </div>
 
           {/* Calendly scheduler */}
-          <div className="overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-border/60">
-            <iframe
-              src="https://calendly.com/hilalaziz-unitzero/30min?hide_gdpr_banner=1&primary_color=2563eb"
-              title="Book a call with BurkyFlow"
-              className="h-[720px] w-full"
-              loading="lazy"
-            />
-          </div>
+          <iframe
+            src={`${site.calendly}?hide_gdpr_banner=1&background_color=ffffff&primary_color=f16b4d`}
+            title="Book a call with BurkyFlow"
+            className="h-[720px] w-full"
+            loading="lazy"
+          />
         </div>
       </section>
     </>
