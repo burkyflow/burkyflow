@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 import type { Funnel } from "@/content/funnels";
 import type { Industry } from "@/content/industries";
 import { FAQAccordion } from "@/components/FAQAccordion";
+import { BookingWidget } from "@/components/BookingWidget";
 
 type Testimonial = { text: string; attribution: string; vertical?: string };
 
@@ -31,8 +32,6 @@ export function FunnelPage({
   industry: Industry;
   testimonials: Testimonial[];
 }) {
-  const calendly = `${site.calendly}?hide_gdpr_banner=1&background_color=ffffff&primary_color=f16b4d`;
-
   return (
     <div className="bg-white">
       {/* ── Minimal funnel nav ─────────────────────────────────── */}
@@ -202,12 +201,7 @@ export function FunnelPage({
         </div>
 
         <div className="container-page mx-auto mt-10 max-w-4xl">
-          <iframe
-            src={calendly}
-            title={`Book a call with ${site.name}`}
-            className="h-[720px] w-full"
-            loading="lazy"
-          />
+          <BookingWidget />
           <p className="mt-6 text-center text-sm text-muted-foreground">
             Prefer to talk now? Call{" "}
             <a href={site.phone.href} className="font-semibold text-brand hover:underline">
