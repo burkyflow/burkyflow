@@ -1,7 +1,7 @@
 // Central site config. Edit once, propagates everywhere.
 export const site = {
   name: "BurkyFlow",
-  legalName: "BurkyFlow",
+  legalName: "BurkyFlow Inc.",
   tagline:
     "AI-powered revenue operations for service businesses. We find where your revenue leaks, capture it, and optimise every step that turns a lead into a paid job.",
   url: "https://burkyflow.com",
@@ -11,8 +11,15 @@ export const site = {
   secondaryCtaLabel: "See how it works",
   email: "atta@burkyflow.com",
   phone: { display: "+1 (407) 978-3798", href: "tel:+14079783798" },
-  // Calendly scheduler (used on /contact and the ad funnels).
+  // Calendly scheduler (still used by the ad funnels).
   calendly: "https://calendly.com/hilalaziz-unitzero/30min",
+  // GoHighLevel booking widget. The script auto-resizes the iframe by its id,
+  // so `id` must match exactly what the embed code specifies.
+  booking: {
+    src: "https://api.burkyflow.com/widget/booking/XNHhxZCCI6H7FjRjAlSl",
+    id: "XNHhxZCCI6H7FjRjAlSl_1784909823286",
+    script: "https://api.burkyflow.com/js/form_embed.js",
+  },
   // Google Tag Manager container.
   gtmId: "GTM-TBPZZQBN",
   // Registered address — used for LocalBusiness/Organization schema + Contact.

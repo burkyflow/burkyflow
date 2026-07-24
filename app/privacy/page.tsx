@@ -124,12 +124,16 @@ export default function PrivacyPage() {
 
         <h2 className="mt-6 text-xl font-semibold">Contact</h2>
         <p className="mt-3">
-          For questions or requests about this policy, email us at <a href={`mailto:${site.email}`}>{site.email}</a>.
+          For questions or requests about this policy, email us at{" "}
+          <a href={`mailto:${site.email}`}>{site.email}</a> or call{" "}
+          <a href={site.phone.href}>{site.phone.display}</a>.
         </p>
-
-        <p className="mt-8 text-sm text-muted-foreground">
-          Note: This privacy policy is a template and may need review by legal counsel to meet
-          specific regulatory requirements in your jurisdiction.
+        <p className="mt-4">
+          {site.legalName}
+          <br />
+          {site.address.streetAddress}
+          <br />
+          {site.address.addressLocality}, {site.address.addressRegion} {site.address.postalCode}
         </p>
       </div>
     </section>

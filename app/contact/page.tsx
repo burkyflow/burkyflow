@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { JsonLd } from "@/components/JsonLd";
+import { BookingWidget } from "@/components/BookingWidget";
 import { localBusinessLd } from "@/lib/seo";
 import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -60,13 +61,8 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Calendly scheduler */}
-          <iframe
-            src={`${site.calendly}?hide_gdpr_banner=1&background_color=ffffff&primary_color=f16b4d`}
-            title="Book a call with BurkyFlow"
-            className="h-[720px] w-full"
-            loading="lazy"
-          />
+          {/* Booking widget */}
+          <BookingWidget />
         </div>
       </section>
     </>
