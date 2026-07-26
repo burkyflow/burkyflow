@@ -19,50 +19,46 @@ export default function ContactPage() {
       <JsonLd data={localBusinessLd()} />
 
       <section className="section bg-surface">
-        <div className="container-page grid gap-12 lg:grid-cols-2">
-          <div>
+        <div className="container-page">
+          {/* Header */}
+          <div className="mx-auto max-w-3xl text-center">
             <p className="eyebrow">Contact</p>
             <h1 className="mt-3 text-4xl font-semibold sm:text-5xl">Book a call</h1>
-            <p className="mt-5 max-w-md text-lg text-muted-foreground">
+            <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
               Tell us what you run today. We will map exactly where revenue is leaking and what we
               would automate first. No pitch decks, just the numbers.
             </p>
+          </div>
 
-            <div className="mt-8 space-y-4">
-              <a
-                href={`mailto:${site.email}`}
-                className="flex items-center gap-3 text-foreground transition-colors hover:text-brand"
-              >
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-white shadow-soft">
-                  <Mail className="size-5 text-brand" />
-                </span>
-                {site.email}
-              </a>
-              <a
-                href={site.phone.href}
-                className="flex items-center gap-3 text-foreground transition-colors hover:text-brand"
-              >
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-white shadow-soft">
-                  <Phone className="size-5 text-brand" />
-                </span>
-                {site.phone.display}
-              </a>
-              <div className="flex items-start gap-3 text-muted-foreground">
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-white shadow-soft">
-                  <MapPin className="size-5 text-brand" />
-                </span>
-                <span className="leading-relaxed">
-                  {site.address.streetAddress}
-                  <br />
-                  {site.address.addressLocality}, {site.address.addressRegion}{" "}
-                  {site.address.postalCode}, USA
-                </span>
-              </div>
+          {/* Contact details row */}
+          <div className="mx-auto mt-8 flex max-w-4xl flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
+            <a
+              href={`mailto:${site.email}`}
+              className="flex items-center gap-3 rounded-2xl bg-white px-5 py-3 shadow-soft ring-1 ring-border/60 transition-colors hover:text-brand"
+            >
+              <Mail className="size-5 shrink-0 text-brand" />
+              <span className="text-sm font-medium">{site.email}</span>
+            </a>
+            <a
+              href={site.phone.href}
+              className="flex items-center gap-3 rounded-2xl bg-white px-5 py-3 shadow-soft ring-1 ring-border/60 transition-colors hover:text-brand"
+            >
+              <Phone className="size-5 shrink-0 text-brand" />
+              <span className="text-sm font-medium">{site.phone.display}</span>
+            </a>
+            <div className="flex items-center gap-3 rounded-2xl bg-white px-5 py-3 text-muted-foreground shadow-soft ring-1 ring-border/60">
+              <MapPin className="size-5 shrink-0 text-brand" />
+              <span className="text-sm">
+                {site.address.streetAddress}, {site.address.addressLocality},{" "}
+                {site.address.addressRegion} {site.address.postalCode}
+              </span>
             </div>
           </div>
 
-          {/* Booking widget */}
-          <BookingWidget />
+          {/* Booking widget — full width so the two-column scheduler shows */}
+          <div className="mx-auto mt-10 max-w-6xl">
+            <BookingWidget />
+          </div>
         </div>
       </section>
     </>
