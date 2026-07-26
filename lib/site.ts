@@ -22,6 +22,8 @@ export const site = {
   },
   // Google Tag Manager container.
   gtmId: "GTM-TBPZZQBN",
+  // Meta (Facebook) Pixel — for ad attribution & retargeting on the funnels.
+  metaPixelId: "2031284237530673",
   // Registered address — used for LocalBusiness/Organization schema + Contact.
   address: {
     streetAddress: "30 N Gould St Ste R",
