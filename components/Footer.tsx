@@ -110,8 +110,27 @@ export function Footer() {
             </div>
           </div>
 
+          {/* SMS consent disclosure (A2P 10DLC compliance) */}
+          <div className="mt-12 border-t border-border/60 pt-6">
+            <p className="mx-auto max-w-4xl text-center text-xs leading-relaxed text-muted-foreground">
+              <span className="font-semibold text-foreground">SMS Consent:</span> By providing your
+              phone number to {site.legalName}, you agree to receive text messages including
+              appointment confirmations, reminders, follow-ups, and replies to your enquiries.
+              Message frequency varies. Message and data rates may apply. Reply STOP to opt out at
+              any time, or HELP for help. See our{" "}
+              <Link href="/privacy" className="underline underline-offset-2 hover:text-foreground">
+                Privacy Policy
+              </Link>{" "}
+              and{" "}
+              <Link href="/terms" className="underline underline-offset-2 hover:text-foreground">
+                Terms
+              </Link>
+              .
+            </p>
+          </div>
+
           {/* Bottom bar */}
-          <div className="mt-12 border-t border-border/60 pt-6 text-center text-sm text-muted-foreground">
+          <div className="mt-6 border-t border-border/60 pt-6 text-center text-sm text-muted-foreground">
             &copy; {year} {site.name}. All rights reserved.
           </div>
         </div>
