@@ -49,6 +49,10 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const metaPixelOptions = site.metaPixelTestEventCode
+    ? `{test_event_code: '${site.metaPixelTestEventCode}'}`
+    : "undefined";
+
   return (
     <html lang="en" className={`${heading.variable} ${body.variable}`}>
       <head>
@@ -72,7 +76,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '${site.metaPixelId}');
-fbq('track', 'PageView');`}
+      fbq('track', 'PageView', {}, ${metaPixelOptions});`}
         </Script>
       </head>
       <body>

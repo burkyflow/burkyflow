@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { site } from "@/lib/site";
 
 declare global {
   interface Window {
@@ -15,10 +16,17 @@ declare global {
 export function MetaPixel() {
   const pathname = usePathname();
   const first = useRef(true);
+  const metaPixelOptions = site.metaPixelTestEventCode
+    ? { test_event_code: site.metaPixelTestEventCode }
+    : undefined;
 
   useEffect(() => {
     if (first.current) {
       first.current = false;
+      return;
+    }
+    if (metaPixelOptions) {
+      window.fbq?.("track", "PageView", {}, metaPixelOptions);
       return;
     }
     window.fbq?.("track", "PageView");
