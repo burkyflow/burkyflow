@@ -24,7 +24,9 @@ export const site = {
   gtmId: "GTM-TBPZZQBN",
   // Meta (Facebook) Pixel — for ad attribution & retargeting on the funnels.
   metaPixelId: "2518081575289161",
-  // Meta Pixel test event code — used to verify browser events in Events Manager.
+  // Meta Test Events code. ⚠️ Only for testing — routes real PageViews into
+  // Meta's Test Events view. Set back to "" before running live ads so real
+  // traffic counts in normal reporting.
   metaPixelTestEventCode: "TEST73160",
   // Registered address — used for LocalBusiness/Organization schema + Contact.
   address: {

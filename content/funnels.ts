@@ -327,3 +327,69 @@ export const funnels: Record<string, Funnel> = {
 export function getFunnel(slug: string) {
   return funnels[slug];
 }
+
+// ── Pricing shown on every funnel ─────────────────────────────────────────
+// TODO(you): set your real prices here. Amounts are indicative and the note
+// makes clear that exact scope + pricing is confirmed on the call.
+export type PriceTier = {
+  name: string;
+  price: string;
+  period: string;
+  setup: string;
+  tagline: string;
+  features: string[];
+  highlighted?: boolean;
+};
+
+export const funnelPricing: {
+  heading: string;
+  lead: string;
+  note: string;
+  tiers: PriceTier[];
+} = {
+  heading: "Pricing built around booked revenue",
+  lead: "Start with one system or run the whole engine. Every plan is done-for-you — we build it, run it, and report the numbers.",
+  note: "Indicative pricing. We confirm exact scope and pricing on your call — no obligation.",
+  tiers: [
+    {
+      name: "Starter",
+      price: "$497",
+      period: "/mo",
+      setup: "+ one-time setup",
+      tagline: "One system, live fast",
+      features: [
+        "24/7 AI Voice Receptionist",
+        "Bookings into your calendar",
+        "Call summaries & smart routing",
+        "Live in ~2 weeks",
+      ],
+    },
+    {
+      name: "Growth",
+      price: "$997",
+      period: "/mo",
+      setup: "+ one-time setup",
+      tagline: "Capture + reactivate",
+      highlighted: true,
+      features: [
+        "Everything in Starter",
+        "Database reactivation campaigns",
+        "CRM & lead pipeline",
+        "Automated follow-up & reminders",
+      ],
+    },
+    {
+      name: "Full System",
+      price: "Custom",
+      period: "",
+      setup: "Scoped to you",
+      tagline: "The whole revenue engine",
+      features: [
+        "Everything in Growth",
+        "Multi-channel outbound",
+        "Answer Engine Optimisation",
+        "Dedicated support & reporting",
+      ],
+    },
+  ],
+};
