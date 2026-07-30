@@ -1,5 +1,5 @@
 // Per-industry ad-funnel copy. Punchier and more direct than the SEO industry
-// pages — built for cold paid traffic with a single CTA: book a call.
+// pages, built for cold paid traffic with a single CTA: book a call.
 // Structural data (pains, offers, serviceFit, faqs) is reused from industries.ts;
 // this file adds the hero, results, and framing that a landing page needs.
 
@@ -29,7 +29,7 @@ export const funnels: Record<string, Funnel> = {
     headline: "Stop losing jobs to a",
     headlineAccent: "missed call.",
     subheadline:
-      "An AI voice agent answers every call 24/7, books the job onto your dispatch board, and wakes up the past customers already in your CRM — so no lead ever goes to the contractor who picked up second.",
+      "An AI voice agent answers every call 24/7, books the job onto your dispatch board, and wakes up the past customers already in your CRM, so no lead ever goes to the contractor who picked up second.",
     heroPoints: [
       "Every after-hours & overflow call answered",
       "Jobs booked straight to your dispatch board",
@@ -80,7 +80,7 @@ export const funnels: Record<string, Funnel> = {
     ],
     bookingHeading: "See how many jobs you're leaving on the table",
     bookingLead:
-      "Book a 30-minute call. We'll audit your missed-call log and show you exactly how much revenue is walking out the door — and what we'd automate first.",
+      "Book a 30-minute call. We'll audit your missed-call log and show you exactly how much revenue is walking out the door, and what we'd automate first.",
   },
 
   healthcare: {
@@ -89,7 +89,7 @@ export const funnels: Record<string, Funnel> = {
     headline: "Fill the chair from the patients you",
     headlineAccent: "already have.",
     subheadline:
-      "We re-engage your recall and hygiene list, verify insurance on the call, and book consults the moment a lead comes in — written straight into your practice software, with zero extra front-desk load.",
+      "We re-engage your recall and hygiene list, verify insurance on the call, and book consults the moment a lead comes in, written straight into your practice software, with zero extra front-desk load.",
     heroPoints: [
       "Recall & hygiene lists worked automatically",
       "Insurance verified before the visit",
@@ -140,7 +140,7 @@ export const funnels: Record<string, Funnel> = {
     ],
     bookingHeading: "Turn your recall list into booked chairs",
     bookingLead:
-      "Book a 30-minute call. We'll show you how many patients on your recall list are reachable today — and how we'd book them without adding front-desk load.",
+      "Book a 30-minute call. We'll show you how many patients on your recall list are reachable today, and how we'd book them without adding front-desk load.",
   },
 
   "real-estate": {
@@ -160,10 +160,10 @@ export const funnels: Record<string, Funnel> = {
       "Hundreds of buyer leads went cold because follow-up was too slow.",
       "Agents burn time on unqualified leads while ready buyers slip away.",
       "Expired and transplant-buyer lists never get worked.",
-      "About 1 in 6 cold leads still transacts — usually with whoever calls second.",
+      "About 1 in 6 cold leads still transacts, usually with whoever calls second.",
     ],
     results: [
-      { value: "~1 in 6", label: "Cold leads still transact — capture yours" },
+      { value: "~1 in 6", label: "Cold leads still transact, capture yours" },
       { value: "100%", label: "Of new leads get an instant first touch" },
       { value: "< 60s", label: "Speed-to-lead on every inquiry" },
       { value: "24/7", label: "Re-engagement & qualification" },
@@ -209,7 +209,7 @@ export const funnels: Record<string, Funnel> = {
     headline: "Bring customers back before they",
     headlineAccent: "switch shops.",
     subheadline:
-      "We text the customers overdue for service and book them back in, while an AI voice answers the calls your team can't during busy bay hours — every booking logged into your shop software.",
+      "We text the customers overdue for service and book them back in, while an AI voice answers the calls your team can't during busy bay hours, every booking logged into your shop software.",
     heroPoints: [
       "Overdue customers texted & rebooked",
       "Calls answered during busy bay hours",
@@ -223,7 +223,7 @@ export const funnels: Record<string, Funnel> = {
       "New callers reach a voicemail and dial the next shop.",
     ],
     results: [
-      { value: "~60%", label: "Of customers switch shops in 18 months — keep yours" },
+      { value: "~60%", label: "Of customers switch shops in 18 months, keep yours" },
       { value: "100%", label: "Of calls answered during bay hours" },
       { value: "24/7", label: "Booking & service reminders" },
       { value: "< 60s", label: "To answer every inbound call" },
@@ -260,7 +260,7 @@ export const funnels: Record<string, Funnel> = {
     ],
     bookingHeading: "See how many customers you can win back",
     bookingLead:
-      "Book a 30-minute call. We'll show you how many of your past customers are overdue for service — and how we'd rebook them automatically.",
+      "Book a 30-minute call. We'll show you how many of your past customers are overdue for service, and how we'd rebook them automatically.",
   },
 
   "professional-firms": {
@@ -280,7 +280,7 @@ export const funnels: Record<string, Funnel> = {
       "After-hours intake calls go to voicemail and never call back.",
       "High-intent inquiries arrive faster than staff can handle.",
       "Manual intake is inconsistent and hard to audit.",
-      "The most motivated callers reach you at 9pm — and hang up.",
+      "The most motivated callers reach you at 9pm, and hang up.",
     ],
     results: [
       { value: "7–11pm", label: "When high-intent intake calls cluster" },
@@ -333,7 +333,8 @@ export function getFunnel(slug: string) {
 // makes clear that exact scope + pricing is confirmed on the call.
 export type PriceTier = {
   name: string;
-  price: string;
+  price: string; // discounted / current price
+  originalPrice?: string; // struck-through pre-discount price
   period: string;
   setup: string;
   tagline: string;
@@ -345,14 +346,18 @@ export const funnelPricing: {
   heading: string;
   lead: string;
   note: string;
+  discount?: { label: string; sub: string };
   tiers: PriceTier[];
 } = {
   heading: "Pricing built around booked revenue",
-  lead: "Start with one system or run the whole engine. Every plan is done-for-you — we build it, run it, and report the numbers.",
-  note: "Indicative pricing. We confirm exact scope and pricing on your call — no obligation.",
+  lead: "Start with one system or run the whole engine. Every plan is done-for-you, we build it, run it, and report the numbers.",
+  note: "Indicative pricing. We confirm exact scope and pricing on your call, no obligation.",
+  // TODO(you): update the offer + prices. Remove `discount` to hide the sale.
+  discount: { label: "Summer End Discount", sub: "Save up to 33%, for a limited time" },
   tiers: [
     {
       name: "Starter",
+      originalPrice: "$697",
       price: "$497",
       period: "/mo",
       setup: "+ one-time setup",
@@ -366,6 +371,7 @@ export const funnelPricing: {
     },
     {
       name: "Growth",
+      originalPrice: "$1,497",
       price: "$997",
       period: "/mo",
       setup: "+ one-time setup",

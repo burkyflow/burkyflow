@@ -76,7 +76,7 @@ export function FunnelPage({
         </div>
       </section>
 
-      {/* ── What we run (services — on top so they see the offer) ─ */}
+      {/* ── What we run (services, on top so they see the offer) ─ */}
       <section className="container-page py-16 md:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">What you get</p>
@@ -186,6 +186,16 @@ export function FunnelPage({
           <p className="eyebrow">Pricing</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">{funnelPricing.heading}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">{funnelPricing.lead}</p>
+
+          {funnelPricing.discount && (
+            <div className="mx-auto mt-6 inline-flex flex-col items-center gap-1 rounded-2xl bg-accent/10 px-6 py-3 sm:flex-row sm:gap-3">
+              <span className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-accent">
+                <Clock className="size-4" />
+                {funnelPricing.discount.label}
+              </span>
+              <span className="text-sm font-medium text-foreground">{funnelPricing.discount.sub}</span>
+            </div>
+          )}
         </div>
 
         <div className="mx-auto mt-12 grid max-w-5xl items-stretch gap-6 md:grid-cols-3">
@@ -207,7 +217,15 @@ export function FunnelPage({
               <p className={`mt-1 text-xs ${tier.highlighted ? "text-white/60" : "text-muted-foreground"}`}>
                 {tier.tagline}
               </p>
-              <div className="mt-5 flex items-end gap-1">
+              {tier.originalPrice && (
+                <p className="mt-5 -mb-1 text-sm font-medium">
+                  <span className={`line-through ${tier.highlighted ? "text-white/50" : "text-muted-foreground/70"}`}>
+                    {tier.originalPrice}
+                  </span>{" "}
+                  <span className="font-bold text-accent">Summer End Discount</span>
+                </p>
+              )}
+              <div className={`flex items-end gap-1 ${tier.originalPrice ? "mt-1" : "mt-5"}`}>
                 <span className="font-heading text-4xl font-bold tracking-tight">{tier.price}</span>
                 {tier.period && (
                   <span className={tier.highlighted ? "text-white/60" : "text-muted-foreground"}>{tier.period}</span>
@@ -301,7 +319,7 @@ export function FunnelPage({
         </div>
       </footer>
 
-      {/* ── Sticky mobile CTA — booking always one tap away ────── */}
+      {/* ── Sticky mobile CTA, booking always one tap away ────── */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-white/95 px-4 py-3 backdrop-blur md:hidden">
         <a
           href={`#${BOOK_ID}`}

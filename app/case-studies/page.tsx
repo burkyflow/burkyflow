@@ -10,7 +10,7 @@ import { pageMetadata, breadcrumbLd } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Case Studies",
   description:
-    "Live client deployments from BurkyFlow — AI voice receptionists, GoHighLevel automation, outbound AI, and unified operations systems shipping real results.",
+    "Live client deployments from BurkyFlow, AI voice receptionists, GoHighLevel automation, outbound AI, and unified operations systems shipping real results.",
   path: "/case-studies",
 });
 
@@ -33,7 +33,7 @@ export default function CaseStudiesIndex() {
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
             Live deployments across the US, UK, Australia, New Zealand, and Europe. Each system is
-            running in client environments today — handling calls, booking jobs, and tracking
+            running in client environments today, handling calls, booking jobs, and tracking
             revenue.
           </p>
         </div>

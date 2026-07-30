@@ -1,4 +1,4 @@
-// "Trusted by service businesses across industries" — logo strip under the hero.
+// "Trusted by service businesses across industries", logo strip under the hero.
 // Desktop: centered wrap. Mobile: infinite right-to-left marquee.
 // Placeholder service-business marks (icon + wordmark) in muted "logo" grey.
 // TODO(you): swap in real client logos when you have permission to display them.

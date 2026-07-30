@@ -29,7 +29,7 @@ function WedgeCard({ wedge }: { wedge: Wedge }) {
 
   return (
     <article className="group grid h-full overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30 sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
-      {/* Image — paste a URL into the wedge's `image` field; placeholder until then */}
+      {/* Image, paste a URL into the wedge's `image` field; placeholder until then */}
       <div className="p-5 sm:p-6 sm:pr-0">
         <WedgeCardImage src={wedge.image} alt={wedge.name} />
       </div>

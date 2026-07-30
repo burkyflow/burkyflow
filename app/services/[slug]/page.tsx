@@ -81,7 +81,7 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
         </div>
       </section>
 
-      {/* How it works — illustrated */}
+      {/* How it works, illustrated */}
       <section className="section">
         <div className="container-page">
           <AlternatingFeatureBlock
@@ -163,7 +163,7 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
             <div className="mx-auto max-w-2xl text-center">
               <p className="eyebrow">Live deployments</p>
               <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">
-                {service.name} — in production today
+                {service.name}, in production today
               </h2>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

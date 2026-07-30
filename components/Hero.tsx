@@ -22,9 +22,9 @@ const headlinePhrases = [
 
 export function Hero() {
   return (
-    // Hero — dashboard as the full-width background, copy overlaid
+    // Hero, dashboard as the full-width background, copy overlaid
     <section className="relative overflow-hidden bg-white">
-      {/* Desktop: full-width background dashboard — natural size, no crop, no overlay */}
+      {/* Desktop: full-width background dashboard, natural size, no crop, no overlay */}
       <div aria-hidden className="hidden lg:block">
         <Image
           src="/images/image.png"
@@ -37,7 +37,7 @@ export function Hero() {
         />
       </div>
 
-      {/* Copy — static flow on mobile, overlaid + vertically centered on desktop */}
+      {/* Copy, static flow on mobile, overlaid + vertically centered on desktop */}
       <div className="container-page relative pt-10 pb-10 lg:absolute lg:inset-0 lg:flex lg:items-center lg:py-0">
         <div className="max-w-xl">
           <h1 className="text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl">
@@ -48,7 +48,7 @@ export function Hero() {
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
             BurkyFlow is the revenue operations layer for service businesses. We quantify exactly
             where your revenue is leaking, capture every call and dormant lead, and optimise the
-            follow-up that converts them — so you grow revenue without adding headcount.
+            follow-up that converts them, so you grow revenue without adding headcount.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">

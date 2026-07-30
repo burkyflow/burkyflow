@@ -27,22 +27,22 @@ const body = Source_Sans_3({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `BurkyFlow — AI automation for service businesses`,
-    template: `%s — ${site.name}`,
+    default: `BurkyFlow, AI automation for service businesses`,
+    template: `%s, ${site.name}`,
   },
   description: site.tagline,
   icons: { icon: "/favicon.ico" },
   openGraph: {
     type: "website",
     siteName: site.name,
-    title: `BurkyFlow — AI automation for service businesses`,
+    title: `BurkyFlow, AI automation for service businesses`,
     description: site.tagline,
     url: site.url,
     images: [{ url: "/images/logo.png", width: 502, height: 502, alt: site.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `BurkyFlow — AI automation for service businesses`,
+    title: `BurkyFlow, AI automation for service businesses`,
     description: site.tagline,
     images: ["/images/logo.png"],
   },

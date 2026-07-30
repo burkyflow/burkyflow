@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const cs = getCaseStudy(slug);
   if (!cs) return pageMetadata({ title: "Not found", description: "", path: "/case-studies" });
   return pageMetadata({
-    title: `${cs.client} — ${cs.headline}`,
+    title: `${cs.client}, ${cs.headline}`,
     description: cs.summary,
     path: `/case-studies/${cs.slug}`,
   });
@@ -192,7 +192,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<Para
                 "{cs.quote.text}"
               </blockquote>
               <figcaption className="mt-4 text-sm font-semibold text-muted-foreground">
-                — {cs.quote.attribution}
+                {cs.quote.attribution}
               </figcaption>
             </figure>
           )}

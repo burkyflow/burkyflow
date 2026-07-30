@@ -34,7 +34,7 @@ export default function ServicesIndex() {
         </div>
       </section>
 
-      {/* Top 4 wedge offers — surface first */}
+      {/* Top 4 wedge offers, surface first */}
       <section className="section">
         <div className="container-page">
           <WedgeGrid />

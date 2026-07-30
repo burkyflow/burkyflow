@@ -33,7 +33,7 @@ export function IndustryStrip({
 }) {
   return (
     <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {/* Intro block — deliberately NOT a card (no box), so it reads as the heading */}
+      {/* Intro block, deliberately NOT a card (no box), so it reads as the heading */}
       <div className="flex flex-col justify-center p-2 sm:p-4 lg:pr-8">
         <p className="eyebrow">{eyebrow}</p>
         <h2 className="mt-3 text-3xl font-bold leading-[1.08] tracking-tight sm:text-4xl">

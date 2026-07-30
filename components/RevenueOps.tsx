@@ -1,4 +1,4 @@
-// Revenue Operations section — illustrated "how the revenue engine works" cards.
+// Revenue Operations section, illustrated "how the revenue engine works" cards.
 // Each card has a soft peach visual (a mini product mockup) above the copy.
 import Link from "next/link";
 import {
@@ -32,7 +32,7 @@ function VizShell({ children }: { children: React.ReactNode }) {
   );
 }
 
-// 01 — Diagnose: an audit report surfacing the leak
+// 01, Diagnose: an audit report surfacing the leak
 function DiagnoseViz() {
   return (
     <VizShell>
@@ -62,7 +62,7 @@ function DiagnoseViz() {
   );
 }
 
-// 02 — Capture: AI voice answering a live call
+// 02, Capture: AI voice answering a live call
 function CaptureViz() {
   const bars = [5, 9, 14, 8, 16, 11, 18, 10, 6, 13, 8, 15, 7, 11];
   return (
@@ -92,7 +92,7 @@ function CaptureViz() {
   );
 }
 
-// 03 — Convert: leads turning into booked jobs
+// 03, Convert: leads turning into booked jobs
 function ConvertViz() {
   const rows = [
     { name: "New booking", status: "Booked", done: true },
@@ -131,7 +131,7 @@ function ConvertViz() {
   );
 }
 
-// 04 — Compound: revenue climbing month over month
+// 04, Compound: revenue climbing month over month
 function CompoundViz() {
   return (
     <VizShell>
@@ -235,7 +235,7 @@ export function RevenueOps() {
           <p className="text-center text-sm text-muted-foreground sm:text-left">
             Not sure how much revenue you are leaking?{" "}
             <span className="font-semibold text-foreground">
-              We will quantify it on the call — for free.
+              We will quantify it on the call, for free.
             </span>
           </p>
           <Button asChild className="w-full sm:w-auto">

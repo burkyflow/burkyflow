@@ -26,7 +26,7 @@ import { faqPageLd, pageMetadata, serviceDetailLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Build Funnel 1 — Missed-Call Recovery",
+  title: "Build Funnel 1, Missed-Call Recovery",
   description:
     "A missed-call recovery landing page built from BurkyFlow's AI voice, database reactivation, CRM, workflow, industry, case study, and content systems.",
   path: "/missed-calls",

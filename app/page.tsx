@@ -27,7 +27,7 @@ export default function HomePage() {
 
       <TrustedBy />
 
-      {/* Top 4 wedge offers — the sharpest pitches we lead with */}
+      {/* Top 4 wedge offers, the sharpest pitches we lead with */}
       <section id="wedges" className="section bg-surface">
         <div className="container-page">
           <WedgeGrid />
@@ -36,7 +36,7 @@ export default function HomePage() {
 
       <ProblemFraming />
 
-      {/* Revenue operations — how we actually grow the number, not just automate */}
+      {/* Revenue operations, how we actually grow the number, not just automate */}
       <RevenueOps />
 
       {/* Services as alternating M360-style sections */}

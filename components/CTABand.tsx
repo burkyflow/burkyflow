@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { site } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 
-// Centered pre-footer CTA. Rendered by <Footer /> on its shared gradient — no box.
+// Centered pre-footer CTA. Rendered by <Footer /> on its shared gradient, no box.
 export function CTABand({
   heading = "Ready to grow revenue without growing headcount?",
   lead = "Book a short call and we will quantify exactly how much revenue you are leaking today, and show you the highest-value gap to close first.",

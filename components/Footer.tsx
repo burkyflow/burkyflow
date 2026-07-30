@@ -11,7 +11,7 @@ export function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-gradient-to-b from-brand/[0.12] via-accent-soft/[0.12] to-white">
-      {/* Pre-footer CTA — sits on the shared gradient, flowing into the footer card */}
+      {/* Pre-footer CTA, sits on the shared gradient, flowing into the footer card */}
       <div className="mx-auto w-full max-w-[95rem] px-4 pb-14 pt-20 sm:px-6 sm:pb-16 sm:pt-24 lg:px-8">
         <CTABand />
       </div>

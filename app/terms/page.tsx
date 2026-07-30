@@ -26,7 +26,7 @@ export default function TermsPage() {
         <h2 className="mt-6 text-xl font-semibold">SMS and text messaging program</h2>
         <p className="mt-3">
           By providing your mobile number and opting in, you agree to receive text messages from{" "}
-          {site.legalName} relating to the service you requested — for example appointment and
+          {site.legalName} relating to the service you requested, for example appointment and
           booking confirmations, reminders, follow-ups, and replies to your enquiries. Consent to
           receive text messages is not a condition of any purchase.
         </p>

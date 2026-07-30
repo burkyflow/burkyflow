@@ -37,7 +37,7 @@ const bar = (x: number, y: number, w: number, opacity = 0.25) => (
 );
 
 const scenes: Record<string, JSX.Element> = {
-  // AI Voice Receptionist — phone with sound waves
+  // AI Voice Receptionist, phone with sound waves
   "ai-voice-receptionist": (
     <g>
       {card(60, 50, 200, 200)}
@@ -54,7 +54,7 @@ const scenes: Record<string, JSX.Element> = {
       <circle cx="270" cy="150" r="6" fill="hsl(var(--brand))" />
     </g>
   ),
-  // Database Reactivation — stacked DB cylinders + spark
+  // Database Reactivation, stacked DB cylinders + spark
   "database-reactivation": (
     <g>
       {[0, 1, 2].map((i) => (
@@ -67,7 +67,7 @@ const scenes: Record<string, JSX.Element> = {
       <path d="M282 76l-12 18h10l-4 14 14-20h-10z" fill="white" />
     </g>
   ),
-  // CRM and Lead Systems — pipeline columns
+  // CRM and Lead Systems, pipeline columns
   "crm-lead-systems": (
     <g>
       {[0, 1, 2].map((i) => (
@@ -82,7 +82,7 @@ const scenes: Record<string, JSX.Element> = {
       <path d="M150 150h100" stroke="hsl(var(--brand))" strokeWidth="4" strokeDasharray="6 6" opacity="0.5" />
     </g>
   ),
-  // Workflow Automation — connected nodes
+  // Workflow Automation, connected nodes
   "workflow-automation": (
     <g>
       <path d="M100 90L200 60M200 60L300 110M200 60L180 200M180 200L290 200" stroke="hsl(var(--brand))" strokeWidth="3" opacity="0.4" fill="none" />
@@ -100,7 +100,7 @@ const scenes: Record<string, JSX.Element> = {
       ))}
     </g>
   ),
-  // Answer Engine Optimization — search bar + AI sparkle results
+  // Answer Engine Optimization, search bar + AI sparkle results
   "answer-engine-optimization": (
     <g>
       {card(60, 70, 280, 46)}
@@ -116,7 +116,7 @@ const scenes: Record<string, JSX.Element> = {
       ))}
     </g>
   ),
-  // Done For You — dashboard + check
+  // Done For You, dashboard + check
   "done-for-you": (
     <g>
       {card(56, 56, 288, 188)}

@@ -25,7 +25,7 @@ export type Service = {
   outcomes: string[]; // bullet outcomes
   faqs: FAQ[];
   whyItMatters: string;
-  relatedIndustries: string[]; // industry slugs — powers the silo
+  relatedIndustries: string[]; // industry slugs, powers the silo
   illustration: string; // matches ServiceIllustration variant
 };
 

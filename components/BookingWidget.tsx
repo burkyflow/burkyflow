@@ -2,7 +2,7 @@ import Script from "next/script";
 import { site } from "@/lib/site";
 
 // GoHighLevel booking widget. `form_embed.js` resizes the iframe to fit the
-// content when it fires — its inline height then wins over the classes below.
+// content when it fires, its inline height then wins over the classes below.
 // When it doesn't fire (unreliable cross-domain), the fixed heights are tall
 // enough to show the whole form (incl. the Continue button) with no scrollbar.
 // Mobile stacks the form, so it needs more height than the desktop two-column.

@@ -1,4 +1,4 @@
-// Problem-framing section — the "you're losing the leads you already have" pitch.
+// Problem-framing section, the "you're losing the leads you already have" pitch.
 import { PhoneOff, Voicemail, CircleDollarSign, Info, type LucideIcon } from "lucide-react";
 import { CountUp } from "@/components/CountUp";
 
@@ -75,7 +75,7 @@ function StatCard({ stat, label, icon: Icon, accent, image }: Stat) {
 export function ProblemFraming() {
   return (
     <section className="section relative overflow-hidden">
-      {/* Decorations — soft pink glow + fading dot grid on the left */}
+      {/* Decorations, soft pink glow + fading dot grid on the left */}
       <div
         aria-hidden
         className="pointer-events-none absolute -left-40 top-0 size-[32rem] rounded-full bg-accent/20 blur-3xl"

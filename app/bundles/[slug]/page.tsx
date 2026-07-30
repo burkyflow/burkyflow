@@ -124,7 +124,7 @@ export default async function BundleDetail({ params }: { params: Promise<Params>
             Bundle discount applied automatically
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Bundles carry a tiered discount versus à la carte — 10% on 2 services scaling to 25% on
+            Bundles carry a tiered discount versus à la carte, 10% on 2 services scaling to 25% on
             full-stack. Exact pricing is shared on a short scoping call so the quote matches the
             result you want.
           </p>

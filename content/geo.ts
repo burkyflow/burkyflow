@@ -140,7 +140,7 @@ export function getNiche(slug: string) {
   return niches.find((n) => n.slug === slug);
 }
 
-// Known organic geo pages for a given niche — powers industry -> geo silo links.
+// Known organic geo pages for a given niche, powers industry -> geo silo links.
 export function geoCombosForNiche(nicheSlug: string) {
   return knownCombos
     .filter((c) => c.niche === nicheSlug)
@@ -148,7 +148,7 @@ export function geoCombosForNiche(nicheSlug: string) {
     .filter((c) => c.niche && c.city);
 }
 
-// All known geo pages for an industry's niches — used on industry detail pages.
+// All known geo pages for an industry's niches, used on industry detail pages.
 export function geoCombosForNiches(nicheSlugs: string[]) {
   return nicheSlugs.flatMap((n) => geoCombosForNiche(n));
 }

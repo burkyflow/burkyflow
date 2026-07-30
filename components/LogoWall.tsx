@@ -1,4 +1,4 @@
-// "Works seamlessly with the tools you already use" — integrations section.
+// "Works seamlessly with the tools you already use", integrations section.
 // Flat cards, no shadow. Paste each app's icon URL in the `logo` field below.
 import { ShieldCheck, ImageIcon } from "lucide-react";
 

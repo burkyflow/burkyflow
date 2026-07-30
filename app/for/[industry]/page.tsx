@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   if (!funnel || !ind) return pageMetadata({ title: "Not found", description: "", path: "/" });
   // Ad funnels are noindex so they never compete with the organic industry pages.
   return pageMetadata({
-    title: `${ind.name} — Book a Call`,
+    title: `${ind.name}, Book a Call`,
     description: funnel.subheadline,
     path: `/for/${industry}`,
     noindex: true,

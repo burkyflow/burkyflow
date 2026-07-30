@@ -40,8 +40,8 @@ export default function PrivacyPage() {
         <h2 className="mt-6 text-xl font-semibold">SMS and text messaging</h2>
         <p className="mt-3">
           If you give us your mobile number and opt in to receive text messages, we use it only to
-          send the messages you asked for — such as appointment and booking confirmations,
-          reminders, follow-ups, and replies to your enquiries — and to respond when you reply to
+          send the messages you asked for, such as appointment and booking confirmations,
+          reminders, follow-ups, and replies to your enquiries, and to respond when you reply to
           us.
         </p>
 
@@ -52,8 +52,8 @@ export default function PrivacyPage() {
           <p className="mt-2 leading-relaxed">
             Text messaging originator opt-in data and consent are excluded from every category of
             information sharing described in this Policy. We will not sell, rent, or share mobile
-            information, your phone number, or your SMS consent status with any third party —
-            including our affiliates, business partners, or lead generators — for promotional or
+            information, your phone number, or your SMS consent status with any third party,
+            including our affiliates, business partners, or lead generators, for promotional or
             marketing purposes, under any circumstance. We share this information only with the
             vendors who help us deliver the messaging service itself, such as our messaging
             platform provider and telecommunications carriers, and only so that the messages you

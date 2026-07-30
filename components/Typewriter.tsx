@@ -24,7 +24,7 @@ export function Typewriter({
 }) {
   const reduce = useReducedMotion();
 
-  // Keep the array out of the dependency list — an inline array is a new
+  // Keep the array out of the dependency list, an inline array is a new
   // reference every render and would restart the effect forever.
   const phrasesRef = useRef(phrases);
   phrasesRef.current = phrases;

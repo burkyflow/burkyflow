@@ -263,7 +263,7 @@ export function Navbar() {
       </nav>
     </header>
 
-      {/* Mobile drawer — always mounted for smooth slide in/out */}
+      {/* Mobile drawer, always mounted for smooth slide in/out */}
       <div
         className={cn("fixed inset-0 z-[60] md:hidden", open ? "pointer-events-auto" : "pointer-events-none")}
         aria-hidden={!open}

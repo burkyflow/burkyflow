@@ -55,7 +55,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Booking widget — full width so the two-column scheduler shows */}
+          {/* Booking widget, full width so the two-column scheduler shows */}
           <div className="mx-auto mt-10 max-w-6xl">
             <BookingWidget />
           </div>

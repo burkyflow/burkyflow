@@ -33,7 +33,7 @@ export const caseStudies: CaseStudy[] = [
     tags: ["GoHighLevel", "12 Workflows", "Dual Pipeline", "Live April 2026"],
     headline: "Full CRM and automation system for an 8-lender consumer finance brand",
     summary:
-      "A complete GoHighLevel ecosystem — 12 published workflows, dual pipelines, native Facebook Lead Ads, multi-lender routing, automated document collection, and a live operations dashboard. 100% native GHL — no Zapier, no ManyChat, no recurring tool costs.",
+      "A complete GoHighLevel ecosystem, 12 published workflows, dual pipelines, native Facebook Lead Ads, multi-lender routing, automated document collection, and a live operations dashboard. 100% native GHL, no Zapier, no ManyChat, no recurring tool costs.",
     heroStats: [
       { value: "1,600+", label: "Contacts unified into one source of truth" },
       { value: "3,520+", label: "Automated workflow executions in the first month" },
@@ -41,7 +41,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     challenge: [
       "Leads from Facebook and the website arrived in separate places. Reps manually checked Business Manager and inboxes. Leads slipped through with no follow-up.",
-      "No immediate SMS or email response to new leads. Average first-contact time was measured in hours, sometimes days — and in consumer finance that directly kills conversion.",
+      "No immediate SMS or email response to new leads. Average first-contact time was measured in hours, sometimes days, and in consumer finance that directly kills conversion.",
       "Documents were chased manually via WhatsApp with no tracking of what was sent, what was missing, or how long a file had been waiting.",
       "Submissions to up to 8 different lenders were tracked from memory and spreadsheets, with no pipeline, no task system, and no escalation logic.",
     ],
@@ -54,12 +54,12 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Automated Document Harvesting",
         detail:
-          "Self-correcting follow-up loop that nudges clients for documents at set intervals and moves the lead the moment they confirm via the form — no staff input required.",
+          "Self-correcting follow-up loop that nudges clients for documents at set intervals and moves the lead the moment they confirm via the form, no staff input required.",
       },
       {
         title: "Intelligent Lender Routing",
         detail:
-          "Tag-based logic system managing sequential submissions across Finance Now, Max Money, CTS Finance, Heart Land, Link Finance, Better Finance, Avanti, and HTF — with automatic pivots and 3-day / 20-day escalation alerts.",
+          "Tag-based logic system managing sequential submissions across Finance Now, Max Money, CTS Finance, Heart Land, Link Finance, Better Finance, Avanti, and HTF, with automatic pivots and 3-day / 20-day escalation alerts.",
       },
       {
         title: "Operational Command Center",
@@ -68,8 +68,8 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     results: [
-      "100% lead capture — every inbound from every source unified into one pipeline",
-      "325 real-time admin notifications sent — zero leakage",
+      "100% lead capture, every inbound from every source unified into one pipeline",
+      "325 real-time admin notifications sent, zero leakage",
       "12 published workflows, all live and modular",
       "98.9% email delivery, 22.39% open rate on broadcast campaigns",
     ],
@@ -85,7 +85,7 @@ export const caseStudies: CaseStudy[] = [
       text: "BurkyFlow didn't just organize our leads; they gave us an automated infrastructure that scales with us. We went from guessing our numbers to seeing them live, every single day.",
       attribution: "Go Waka Car Finance",
     },
-    status: "Live & operational — April 2026",
+    status: "Live & operational, April 2026",
     relatedServices: ["crm-lead-systems", "workflow-automation"],
     relatedIndustries: ["professional-firms"],
   },
@@ -97,16 +97,16 @@ export const caseStudies: CaseStudy[] = [
     tags: ["Apollo", "Clay", "GoHighLevel", "AI Proposal Agent"],
     headline: "A high-velocity lead engine for California balcony compliance",
     summary:
-      "Gordon was sitting on a goldmine — thousands of California properties facing a hard 2026 legal deadline — but spending 10 hours a day on admin and proposal writing. We built a triple-threat marketing and operations engine that handles everything from cold touch to final proposal.",
+      "Gordon was sitting on a goldmine, thousands of California properties facing a hard 2026 legal deadline, but spending 10 hours a day on admin and proposal writing. We built a triple-threat marketing and operations engine that handles everything from cold touch to final proposal.",
     heroStats: [
       { value: "Instant", label: "Proposal turnaround (was 2–3 days)" },
       { value: "Statewide", label: "Reach (was local consultant)" },
       { value: "Surgical", label: "Outreach personalised per property" },
     ],
     challenge: [
-      "Reaching the correct decision-maker — property manager or HOA board president — across thousands of California buildings was a manual nightmare.",
+      "Reaching the correct decision-maker, property manager or HOA board president, across thousands of California buildings was a manual nightmare.",
       "Inspection requests arrived as messy emails and phone calls with missing addresses and incomplete reports.",
-      "After every inspection Gordon manually calculated costs and drafted repair bids — taking hours and delaying high-ticket repair contracts.",
+      "After every inspection Gordon manually calculated costs and drafted repair bids, taking hours and delaying high-ticket repair contracts.",
     ],
     solution: [
       {
@@ -117,18 +117,18 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Dual-Funnel Intake (GoHighLevel)",
         detail:
-          "Two high-converting funnels — one for new inspection leads, one for urgent post-inspection repairs — capturing structured data and uploaded inspection reports directly.",
+          "Two high-converting funnels, one for new inspection leads, one for urgent post-inspection repairs, capturing structured data and uploaded inspection reports directly.",
       },
       {
         title: "AI Proposal Agent",
         detail:
-          "Custom AI agent that ingests inspection reports, extracts deficiencies, and generates a structured, professional proposal — then syncs the deal value back into the GHL pipeline.",
+          "Custom AI agent that ingests inspection reports, extracts deficiencies, and generates a structured, professional proposal, then syncs the deal value back into the GHL pipeline.",
       },
     ],
     results: [
       "Proposals delivered in minutes instead of days",
       "Outreach personalised per account at scale",
-      "Statewide market position — perfectly placed for the January 2026 compliance surge",
+      "Statewide market position, perfectly placed for the January 2026 compliance surge",
     ],
     resultsTable: [
       { metric: "Lead discovery", before: "Manual / random", after: "Automated (Apollo + Clay)" },
@@ -150,7 +150,7 @@ export const caseStudies: CaseStudy[] = [
     vertical: "Recruiting & Talent Placement",
     location: "United States",
     tags: ["Airtable", "n8n", "Slack", "Meta Lead Ads"],
-    headline: "Unified operations system — six spreadsheets retired, one source of truth",
+    headline: "Unified operations system, six spreadsheets retired, one source of truth",
     summary:
       "Josh was running a high-growth recruiting agency held back by tool sprawl across six Google Sheets and a custom Vercel dashboard. We engineered a centralised Airtable + n8n + Slack ecosystem that replaced all of it.",
     heroStats: [
@@ -159,7 +159,7 @@ export const caseStudies: CaseStudy[] = [
       { value: "100%", label: "Of operations managed in one system" },
     ],
     challenge: [
-      "Operations scattered across six Google Sheets and a custom Vercel dashboard — no central source of truth.",
+      "Operations scattered across six Google Sheets and a custom Vercel dashboard, no central source of truth.",
       "Fragmented data, delayed follow-ups, and zero real-time visibility for management.",
       "Recruiters spent more time updating systems than placing talent.",
     ],
@@ -172,7 +172,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Slack Remote Control",
         detail:
-          "Custom n8n-powered Slack bot with interactive buttons — set review dates, qualify leads, and assign recruiters without ever opening a database.",
+          "Custom n8n-powered Slack bot with interactive buttons, set review dates, qualify leads, and assign recruiters without ever opening a database.",
       },
       {
         title: "Automated Lead Harvesting",
@@ -197,7 +197,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "arik-services",
     client: "ARIK Services",
-    vertical: "Home Services — 13 niches",
+    vertical: "Home Services, 13 niches",
     location: "United States",
     tags: ["VAPI", "Multi-niche", "Spam Blocking", "Custom Database"],
     headline: "One AI receptionist + custom spam shield across 13 service lines",
@@ -209,15 +209,15 @@ export const caseStudies: CaseStudy[] = [
       { value: "13", label: "Service niches on one shared infrastructure" },
     ],
     challenge: [
-      "Over 3,000 spam calls regularly — robodialers, lead aggregators, telemarketing bots — every one consuming telephony minutes and staff time.",
+      "Over 3,000 spam calls regularly, robodialers, lead aggregators, telemarketing bots, every one consuming telephony minutes and staff time.",
       "13 service lines (HVAC, water damage, sliding door, roofing, painting, gutter, garage door, fencing, electric gate, carpet cleaning, air duct, chimney sweep, ARIK) with no unified standard for inbound handling.",
-      "Complex scheduling rules — Saturday closures, same-day Friday block, blackout dates, 3-hour appointment windows — impossible to enforce consistently across staff.",
+      "Complex scheduling rules, Saturday closures, same-day Friday block, blackout dates, 3-hour appointment windows, impossible to enforce consistently across staff.",
     ],
     solution: [
       {
         title: "Global Spam Shield",
         detail:
-          "Pre-answer screening against a self-growing database of 40,000+ confirmed spam numbers. Spam calls are blocked at the infrastructure level — zero cost, zero agent time.",
+          "Pre-answer screening against a self-growing database of 40,000+ confirmed spam numbers. Spam calls are blocked at the infrastructure level, zero cost, zero agent time.",
       },
       {
         title: "Unified Multi-Niche AI Receptionist",
@@ -227,16 +227,16 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Intelligent Guardrails",
         detail:
-          "Zero-error scheduling — automatic Saturday closures, same-day Friday block, live blackout date checks. Rules enforced on every call without exception.",
+          "Zero-error scheduling, automatic Saturday closures, same-day Friday block, live blackout date checks. Rules enforced on every call without exception.",
       },
       {
         title: "Omnichannel Notifications",
         detail:
-          "3-way sync on every booking — SMS to customer, plus SMS and email to owner and local staff.",
+          "3-way sync on every booking, SMS to customer, plus SMS and email to owner and local staff.",
       },
     ],
     results: [
-      "3,000+ spam calls eliminated per period — direct telephony cost savings",
+      "3,000+ spam calls eliminated per period, direct telephony cost savings",
       "100% data integrity: hard-coded to never book without a complete data set",
       "All 13 niches running on one shared infrastructure",
       "24/7 professional response across every service line",
@@ -264,14 +264,14 @@ export const caseStudies: CaseStudy[] = [
     ],
     challenge: [
       "45% of high-intent calls occurred outside 9-to-5 and went to voicemail rarely returned in time.",
-      "Technicians manually texted clients to confirm addresses — human error and scheduling overlaps.",
+      "Technicians manually texted clients to confirm addresses, human error and scheduling overlaps.",
       "No automated reminders meant technicians often arrived at empty properties, costing roughly €1,200/month in wasted labour and travel.",
     ],
     solution: [
       {
         title: "AI Voice Intelligence (Vapi)",
         detail:
-          "'Mark' is connected via API to the master calendar — checks real-time slots, books on the spot, and switches languages instantly to match the caller.",
+          "'Mark' is connected via API to the master calendar, checks real-time slots, books on the spot, and switches languages instantly to match the caller.",
       },
       {
         title: "Post-Call 'Pulse' Automation",
@@ -281,7 +281,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Safety-Net Recovery System",
         detail:
-          "If a technician marks a visit as missed, an automated recovery sequence fires: 'Sorry we missed you — pick a new time.' Plus a 7-day nurture loop for leads who called but didn't book.",
+          "If a technician marks a visit as missed, an automated recovery sequence fires: 'Sorry we missed you, pick a new time.' Plus a 7-day nurture loop for leads who called but didn't book.",
       },
     ],
     results: [
@@ -307,7 +307,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "troy-plumbing",
     client: "Troy Plumbing",
     vertical: "Plumbing Services",
-    location: "Culver City, CA — serving LA County",
+    location: "Culver City, CA, serving LA County",
     tags: ["VAPI", "Caller ID", "24/7 Intake"],
     headline: "Zero missed leads across LA County, day or night",
     summary:
@@ -318,7 +318,7 @@ export const caseStudies: CaseStudy[] = [
       { value: "+20%", label: "Lift in average ticket value" },
     ],
     challenge: [
-      "2-minute hold times in a plumbing emergency — callers hang up and dial the next Google result.",
+      "2-minute hold times in a plumbing emergency, callers hang up and dial the next Google result.",
       "Office staff occasionally forgot ZIP codes or misspelled emails, leading to lost follow-ups.",
       "The office was plagued by automated sales calls wasting hours of human time every week.",
     ],
@@ -331,7 +331,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Active Listening Engine",
         detail:
-          "Unlike basic bots, the AI lets the caller explain their plumbing disaster fully before speaking — creating a human-centric experience.",
+          "Unlike basic bots, the AI lets the caller explain their plumbing disaster fully before speaking, creating a human-centric experience.",
       },
       {
         title: "Structured Data Harvesting",
@@ -345,7 +345,7 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     results: [
-      "Zero missed leads — every LA County call answered within 2 seconds",
+      "Zero missed leads, every LA County call answered within 2 seconds",
       "99.9% email and address accuracy via mandatory confirmation",
       "20% increase in average ticket value",
       "Spam interception fully automated",
@@ -387,7 +387,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Safety Firewall",
         detail:
-          "Constant background monitoring for stroke and seizure indicators (slurred speech, drooping face). On detection, the AI halts all business logic and triggers the emergency script — 9-to-9 line or 911.",
+          "Constant background monitoring for stroke and seizure indicators (slurred speech, drooping face). On detection, the AI halts all business logic and triggers the emergency script, 9-to-9 line or 911.",
       },
       {
         title: "Clinical Redirect",
@@ -406,7 +406,7 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     results: [
-      "Zero hold times — 100% of calls answered on the first ring, 24/7",
+      "Zero hold times, 100% of calls answered on the first ring, 24/7",
       "100% of emergency calls identified and escalated instantly",
       "Clinical team only receives clean, pre-qualified appointment requests",
       "Office manager saves 20+ hours per week",
@@ -423,14 +423,14 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "sabra-home-buyers",
     client: "Sabra Home Buyers",
-    vertical: "Residential Real Estate — Cash Offers",
+    vertical: "Residential Real Estate, Cash Offers",
     location: "United States",
     tags: ["VAPI", "GoHighLevel", "Outbound AI", "Four-Pillar Qualification"],
-    headline: "'Mark' — an outbound AI follow-up specialist that booked appointments hands-free",
+    headline: "'Mark', an outbound AI follow-up specialist that booked appointments hands-free",
     summary:
       "Sabra had a pipeline overflowing with warm leads and reps losing hours to manual dialing. We deployed Mark, a high-performance outbound AI Follow-Up Specialist integrated into GoHighLevel that qualifies on four pillars and books in real time.",
     heroStats: [
-      { value: "100%", label: "Follow-up consistency — no manual dialing" },
+      { value: "100%", label: "Follow-up consistency, no manual dialing" },
       { value: "< 90s", label: "Average qualification call length" },
       { value: "0", label: "Manual CRM updates required" },
     ],
@@ -449,7 +449,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Intelligent Intent Detection",
         detail:
-          "If a homeowner meets at least 2 of the 4 pillars, Mark instantly shifts into booking mode. Fewer than 2 — he wraps politely and logs the outcome.",
+          "If a homeowner meets at least 2 of the 4 pillars, Mark instantly shifts into booking mode. Fewer than 2, he wraps politely and logs the outcome.",
       },
       {
         title: "Live GHL Calendar Sync",
@@ -463,9 +463,9 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     results: [
-      "100% follow-up consistency — every lead re-contacted without a rep dialing",
+      "100% follow-up consistency, every lead re-contacted without a rep dialing",
       "Only high-intent sellers reach the team's calendar",
-      "Zero-admin workflow: outbound dial, CRM update, team notification — fully hands-free",
+      "Zero-admin workflow: outbound dial, CRM update, team notification, fully hands-free",
       "Reduced no-shows via instant personalised SMS confirmation",
     ],
     relatedServices: ["crm-lead-systems", "database-reactivation", "ai-voice-receptionist"],
@@ -477,7 +477,7 @@ export const caseStudies: CaseStudy[] = [
     vertical: "Luxury Landscaping",
     location: "United States",
     tags: ["VAPI", "Southern Gentleman persona", "Hospitality Intake"],
-    headline: "'Elliot' — a white-glove AI coordinator for a boutique landscaping firm",
+    headline: "'Elliot', a white-glove AI coordinator for a boutique landscaping firm",
     summary:
       "The owner was stuck in a success trap: the more projects he won, the less time he had to answer the phone. Five-figure contracts were lost to voicemail. We deployed Elliot, a warm Southern-Gentleman AI coordinator who pre-sells the brand before the first stone is laid.",
     heroStats: [
@@ -486,7 +486,7 @@ export const caseStudies: CaseStudy[] = [
       { value: "100%", label: "Verified data accuracy" },
     ],
     challenge: [
-      "Voicemail and generic call centres felt 'budget' — making it harder to justify premium pricing.",
+      "Voicemail and generic call centres felt 'budget', making it harder to justify premium pricing.",
       "Owner spent evenings playing phone tag for basic details like zip codes or project type.",
       "45-minute drives to locked-gate properties were costing hundreds of dollars a week in lost labour and fuel.",
     ],
@@ -511,7 +511,7 @@ export const caseStudies: CaseStudy[] = [
       "Operates with the administrative power of a much larger firm",
       "Owner reclaimed 15+ hours per week of personal time and travel efficiency",
       "No-show rate virtually eliminated",
-      "Customers regularly comment on how professional the intake felt — before meeting the team",
+      "Customers regularly comment on how professional the intake felt, before meeting the team",
     ],
     resultsTable: [
       { metric: "Response speed", before: "2–8 hours (voicemail)", after: "Instant (24/7)" },

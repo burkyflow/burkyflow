@@ -1,4 +1,4 @@
-// "Results that matter" — homepage stat cards.
+// "Results that matter", homepage stat cards.
 // Each card has a slot for a progress-bar / chart background image.
 import { LineChart, Users, Clock, Zap, TrendingUp, ShieldCheck, User, type LucideIcon } from "lucide-react";
 import { CountUp } from "@/components/CountUp";
