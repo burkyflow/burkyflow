@@ -31,6 +31,7 @@ import type { Industry } from "@/content/industries";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { BookingWidget } from "@/components/BookingWidget";
 import { FunnelNav } from "@/components/funnel/FunnelNav";
+import { UsFlag } from "@/components/UsFlag";
 
 type Testimonial = { text: string; attribution: string; vertical?: string };
 
@@ -142,9 +143,9 @@ export function FunnelPage({
               className="object-cover object-[75%_top] lg:object-[right_top]"
             />
             {/* left-to-right dark gradient keeps the copy legible over the photo */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0b1220] via-[#0b1220]/92 to-[#0b1220]/10" />
-            {/* extra scrim on small screens where the copy sits over the person */}
-            <div className="absolute inset-0 bg-[#0b1220]/55 lg:hidden" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0b1220] via-[#0b1220]/70 to-transparent" />
+            {/* light scrim on small screens where the copy sits over the person */}
+            <div className="absolute inset-0 bg-[#0b1220]/30 lg:hidden" />
             {/* blend the bottom edge into the stat bar */}
             <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0b1220] to-transparent" />
           </div>
@@ -168,22 +169,22 @@ export function FunnelPage({
         {/* subtle brand glow behind the copy */}
         <div className="pointer-events-none absolute -left-32 top-10 size-[30rem] rounded-full bg-brand/20 blur-[110px]" aria-hidden />
 
-        <div className="container-page relative pb-16 pt-32 md:py-28 lg:py-36">
+        <div className="container-page relative pb-16 pt-52 md:py-28 lg:py-36">
           {/* copy */}
           <div className="max-w-2xl">
-            <p className="hidden items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/80 backdrop-blur sm:inline-flex">
-              <ShieldCheck className="size-3.5 text-brand-cta" />
-              {funnel.eyebrow}
-            </p>
+            <span className="inline-flex items-center gap-2.5 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-semibold text-white/90 backdrop-blur">
+              <UsFlag className="h-3.5 w-5 shrink-0 rounded-[2px] ring-1 ring-black/10" />
+              {funnel.testimonialsHeading ?? "Trusted by businesses across the USA"}
+            </span>
 
-            <h1 className="mt-6 text-4xl font-bold leading-[1.06] tracking-tight text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-6 text-4xl font-extrabold leading-[1.06] tracking-tight text-white sm:text-5xl md:text-6xl">
               {funnel.headline}{" "}
               <span className="bg-gradient-to-r from-[#7ba7e8] via-[#a9c4f0] to-white bg-clip-text text-transparent">
                 {funnel.headlineAccent}
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg text-white/70">{funnel.subheadline}</p>
+            <p className="mt-5 max-w-xl text-lg leading-snug text-white/70">{funnel.subheadline}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <PrimaryCTA />
@@ -356,10 +357,11 @@ export function FunnelPage({
       {/* ── Testimonials (trusted by) ──────────────────────────── */}
       {testimonials.length > 0 && (
         <section className="bg-white py-16 md:py-24">
-          <div className="container-page mx-auto max-w-4xl text-center">
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+          <div className="container-page flex justify-center">
+            <span className="inline-flex items-center gap-2.5 rounded-full bg-brand/5 px-5 py-2.5 text-center text-xs font-bold leading-tight text-foreground ring-1 ring-brand/10 sm:text-sm">
+              <UsFlag className="h-3.5 w-5 shrink-0 rounded-[2px] ring-1 ring-black/5" />
               {funnel.testimonialsHeading ?? "Trusted by businesses across the USA"}
-            </h2>
+            </span>
           </div>
           <div className="container-page mx-auto mt-12 grid max-w-6xl gap-x-10 gap-y-12 md:grid-cols-3">
             {testimonials.map((t) => {
