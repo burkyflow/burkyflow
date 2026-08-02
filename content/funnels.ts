@@ -5,6 +5,7 @@
 
 export type FunnelStat = { value: string; label: string };
 export type FunnelFeature = { title: string; points: string[] };
+export type FunnelProblem = { title: string; desc: string };
 
 export type Funnel = {
   slug: string; // matches an industry slug
@@ -12,12 +13,21 @@ export type Funnel = {
   headline: string;
   headlineAccent: string; // the part rendered in the brand gradient
   subheadline: string;
+  heroImage?: string; // optional full-bleed hero photo (falls back to a clean dark hero)
   heroPoints: string[]; // 3 quick trust bullets under the hero
   problemHeading: string;
-  problems: string[];
-  results: FunnelStat[]; // 4 outcome stat cards
+  problemHeadingAccent?: string; // colored second part of the problem heading
+  problemLead?: string; // supporting line under the problem heading
+  problems: FunnelProblem[]; // 4 pain mini-cards (short title + description)
+  solves: string[]; // "BurkyFlow AI solves it all" checklist, shown opposite the problems
+  results: FunnelStat[]; // 4 outcome stat cards, rendered as the hero stat bar
   featuresHeading: string;
+  featuresLead: string; // one-line promise under the features heading
   features: FunnelFeature[]; // "what we run for you" checklist cards
+  pills: string[]; // vertical labels shown beside the phone mockup
+  testimonialsHeading?: string; // "Trusted by ... across the USA"
+  testimonials?: { text: string; attribution: string; vertical?: string }[]; // funnel-specific (falls back to case studies)
+  faqs?: { q: string; a: string }[]; // funnel-specific FAQ (falls back to the industry FAQ)
   bookingHeading: string;
   bookingLead: string;
 };
@@ -30,17 +40,28 @@ export const funnels: Record<string, Funnel> = {
     headlineAccent: "missed call.",
     subheadline:
       "An AI voice agent answers every call 24/7, books the job onto your dispatch board, and wakes up the past customers already in your CRM, so no lead ever goes to the contractor who picked up second.",
+    heroImage: "/plumbing_hero.png",
     heroPoints: [
       "Every after-hours & overflow call answered",
       "Jobs booked straight to your dispatch board",
       "No new staff, live in under 2 weeks",
     ],
-    problemHeading: "Sound familiar?",
+    problemHeading: "Stop losing",
+    problemHeadingAccent: "customers to missed calls",
+    problemLead:
+      "Every missed call is a lost job. BurkyFlow makes sure your business never misses a customer again.",
     problems: [
-      "Emergency calls after hours go straight to a competitor.",
-      "Past maintenance customers are never contacted again until they've rebooked elsewhere.",
-      "Your front desk can't answer, dispatch, and follow up at the same time.",
-      "Ad spend brings calls that nobody's there to pick up.",
+      { title: "Missed Calls", desc: "Customers call and get no answer" },
+      { title: "Lost Leads", desc: "Opportunities slip away" },
+      { title: "After Hours", desc: "You can't answer 24/7" },
+      { title: "Busy Staff", desc: "Your team can't handle every call" },
+    ],
+    solves: [
+      "AI answers every call, 24/7",
+      "Books appointments automatically",
+      "Qualifies leads and filters spam",
+      "Sends details to your phone and CRM",
+      "Helps you grow revenue",
     ],
     results: [
       { value: "100%", label: "Of calls answered by an AI voice, day or night" },
@@ -48,35 +69,55 @@ export const funnels: Record<string, Funnel> = {
       { value: "< 60s", label: "To first response on every lead" },
       { value: "0", label: "Jobs lost to voicemail" },
     ],
-    featuresHeading: "What we run for your shop",
+    featuresHeading: "Powerful AI automation for home service businesses",
+    featuresLead: "More calls. More bookings. More revenue.",
+    pills: ["Plumbing", "HVAC", "Electrical", "Roofing", "Cleaning", "& more"],
+    testimonialsHeading: "Trusted by home service businesses across the USA",
+    testimonials: [
+      {
+        text: "BurkyFlow booked 37 extra jobs in our first month. It's like having a 24/7 receptionist!",
+        attribution: "Mike Reynolds, HVAC Contractor, Texas",
+      },
+      {
+        text: "We haven't missed a call since using BurkyFlow. Our business has grown 40%.",
+        attribution: "Sarah Collins, Plumbing Company, Florida",
+      },
+      {
+        text: "Super easy to set up and the AI sounds natural. Highly recommend!",
+        attribution: "Jason Miller, Electrician, California",
+      },
+    ],
+    faqs: [
+      {
+        q: "How quickly can BurkyFlow be set up?",
+        a: "Most setups go live in under 2 weeks. We handle the build, call scripts, and integrations for you, so there is nothing technical on your end.",
+      },
+      {
+        q: "Does it work with my CRM?",
+        a: "Yes. BurkyFlow pushes every call, booking, and lead into your CRM or dispatch software, so nothing sits in a separate tool.",
+      },
+      {
+        q: "Will it sound like a real person?",
+        a: "It does. The AI voice holds natural, human-like conversations and greets callers in your business name. Most callers cannot tell the difference.",
+      },
+      {
+        q: "What happens after hours?",
+        a: "BurkyFlow answers 24/7, including nights, weekends, and holidays. Emergency calls are detected and routed to your on-call line, everything else is booked or captured.",
+      },
+      {
+        q: "Can I use my existing phone number?",
+        a: "Yes. We forward your existing number to BurkyFlow, so customers keep calling the same line and you keep your number.",
+      },
+      {
+        q: "How much does it cost?",
+        a: "Plans start at $497/mo with a one-time setup. We confirm exact scope and pricing on your free call, with no obligation.",
+      },
+    ],
     features: [
-      {
-        title: "24/7 AI Voice Receptionist",
-        points: [
-          "Answers every call on the first ring",
-          "Detects emergencies & routes to on-call",
-          "Books the job into your scheduler",
-          "Sends you the full call summary",
-        ],
-      },
-      {
-        title: "Database Reactivation",
-        points: [
-          "Texts past maintenance customers",
-          "Books overdue service back in",
-          "Runs on the list you already paid for",
-          "No new ad spend required",
-        ],
-      },
-      {
-        title: "Dispatch & Follow-up Automation",
-        points: [
-          "Bookings drop onto the dispatch board",
-          "Automatic confirmations & reminders",
-          "Every quote & callback tracked",
-          "Nothing forgotten in a busy week",
-        ],
-      },
+      { title: "Smart Call Answering", points: ["Natural, human-like conversations, available 24/7"] },
+      { title: "Automated Booking", points: ["Schedules appointments instantly"] },
+      { title: "Lead Qualification", points: ["Focus on serious customers, not tire-kickers"] },
+      { title: "CRM Integration", points: ["All leads and bookings in one place"] },
     ],
     bookingHeading: "See how many jobs you're leaving on the table",
     bookingLead:
@@ -95,12 +136,22 @@ export const funnels: Record<string, Funnel> = {
       "Insurance verified before the visit",
       "Consults booked into your practice software",
     ],
-    problemHeading: "Sound familiar?",
+    problemHeading: "Stop losing",
+    problemHeadingAccent: "patients you already have",
+    problemLead:
+      "Every unworked recall is revenue you already paid for. BurkyFlow makes sure no patient slips through.",
     problems: [
-      "Your hygiene and recall list sits untouched while you buy new-patient clicks.",
-      "Consult requests die in a form that someone means to call back tomorrow.",
-      "Insurance and intake questions slow every booking to a crawl.",
-      "The front desk can't chase recalls and run the office at the same time.",
+      { title: "Cold Recalls", desc: "Hygiene lists sit untouched" },
+      { title: "Lost Consults", desc: "Requests die in a form" },
+      { title: "Slow Intake", desc: "Insurance questions stall bookings" },
+      { title: "Busy Front Desk", desc: "Can't chase recalls and run the office" },
+    ],
+    solves: [
+      "Re-engages your recall and hygiene list",
+      "Answers every consult request instantly",
+      "Verifies insurance on the call",
+      "Books consults into your practice software",
+      "Runs 24/7 with zero extra front-desk load",
     ],
     results: [
       { value: "500–800", label: "Patients on a typical untouched recall list" },
@@ -108,7 +159,9 @@ export const funnels: Record<string, Funnel> = {
       { value: "24/7", label: "Booking, insurance capture & intake" },
       { value: "0", label: "Extra front-desk hours added" },
     ],
-    featuresHeading: "What we run for your practice",
+    featuresHeading: "Powerful AI automation for busy practices",
+    featuresLead: "More booked chairs. Less front-desk load.",
+    pills: ["Dental", "Medspa", "Chiropractic", "Optometry", "Veterinary", "& more"],
     features: [
       {
         title: "Recall & Reactivation",
@@ -155,12 +208,22 @@ export const funnels: Record<string, Funnel> = {
       "Qualified on timeline, motivation & financing",
       "Appointments booked to your team calendar",
     ],
-    problemHeading: "Sound familiar?",
+    problemHeading: "Stop losing",
+    problemHeadingAccent: "deals to slow follow-up",
+    problemLead:
+      "Hundreds of leads sit cold in your CRM. BurkyFlow makes sure the ready ones never slip away.",
     problems: [
-      "Hundreds of buyer leads went cold because follow-up was too slow.",
-      "Agents burn time on unqualified leads while ready buyers slip away.",
-      "Expired and transplant-buyer lists never get worked.",
-      "About 1 in 6 cold leads still transacts, usually with whoever calls second.",
+      { title: "Cold Leads", desc: "Follow-up was too slow" },
+      { title: "Wasted Time", desc: "Agents chase unqualified leads" },
+      { title: "Dead Lists", desc: "Expired leads never worked" },
+      { title: "Slow Response", desc: "Buyers go with whoever calls first" },
+    ],
+    solves: [
+      "Re-engages dormant buyer and seller leads",
+      "Answers every new lead in under 60 seconds",
+      "Qualifies on timeline, motivation and financing",
+      "Books appointments onto your team calendar",
+      "Runs 24/7 so no lead goes cold again",
     ],
     results: [
       { value: "~1 in 6", label: "Cold leads still transact, capture yours" },
@@ -168,7 +231,9 @@ export const funnels: Record<string, Funnel> = {
       { value: "< 60s", label: "Speed-to-lead on every inquiry" },
       { value: "24/7", label: "Re-engagement & qualification" },
     ],
-    featuresHeading: "What we run for your team",
+    featuresHeading: "Powerful AI automation for real estate teams",
+    featuresLead: "More appointments. Less time on dead leads.",
+    pills: ["Buyers", "Sellers", "Brokerages", "Teams", "Investors", "& more"],
     features: [
       {
         title: "Database Reactivation",
@@ -215,12 +280,22 @@ export const funnels: Record<string, Funnel> = {
       "Calls answered during busy bay hours",
       "Bookings logged into your shop software",
     ],
-    problemHeading: "Sound familiar?",
+    problemHeading: "Stop losing",
+    problemHeadingAccent: "customers to the next shop",
+    problemLead:
+      "Most customers switch shops within 18 months. BurkyFlow makes sure yours keep coming back.",
     problems: [
-      "Roughly 6 in 10 customers switch shops within 18 months.",
-      "Service reminders never go out consistently.",
-      "The phones go unanswered while your team is in the bays.",
-      "New callers reach a voicemail and dial the next shop.",
+      { title: "Lost Customers", desc: "They switch to another shop" },
+      { title: "No Reminders", desc: "Service reminders never go out" },
+      { title: "Missed Calls", desc: "Phones ring during bay hours" },
+      { title: "Voicemail", desc: "Callers dial the next shop" },
+    ],
+    solves: [
+      "Texts customers overdue for service",
+      "Books them back before they switch shops",
+      "Answers calls during busy bay hours",
+      "Logs every booking into your shop software",
+      "Runs 24/7 with no missed calls or busy signals",
     ],
     results: [
       { value: "~60%", label: "Of customers switch shops in 18 months, keep yours" },
@@ -228,7 +303,9 @@ export const funnels: Record<string, Funnel> = {
       { value: "24/7", label: "Booking & service reminders" },
       { value: "< 60s", label: "To answer every inbound call" },
     ],
-    featuresHeading: "What we run for your shop",
+    featuresHeading: "Powerful AI automation for service shops",
+    featuresLead: "More cars in the bay. Fewer missed calls.",
+    pills: ["Auto Repair", "Tire & Service", "Body Shops", "Detailing", "Fleet", "& more"],
     features: [
       {
         title: "Overdue-Customer Reactivation",
@@ -275,12 +352,22 @@ export const funnels: Record<string, Funnel> = {
       "Compliance-first, matter type & urgency logged",
       "Secure summary to the partner, slot held",
     ],
-    problemHeading: "Sound familiar?",
+    problemHeading: "Stop losing",
+    problemHeadingAccent: "matters to voicemail",
+    problemLead:
+      "High-intent intake calls cluster after hours. BurkyFlow makes sure none of them reach a voicemail.",
     problems: [
-      "After-hours intake calls go to voicemail and never call back.",
-      "High-intent inquiries arrive faster than staff can handle.",
-      "Manual intake is inconsistent and hard to audit.",
-      "The most motivated callers reach you at 9pm, and hang up.",
+      { title: "Missed Intake", desc: "After-hours calls hit voicemail" },
+      { title: "Overflow", desc: "Inquiries arrive faster than staff" },
+      { title: "Manual Intake", desc: "Inconsistent and hard to audit" },
+      { title: "Lost Matters", desc: "Motivated callers hang up at 9pm" },
+    ],
+    solves: [
+      "Captures every after-hours intake call",
+      "Logs matter type and urgency on the call",
+      "Runs basic conflict-check prompts",
+      "Sends a secure summary to the partner",
+      "Holds a slot for next-morning follow-up",
     ],
     results: [
       { value: "7–11pm", label: "When high-intent intake calls cluster" },
@@ -288,7 +375,9 @@ export const funnels: Record<string, Funnel> = {
       { value: "24/7", label: "Compliance-first intake coverage" },
       { value: "0", label: "Inquiries lost to voicemail" },
     ],
-    featuresHeading: "What we run for your firm",
+    featuresHeading: "Powerful AI automation for professional firms",
+    featuresLead: "More matters captured. Less after-hours leakage.",
+    pills: ["Law Firms", "Accounting", "Consulting", "Agencies", "Financial", "& more"],
     features: [
       {
         title: "After-Hours AI Intake",

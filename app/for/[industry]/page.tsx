@@ -45,5 +45,11 @@ export default async function IndustryFunnel({ params }: { params: Promise<Param
   const ind = getIndustry(industry);
   if (!funnel || !ind) notFound();
 
-  return <FunnelPage funnel={funnel} industry={ind} testimonials={pickTestimonials(industry)} />;
+  return (
+    <FunnelPage
+      funnel={funnel}
+      industry={ind}
+      testimonials={funnel.testimonials ?? pickTestimonials(industry)}
+    />
+  );
 }
