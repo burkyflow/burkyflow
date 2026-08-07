@@ -27,7 +27,7 @@ export const site = {
   // Meta Test Events code. ⚠️ Only for testing — routes real PageViews into
   // Meta's Test Events view. Set back to "" before running live ads so real
   // traffic counts in normal reporting.
-  metaPixelTestEventCode: "TEST73160",
+  metaPixelTestEventCode: "",
   // Registered address — used for LocalBusiness/Organization schema + Contact.
   address: {
     streetAddress: "30 N Gould St Ste R",

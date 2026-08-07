@@ -357,11 +357,10 @@ export function FunnelPage({
       {/* ── Testimonials (trusted by) ──────────────────────────── */}
       {testimonials.length > 0 && (
         <section className="bg-white py-16 md:py-24">
-          <div className="container-page flex justify-center">
-            <span className="inline-flex items-center gap-2.5 rounded-full bg-brand/5 px-5 py-2.5 text-center text-xs font-bold leading-tight text-foreground ring-1 ring-brand/10 sm:text-sm">
-              <UsFlag className="h-3.5 w-5 shrink-0 rounded-[2px] ring-1 ring-black/5" />
+          <div className="container-page mx-auto max-w-4xl text-center">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
               {funnel.testimonialsHeading ?? "Trusted by businesses across the USA"}
-            </span>
+            </h2>
           </div>
           <div className="container-page mx-auto mt-12 grid max-w-6xl gap-x-10 gap-y-12 md:grid-cols-3">
             {testimonials.map((t) => {
