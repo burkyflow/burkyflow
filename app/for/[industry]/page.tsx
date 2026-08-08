@@ -5,6 +5,7 @@ import { getIndustry } from "@/content/industries";
 import { caseStudies } from "@/content/case-studies";
 import { pageMetadata } from "@/lib/seo";
 import { FunnelPage } from "@/components/funnel/FunnelPage";
+import { MetaPixelInline } from "@/components/MetaPixelInline";
 
 type Params = { industry: string };
 
@@ -46,10 +47,14 @@ export default async function IndustryFunnel({ params }: { params: Promise<Param
   if (!funnel || !ind) notFound();
 
   return (
-    <FunnelPage
-      funnel={funnel}
-      industry={ind}
-      testimonials={funnel.testimonials ?? pickTestimonials(industry)}
-    />
+    <>
+      {/* Meta Pixel only on the home-services landing page (ads point here). */}
+      {industry === "home-services" && <MetaPixelInline />}
+      <FunnelPage
+        funnel={funnel}
+        industry={ind}
+        testimonials={funnel.testimonials ?? pickTestimonials(industry)}
+      />
+    </>
   );
 }
