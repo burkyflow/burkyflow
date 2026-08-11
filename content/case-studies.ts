@@ -26,8 +26,8 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "go-waka-car-finance",
-    client: "Go Waka Car Finance",
+    slug: "auto-finance-company",
+    client: "Auto Finance Company",
     vertical: "Auto Finance & Lending",
     location: "Auckland, New Zealand",
     tags: ["GoHighLevel", "12 Workflows", "Dual Pipeline", "Live April 2026"],
@@ -83,7 +83,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     quote: {
       text: "BurkyFlow didn't just organize our leads; they gave us an automated infrastructure that scales with us. We went from guessing our numbers to seeing them live, every single day.",
-      attribution: "Go Waka Car Finance",
+      attribution: "Auto Finance Company",
     },
     status: "Live & operational, April 2026",
     relatedServices: ["crm-lead-systems", "workflow-automation"],
