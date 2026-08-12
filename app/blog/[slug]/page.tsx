@@ -45,11 +45,10 @@ export default async function BlogPost({ params }: { params: Promise<Params> }) 
             {fmt(post.date)} &middot; {post.readMinutes} min read
           </p>
           <h1 className="mt-2 text-4xl font-semibold leading-tight sm:text-5xl">{post.title}</h1>
-          <div className="mt-8 space-y-5 text-lg leading-relaxed text-muted-foreground">
-            {post.body.map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
-          </div>
+          <div
+            className="mt-8 text-lg leading-relaxed text-muted-foreground [&_a]:font-medium [&_a]:text-brand [&_a]:underline [&_h2]:mt-10 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-foreground [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-foreground [&_li]:mt-1.5 [&_ol]:mt-4 [&_ol]:list-decimal [&_ol]:pl-6 [&_p]:mt-4 [&_strong]:text-foreground [&_ul]:mt-4 [&_ul]:list-disc [&_ul]:pl-6"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
         </div>
       </article>
 
