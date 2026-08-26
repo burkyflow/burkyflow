@@ -10,7 +10,7 @@ export const site = {
   ctaLabel: "Book a call",
   secondaryCtaLabel: "See how it works",
   email: "atta@burkyflow.com",
-  phone: { display: "+1 (407) 978-3798", href: "tel:+14079783798" },
+  phone: { display: "+1 (470) 978-3478", href: "tel:+14709783478" },
   // Calendly scheduler (still used by the ad funnels).
   calendly: "https://calendly.com/hilalaziz-unitzero/30min",
   // GoHighLevel booking widget. The script auto-resizes the iframe by its id,
