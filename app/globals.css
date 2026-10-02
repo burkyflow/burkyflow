@@ -37,6 +37,7 @@
   }
 
   body {
+    --font-body: var(--font-heading);
     @apply bg-background text-foreground font-sans antialiased;
     text-rendering: optimizeLegibility;
   }

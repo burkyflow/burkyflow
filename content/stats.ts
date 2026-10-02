@@ -1,8 +1,8 @@
-// Conservative, early-stage placeholders. TODO(you): edit these numbers.
+// Service capabilities, rather than unverified aggregate results.
 export const stats = [
-  { value: "25+", label: "Businesses served" },
-  { value: "10,000+", label: "Hours of automation deployed" },
-  { value: "Under 60s", label: "Average lead response time" },
+  { value: "Capture", label: "Calls and enquiries into your CRM" },
+  { value: "Connect", label: "Booking, follow-up, and workflows" },
+  { value: "Measure", label: "Bookings and revenue per lead" },
 ] as const;
 
 // Global FAQ shown on the homepage.

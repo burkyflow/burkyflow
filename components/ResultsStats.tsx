@@ -1,4 +1,4 @@
-// "Results that matter", homepage stat cards.
+// "Metrics that matter", homepage stat cards.
 // Each card has a slot for a progress-bar / chart background image.
 import { LineChart, Users, Clock, Zap, TrendingUp, ShieldCheck, User, type LucideIcon } from "lucide-react";
 import { CountUp } from "@/components/CountUp";
@@ -34,30 +34,9 @@ type Card = {
 };
 
 const cards: Card[] = [
-  {
-    accent: "brand",
-    icon: Users,
-    value: "25+",
-    label: "Businesses served",
-    image: "/images/pro1.png",
-    avatars: { count: "+21", caption: "Join 25+ growing businesses" },
-  },
-  {
-    accent: "accent",
-    icon: Clock,
-    value: "10,000+",
-    label: "Hours of automation deployed",
-    image: "/images/pro2.png",
-    info: { icon: TrendingUp, title: "That's 416+ days saved", sub: "Back to your business" },
-  },
-  {
-    accent: "brand",
-    icon: Zap,
-    value: "Under 60s",
-    label: "Average lead response time",
-    image: "/images/pro1.png",
-    info: { icon: Clock, title: "3x faster than industry average", sub: "Respond before your competitors even see it" },
-  },
+  { accent: "brand", icon: Users, value: "Capture", label: "Calls and leads", image: "/images/pro1.webp", info: { icon: TrendingUp, title: "Keep enquiries in one pipeline", sub: "Answer, qualify, and route each opportunity" } },
+  { accent: "accent", icon: Clock, value: "Connect", label: "Your existing tools", image: "/images/pro2.webp", info: { icon: Clock, title: "Reduce manual handoffs", sub: "Link your CRM, calendar, and follow-up" } },
+  { accent: "brand", icon: Zap, value: "Measure", label: "Your business outcomes", image: "/images/pro1.webp", info: { icon: TrendingUp, title: "Report against agreed metrics", sub: "Track booking rate and revenue per lead" } },
 ];
 
 function StatCard({ card }: { card: Card }) {
@@ -71,6 +50,10 @@ function StatCard({ card }: { card: Card }) {
       {bg ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
+          loading="lazy"
+          decoding="async"
+          width={640}
+          height={520}
           src={bg}
           alt=""
           aria-hidden
@@ -134,7 +117,7 @@ export function ResultsStats() {
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-brand/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-brand">
             <LineChart className="size-4" />
-            Results that matter
+            Metrics that matter
           </span>
 
           <h2 className="mt-5 text-4xl font-bold leading-[1.12] tracking-tight sm:text-5xl">
@@ -155,7 +138,7 @@ export function ResultsStats() {
 
         <p className="mt-10 flex items-center justify-center gap-2 text-sm text-muted-foreground">
           <ShieldCheck className="size-4 text-brand" />
-          Real results from real businesses using BurkyFlow
+          Reporting scoped to your call logs, CRM, and booked jobs
         </p>
       </div>
     </section>

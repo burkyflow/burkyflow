@@ -1,15 +1,13 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 
-// Generates /robots.txt. Paid landing pages under /lp/ are disallowed from
-// indexing so they never compete with the organic /ai-automation/ canonicals.
+// Allow crawling of paid pages so crawlers can read their noindex directives.
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/lp/"],
       },
     ],
     sitemap: `${site.url}/sitemap.xml`,

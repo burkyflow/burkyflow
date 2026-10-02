@@ -418,8 +418,7 @@ export function getFunnel(slug: string) {
 }
 
 // ── Pricing shown on every funnel ─────────────────────────────────────────
-// TODO(you): set your real prices here. Amounts are indicative and the note
-// makes clear that exact scope + pricing is confirmed on the call.
+// Pricing is scoped to the system and usage.
 export type PriceTier = {
   name: string;
   price: string; // discounted / current price
@@ -440,15 +439,12 @@ export const funnelPricing: {
 } = {
   heading: "Pricing built around booked revenue",
   lead: "Start with one system or run the whole engine. Every plan is done-for-you, we build it, run it, and report the numbers.",
-  note: "Indicative pricing. We confirm exact scope and pricing on your call, no obligation.",
-  // TODO(you): update the offer + prices. Remove `discount` to hide the sale.
-  discount: { label: "Summer End Discount", sub: "Save up to 33%, for a limited time" },
+  note: "We confirm scope, usage, setup fees, and monthly pricing on your call, no obligation.",
   tiers: [
     {
       name: "Starter",
-      originalPrice: "$697",
-      price: "$497",
-      period: "/mo",
+      price: "Custom",
+      period: "",
       setup: "+ one-time setup",
       tagline: "One system, live fast",
       features: [
@@ -460,9 +456,8 @@ export const funnelPricing: {
     },
     {
       name: "Growth",
-      originalPrice: "$1,497",
-      price: "$997",
-      period: "/mo",
+      price: "Custom",
+      period: "",
       setup: "+ one-time setup",
       tagline: "Capture + reactivate",
       highlighted: true,

@@ -15,7 +15,7 @@ export const metadata = pageMetadata({
 export default function ContactPage() {
   return (
     <>
-      {/* LocalBusiness lives ONLY here, where the real registered address sits. */}
+      {/* Registered business details; service cities are served remotely. */}
       <JsonLd data={localBusinessLd()} />
 
       <section className="section bg-surface">

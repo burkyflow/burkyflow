@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Reveal } from "@/components/Reveal";
 import { industries } from "@/content/industries";
 import { pageMetadata } from "@/lib/seo";
@@ -35,7 +35,7 @@ export default function IndustriesIndex() {
               <Link href={`/industries/${industry.slug}`} className="group block h-full">
                 <Card className="h-full transition-shadow duration-200 hover:shadow-soft-lg">
                   <CardHeader>
-                    <CardTitle>{industry.name}</CardTitle>
+                    <h2 className="text-xl font-semibold">{industry.name}</h2>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">{industry.lead}</p>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
@@ -49,7 +49,7 @@ export default function CaseStudiesIndex() {
                     <p className="text-xs font-semibold uppercase tracking-wide text-brand">
                       {cs.vertical}
                     </p>
-                    <CardTitle className="mt-2">{cs.client}</CardTitle>
+                    <h2 className="mt-2 text-xl font-semibold">{cs.client}</h2>
                     <p className="mt-1 text-xs text-muted-foreground">{cs.location}</p>
                   </CardHeader>
                   <CardContent>

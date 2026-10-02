@@ -137,33 +137,6 @@ export function GeoLandingTemplate({
         </div>
       </section>
 
-      {/* Local trust strip (placeholder) */}
-      <section className="section">
-        <div className="container-page">
-          {/* TODO(you): replace with real local reviews / testimonials. */}
-          <div className="rounded-3xl bg-surface px-6 py-12 text-center sm:px-12">
-            <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-              Trusted by {niche.plural} in {city.name} and across {city.state}
-            </p>
-            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  className="rounded-2xl bg-white p-6 text-left shadow-soft"
-                >
-                  <p className="text-muted-foreground">
-                    &ldquo;Placeholder review. Add a real {city.name} client quote here.&rdquo;
-                  </p>
-                  <p className="mt-4 text-sm font-semibold text-foreground">
-                    Owner, {city.name} {niche.name} business
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Local FAQ */}
       <section className="section bg-surface">
         <div className="container-page">

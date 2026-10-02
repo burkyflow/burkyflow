@@ -1,8 +1,8 @@
-# Burky Flow — Full Content Index for AI Crawlers
+# BurkyFlow — Full Content Index for AI Crawlers
 
 > AI automation agency for service businesses. We turn missed calls and dormant leads into booked revenue with AI voice, reactivation, CRM, and workflow systems we build and run for you.
 
-Burky Flow is an AI automation agency. We operate remotely and serve clients across the United States. Focus metros: Houston TX, San Antonio TX, Charleston SC, Greenville SC. We do not maintain physical offices in those cities; we declare them as remotely served areas only.
+BurkyFlow is an AI automation agency. We operate remotely and serve clients across the United States. Focus metros: Houston TX, San Antonio TX, Charleston SC, Greenville SC. We do not maintain physical offices in those cities; we declare them as remotely served areas only.
 
 ---
 
@@ -86,4 +86,4 @@ Examples:
  - Sitemap: https://burkyflow.com/sitemap.xml
 
 ## Contact
-Email hello@burkyflow.com or book a call at https://burkyflow.com/contact
+Email atta@burkyflow.com or book a call at https://burkyflow.com/contact

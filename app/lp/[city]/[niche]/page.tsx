@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     description: `Book more ${niche.name} jobs in ${city.name} with AI automation from BurkyFlow.`,
     path: `/lp/${city.slug}/${niche.slug}`,
     noindex: true,
+    canonicalPath: `/ai-automation/${niche.slug}/${city.slug}`,
   });
 }
 

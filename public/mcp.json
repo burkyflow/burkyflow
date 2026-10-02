@@ -1,20 +1,27 @@
 {
-  "$schema": "https://modelcontextprotocol.io/schemas/web-mcp/draft/mcp.json",
   "schemaVersion": "2025-draft",
-  "name": "Burky Flow",
-  "type": "agency",
-  "description": "Burky Flow is an AI automation agency for service businesses. We build and run AI voice receptionists, database reactivation, CRM and lead systems, workflow automation, and answer engine optimization so businesses capture every call and book more revenue.",
+  "name": "BurkyFlow",
+  "type": "service-catalog",
+  "description": "BurkyFlow is an AI automation agency for service businesses. We build and run AI voice receptionists, database reactivation, CRM and lead systems, workflow automation, and answer engine optimization so businesses capture every call and book more revenue.",
   "url": "https://burkyflow.com",
-  "logo": "https://burkyflow.com/logo.png",
+  "logo": "https://burkyflow.com/images/logo.png",
   "contact": {
-    "email": "hello@burkyflow.com",
+    "email": "atta@burkyflow.com",
     "form": "https://burkyflow.com/contact",
-    "scheduling": "https://burkyflow.com/contact"
+    "scheduling": "https://burkyflow.com/contact",
+    "telephone": "+14709783478"
   },
   "serviceArea": {
     "type": "remote",
-    "regions": ["United States"],
-    "metros": ["Houston, TX", "San Antonio, TX", "Charleston, SC", "Greenville, SC"]
+    "regions": [
+      "United States"
+    ],
+    "metros": [
+      "Houston, TX",
+      "San Antonio, TX",
+      "Charleston, SC",
+      "Greenville, SC"
+    ]
   },
   "services": [
     {
@@ -64,12 +71,12 @@
   "capabilities": [
     {
       "name": "list_services",
-      "description": "Return the list of automation services Burky Flow offers, with descriptions and URLs.",
+      "description": "Return the list of automation services BurkyFlow offers, with descriptions and URLs.",
       "endpoint": "https://burkyflow.com/mcp.json#/services"
     },
     {
       "name": "get_service_areas",
-      "description": "Return the metros and regions Burky Flow serves remotely.",
+      "description": "Return the metros and regions BurkyFlow serves remotely.",
       "endpoint": "https://burkyflow.com/mcp.json#/serviceArea"
     },
     {

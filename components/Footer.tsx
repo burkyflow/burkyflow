@@ -31,36 +31,14 @@ export function Footer() {
                 />
               </Link>
 
-              <p className="mt-6 text-sm font-medium text-foreground">
-                Sign up for automation tips that book revenue.
-              </p>
-              <form className="mt-3 flex max-w-sm gap-2" action="#" method="post">
-                <label htmlFor="footer-email" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  id="footer-email"
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="Enter your email"
-                  className="h-11 flex-1 rounded-full border border-border bg-white px-4 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-ring"
-                />
-                <button
-                  type="submit"
-                  className="h-11 shrink-0 cursor-pointer rounded-full bg-brand-cta px-5 text-sm font-semibold text-brand-cta-fg shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand-cta-hover hover:shadow-soft-lg active:translate-y-0 active:scale-[0.98]"
-                >
-                  Submit
-                </button>
-              </form>
-              <p className="mt-3 max-w-sm text-xs leading-relaxed text-muted-foreground">
-                By subscribing you agree to our{" "}
-                <Link href="/privacy" className="underline underline-offset-2 hover:text-foreground">
-                  Privacy Policy
-                </Link>{" "}
-                and consent to receive updates from {site.name}.
-              </p>
-
+              <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">AI voice receptionists, database reactivation, and CRM automation for service businesses.</p>
+              <address className="mt-4 space-y-2 text-sm not-italic text-muted-foreground">
+                <p><a href={site.phone.href} className="hover:text-brand">{site.phone.display}</a></p>
+                <p><a href={`mailto:${site.email}`} className="hover:text-brand">{site.email}</a></p>
+                <p>Registered address: {site.address.streetAddress}, {site.address.addressLocality}, {site.address.addressRegion} {site.address.postalCode}, USA</p>
+                <p>Serving US businesses remotely.</p>
+              </address>
+              <Link href="/blog" className="mt-4 inline-block text-sm font-semibold text-brand">Read our automation guides</Link>
               <div className="mt-6 flex gap-3">
                 <SocialLink href={site.social.linkedin} label="LinkedIn">
                   <Linkedin className="size-4" />
@@ -142,7 +120,7 @@ export function Footer() {
 function FooterColumn({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <h4 className="text-sm font-bold text-foreground">{title}</h4>
+      <p className="text-sm font-bold text-foreground">{title}</p>
       <div className="mt-4 flex flex-col gap-3">{children}</div>
     </div>
   );

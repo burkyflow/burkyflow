@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { Plus, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +21,7 @@ export function FAQAccordion({
 }) {
   // First question open by default in single-column; all closed in two-column.
   const [open, setOpen] = useState<number | null>(columns === 2 ? null : 0);
+  const faqId = useId();
 
   const renderItem = ({ item, i }: { item: FAQItem; i: number }) => {
     const isOpen = open === i;
@@ -35,6 +36,8 @@ export function FAQAccordion({
         <button
           type="button"
           aria-expanded={isOpen}
+          aria-controls={`${faqId}-answer-${i}`}
+          id={`${faqId}-question-${i}`}
           onClick={() => setOpen(isOpen ? null : i)}
           className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-4 text-left sm:px-7"
         >
@@ -51,6 +54,10 @@ export function FAQAccordion({
 
         {/* smooth height expand/collapse */}
         <div
+          id={`${faqId}-answer-${i}`}
+          role="region"
+          aria-labelledby={`${faqId}-question-${i}`}
+          aria-hidden={!isOpen}
           className={cn(
             "grid transition-all duration-300 ease-out",
             isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"

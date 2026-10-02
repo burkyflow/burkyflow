@@ -1,11 +1,11 @@
 // "Works seamlessly with the tools you already use", integrations section.
 // Flat cards, no shadow. Paste each app's icon URL in the `logo` field below.
-import { ShieldCheck, ImageIcon } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 type Logo = { name: string; logo: string };
 
 // ── Paste each app's icon URL here (a /images/... path or a full URL). ──
-// Leave "" to show the placeholder.
+// Optional brand artwork.
 const logos: Logo[] = [
   { name: "HubSpot", logo: "/images/hubspot.png" },
   { name: "Salesforce", logo: "/images/salesforce.webp" },
@@ -16,7 +16,7 @@ const logos: Logo[] = [
 ];
 
 export function LogoWall({
-  eyebrow = "Trusted by leading platforms",
+  eyebrow = "Connected to your platforms",
   lead = "BurkyFlow integrates with the platforms you rely on every day, so you can automate follow-ups without changing your workflow.",
 }: {
   eyebrow?: string;
@@ -45,13 +45,17 @@ export function LogoWall({
             {item.logo ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
+                loading="lazy"
+                decoding="async"
+                width={40}
+                height={40}
                 src={item.logo}
                 alt={item.name}
                 className="h-10 w-10 object-contain grayscale transition-all duration-300 group-hover:scale-110 group-hover:grayscale-0"
               />
             ) : (
               <div className="flex size-10 items-center justify-center rounded-lg bg-surface text-muted-foreground/50">
-                <ImageIcon className="size-5" strokeWidth={1.5} />
+                <span className="text-lg font-bold">{item.name.slice(0, 1)}</span>
               </div>
             )}
             <span className="text-sm font-semibold text-foreground">{item.name}</span>

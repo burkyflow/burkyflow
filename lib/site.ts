@@ -5,7 +5,6 @@ export const site = {
   tagline:
     "AI-powered revenue operations for service businesses. We find where your revenue leaks, capture it, and optimise every step that turns a lead into a paid job.",
   url: "https://burkyflow.com",
-  // TODO(you): confirm where the primary CTA points. Placeholder for now.
   ctaHref: "/contact",
   ctaLabel: "Book a call",
   secondaryCtaLabel: "See how it works",

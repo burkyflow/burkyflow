@@ -6,11 +6,13 @@ export function pageMetadata({
   description,
   path = "/",
   noindex = false,
+  canonicalPath = path,
 }: {
   title: string;
   description: string;
   path?: string;
   noindex?: boolean;
+  canonicalPath?: string;
 }): Metadata {
   const url = `${site.url}${path}`;
   const ogImage = {
@@ -22,8 +24,11 @@ export function pageMetadata({
   return {
     title,
     description,
-    alternates: { canonical: url },
-    robots: noindex ? { index: false, follow: false } : { index: true, follow: true },
+    alternates: { canonical: `${site.url}${canonicalPath}` },
+    robots: noindex ? { index: false, follow: true } : {
+      index: true, follow: true,
+      googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+    },
     openGraph: {
       title,
       description,
@@ -43,7 +48,13 @@ export function organizationLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: site.legalName,
+    "@id": `${site.url}/#organization`,
+    name: site.name,
+    legalName: site.legalName,
+    logo: { "@type": "ImageObject", url: `${site.url}/images/logo.png` },
+    telephone: site.phone.href.replace("tel:", ""),
+    address: { "@type": "PostalAddress", ...site.address },
+    contactPoint: { "@type": "ContactPoint", telephone: site.phone.href.replace("tel:", ""), email: site.email, contactType: "sales", availableLanguage: "English" },
     url: site.url,
     description: site.tagline,
     email: site.email,
@@ -52,14 +63,18 @@ export function organizationLd() {
   };
 }
 
-// LocalBusiness — ONLY for the Contact page, where the real address sits.
+// Registered business details on home and contact; no fabricated city offices.
 export function localBusinessLd() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": `${site.url}/#business`,
     name: site.legalName,
     url: site.url,
     email: site.email,
+    telephone: site.phone.href.replace("tel:", ""),
+    image: `${site.url}/images/logo.png`,
+    parentOrganization: { "@id": `${site.url}/#organization` },
     address: {
       "@type": "PostalAddress",
       ...site.address,
@@ -91,6 +106,7 @@ export function serviceLd({
     serviceType: "AI automation for service businesses",
     provider: {
       "@type": "Organization",
+      "@id": `${site.url}/#organization`,
       name: site.legalName,
       url: site.url,
     },
@@ -138,7 +154,7 @@ export function serviceItemListLd({
         name: s.name,
         description: s.description,
         url: s.url,
-        provider: { "@type": "Organization", name: site.legalName, url: site.url },
+        provider: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: site.url },
         areaServed: site.serviceAreas,
       },
     })),
@@ -161,7 +177,7 @@ export function serviceDetailLd({
     name,
     description,
     serviceType: "AI automation for service businesses",
-    provider: { "@type": "Organization", name: site.legalName, url: site.url },
+    provider: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: site.url },
     areaServed: site.serviceAreas,
     url,
   };
@@ -176,5 +192,36 @@ export function faqPageLd(faqs: { q: string; a: string }[]) {
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
+  };
+}
+
+export function websiteLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${site.url}/#website`,
+    url: site.url,
+    name: site.name,
+    inLanguage: "en-US",
+    publisher: { "@id": `${site.url}/#organization` },
+  };
+}
+
+export function articleLd(post: { slug: string; title: string; excerpt: string; date: string; modified: string }) {
+  const url = `${site.url}/blog/${post.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${url}#article`,
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.modified,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    author: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: `${site.url}/about` },
+    publisher: { "@id": `${site.url}/#organization` },
+    image: `${site.url}/images/logo.png`,
+    inLanguage: "en-US",
   };
 }

@@ -6,20 +6,13 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ChromeGate } from "@/components/ChromeGate";
 import { JsonLd } from "@/components/JsonLd";
-import { organizationLd } from "@/lib/seo";
+import { organizationLd, websiteLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 const heading = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-heading",
-  display: "swap",
-});
-
-const body = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-body",
   display: "swap",
 });
 
@@ -49,7 +42,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${heading.variable} ${body.variable}`}>
+    <html lang="en" className={heading.variable}>
       <head>
         {/* Google Tag Manager */}
         <Script id="gtm" strategy="afterInteractive">
@@ -71,7 +64,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
 
-        <JsonLd data={organizationLd()} />
+        <JsonLd data={[organizationLd(), websiteLd()]} />
         <ChromeGate navbar={<Navbar />} footer={<Footer />}>
           {children}
         </ChromeGate>

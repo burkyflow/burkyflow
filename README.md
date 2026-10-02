@@ -1,10 +1,10 @@
-# Burky Flow
+# BurkyFlow
 
-Marketing site for Burky Flow, an AI automation agency for service businesses. Light theme, trust-driven, modeled on the Marketing 360 alternating-section pattern with Burky Flow branding.
+Marketing site for BurkyFlow, an AI automation agency for service businesses. Light theme, trust-driven, modeled on the Marketing 360 alternating-section pattern with BurkyFlow branding.
 
 ## Stack
 
-- Next.js 14 (App Router) + TypeScript
+- Next.js 16 (App Router) + TypeScript
 - Tailwind CSS (design tokens in `app/globals.css`)
 - shadcn/ui-style primitives (`components/ui/*`) on Radix
 - Framer Motion for subtle scroll reveals only
@@ -40,7 +40,7 @@ All copy lives in `content/` and `lib/site.ts`. You should not need to touch com
 
 ## Design tokens / rebranding
 
-The accent color is a single placeholder token. To rebrand, edit two pairs in
+The brand colors are defined as CSS tokens. To rebrand, edit two pairs in
 `app/globals.css`:
 
 ```css
@@ -48,7 +48,7 @@ The accent color is a single placeholder token. To rebrand, edit two pairs in
 --brand-cta: 199 89% 48%;      /* CTA color, can differ */
 ```
 
-Everything (buttons, eyebrows, CTA bands, icons) reads from these. Type is Lexend (headings) + Source Sans 3 (body) via `next/font`.
+Everything (buttons, eyebrows, CTA bands, icons) reads from these. Type uses one shared Inter family via `next/font`.
 
 ## Adding a new geo landing page
 
@@ -75,28 +75,16 @@ Example reference page: `/ai-automation/hvac/houston`.
 
 ## SEO and schema notes
 
-- `Organization` JSON-LD is global (in `app/layout.tsx`).
-- `LocalBusiness`/`ProfessionalService` JSON-LD appears ONLY on `/contact`,
-  where the real registered address sits. UNITZERO is registered in Karachi
-  (later Wyoming, US); we never claim a physical presence in a service city.
-- Geo pages declare remote service honestly via `Service.areaServed`, not
-  `LocalBusiness`. This is the Google-sanctioned way to target a city you serve
-  remotely without risking deceptive-markup flags.
+Organization and WebSite JSON-LD are global. Home and Contact include the registered business details. City pages use Service.areaServed and describe remote coverage.
 
-## AI-agent compliance
+The site has llms.txt, llms-full.txt, and an informational service catalog at mcp.json. These resources describe published services and contact options.
 
-- `public/mcp.json` describes UNITZERO as an agency with services, contact
-  endpoints, service areas, and a capabilities array (Web MCP draft convention).
-- `public/llms.txt` and `public/llms-full.txt` give AI crawlers a concise and a
-  full content index.
+For the audit implementation, verification results, and post-deployment work, see [SEO improvements](docs/seo-improvements.md).
 
-## TODOs left for you (search the codebase for `TODO(you)`)
+To crawl a running production build:
 
-- Final accent color hex in `app/globals.css`.
-- Real registered address, email, and CTA destination in `lib/site.ts`.
-- Where contact + newsletter form data should POST, and what happens on submit.
-- Real product screenshots/illustrations (replace placeholder visuals).
-- Real stats numbers in `content/stats.ts`.
-- Real blog content / wire to a CMS in `content/blog.ts`.
-- Client logos in `components/LogoWall.tsx` and local reviews in the geo template.
+```bash
+npm run build
+npm run start
+python scripts/check-site.py
 ```

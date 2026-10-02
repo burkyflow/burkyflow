@@ -11,6 +11,7 @@ export type Post = {
   title: string;
   excerpt: string;
   date: string; // ISO (YYYY-MM-DD)
+  modified: string;
   readMinutes: number;
   html: string; // rendered Markdown body
 };
@@ -35,11 +36,12 @@ function loadPosts(): Post[] {
       // Accept `excerpt` or `metaDescription` (n8n uses metaDescription).
       const excerpt = String(data.excerpt || data.metaDescription || "");
       const date = String(data.date || "").slice(0, 10) || "1970-01-01";
+      const modified = String(data.updated || date).slice(0, 10);
       const words = content.trim().split(/\s+/).filter(Boolean).length;
       const readMinutes = Number(data.readMinutes) || Math.max(1, Math.round(words / 200));
       const html = marked.parse(content, { async: false }) as string;
 
-      return { slug, title, excerpt, date, readMinutes, html };
+      return { slug, title, excerpt, date, modified, readMinutes, html };
     })
     // newest first
     .sort((a, b) => (a.date < b.date ? 1 : -1));

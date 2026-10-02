@@ -1,18 +1,14 @@
-// "Trusted by service businesses across industries", logo strip under the hero.
-// Desktop: centered wrap. Mobile: infinite right-to-left marquee.
-// Placeholder service-business marks (icon + wordmark) in muted "logo" grey.
-// TODO(you): swap in real client logos when you have permission to display them.
 import { Wind, Droplets, Zap, Home, SprayCan, Bug, type LucideIcon } from "lucide-react";
 
 type BrandLogo = { name: string; sub: string; icon: LucideIcon };
 
 const logos: BrandLogo[] = [
-  { name: "HVAC", sub: "Pros", icon: Wind },
-  { name: "PlumbRight", sub: "Solutions", icon: Droplets },
-  { name: "Elevate", sub: "Electrical", icon: Zap },
-  { name: "RoofMax", sub: "Exteriors", icon: Home },
-  { name: "CleanSpace", sub: "Restoration", icon: SprayCan },
-  { name: "PestFree", sub: "Solutions", icon: Bug },
+  { name: "HVAC", sub: "Services", icon: Wind },
+  { name: "Plumbing", sub: "Services", icon: Droplets },
+  { name: "Electrical", sub: "Services", icon: Zap },
+  { name: "Roofing", sub: "Services", icon: Home },
+  { name: "Restoration", sub: "Services", icon: SprayCan },
+  { name: "Pest Control", sub: "Services", icon: Bug },
 ];
 
 function LogoItem({ name, sub, icon: Icon, className = "" }: BrandLogo & { className?: string }) {
@@ -34,7 +30,7 @@ function LogoItem({ name, sub, icon: Icon, className = "" }: BrandLogo & { class
 }
 
 export function TrustedBy({
-  heading = "Trusted by service businesses across industries",
+  heading = "Built for service businesses across industries",
 }: {
   heading?: string;
 }) {

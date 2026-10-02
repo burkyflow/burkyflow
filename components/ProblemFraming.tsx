@@ -1,5 +1,5 @@
 // Problem-framing section, the "you're losing the leads you already have" pitch.
-import { PhoneOff, Voicemail, CircleDollarSign, Info, type LucideIcon } from "lucide-react";
+import { PhoneOff, Voicemail, CircleDollarSign, type LucideIcon } from "lucide-react";
 import { CountUp } from "@/components/CountUp";
 
 type Accent = "brand" | "accent";
@@ -8,25 +8,25 @@ type Stat = { stat: string; label: string; icon: LucideIcon; accent: Accent; ima
 
 const stats: Stat[] = [
   {
-    stat: "62%",
-    label: "of calls to contractors go unanswered while crews are on jobs",
+    stat: "Calls",
+    label: "Capture enquiries while your crews are busy on jobs",
     icon: PhoneOff,
     accent: "brand",
-    image: "/images/c1.png", // ← card background (full cover)
+    image: "/images/c1.webp", // ← card background (full cover)
   },
   {
-    stat: "78%",
-    label: "of callers will not leave a voicemail, they call the next business",
+    stat: "Leads",
+    label: "Follow up with callers who leave without booking",
     icon: Voicemail,
     accent: "accent",
-    image: "/images/c2.png", // ← card background (full cover)
+    image: "/images/c2.webp", // ← card background (full cover)
   },
   {
-    stat: "$1,200",
-    label: "average lost revenue per missed call for home services",
+    stat: "Revenue",
+    label: "Track recovered bookings against your actual job value",
     icon: CircleDollarSign,
     accent: "brand",
-    image: "/images/c1.png", // ← add e.g. "/images/c3.png" once you have it
+    image: "/images/c1.webp", // ← add e.g. "/images/c3.png" once you have it
   },
 ];
 
@@ -43,7 +43,7 @@ function StatCard({ stat, label, icon: Icon, accent, image }: Stat) {
       {image ? (
         // Full-cover card background
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={image} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover" />
+        <img loading="lazy" decoding="async" width={640} height={520} src={image} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover" />
       ) : (
         /* soft colored wave at the bottom (fallback when no image) */
         <div
@@ -59,7 +59,7 @@ function StatCard({ stat, label, icon: Icon, accent, image }: Stat) {
           <Icon className="size-6" strokeWidth={1.75} />
         </div>
 
-        <p className="mt-6 text-5xl font-bold tracking-tight text-brand font-heading">
+        <p className="mt-6 text-4xl font-bold tracking-tight text-brand font-heading">
           <CountUp value={stat} />
         </p>
         <div className="mx-auto mt-3 h-1 w-8 rounded-full bg-brand/30" />
@@ -101,8 +101,7 @@ export function ProblemFraming() {
             You are <span className="text-brand">losing the ones</span> you already have.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-            Most owners guess they miss a couple of calls a week. Pull the phone logs and it is
-            usually a third of them. The customers already in your CRM go months without a single
+            Your phone logs show how many calls go unanswered. The customers already in your CRM go months without a single
             follow-up. Both are revenue you already paid for, walking out the door to whoever
             responds first.
           </p>
@@ -114,13 +113,7 @@ export function ProblemFraming() {
           ))}
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-3xl items-center justify-center gap-2.5 rounded-2xl bg-surface px-5 py-3 text-center text-xs text-muted-foreground ring-1 ring-border/60">
-          <Info className="size-4 shrink-0 text-brand" />
-          <span>
-            Sources: Invoca and contractor call-tracking research. TODO(you): confirm citations
-            before publishing.
-          </span>
-        </div>
+
       </div>
     </section>
   );

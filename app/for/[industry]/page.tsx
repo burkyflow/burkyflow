@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     description: funnel.subheadline,
     path: `/for/${industry}`,
     noindex: true,
+    canonicalPath: `/industries/${industry}`,
   });
 }
 

@@ -10,44 +10,41 @@ import { knownCombos, getNiche, getCity } from "@/content/geo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url;
-  const now = new Date();
 
-  const staticPaths = ["", "/about", "/services", "/bundles", "/case-studies", "/industries", "/blog", "/contact"];
+  const staticPaths = ["", "/about", "/services", "/bundles", "/case-studies", "/industries", "/blog", "/contact", "/missed-calls", "/privacy", "/terms"];
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((path) => ({
     url: `${base}${path}`,
-    lastModified: now,
     changeFrequency: "monthly",
     priority: path === "" ? 1 : 0.7,
   }));
 
   for (const b of branches) {
-    entries.push({ url: `${base}/services/${b.slug}`, lastModified: now, priority: 0.8 });
+    entries.push({ url: `${base}/services/${b.slug}`, priority: 0.8 });
   }
   for (const s of services) {
-    entries.push({ url: `${base}/services/${s.slug}`, lastModified: now, priority: 0.6 });
+    entries.push({ url: `${base}/services/${s.slug}`, priority: 0.6 });
   }
   for (const i of industries) {
-    entries.push({ url: `${base}/industries/${i.slug}`, lastModified: now, priority: 0.6 });
+    entries.push({ url: `${base}/industries/${i.slug}`, priority: 0.6 });
   }
   for (const c of caseStudies) {
-    entries.push({ url: `${base}/case-studies/${c.slug}`, lastModified: now, priority: 0.7 });
+    entries.push({ url: `${base}/case-studies/${c.slug}`, priority: 0.7 });
   }
   for (const w of wedges) {
-    entries.push({ url: `${base}/wedges/${w.slug}`, lastModified: now, priority: 0.9 });
+    entries.push({ url: `${base}/wedges/${w.slug}`, priority: 0.9 });
   }
   for (const b of allBundles) {
-    entries.push({ url: `${base}/bundles/${b.slug}`, lastModified: now, priority: 0.6 });
+    entries.push({ url: `${base}/bundles/${b.slug}`, priority: 0.6 });
   }
   for (const p of posts) {
-    entries.push({ url: `${base}/blog/${p.slug}`, lastModified: new Date(p.date), priority: 0.5 });
+    entries.push({ url: `${base}/blog/${p.slug}`, lastModified: new Date(p.modified), priority: 0.5 });
   }
   // Organic geo pages only. Paid /lp/ routes are intentionally excluded (noindex).
   for (const c of knownCombos) {
     if (!getNiche(c.niche) || !getCity(c.city)) continue;
     entries.push({
       url: `${base}/ai-automation/${c.niche}/${c.city}`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
     });

@@ -10,8 +10,6 @@ export const metadata = pageMetadata({
   path: "/about",
 });
 
-// TODO(you): replace placeholder narrative with the real BurkyFlow story,
-// founder bio, and any credentials you want to lead with.
 const values = [
   {
     title: "Outcomes, not tools",

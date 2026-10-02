@@ -13,9 +13,9 @@ export function BookingWidget({ className = "" }: { className?: string }) {
         src={site.booking.src}
         id={site.booking.id}
         title={`Book a call with ${site.name}`}
+        loading="lazy"
         scrolling="no"
-        className={`h-[1180px] w-full sm:h-[940px] ${className}`}
-        style={{ border: "none" }}
+        className={`h-[1180px] w-full sm:h-[940px] border-0 ${className}`}
       />
       <Script src={site.booking.script} strategy="afterInteractive" />
     </>

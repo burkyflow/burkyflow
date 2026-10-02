@@ -8,7 +8,7 @@ export type Wedge = {
   name: string;
   shortName: string;
   // Card image for the "Top offers" grid. Paste a URL (or /images/... path) here.
-  // Leave undefined to show the placeholder.
+  // Optional offer artwork.
   image?: string;
   tagline: string;
   pitch: string;
@@ -26,7 +26,7 @@ export const wedges: Wedge[] = [
     letter: "A",
     name: "Unlock the list you already paid for",
     shortName: "Database Reactivation",
-    image: "/images/card1.png", 
+    image: "/images/card1.webp",
     tagline: "Wake up dormant CRM lists with SMS + AI voice booking.",
     pitch:
       "Pay per booked job. Zero cost until the calendar starts filling. We work the list you already paid to acquire.",
@@ -69,7 +69,7 @@ export const wedges: Wedge[] = [
     letter: "B",
     name: "Paid acquisition that doesn't leak at the booking step",
     shortName: "Ads + AI Voice Pilot",
-    image: "/images/card2.png", 
+    image: "/images/card2.webp",
     tagline: "Meta / IG ads + AI voice + GHL booking funnel, wired together.",
     pitch:
       "Most paid lead campaigns lose 60%+ of leads at the booking step. We close that leak with AI voice and a GHL funnel built behind the ad, sold as a 14-day pilot against a defined target.",
@@ -111,7 +111,7 @@ export const wedges: Wedge[] = [
     letter: "C",
     name: "Outbound that doesn't smell like outbound",
     shortName: "B2B Outbound Engine",
-    image: "/images/card3.png",
+    image: "/images/card3.webp",
     tagline: "Apollo + Clay list build → multi-touch SMS + email → AI voice qualifier → booked meeting.",
     pitch:
       "Replaces the fragile 6-tool DIY outbound stack with a single productised engine. Setup fee plus monthly retainer, booked meetings on the calendar.",
@@ -153,7 +153,7 @@ export const wedges: Wedge[] = [
     letter: "D",
     name: "Don't lose the calls you already paid Google for",
     shortName: "24/7 AI Voice Coverage",
-    image: "/images/card4.png",
+    image: "/images/card4.webp",
     tagline: "AI voice on the inbound line, catches missed and after-hours calls from LSAs, SEO, and referrals.",
     pitch:
       "You already paid for the click that drove the call. Missing the call is the most expensive line item in the business. Proof-window first, then ongoing coverage.",
