@@ -84,7 +84,7 @@ export function FAQAccordion({
     <div className={cn("mx-auto", columns === 2 ? "max-w-4xl" : "max-w-3xl")}>
       <div className="text-center">
         {eyebrow && (
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/70">{eyebrow}</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">{eyebrow}</p>
         )}
         <h2 className="mt-3 text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl">{heading}</h2>
         {lead && <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">{lead}</p>}

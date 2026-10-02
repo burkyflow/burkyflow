@@ -20,7 +20,7 @@ export function ChromeGate({
   return (
     <>
       {!bare && navbar}
-      <main>{children}</main>
+      <main id="main-content">{children}</main>
       {!bare && footer}
     </>
   );

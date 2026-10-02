@@ -17,7 +17,7 @@ import { JsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "AI Voice & CRM Automation for Service Businesses",
+  title: "AI Voice Receptionist & CRM Automation Services | BurkyFlow",
   description: "Capture missed calls and reactivate dormant leads with BurkyFlow's AI voice receptionist, CRM automation, and managed revenue operations for service businesses.",
   path: "/",
 });

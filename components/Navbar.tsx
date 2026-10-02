@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
@@ -187,6 +186,14 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.activeElement as HTMLElement | null;
+    menuRef.current?.querySelector<HTMLElement>("button")?.focus();
+    return () => previous?.focus();
+  }, [open]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
@@ -224,12 +231,12 @@ export function Navbar() {
         )}
       >
         <Link href="/" className="inline-flex items-center">
-          <Image
-            src="/images/logo1.png"
+          <img
+            src="/images/logo1.webp"
             alt={site.name}
-            width={3136}
-            height={760}
-            priority
+            width={132}
+            height={32}
+            decoding="async"
             className="h-8 w-auto"
           />
         </Link>
@@ -263,7 +270,8 @@ export function Navbar() {
       </nav>
     </header>
 
-      {/* Mobile drawer, always mounted for smooth slide in/out */}
+      {/* Mount only while open so hidden links cannot receive keyboard focus. */}
+      {open && (
       <div
         className={cn("fixed inset-0 z-[60] md:hidden", open ? "pointer-events-auto" : "pointer-events-none")}
         aria-hidden={!open}
@@ -279,6 +287,19 @@ export function Navbar() {
 
         {/* sliding panel */}
         <div
+          ref={menuRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation menu"
+          onKeyDown={(event) => {
+            if (event.key === "Escape") { setOpen(false); return; }
+            if (event.key !== "Tab") return;
+            const items = Array.from(event.currentTarget.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')).filter(item => item.getClientRects().length > 0);
+            const first = items[0];
+            const last = items[items.length - 1];
+            if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+            if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+          }}
           className={cn(
             "absolute right-0 top-0 flex h-full w-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out",
             open ? "translate-x-0" : "translate-x-full"
@@ -287,11 +308,12 @@ export function Navbar() {
           {/* header */}
           <div className="flex items-center justify-between border-b border-border/70 px-5 py-4">
             <Link href="/" onClick={() => setOpen(false)} className="inline-flex items-center">
-              <Image
-                src="/images/logo1.png"
+              <img
+                src="/images/logo1.webp"
                 alt={site.name}
-                width={3136}
-                height={760}
+                width={132}
+                height={32}
+                decoding="async"
                 className="h-8 w-auto"
               />
             </Link>
@@ -376,6 +398,7 @@ export function Navbar() {
           </div>
         </div>
       </div>
+      )}
     </>
   );
 }

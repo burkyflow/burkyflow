@@ -22,7 +22,7 @@ export function pageMetadata({
     alt: site.name,
   };
   return {
-    title,
+    title: { absolute: path === "/" ? title : `${title} | ${site.name}` },
     description,
     alternates: { canonical: `${site.url}${canonicalPath}` },
     robots: noindex ? { index: false, follow: true } : {

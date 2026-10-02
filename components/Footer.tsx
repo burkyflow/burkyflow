@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
 import { site } from "@/lib/site";
 import { services } from "@/content/services";
@@ -22,11 +21,13 @@ export function Footer() {
             {/* Brand + newsletter */}
             <div>
               <Link href="/" className="inline-block">
-                <Image
-                  src="/images/logo1.png"
+                <img
+                  src="/images/logo1.webp"
                   alt={site.name}
-                  width={3136}
-                  height={760}
+                  width={132}
+                  height={32}
+                  loading="lazy"
+                  decoding="async"
                   className="h-8 w-auto"
                 />
               </Link>

@@ -14,14 +14,14 @@ const logos: BrandLogo[] = [
 function LogoItem({ name, sub, icon: Icon, className = "" }: BrandLogo & { className?: string }) {
   return (
     <span
-      className={`flex shrink-0 items-center gap-2.5 whitespace-nowrap text-slate-400 ${className}`}
+      className={`flex shrink-0 items-center gap-2.5 whitespace-nowrap text-muted-foreground ${className}`}
     >
       <span className="flex size-7 shrink-0 items-center justify-center">
         <Icon className="size-7" strokeWidth={1.75} />
       </span>
       <span className="leading-tight">
         <span className="block text-sm font-bold tracking-tight">{name}</span>
-        <span className="block text-[10px] font-medium uppercase tracking-[0.16em] opacity-80">
+        <span className="block text-[10px] font-medium uppercase tracking-[0.16em]">
           {sub}
         </span>
       </span>
@@ -37,7 +37,7 @@ export function TrustedBy({
   return (
     <section className="overflow-hidden border-y border-border/60 bg-white py-12 md:py-14">
       <div className="container-page">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground/70">
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
           {heading}
         </p>
       </div>

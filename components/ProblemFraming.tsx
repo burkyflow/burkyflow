@@ -1,6 +1,5 @@
 // Problem-framing section, the "you're losing the leads you already have" pitch.
 import { PhoneOff, Voicemail, CircleDollarSign, type LucideIcon } from "lucide-react";
-import { CountUp } from "@/components/CountUp";
 
 type Accent = "brand" | "accent";
 
@@ -43,7 +42,7 @@ function StatCard({ stat, label, icon: Icon, accent, image }: Stat) {
       {image ? (
         // Full-cover card background
         // eslint-disable-next-line @next/next/no-img-element
-        <img loading="lazy" decoding="async" width={640} height={520} src={image} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover" />
+        <div aria-hidden className={`absolute inset-0 bg-cover bg-center ${accent === "accent" ? "problem-background-accent" : "problem-background-brand"}`} />
       ) : (
         /* soft colored wave at the bottom (fallback when no image) */
         <div
@@ -60,7 +59,7 @@ function StatCard({ stat, label, icon: Icon, accent, image }: Stat) {
         </div>
 
         <p className="mt-6 text-4xl font-bold tracking-tight text-brand font-heading">
-          <CountUp value={stat} />
+          {stat}
         </p>
         <div className="mx-auto mt-3 h-1 w-8 rounded-full bg-brand/30" />
 
@@ -82,14 +81,7 @@ export function ProblemFraming() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-10 left-0 h-[26rem] w-80"
-        style={{
-          backgroundImage: "radial-gradient(currentColor 1px, transparent 1px)",
-          backgroundSize: "16px 16px",
-          color: "rgba(148, 163, 184, 0.45)",
-          maskImage: "radial-gradient(circle at left bottom, black, transparent 72%)",
-          WebkitMaskImage: "radial-gradient(circle at left bottom, black, transparent 72%)",
-        }}
+        className="problem-dot-grid pointer-events-none absolute bottom-10 left-0 h-[26rem] w-80"
       />
 
       <div className="container-page relative z-10">

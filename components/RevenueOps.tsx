@@ -54,7 +54,7 @@ function DiagnoseViz() {
           </div>
         </div>
         <div className="mt-3 rounded-lg bg-accent/10 px-3 py-2">
-          <p className="text-[10px] font-medium text-accent/80">Lost revenue</p>
+            <p className="text-[10px] font-medium text-accent">Lost revenue</p>
           <p className="text-base font-bold text-accent">≈ $18,400/mo</p>
         </div>
       </div>
@@ -78,8 +78,7 @@ function CaptureViz() {
           {bars.map((h, i) => (
             <span
               key={i}
-              className="w-[3px] rounded-full bg-brand"
-              style={{ height: `${h}px`, opacity: 0.4 + (h / 18) * 0.6 }}
+              className={`w-[3px] rounded-full bg-brand waveform-${h}`}
             />
           ))}
         </div>
@@ -110,7 +109,7 @@ function ConvertViz() {
             <span className="flex items-center gap-2 text-[11px] font-semibold text-foreground">
               <span
                 className={`flex size-5 items-center justify-center rounded-full ${
-                  r.done ? "bg-emerald-500/15 text-emerald-600" : "bg-accent/15 text-accent"
+                  r.done ? "bg-emerald-500/15 text-emerald-700" : "bg-accent/15 text-accent"
                 }`}
               >
                 {r.done ? <Check className="size-3" /> : <Repeat2 className="size-3" />}
@@ -119,7 +118,7 @@ function ConvertViz() {
             </span>
             <span
               className={`rounded-full px-2 py-0.5 text-[9px] font-bold ${
-                r.done ? "bg-emerald-500/15 text-emerald-600" : "bg-accent/15 text-accent"
+                r.done ? "bg-emerald-500/15 text-emerald-700" : "bg-accent/15 text-accent"
               }`}
             >
               {r.status}
@@ -141,7 +140,7 @@ function CompoundViz() {
             <p className="text-[10px] font-medium text-muted-foreground">Revenue</p>
             <p className="text-xl font-bold text-foreground">$248K</p>
           </div>
-          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-600">
+          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
             <TrendingUp className="size-2.5" /> +22%
           </span>
         </div>
@@ -149,8 +148,7 @@ function CompoundViz() {
           {[30, 42, 38, 55, 60, 78, 92].map((h, i) => (
             <span
               key={i}
-              className={`flex-1 rounded-t ${i >= 5 ? "bg-accent" : "bg-brand/70"}`}
-              style={{ height: `${h}%` }}
+              className={`flex-1 rounded-t chart-bar-${h} ${i >= 5 ? "bg-accent" : "bg-brand/70"}`}
             />
           ))}
         </div>

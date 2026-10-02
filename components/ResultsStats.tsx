@@ -1,7 +1,6 @@
 // "Metrics that matter", homepage stat cards.
 // Each card has a slot for a progress-bar / chart background image.
 import { LineChart, Users, Clock, Zap, TrendingUp, ShieldCheck, User, type LucideIcon } from "lucide-react";
-import { CountUp } from "@/components/CountUp";
 import { Reveal } from "@/components/Reveal";
 
 type Accent = "brand" | "accent";
@@ -49,16 +48,7 @@ function StatCard({ card }: { card: Card }) {
       {/* Background chart/progress image slot */}
       {bg ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img
-          loading="lazy"
-          decoding="async"
-          width={640}
-          height={520}
-          src={bg}
-          alt=""
-          aria-hidden
-          className="pointer-events-none absolute inset-x-0 -top-2 w-full transition-transform duration-500 group-hover:scale-105"
-        />
+        <div aria-hidden className={`pointer-events-none absolute inset-x-0 -top-2 bg-cover transition-transform duration-500 group-hover:scale-105 ${card.accent === "accent" ? "results-background-accent" : "results-background-brand"}`} />
       ) : null}
 
       <div className="relative z-10">
@@ -69,7 +59,7 @@ function StatCard({ card }: { card: Card }) {
         </div>
 
         <p className={`mt-8 text-4xl font-bold tracking-tight font-heading ${a.value}`}>
-          <CountUp value={card.value} />
+          {card.value}
         </p>
         <p className="mt-2 font-semibold text-foreground">{card.label}</p>
 

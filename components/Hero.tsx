@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, Play, PhoneCall, Repeat2, CalendarDays, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { site } from "@/lib/site";
@@ -17,17 +16,7 @@ export function Hero() {
     // Hero, dashboard as the full-width background, copy overlaid
     <section className="relative overflow-hidden bg-white">
       {/* Desktop: full-width background dashboard, natural size, no crop, no overlay */}
-      <div aria-hidden className="hidden lg:block">
-        <Image
-          src="/images/image.webp"
-          alt=""
-          width={1738}
-          height={905}
-          loading="lazy"
-          sizes="(min-width: 1024px) 100vw, 1px"
-          className="h-auto w-full"
-        />
-      </div>
+      <div aria-hidden className="hero-dashboard hidden aspect-[2/1] lg:block" />
 
       {/* Copy, static flow on mobile, overlaid + vertically centered on desktop */}
       <div className="container-page relative pt-10 pb-10 lg:absolute lg:inset-0 lg:flex lg:items-center lg:py-0">

@@ -74,6 +74,10 @@ def main():
                 if status != 200: errors.append(f"{path}: HTTP failure {status}: {html[:100]}"); pages[path]=None; continue
                 if kind != "text/html": pages[path]=None; continue
                 page=Page(html); pages[path]=page
+                if path == "/":
+                    title=re.search(r"<title>(.*?)</title>",html,re.S)
+                    if not title or not 50 <= len(title.group(1).replace("&amp;", "&")) <= 60: errors.append("/: homepage title must be 50-60 characters")
+                    if re.search(r'<img\b[^>]*\balt=""',html): errors.append("/: use CSS for decorative artwork; content images need descriptions")
                 errors.extend(f"{path}: {e}" for e in page.errors)
                 if page.headings.count(1) != 1: errors.append(f"{path}: expected one H1")
                 if not page.canonical: errors.append(f"{path}: missing canonical")

@@ -6,13 +6,13 @@
   :root {
     /* ── BurkyFlow brand palette (from the brand guide) ── */
     /* ── BurkyFlow brand palette ── */
-    --brand: 216 47% 48%; /* #4170B6 — brand blue (headings, icons, links) */
+    --brand: 216 47% 44%; /* Darker blue stays readable on tinted surfaces. */
     --brand-foreground: 0 0% 100%;
     /* Buttons are brand coral, deepening on hover. */
-    --brand-cta: 11 85% 62%; /* #F16B4D — coral (all buttons) */
-    --brand-cta-hover: 11 72% 52%; /* ~#DD4D2C — deeper coral on hover */
+    --brand-cta: 11 72% 44%; /* Dark coral supports white button text. */
+    --brand-cta-hover: 11 72% 39%;
     --brand-cta-foreground: 0 0% 100%;
-    --accent: 11 85% 62%; /* #F16B4D — coral (highlights) */
+    --accent: 11 72% 39%; /* Readable even on peach-tinted cards. */
     --accent-foreground: 0 0% 100%;
     --accent-soft: 13 80% 80%; /* #F5B5A3 — soft peach (tints) */
 
@@ -21,7 +21,7 @@
     --surface: 0 0% 95%; /* #F2F2F2 */
     --foreground: 0 0% 10%; /* #1A1A1A */
     --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 41%; /* #686868 */
+    --muted-foreground: 0 0% 37%;
     --border: 0 0% 90%; /* hairline */
     --ring: 11 85% 62%; /* coral, matching the buttons */
   }
@@ -98,3 +98,54 @@
 .animate-marquee {
   animation: marquee 35s linear infinite;
 }
+
+/* Decorative artwork belongs in CSS, outside the content-image outline. */
+@media (min-width: 1024px) {
+  .hero-dashboard { background: url('/images/image.webp') center / cover no-repeat; }
+}
+.problem-background-brand { background-image: url('/images/c1.webp'); }
+.problem-background-accent { background-image: url('/images/c2.webp'); }
+.results-background-brand { background-image: url('/images/pro1.webp'); aspect-ratio: 1476 / 872; }
+.results-background-accent { background-image: url('/images/pro2.webp'); aspect-ratio: 1515 / 946; }
+.problem-dot-grid {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 16px 16px;
+  color: rgba(148, 163, 184, 0.45);
+  mask-image: radial-gradient(circle at left bottom, black, transparent 72%);
+  -webkit-mask-image: radial-gradient(circle at left bottom, black, transparent 72%);
+}
+
+/* Progressive enhancement: unsupported browsers show all content immediately. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-entrance linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 30%;
+    }
+  }
+}
+@keyframes reveal-entrance {
+  from { transform: translateY(8px); }
+  to { transform: translateY(0); }
+}
+
+.waveform-5 { height: 5px; opacity: 0.567; }
+.waveform-6 { height: 6px; opacity: 0.6; }
+.waveform-7 { height: 7px; opacity: 0.633; }
+.waveform-8 { height: 8px; opacity: 0.667; }
+.waveform-9 { height: 9px; opacity: 0.7; }
+.waveform-10 { height: 10px; opacity: 0.733; }
+.waveform-11 { height: 11px; opacity: 0.767; }
+.waveform-13 { height: 13px; opacity: 0.833; }
+.waveform-14 { height: 14px; opacity: 0.867; }
+.waveform-15 { height: 15px; opacity: 0.9; }
+.waveform-16 { height: 16px; opacity: 0.933; }
+.waveform-18 { height: 18px; opacity: 1.0; }
+.chart-bar-30 { height: 30%; }
+.chart-bar-42 { height: 42%; }
+.chart-bar-38 { height: 38%; }
+.chart-bar-55 { height: 55%; }
+.chart-bar-60 { height: 60%; }
+.chart-bar-78 { height: 78%; }
+.chart-bar-92 { height: 92%; }
