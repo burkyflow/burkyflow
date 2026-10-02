@@ -1,4 +1,4 @@
-# BurkyFlow — Full Content Index for AI Crawlers
+# BurkyFlow â€” Full Content Index for AI Crawlers
 
 > AI automation agency for service businesses. We turn missed calls and dormant leads into booked revenue with AI voice, reactivation, CRM, and workflow systems we build and run for you.
 
@@ -9,7 +9,7 @@ BurkyFlow is an AI automation agency. We operate remotely and serve clients acro
 ## Services (full descriptions)
 
 ### AI Voice Receptionist
-URL: https://burkyflow.com/services/ai-voice-receptionist
+URL: https://www.burkyflow.com/services/ai-voice-receptionist
 Most missed calls go to a competitor who picked up second. A human-sounding AI voice answers on the first ring, qualifies the caller, and books the job straight into your calendar.
 How it works:
 1. Connect your existing number or after-hours line to the AI voice. No new hardware.
@@ -18,7 +18,7 @@ How it works:
 Why it matters: A single missed emergency call can be a four-figure job handed to the shop that answered.
 
 ### Database Reactivation
-URL: https://burkyflow.com/services/database-reactivation
+URL: https://www.burkyflow.com/services/database-reactivation
 You already paid to acquire every past customer and dead lead in your database. We re-engage them by SMS in your tone, and the AI voice books the ones who are ready.
 How it works:
 1. We pull a reachable-contact count from your CRM so you see the opportunity first.
@@ -27,7 +27,7 @@ How it works:
 Why it matters: Reactivating an existing list costs a fraction of new clicks, and those people already trust you.
 
 ### CRM and Lead Systems
-URL: https://burkyflow.com/services/crm-lead-systems
+URL: https://www.burkyflow.com/services/crm-lead-systems
 Leads leak when they live across a phone, an inbox, and three apps. We build one pipeline where every lead is captured, routed, and followed up automatically.
 How it works:
 1. Map your real sales stages, sources, and hand-off points.
@@ -36,7 +36,7 @@ How it works:
 Why it matters: Most leads are won or lost in the first five minutes.
 
 ### Workflow Automation
-URL: https://burkyflow.com/services/workflow-automation
+URL: https://www.burkyflow.com/services/workflow-automation
 The repetitive copy-paste between your booking app, CRM, invoicing, and inbox is where hours and accuracy disappear. We connect them into reliable workflows.
 How it works:
 1. Document the daily manual handoffs and where they break.
@@ -45,7 +45,7 @@ How it works:
 Why it matters: Manual handoffs quietly drop the customer who fell between two systems.
 
 ### Answer Engine Optimization
-URL: https://burkyflow.com/services/answer-engine-optimization
+URL: https://www.burkyflow.com/services/answer-engine-optimization
 Buyers now ask AI search for a recommendation. We structure your site and content so answer engines cite you as the trusted local choice.
 How it works:
 1. Audit how AI engines currently describe your business.
@@ -54,7 +54,7 @@ How it works:
 Why it matters: Being left off an AI assistant's shortlist is the new page two.
 
 ### Done For You Service Model
-URL: https://burkyflow.com/services/done-for-you
+URL: https://www.burkyflow.com/services/done-for-you
 We build, run, and maintain the entire automation stack so you get the outcome without the operations.
 How it works:
 1. Agree on the result you want, in your numbers, up front.
@@ -66,24 +66,24 @@ Why it matters: A pile of disconnected tools is fragile; one owned system is rel
 
 ## Industries
 
- - Home and Property Services (HVAC, plumbing, roofing, lawn and pest): https://burkyflow.com/industries/home-services
- - Healthcare and Practices (dental, medspa): https://burkyflow.com/industries/healthcare
- - Real Estate Teams: https://burkyflow.com/industries/real-estate
- - Automotive and Repair: https://burkyflow.com/industries/automotive
- - Professional Firms (law, staffing): https://burkyflow.com/industries/professional-firms
+ - Home and Property Services (HVAC, plumbing, roofing, lawn and pest): https://www.burkyflow.com/industries/home-services
+ - Healthcare and Practices (dental, medspa): https://www.burkyflow.com/industries/healthcare
+ - Real Estate Teams: https://www.burkyflow.com/industries/real-estate
+ - Automotive and Repair: https://www.burkyflow.com/industries/automotive
+ - Professional Firms (law, staffing): https://www.burkyflow.com/industries/professional-firms
 
 ## Geo landing pages (organic)
 
-Pattern: https://burkyflow.com/ai-automation/[niche]/[city]
+Pattern: https://www.burkyflow.com/ai-automation/[niche]/[city]
 Examples:
- - https://burkyflow.com/ai-automation/hvac/houston
- - https://burkyflow.com/ai-automation/plumbing/san-antonio
- - https://burkyflow.com/ai-automation/real-estate/charleston
- - https://burkyflow.com/ai-automation/dental/greenville
+ - https://www.burkyflow.com/ai-automation/hvac/houston
+ - https://www.burkyflow.com/ai-automation/plumbing/san-antonio
+ - https://www.burkyflow.com/ai-automation/real-estate/charleston
+ - https://www.burkyflow.com/ai-automation/dental/greenville
 
 ## Machine-readable resources
- - Capabilities: https://burkyflow.com/mcp.json
- - Sitemap: https://burkyflow.com/sitemap.xml
+ - Capabilities: https://www.burkyflow.com/mcp.json
+ - Sitemap: https://www.burkyflow.com/sitemap.xml
 
 ## Contact
-Email atta@burkyflow.com or book a call at https://burkyflow.com/contact
+Email atta@burkyflow.com or book a call at https://www.burkyflow.com/contact

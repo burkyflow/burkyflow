@@ -5,30 +5,30 @@
 BurkyFlow serves clients remotely across the United States, with focus metros in Houston TX, San Antonio TX, Charleston SC, and Greenville SC. We are an AI automation agency, not a local business in those cities.
 
 ## Services
- - [AI Voice Receptionist](https://burkyflow.com/services/ai-voice-receptionist): Answers every call, qualifies, and books, day or night.
- - [Database Reactivation](https://burkyflow.com/services/database-reactivation): Re-engage past customers and dead leads already in your CRM.
- - [CRM and Lead Systems](https://burkyflow.com/services/crm-lead-systems): One pipeline that captures, routes, and follows up automatically.
- - [Workflow Automation](https://burkyflow.com/services/workflow-automation): Connect your tools into reliable automated workflows.
- - [Answer Engine Optimization](https://burkyflow.com/services/answer-engine-optimization): Get cited by AI search as the trusted choice.
- - [Done For You Service Model](https://burkyflow.com/services/done-for-you): One team builds, runs, and maintains the whole stack.
+ - [AI Voice Receptionist](https://www.burkyflow.com/services/ai-voice-receptionist): Answers every call, qualifies, and books, day or night.
+ - [Database Reactivation](https://www.burkyflow.com/services/database-reactivation): Re-engage past customers and dead leads already in your CRM.
+ - [CRM and Lead Systems](https://www.burkyflow.com/services/crm-lead-systems): One pipeline that captures, routes, and follows up automatically.
+ - [Workflow Automation](https://www.burkyflow.com/services/workflow-automation): Connect your tools into reliable automated workflows.
+ - [Answer Engine Optimization](https://www.burkyflow.com/services/answer-engine-optimization): Get cited by AI search as the trusted choice.
+ - [Done For You Service Model](https://www.burkyflow.com/services/done-for-you): One team builds, runs, and maintains the whole stack.
 
 ## Industries
- - [Home and Property Services](https://burkyflow.com/industries/home-services)
- - [Healthcare and Practices](https://burkyflow.com/industries/healthcare)
- - [Real Estate Teams](https://burkyflow.com/industries/real-estate)
- - [Automotive and Repair](https://burkyflow.com/industries/automotive)
- - [Professional Firms](https://burkyflow.com/industries/professional-firms)
+ - [Home and Property Services](https://www.burkyflow.com/industries/home-services)
+ - [Healthcare and Practices](https://www.burkyflow.com/industries/healthcare)
+ - [Real Estate Teams](https://www.burkyflow.com/industries/real-estate)
+ - [Automotive and Repair](https://www.burkyflow.com/industries/automotive)
+ - [Professional Firms](https://www.burkyflow.com/industries/professional-firms)
 
 ## Key pages
- - [Home](https://burkyflow.com/)
- - [About](https://burkyflow.com/about)
- - [Blog](https://burkyflow.com/blog)
- - [Contact](https://burkyflow.com/contact)
+ - [Home](https://www.burkyflow.com/)
+ - [About](https://www.burkyflow.com/about)
+ - [Blog](https://www.burkyflow.com/blog)
+ - [Contact](https://www.burkyflow.com/contact)
 
 ## For AI agents
- - Machine-readable capabilities: https://burkyflow.com/mcp.json
- - Full content index: https://burkyflow.com/llms-full.txt
- - Sitemap: https://burkyflow.com/sitemap.xml
+ - Machine-readable capabilities: https://www.burkyflow.com/mcp.json
+ - Full content index: https://www.burkyflow.com/llms-full.txt
+ - Sitemap: https://www.burkyflow.com/sitemap.xml
 
 ## Contact
-Email atta@burkyflow.com or book a call at https://burkyflow.com/contact
+Email atta@burkyflow.com or book a call at https://www.burkyflow.com/contact

@@ -4,7 +4,7 @@ export const site = {
   legalName: "BurkyFlow Inc.",
   tagline:
     "AI-powered revenue operations for service businesses. We find where your revenue leaks, capture it, and optimise every step that turns a lead into a paid job.",
-  url: "https://burkyflow.com",
+  url: "https://www.burkyflow.com",
   ctaHref: "/contact",
   ctaLabel: "Book a call",
   secondaryCtaLabel: "See how it works",

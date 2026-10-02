@@ -13,7 +13,7 @@ Implemented locally on October 3, 2026, using the supplied BurkyFlow SEO Audit r
 | Image alt attributes | All rendered images have alt attributes. Decorative images use empty alt text; content images retain descriptive labels. |
 | Address and telephone | The shared footer displays the registered Wyoming address, telephone, email, and remote service coverage. |
 | Business schema | Organization and WebSite entities have stable IDs. Home and contact pages include ProfessionalService details with telephone, address, image, and the organization reference. City pages continue to declare remote Service coverage without claiming local offices. |
-| Crawl and canonical behavior | Added omitted public pages to the sitemap. Paid routes use noindex, follow and reference their organic counterparts. Robots allows crawling so the noindex directives can be read. Added a permanent www-to-apex redirect. Sitemap timestamps no longer imply every page changed at each build. |
+| Crawl and canonical behavior | Added omitted public pages to the sitemap. Paid routes use noindex, follow and reference their organic counterparts. Robots allows crawling so the noindex directives can be read. Canonical URLs follow the existing Vercel www host; the hosting redirect sends the bare domain to www. Sitemap timestamps no longer imply every page changed at each build. |
 | Facebook Pixel | Existing Pixel remains on the home-services ad funnel; existing Google Tag Manager remains available. Avoided adding duplicate tracking just to satisfy the scanner. |
 | Render-blocking resources and inline styles | Reduced font duplication and kept nonessential scripts deferred. Framework animation styles and necessary decorative styles remain; removing them merely to satisfy a scanner would not establish a performance benefit. |
 
@@ -46,11 +46,11 @@ Run the production server with `npm run start`, then `python scripts/check-site.
 
 LinkedIn, Instagram, Facebook, YouTube, X, the booking widget, and its embed script each returned HTTP 200 during the external check. Social platforms may gate profile content despite HTTP 200; this check establishes that the URLs responded, not that every profile detail is available anonymously.
 
-Compressed hero artwork was inspected directly. A live browser was unavailable in this session, so viewport screenshots, interactive browser behavior, and a fresh Lighthouse/PageSpeed run were not verified. No new PageSpeed score or ranking improvement is claimed. This change has not been deployed.
+Compressed hero artwork was inspected directly. A live browser was unavailable in this session, so viewport screenshots, interactive browser behavior, and a fresh Lighthouse/PageSpeed run were not verified. No new PageSpeed score or ranking improvement is claimed. The changes were pushed for production deployment on October 3, 2026; live verification is required after each deployment.
 
 ## Work after deployment
 
-1. Verify the production www-to-apex redirect is one hop and check that hosting/CDN redirects do not conflict. Confirm HTTPS and canonical behavior on actual production URLs.
+1. Verify the production bare-domain-to-www redirect is one hop and check that hosting/CDN redirects do not conflict. Confirm HTTPS and canonical behavior on actual production URLs.
 2. Run PageSpeed Insights on home, a service page, and a city page on mobile and desktop. Track LCP, CLS, and INP using real traffic when enough data becomes available.
 3. Submit the sitemap in Google Search Console and Bing Webmaster Tools. Inspect the main pages, confirm paid routes remain excluded, and monitor queries, conversions, and available AI citation reporting.
 4. Address the report's F for backlinks through relevant earned links: complete accurate company profiles, publish documented client case studies with permission, and offer useful measurement guides to industry partners. Prioritize relevant referring domains and measurable referral traffic; a source-code edit cannot create legitimate backlinks.

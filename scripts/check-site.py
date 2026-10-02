@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 
 BASE = (sys.argv[1] if len(sys.argv) > 1 else "http://localhost:3000").rstrip("/")
-PRODUCTION = "https://burkyflow.com"
+PRODUCTION = "https://www.burkyflow.com"
 
 def fetch(path):
     try:
