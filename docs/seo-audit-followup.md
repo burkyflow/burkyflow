@@ -32,3 +32,25 @@ The implementation follows [Next.js metadata behavior](https://nextjs.org/docs/a
 The production build passes with TypeScript checks. `scripts/check-site.py` verifies public and paid routes, links, anchors, image requests, canonical/noindex behavior, structured data syntax, headings, and the homepage title and content-image descriptions. The full local crawl passed across 75 resources.
 
 Lighthouse is run with mobile emulation and simulated throttling on the canonical production URL before and after deployment. Localhost runs support debugging but are not used as proof of production speed improvements. Scores vary with network conditions, Chrome, Lighthouse versions, and third-party activity; compare the metrics alongside the score.
+
+## Production results
+
+Verified on the live canonical URL after deployment of commit `c028e7e`, using Lighthouse 12.8.2 on October 3, 2026:
+
+| Category | Mobile before this follow-up | Mobile after | Desktop after |
+| --- | --- | --- | --- |
+| Performance | 85 | 94 | 100 |
+| Accessibility | 93 | 100 | 100 |
+| SEO | 100 | 100 | 100 |
+
+The mobile after-run recorded a 2.7-second LCP, 1.5-second first contentful paint, 110 ms total blocking time, and zero layout shift. Desktop recorded a 0.7-second LCP, zero total blocking time, and zero layout shift. These are individual lab runs on the canonical HTTPS URL, not field Core Web Vitals or new SEOptimer grades.
+
+The production crawl visited 75 resources, checked 13 image requests and 182 fragment links, and returned zero errors. The homepage title contains 59 characters. The bare domain returns a single 308 redirect to the canonical www URL, which returns HTTP 200.
+
+To reproduce the mobile Lighthouse run in PowerShell:
+
+```powershell
+npx --yes lighthouse https://www.burkyflow.com --output=json --output-path=lighthouse.json "--only-categories=performance,seo,accessibility" --chrome-flags="--headless --no-sandbox" --quiet
+```
+
+Add `--preset=desktop` for the desktop run. Audit the canonical URL when comparing page rendering; audit the bare domain separately when checking redirects.
