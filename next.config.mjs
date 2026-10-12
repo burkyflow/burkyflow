@@ -15,6 +15,11 @@ const nextConfig = {
         destination: "/bundles/full-stack-burkyflow",
         permanent: true,
       },
+      {
+        source: "/bundles/the-wedge-service-business",
+        destination: "/bundles/service-business-core",
+        permanent: true,
+      },
     ];
   },
 };

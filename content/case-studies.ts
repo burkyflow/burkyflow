@@ -33,7 +33,7 @@ export const caseStudies: CaseStudy[] = [
     tags: ["GoHighLevel", "12 Workflows", "Dual Pipeline", "Live April 2026"],
     headline: "Full CRM and automation system for an 8-lender consumer finance brand",
     summary:
-      "A complete GoHighLevel ecosystem, 12 published workflows, dual pipelines, native Facebook Lead Ads, multi-lender routing, automated document collection, and a live operations dashboard. 100% native GHL, no Zapier, no ManyChat, no recurring tool costs.",
+      "A complete GoHighLevel ecosystem, 12 published workflows, dual pipelines, native Facebook Lead Ads, multi-lender routing, automated document collection, and a live operations dashboard. 100% native GoHighLevel, no Zapier, no ManyChat, no recurring tool costs.",
     heroStats: [
       { value: "1,600+", label: "Contacts unified into one source of truth" },
       { value: "3,520+", label: "Automated workflow executions in the first month" },
@@ -64,7 +64,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Operational Command Center",
         detail:
-          "Live 8-widget GHL dashboard giving management 100% visibility into lead sources, pipeline stage distribution, team task load, and lender performance.",
+          "Live 8-widget GoHighLevel dashboard giving management 100% visibility into lead sources, pipeline stage distribution, team task load, and lender performance.",
       },
     ],
     results: [
@@ -122,7 +122,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "AI Proposal Agent",
         detail:
-          "Custom AI agent that ingests inspection reports, extracts deficiencies, and generates a structured, professional proposal, then syncs the deal value back into the GHL pipeline.",
+          "Custom AI agent that ingests inspection reports, extracts deficiencies, and generates a structured, professional proposal, then syncs the deal value back into the GoHighLevel pipeline.",
       },
     ],
     results: [
@@ -133,7 +133,7 @@ export const caseStudies: CaseStudy[] = [
     resultsTable: [
       { metric: "Lead discovery", before: "Manual / random", after: "Automated (Apollo + Clay)" },
       { metric: "Email relevance", before: "Generic / ignored", after: "Highly personalized via AI" },
-      { metric: "Intake process", before: "Phone calls + messy emails", after: "Structured GHL funnels" },
+      { metric: "Intake process", before: "Phone calls + messy emails", after: "Structured GoHighLevel funnels" },
       { metric: "Proposal turnaround", before: "2–3 days", after: "Instant (AI generated)" },
       { metric: "Market position", before: "Local consultant", after: "Statewide compliance leader" },
     ],
@@ -452,7 +452,7 @@ export const caseStudies: CaseStudy[] = [
           "If a homeowner meets at least 2 of the 4 pillars, Mark instantly shifts into booking mode. Fewer than 2, he wraps politely and logs the outcome.",
       },
       {
-        title: "Live GHL Calendar Sync",
+        title: "Live GoHighLevel Calendar Sync",
         detail:
           "During the call Mark checks live calendar availability, offers up to 3 specific time slots within Mon–Fri 9am–6pm, and books in real time.",
       },

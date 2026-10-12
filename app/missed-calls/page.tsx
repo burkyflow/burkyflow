@@ -313,7 +313,7 @@ export default function MissedCallsPage() {
                   <CardContent>
                     <p className="text-muted-foreground">{wedge.pitch}</p>
                     <div className="mt-4 rounded-2xl bg-surface p-4">
-                      <p className="text-sm font-semibold text-foreground">Risk reversal</p>
+                      <p className="text-sm font-semibold text-foreground">Low-risk start</p>
                       <p className="mt-1 text-sm text-muted-foreground">{wedge.riskReversal}</p>
                     </div>
                     <ul className="mt-4 space-y-2">

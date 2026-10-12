@@ -34,24 +34,24 @@ export default function ServicesIndex() {
         </div>
       </section>
 
-      {/* Top 4 wedge offers, surface first */}
+      {/* Top 4 offers, surfaced first */}
       <section className="section">
         <div className="container-page">
           <WedgeGrid />
         </div>
       </section>
 
-      {/* Two branches */}
+      {/* Two service areas */}
       <section className="section bg-surface">
         <div className="container-page">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">Two branches, one system</p>
+            <p className="eyebrow">Two service areas, one system</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-              Demand fills the pipe. Ops processes it.
+              Sales generation brings in leads. Automation handles them.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Pick one wedge or run the full stack. Every offer is deployable on its own and
-              plugs cleanly into the next.
+              Start with one service or run the full system. Every offer works on its own and
+              connects cleanly to the next.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -103,10 +103,10 @@ export default function ServicesIndex() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow">Featured services</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-              Most popular wedges
+              Most popular services
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              The standalone offers most clients enter through before expanding.
+              The services most clients start with before expanding.
             </p>
           </div>
         </div>

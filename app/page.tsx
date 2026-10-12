@@ -42,8 +42,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Top 4 wedge offers, the sharpest pitches we lead with */}
-      <section id="wedges" className="section bg-surface">
+      {/* Top 4 offers most clients start with */}
+      <section id="offers" className="section bg-surface">
         <div className="container-page">
           <WedgeGrid />
         </div>

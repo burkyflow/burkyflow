@@ -1,4 +1,4 @@
-// The four headline wedge offers, the sharpest pitches we lead with.
+// The four headline offers most clients start with.
 // These are positioning over plumbing: each maps onto the underlying services
 // in content/services.ts and content/catalogue.ts.
 
@@ -27,12 +27,12 @@ export const wedges: Wedge[] = [
     name: "Unlock the list you already paid for",
     shortName: "Database Reactivation",
     image: "/images/card1.webp",
-    tagline: "Wake up dormant CRM lists with SMS + AI voice booking.",
+    tagline: "Text past customers and old leads, and let AI voice book the ones who reply.",
     pitch:
       "Pay per booked job. Zero cost until the calendar starts filling. We work the list you already paid to acquire.",
     pitchLong: [
       "Every service business is sitting on a list of past customers and dead leads they already paid to acquire, and almost none of them are being contacted. Meanwhile the team keeps buying new clicks at a premium.",
-      "We text the list in your tone, the AI voice handles replies and qualifies intent, and ready customers land on your calendar. You see the reachable-contact count before anything sends, and the engagement is structured as risk-reversed: you pay per booked job.",
+      "We text the list in your tone, the AI voice handles replies and qualifies intent, and ready customers land on your calendar. You see the reachable-contact count before anything sends, and you pay only for booked jobs.",
     ],
     riskReversal: "Pay per booked job, zero cost until the calendar fills.",
     bestFor: [
@@ -70,12 +70,12 @@ export const wedges: Wedge[] = [
     name: "Paid acquisition that doesn't leak at the booking step",
     shortName: "Ads + AI Voice Pilot",
     image: "/images/card2.webp",
-    tagline: "Meta / IG ads + AI voice + GHL booking funnel, wired together.",
+    tagline: "Facebook and Instagram ads, an AI voice that answers every lead, and a booking page, run by one team.",
     pitch:
-      "Most paid lead campaigns lose 60%+ of leads at the booking step. We close that leak with AI voice and a GHL funnel built behind the ad, sold as a 14-day pilot against a defined target.",
+      "Most paid lead campaigns lose 60%+ of leads at the booking step. We close that leak with an AI voice and a booking page built behind the ad, starting with a 14-day pilot against a target you set.",
     pitchLong: [
       "Ads agencies fill the top of the funnel and then walk away. The leak is below the ad, leads come in, the front desk can't answer fast enough, the booking flow is broken, and 60%+ of that paid traffic dies before it becomes a consult.",
-      "We run the ads, build the funnel, and put the AI voice receptionist on the inbound number so every lead is answered, qualified, and booked. Sold as a 14-day pilot with a defined target, consults, inspections, or installs, so you can measure the difference before committing.",
+      "We run the ads, build the funnel, and put the AI voice receptionist on the inbound number so every lead is answered, qualified, and booked. It starts as a 14-day pilot with a defined target, consults, inspections, or installs, so you can measure the difference before committing.",
     ],
     riskReversal: "14-day pilot with a defined target. If the numbers don't land, no commitment to continue.",
     bestFor: [
@@ -94,7 +94,7 @@ export const wedges: Wedge[] = [
     faqs: [
       {
         q: "Who runs the ads?",
-        a: "We run the ads, build the landing/funnel, and wire the AI voice + GHL booking behind it. One team, one accountability line.",
+        a: "We run the ads, build the landing page, and connect the AI voice and booking system behind it. One team is accountable for the result.",
       },
       {
         q: "What's the pilot commitment?",
@@ -109,15 +109,15 @@ export const wedges: Wedge[] = [
   {
     slug: "outbound-engine",
     letter: "C",
-    name: "Outbound that doesn't smell like outbound",
-    shortName: "B2B Outbound Engine",
+    name: "Outbound that feels personal, not automated",
+    shortName: "Done-for-You B2B Outbound",
     image: "/images/card3.webp",
-    tagline: "Apollo + Clay list build → multi-touch SMS + email → AI voice qualifier → booked meeting.",
+    tagline: "We build a researched prospect list, reach out by email and text, qualify replies with AI voice, and book the meeting.",
     pitch:
-      "Replaces the fragile 6-tool DIY outbound stack with a single productized engine. Setup fee plus monthly retainer, booked meetings on the calendar.",
+      "One done-for-you system instead of six separate sales tools. A setup fee plus a monthly retainer, with qualified meetings on your calendar.",
     pitchLong: [
-      "Most B2B teams cobble together six tools, Apollo, Clay, Instantly, Smartlead, Zapier, Calendly, and the result is fragile, generic, and obvious. Reply rates drop, the sender domain burns, and the SDR layer becomes a cost center.",
-      "We replace that stack with one productized engine: enriched lists, multi-touch SMS and email, an AI voice qualifier, and direct hand-off to your calendar. Meetings land qualified, and the team behind it is ours.",
+      "Most B2B teams stitch together separate tools for lists, data, email sending, automation, and scheduling, and the result is fragile and generic. Reply rates drop, email deliverability suffers, and sales reps spend their time on prospects who were never a fit.",
+      "We replace that with one system we run for you: researched prospect lists, personalized email and text follow-up, an AI voice call that checks interest, and meetings booked straight onto your calendar. Our team runs it end to end.",
     ],
     riskReversal: "Setup fee plus monthly retainer. Reply and meeting targets defined up front and reported weekly.",
     bestFor: [
@@ -128,8 +128,8 @@ export const wedges: Wedge[] = [
     ],
     underlyingServices: ["crm-lead-systems", "workflow-automation"],
     proofPoints: [
-      "Personalized per-account using Clay enrichment, not just first-name swaps",
-      "Multi-touch sequencing across SMS + email + LinkedIn",
+      "Personalized to each company, not just a first-name swap",
+      "Follow-up across email, text, and LinkedIn",
       "AI voice qualifies before the meeting lands on your calendar",
       "Weekly reporting against a stated meeting target",
     ],
@@ -154,14 +154,14 @@ export const wedges: Wedge[] = [
     name: "Don't lose the calls you already paid Google for",
     shortName: "24/7 AI Voice Coverage",
     image: "/images/card4.webp",
-    tagline: "AI voice on the inbound line, catches missed and after-hours calls from LSAs, SEO, and referrals.",
+    tagline: "An AI receptionist on your main line that answers missed and after-hours calls from Google ads, search, and referrals.",
     pitch:
-      "You already paid for the click that drove the call. Missing the call is the most expensive line item in the business. Proof-window first, then ongoing coverage.",
+      "You already paid for the click that drove the call. Missing the call is the most expensive line item in the business. We start by auditing your missed calls, then move to ongoing coverage.",
     pitchLong: [
-      "Every missed call to a business that bought the click, LSAs, Google Ads, organic SEO, referral traffic, is the most expensive line item in the business. The acquisition cost is paid; the conversion is lost to whoever answers second.",
-      "We put an AI voice on the inbound line, overflow, after-hours, or full coverage, and you stop paying twice. Start with a proof-window audit of your missed-call log, then move to ongoing coverage with bookings landing in your CRM.",
+      "Every missed call to a business that paid for it, through Local Services Ads, Google Ads, search, or referrals, is the most expensive line item in the business. The acquisition cost is paid; the conversion is lost to whoever answers second.",
+      "We put an AI voice on the inbound line, overflow, after-hours, or full coverage, and you stop paying twice. Start with an audit of your missed-call log, then move to ongoing coverage with bookings landing in your CRM.",
     ],
-    riskReversal: "Proof window first: we audit your missed-call log and show the lost-revenue number before you commit.",
+    riskReversal: "Audit first: we review your missed-call log and show the lost-revenue number before you commit.",
     bestFor: [
       "After-hours plumbing, electrical, HVAC",
       "Law firm intake",
@@ -177,7 +177,7 @@ export const wedges: Wedge[] = [
     ],
     faqs: [
       {
-        q: "What's a 'proof window'?",
+        q: "What happens in the missed-call audit?",
         a: "We pull your missed-call log, quantify the lost-revenue number, and only move forward if the math justifies it. No commitment to begin.",
       },
       {
@@ -186,7 +186,7 @@ export const wedges: Wedge[] = [
       },
       {
         q: "How fast can it go live?",
-        a: "Voice Lite goes live in 5–7 days. Voice Pro (full intake + CRM sync) in 10–14 days.",
+        a: "A basic setup goes live in 5–7 days. Full intake with CRM sync takes 10–14 days.",
       },
     ],
   },

@@ -70,7 +70,7 @@ function WedgeCard({ wedge }: { wedge: Wedge }) {
           href={`/wedges/${wedge.slug}`}
           className={`group mt-4 inline-flex items-center gap-1.5 text-sm font-semibold ${a.text}`}
         >
-          See the full pitch
+          See the details
           <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
         </Link>
       </div>
@@ -79,9 +79,9 @@ function WedgeCard({ wedge }: { wedge: Wedge }) {
 }
 
 export function WedgeGrid({
-  heading = "The four wedges most clients enter through",
+  heading = "Four ways most clients start",
   eyebrow = "Top offers",
-  lead = "Each one stands alone, is priced for fast proof, and plugs into the rest of the stack when it's time to expand.",
+  lead = "Each offer works on its own, is priced so you see results quickly, and connects to the rest of your system when you are ready to expand.",
 }: {
   heading?: string;
   eyebrow?: string;

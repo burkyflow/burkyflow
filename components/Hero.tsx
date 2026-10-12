@@ -41,7 +41,7 @@ export function Hero() {
               </Link>
             </Button>
             <Button asChild variant="secondary" size="lg">
-              <Link href="#wedges">
+              <Link href="#offers">
                 <Play className="size-4 fill-brand text-brand" />
                 {site.secondaryCtaLabel}
               </Link>
