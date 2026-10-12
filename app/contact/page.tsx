@@ -55,8 +55,21 @@ export default function ContactPage() {
             </div>
           </div>
 
+          {/* Visible even when the third-party calendar is slow or blocked */}
+          <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted-foreground">
+            Pick a time in the calendar below. If it does not load, call{" "}
+            <a href={site.phone.href} className="font-semibold text-brand hover:underline">
+              {site.phone.display}
+            </a>{" "}
+            or email{" "}
+            <a href={`mailto:${site.email}`} className="font-semibold text-brand hover:underline">
+              {site.email}
+            </a>
+            .
+          </p>
+
           {/* Booking widget, full width so the two-column scheduler shows */}
-          <div className="mx-auto mt-10 max-w-6xl">
+          <div className="mx-auto mt-6 max-w-6xl">
             <BookingWidget />
           </div>
         </div>

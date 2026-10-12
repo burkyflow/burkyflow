@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Sales Generation & GTM",
   description:
-    "GTM-as-a-Service, hyper-personalised SMS/email copy, meeting booking engines, referral systems, social content autopilot, Meta Ads, and database reactivation.",
+    "GTM-as-a-Service, hyper-personalized SMS/email copy, meeting booking engines, referral systems, social content autopilot, Meta Ads, and database reactivation.",
   path: "/services/sales-generation",
 });
 

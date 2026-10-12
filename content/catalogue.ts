@@ -135,7 +135,7 @@ export const automationBranch: Branch = {
       slug: "crm-lead-systems",
       name: "CRM & Lead Systems (GoHighLevel build-outs)",
       bestFit: "Sales Directors and SMB owners whose leads go cold in 5 minutes.",
-      pitch: "A standardised, templated CRM environment built for rapid deployment with an aggressive 5-day follow-up cadence.",
+      pitch: "A standardized, templated CRM environment built for rapid deployment with an aggressive 5-day follow-up cadence.",
       packages: [
         {
           tier: "CRM Foundation",
@@ -186,7 +186,7 @@ export const automationBranch: Branch = {
           deliverables: [
             "90-minute discovery",
             "Written audit",
-            "Prioritised automation backlog",
+            "Prioritized automation backlog",
             "ROI estimate per workflow",
           ],
           timeline: "1 week",
@@ -311,7 +311,7 @@ export const automationBranch: Branch = {
       ],
       faqs: [
         { q: "Do I own the clone?", a: "Yes. Your voice, likeness, and the underlying assets remain yours. We operate the studio on your behalf." },
-        { q: "How is it used in sales?", a: "Voice clones power outbound voice and personalised follow-up; avatar clones power outreach video and inbound content." },
+        { q: "How is it used in sales?", a: "Voice clones power outbound voice and personalized follow-up; avatar clones power outreach video and inbound content." },
       ],
     },
     {
@@ -360,7 +360,7 @@ export const automationBranch: Branch = {
       slug: "managed-services",
       name: "Managed Services (Retainer Layer)",
       bestFit: "Every Branch A client at the point of build hand-off. Default attach: Care.",
-      pitch: "Monitoring, optimisation, and ongoing support, the MRR layer that sits on top of every build.",
+      pitch: "Monitoring, optimization, and ongoing support, the MRR layer that sits on top of every build.",
       packages: [
         {
           tier: "Care",
@@ -368,19 +368,19 @@ export const automationBranch: Branch = {
           deliverables: ["Uptime monitoring", "Incident response", "Monthly health report"],
         },
         {
-          tier: "Optimise",
-          scope: "Care plus monthly optimisation pass on flows and copy, and a quarterly strategy call.",
+          tier: "Optimize",
+          scope: "Care plus monthly optimization pass on flows and copy, and a quarterly strategy call.",
           deliverables: [
             "Everything in Care",
-            "Monthly optimisation pass",
+            "Monthly optimization pass",
             "Quarterly strategy call",
           ],
         },
         {
           tier: "Partner",
-          scope: "Optimise plus dedicated Slack channel, 4-hour incident SLA, and unlimited minor changes.",
+          scope: "Optimize plus dedicated Slack channel, 4-hour incident SLA, and unlimited minor changes.",
           deliverables: [
-            "Everything in Optimise",
+            "Everything in Optimize",
             "Dedicated Slack channel",
             "4-hour incident SLA",
             "Unlimited minor changes",
@@ -396,7 +396,7 @@ export const automationBranch: Branch = {
       slug: "ai-consulting",
       name: "AI Consulting",
       bestFit: "Larger SMBs and professional firms not yet ready for a full build.",
-      pitch: "Strategy, automation audits, stack evaluation, ROI modelling, and roadmap.",
+      pitch: "Strategy, automation audits, stack evaluation, ROI modeling, and roadmap.",
       packages: [
         {
           tier: "Strategy Sprint",
@@ -494,7 +494,7 @@ export const demandBranch: Branch = {
     },
     {
       slug: "sms-email-copy",
-      name: "SMS & Email Copy (Hyper-Personalised)",
+      name: "SMS & Email Copy (Hyper-Personalized)",
       bestFit: "Clients who already have lists and infrastructure and need the copy that converts them.",
       pitch: "AI-generated, Clay-enriched SMS and email copy built for 5-minute lead-response windows and 5-day follow-up sequences.",
       packages: [
@@ -515,7 +515,7 @@ export const demandBranch: Branch = {
         },
       ],
       faqs: [
-        { q: "Will the copy sound like a template?", a: "No. Personalisation is generated per account using Clay enrichment, not just first-name swaps." },
+        { q: "Will the copy sound like a template?", a: "No. Personalization is generated per account using Clay enrichment, not just first-name swaps." },
         { q: "How long until I see replies?", a: "First sequences typically begin landing within days, with cadence and copy tuned weekly from there." },
       ],
     },
@@ -537,10 +537,10 @@ export const demandBranch: Branch = {
         },
         {
           tier: "Booking Engine + Dashboard",
-          scope: "Booking Engine plus an Airtable command-centre dashboard with daily digest and reporting.",
+          scope: "Booking Engine plus an Airtable command-center dashboard with daily digest and reporting.",
           deliverables: [
             "Everything in Booking Engine",
-            "Airtable command-centre",
+            "Airtable command-center",
             "Daily digest",
             "Reporting dashboard",
           ],
@@ -614,7 +614,7 @@ export const demandBranch: Branch = {
       slug: "meta-ads-management",
       name: "Meta Ads (Facebook + Instagram) Management",
       bestFit: "Clients ready to funnel paid social into the same AI voice + SMS + GHL pipeline Branch A runs.",
-      pitch: "Paid social creative, campaign build, audience targeting, and optimisation, funnelled into your operating system.",
+      pitch: "Paid social creative, campaign build, audience targeting, and optimization, funneled into your operating system.",
       packages: [
         {
           tier: "Ads Starter",
@@ -622,7 +622,7 @@ export const demandBranch: Branch = {
           deliverables: [
             "1 campaign",
             "3 creatives / month",
-            "Weekly optimisation",
+            "Weekly optimization",
             "Monthly report",
           ],
         },
@@ -676,7 +676,7 @@ export const demandBranch: Branch = {
       faqs: [
         { q: "Is it compliant?", a: "Yes. We message in your tone with appropriate consent handling, sensible cadence, and clear opt-out." },
         { q: "How fast do results show?", a: "Reactivation typically produces replies and bookings within the first days of sending, you are contacting people who already know you." },
-        { q: "How is revshare structured?", a: "Performance components are passed through at standard catalogue rates and tracked transparently in the reporting dashboard." },
+        { q: "How is revshare structured?", a: "Performance components are passed through at standard catalog rates and tracked transparently in the reporting dashboard." },
       ],
     },
   ],
@@ -782,7 +782,7 @@ export const bundleGroups: BundleGroup[] = [
           "Replaces hiring SDRs. Builds the list, runs the sequences, qualifies the replies, and lands qualified meetings on the calendar.",
         outcomes: [
           "10–30 booked meetings per month at the target tier",
-          "Cold reply rates of 4–8% on personalised outreach",
+          "Cold reply rates of 4–8% on personalized outreach",
           "Cost per booked meeting under $300 once tuned",
         ],
       },
@@ -821,7 +821,7 @@ export const bundleGroups: BundleGroup[] = [
         components: ["Content Standard", "Meta Ads Growth", "GTM Foundation", "AEO Baseline"],
         bestFor: "Businesses where outbound lands cold because the brand has no surface area.",
         whyThisBundle:
-          "Warms the brand before outbound hits. Content, paid social, AI-search visibility, and outbound work together so the prospect already recognises you.",
+          "Warms the brand before outbound hits. Content, paid social, AI-search visibility, and outbound work together so the prospect already recognizes you.",
         outcomes: [
           "Outbound prospects who already know who you are",
           "Paid traffic landing on a credible, populated brand",
@@ -835,10 +835,10 @@ export const bundleGroups: BundleGroup[] = [
         components: ["Full Persona Studio", "Content Pro", "LinkedIn outbound", "Care"],
         bestFor: "Agency owners, coaches, and founders selling on personal brand.",
         whyThisBundle:
-          "Productises the founder. Voice clone, avatar, daily content, and LinkedIn outbound, all in the founder's voice, without the founder being on camera all day.",
+          "Productizes the founder. Voice clone, avatar, daily content, and LinkedIn outbound, all in the founder's voice, without the founder being on camera all day.",
         outcomes: [
           "Daily content drops in the founder's voice and likeness",
-          "Outbound that lands on a warm, recognised brand",
+          "Outbound that lands on a warm, recognized brand",
           "The founder's time freed from production",
         ],
       },

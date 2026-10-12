@@ -8,7 +8,7 @@ type Stat = { stat: string; label: string; icon: LucideIcon; accent: Accent; ima
 const stats: Stat[] = [
   {
     stat: "Calls",
-    label: "Capture enquiries while your crews are busy on jobs",
+    label: "Capture inquiries while your crews are busy on jobs",
     icon: PhoneOff,
     accent: "brand",
     image: "/images/c1.webp", // ← card background (full cover)

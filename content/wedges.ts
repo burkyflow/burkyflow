@@ -114,10 +114,10 @@ export const wedges: Wedge[] = [
     image: "/images/card3.webp",
     tagline: "Apollo + Clay list build → multi-touch SMS + email → AI voice qualifier → booked meeting.",
     pitch:
-      "Replaces the fragile 6-tool DIY outbound stack with a single productised engine. Setup fee plus monthly retainer, booked meetings on the calendar.",
+      "Replaces the fragile 6-tool DIY outbound stack with a single productized engine. Setup fee plus monthly retainer, booked meetings on the calendar.",
     pitchLong: [
-      "Most B2B teams cobble together six tools, Apollo, Clay, Instantly, Smartlead, Zapier, Calendly, and the result is fragile, generic, and obvious. Reply rates drop, the sender domain burns, and the SDR layer becomes a cost centre.",
-      "We replace that stack with one productised engine: enriched lists, multi-touch SMS and email, an AI voice qualifier, and direct hand-off to your calendar. Meetings land qualified, and the team behind it is ours.",
+      "Most B2B teams cobble together six tools, Apollo, Clay, Instantly, Smartlead, Zapier, Calendly, and the result is fragile, generic, and obvious. Reply rates drop, the sender domain burns, and the SDR layer becomes a cost center.",
+      "We replace that stack with one productized engine: enriched lists, multi-touch SMS and email, an AI voice qualifier, and direct hand-off to your calendar. Meetings land qualified, and the team behind it is ours.",
     ],
     riskReversal: "Setup fee plus monthly retainer. Reply and meeting targets defined up front and reported weekly.",
     bestFor: [
@@ -128,7 +128,7 @@ export const wedges: Wedge[] = [
     ],
     underlyingServices: ["crm-lead-systems", "workflow-automation"],
     proofPoints: [
-      "Personalised per-account using Clay enrichment, not just first-name swaps",
+      "Personalized per-account using Clay enrichment, not just first-name swaps",
       "Multi-touch sequencing across SMS + email + LinkedIn",
       "AI voice qualifies before the meeting lands on your calendar",
       "Weekly reporting against a stated meeting target",

@@ -41,7 +41,7 @@ export default function PrivacyPage() {
         <p className="mt-3">
           If you give us your mobile number and opt in to receive text messages, we use it only to
           send the messages you asked for, such as appointment and booking confirmations,
-          reminders, follow-ups, and replies to your enquiries, and to respond when you reply to
+          reminders, follow-ups, and replies to your inquiries, and to respond when you reply to
           us.
         </p>
 

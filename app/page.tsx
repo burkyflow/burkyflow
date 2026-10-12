@@ -32,7 +32,7 @@ export default function HomePage() {
       <section className="section" aria-labelledby="automation-overview">
         <div className="container-page mx-auto max-w-3xl">
           <h2 id="automation-overview" className="text-3xl font-semibold sm:text-4xl">How do AI voice receptionists help service businesses?</h2>
-          <p className="mt-5 text-lg text-muted-foreground">AI automation connects call answering, lead follow-up, scheduling, and CRM updates. BurkyFlow builds and runs these systems for service businesses so enquiries reach the right person, appointments reach the calendar, and results can be measured.</p>
+          <p className="mt-5 text-lg text-muted-foreground">AI automation connects call answering, lead follow-up, scheduling, and CRM updates. BurkyFlow builds and runs these systems for service businesses so inquiries reach the right person, appointments reach the calendar, and results can be measured.</p>
           <dl className="mt-6 space-y-4 text-muted-foreground">
             <div><dt className="font-semibold text-foreground">AI voice receptionist</dt><dd>Answers calls, gathers service details, follows booking rules, and escalates calls that need a person. <Link href="/services/ai-voice-receptionist" className="text-brand underline">Explore AI call answering</Link>.</dd></div>
             <div><dt className="font-semibold text-foreground">Database reactivation</dt><dd>Re-engages eligible past customers and dormant leads with relevant messages and booking follow-up. <Link href="/services/database-reactivation" className="text-brand underline">Explore customer reactivation</Link>.</dd></div>

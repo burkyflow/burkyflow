@@ -14,7 +14,7 @@ Start with customers due for maintenance or prospects who requested an estimate.
 
 ## How does CRM reactivation work?
 
-1. Segment eligible contacts by last service date, service type, or enquiry stage.
+1. Segment eligible contacts by last service date, service type, or inquiry stage.
 2. Send a short message explaining why you are contacting them and what they can do next.
 3. Route replies to your team or booking workflow, with a clear path to a person.
 4. Stop campaign messages when someone books, declines, or opts out.

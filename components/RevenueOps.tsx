@@ -190,15 +190,15 @@ export function RevenueOps() {
     <section className="section bg-surface">
       <div className="container-page">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="eyebrow">Revenue optimisation</p>
+          <p className="eyebrow">Revenue optimization</p>
           <h2 className="mt-3 text-4xl font-bold leading-[1.12] tracking-tight sm:text-5xl">
             We don&apos;t just automate tasks.
             <br />
-            We <span className="text-gradient-brand">optimise the revenue</span> you already have.
+            We <span className="text-gradient-brand">optimize the revenue</span> you already have.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
             Automation is the tool. Revenue is the outcome. We measure where every dollar falls out
-            of the funnel, fix the most expensive gap first, and keep optimising the numbers that
+            of the funnel, fix the most expensive gap first, and keep optimizing the numbers that
             decide what you actually earn.
           </p>
         </div>

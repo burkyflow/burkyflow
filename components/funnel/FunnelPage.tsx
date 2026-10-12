@@ -559,9 +559,9 @@ export function FunnelPage({
         </div>
 
         <div className="container-page mx-auto mt-10 max-w-5xl">
-          <BookingWidget />
-          <p className="mt-6 text-center text-sm text-muted-foreground">
-            Prefer to talk now? Call{" "}
+          {/* Above the widget so it stays visible if the calendar is slow or blocked */}
+          <p className="mb-6 text-center text-sm text-muted-foreground">
+            Prefer to talk now, or the calendar is not loading? Call{" "}
             <a href={site.phone.href} className="font-semibold text-brand hover:underline">
               {site.phone.display}
             </a>{" "}
@@ -571,6 +571,7 @@ export function FunnelPage({
             </a>
             .
           </p>
+          <BookingWidget />
         </div>
       </section>
 

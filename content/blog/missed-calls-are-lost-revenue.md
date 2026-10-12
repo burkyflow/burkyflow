@@ -6,7 +6,7 @@ date: "2026-05-01"
 updated: "2026-10-03"
 ---
 
-Missed-call recovery means responding to unanswered enquiries, qualifying the caller, and helping them book a service. An [AI voice receptionist](/services/ai-voice-receptionist) handles overflow and after-hours calls using your service information, booking rules, and human escalation instructions.
+Missed-call recovery means responding to unanswered inquiries, qualifying the caller, and helping them book a service. An [AI voice receptionist](/services/ai-voice-receptionist) handles overflow and after-hours calls using your service information, booking rules, and human escalation instructions.
 
 ## Why it happens
 
@@ -14,11 +14,11 @@ Crews are on jobs, the front desk is busy, and after hours nobody may be availab
 
 ## How do you calculate the value of missed calls?
 
-Start with unique, qualified enquiries. Exclude spam, repeat dialling, and calls about existing bookings. Then estimate:
+Start with unique, qualified inquiries. Exclude spam, repeat dialing, and calls about existing bookings. Then estimate:
 
-**Potential recovered revenue = qualified missed enquiries × recovery-to-booking rate × average completed job value.**
+**Potential recovered revenue = qualified missed inquiries × recovery-to-booking rate × average completed job value.**
 
-For example, 40 qualified missed enquiries, a hypothetical 25% recovery-to-booking rate, and a $300 average completed job value imply $3,000 in potential revenue. These figures illustrate the calculation; they are not client results or industry benchmarks. Adjust for cancellations and uncompleted jobs before comparing revenue with system costs.
+For example, 40 qualified missed inquiries, a hypothetical 25% recovery-to-booking rate, and a $300 average completed job value imply $3,000 in potential revenue. These figures illustrate the calculation; they are not client results or industry benchmarks. Adjust for cancellations and uncompleted jobs before comparing revenue with system costs.
 
 ## What to do about it
 
@@ -35,6 +35,6 @@ It supports your team by covering repeat questions and unattended calls. Calls n
 
 ## What should you measure after launch?
 
-Track qualified enquiries, booked appointments, completed jobs, and revenue attributed to recovered enquiries. Completed work is a better basis for financial return than bookings alone.
+Track qualified inquiries, booked appointments, completed jobs, and revenue attributed to recovered inquiries. Completed work is a better basis for financial return than bookings alone.
 
 See [our missed-call recovery approach](/missed-calls) or [book a call](/contact) to discuss your systems and booking requirements.

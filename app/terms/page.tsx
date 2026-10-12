@@ -27,7 +27,7 @@ export default function TermsPage() {
         <p className="mt-3">
           By providing your mobile number and opting in, you agree to receive text messages from{" "}
           {site.legalName} relating to the service you requested, for example appointment and
-          booking confirmations, reminders, follow-ups, and replies to your enquiries. Consent to
+          booking confirmations, reminders, follow-ups, and replies to your inquiries. Consent to
           receive text messages is not a condition of any purchase.
         </p>
         <ul className="mt-3 list-disc pl-6">

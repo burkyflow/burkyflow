@@ -33,7 +33,7 @@ type Card = {
 };
 
 const cards: Card[] = [
-  { accent: "brand", icon: Users, value: "Capture", label: "Calls and leads", image: "/images/pro1.webp", info: { icon: TrendingUp, title: "Keep enquiries in one pipeline", sub: "Answer, qualify, and route each opportunity" } },
+  { accent: "brand", icon: Users, value: "Capture", label: "Calls and leads", image: "/images/pro1.webp", info: { icon: TrendingUp, title: "Keep inquiries in one pipeline", sub: "Answer, qualify, and route each opportunity" } },
   { accent: "accent", icon: Clock, value: "Connect", label: "Your existing tools", image: "/images/pro2.webp", info: { icon: Clock, title: "Reduce manual handoffs", sub: "Link your CRM, calendar, and follow-up" } },
   { accent: "brand", icon: Zap, value: "Measure", label: "Your business outcomes", image: "/images/pro1.webp", info: { icon: TrendingUp, title: "Report against agreed metrics", sub: "Track booking rate and revenue per lead" } },
 ];

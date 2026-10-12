@@ -477,7 +477,7 @@ export const funnelPricing: {
       features: [
         "Everything in Growth",
         "Multi-channel outbound",
-        "Answer Engine Optimisation",
+        "Answer Engine Optimization",
         "Dedicated support & reporting",
       ],
     },
