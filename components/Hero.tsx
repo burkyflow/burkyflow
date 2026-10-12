@@ -13,16 +13,13 @@ const pills = [
 
 export function Hero() {
   return (
-    // Hero, dashboard as the full-width background, copy overlaid
-    <section className="relative overflow-hidden bg-white">
-      {/* Desktop: full-width background dashboard, natural size, no crop, no overlay */}
-      <div aria-hidden className="hero-dashboard hidden aspect-[2/1] lg:block" />
-
-      {/* Copy, static flow on mobile, overlaid + vertically centered on desktop */}
-      <div className="container-page relative pt-10 pb-10 lg:absolute lg:inset-0 lg:flex lg:items-center lg:py-0">
+    // Copy and dashboard share the page container, so both line up with the
+    // navbar at every width instead of the artwork stretching to the screen edge.
+    <section className="relative overflow-hidden bg-[#fbfbfe]">
+      <div className="container-page relative grid items-center gap-10 py-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-12 lg:py-20 xl:py-24">
         <div className="max-w-xl">
           <p className="eyebrow mb-4">AI voice receptionist &amp; revenue automation</p>
-          <h1 className="text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl">
+          <h1 className="text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
             Turn missed calls and dormant leads into{" "}
             <span className="text-gradient-brand">booked revenue</span>
           </h1>
@@ -60,6 +57,13 @@ export function Hero() {
             ))}
           </ul>
         </div>
+
+        {/* Desktop only: product dashboard, set in CSS so phones never download it.
+            It extends left into the column gap, where its faded margin sits. */}
+        <div
+          aria-hidden
+          className="hero-dashboard hidden aspect-[1054/800] lg:-ml-8 lg:block lg:w-[calc(100%+2rem)] xl:-ml-24 xl:w-[calc(100%+6rem)]"
+        />
       </div>
     </section>
   );
