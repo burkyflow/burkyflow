@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   if (!found) return pageMetadata({ title: "Not found", description: "", path: "/bundles" });
   return pageMetadata({
     title: `${found.bundle.name} bundle`,
-    description: found.bundle.tagline,
+    description: found.bundle.metaDescription ?? found.bundle.tagline,
     path: `/bundles/${found.bundle.slug}`,
   });
 }

@@ -67,14 +67,14 @@ export const wedges: Wedge[] = [
   {
     slug: "paid-acquisition-no-leak",
     letter: "B",
-    name: "Paid acquisition that doesn't leak at the booking step",
+    name: "Paid ads that don't leak at the booking step",
     shortName: "Ads + AI Voice Pilot",
     image: "/images/card2.webp",
     tagline: "Facebook and Instagram ads, an AI voice that answers every lead, and a booking page, run by one team.",
     pitch:
-      "Most paid lead campaigns lose 60%+ of leads at the booking step. We close that leak with an AI voice and a booking page built behind the ad, starting with a 14-day pilot against a target you set.",
+      "Paid leads go cold fast when nobody answers or booking is clumsy. We close that leak with an AI voice and a booking page built behind the ad, starting with a 14-day pilot against a target you set.",
     pitchLong: [
-      "Ads agencies fill the top of the funnel and then walk away. The leak is below the ad, leads come in, the front desk can't answer fast enough, the booking flow is broken, and 60%+ of that paid traffic dies before it becomes a consult.",
+      "Ads agencies fill the top of the funnel and then walk away. The leak is below the ad, leads come in, the front desk can't answer fast enough, the booking flow is broken, and much of that paid traffic is lost before it becomes a consult.",
       "We run the ads, build the funnel, and put the AI voice receptionist on the inbound number so every lead is answered, qualified, and booked. It starts as a 14-day pilot with a defined target, consults, inspections, or installs, so you can measure the difference before committing.",
     ],
     riskReversal: "14-day pilot with a defined target. If the numbers don't land, no commitment to continue.",
@@ -136,7 +136,7 @@ export const wedges: Wedge[] = [
     faqs: [
       {
         q: "What reply rates should I expect?",
-        a: "4–8% cold replies are typical, with 10–30 booked meetings per month at the multi-channel tier.",
+        a: "It depends on your market, offer, and list. We agree reply and meeting targets during setup and report against them every week.",
       },
       {
         q: "Do you handle reply management?",
@@ -171,8 +171,8 @@ export const wedges: Wedge[] = [
     underlyingServices: ["ai-voice-receptionist", "crm-lead-systems", "workflow-automation"],
     proofPoints: [
       "Sub-60-second response, 24/7",
-      "20–40% booking rate on qualified inbound",
-      "30%+ missed-call recovery",
+      "Average answer time cut from 45 seconds to 2 at Troy Plumbing",
+      "Call capture raised from 55% to 100% at EZ Cribs",
       "Bookings land in your CRM with full call context",
     ],
     faqs: [

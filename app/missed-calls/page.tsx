@@ -225,8 +225,8 @@ export default function MissedCallsPage() {
                     stats[0],
                     stats[2],
                     {
-                      value: "$45K–$120K",
-                      label: "missed-call loss per year in home services",
+                      value: "7×",
+                      label: "more likely to qualify a lead contacted within an hour (HBR)",
                     },
                   ].map((item) => (
                     <div key={item.label} className="rounded-2xl bg-surface p-4 text-center">

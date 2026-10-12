@@ -23,7 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const cs = getCaseStudy(slug);
   if (!cs) return pageMetadata({ title: "Not found", description: "", path: "/case-studies" });
   return pageMetadata({
-    title: `${cs.client}, ${cs.headline}`,
+    // Short enough to show in full in search results (~60 characters with the brand).
+    title: `${cs.client} Case Study`,
     description: cs.summary,
     path: `/case-studies/${cs.slug}`,
   });

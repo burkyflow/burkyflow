@@ -91,7 +91,7 @@ export const automationBranch: Branch = {
         { q: "Will the AI voice sound robotic?", a: "No. It is configured to match how your business talks, handles real back-and-forth, and hands off to a human when a call needs one." },
         { q: "What happens with an emergency call?", a: "Urgency cues such as no heat, burst pipe, or lockout are detected and the call is routed to your on-call person immediately." },
         { q: "Does it work with my phone setup?", a: "Yes. We route your existing number, or just your after-hours and overflow line, to the AI voice. No new hardware." },
-        { q: "What are the performance standards?", a: "Sub-60-second response time, 20–40% booking rate on qualified leads, 30%+ missed-call recovery, and 99.5% uptime." },
+        { q: "What are the performance standards?", a: "Calls are answered within seconds, 24 hours a day, against a 99.5% uptime target. Booking and recovery targets are set from your own call data during setup and reported to you. In client deployments, average answer time fell from 45 seconds to 2 (Troy Plumbing) and call capture rose from 55% to 100% (EZ Cribs)." },
       ],
     },
     {
@@ -485,8 +485,8 @@ export const demandBranch: Branch = {
         },
       ],
       faqs: [
-        { q: "What reply rates should I expect?", a: "Cold reply rates of 4–8% are typical, with 10–30 booked meetings per month at the Multi-Channel tier." },
-        { q: "What's the cost per booked meeting?", a: "Targeted below $300 per booked meeting once the engine is tuned, which is consistently cheaper than building an in-house sales development team." },
+        { q: "What reply rates should I expect?", a: "It depends on your market, offer, and list. We agree reply and meeting targets during setup and report against them every week." },
+        { q: "What's the cost per booked meeting?", a: "We set a cost-per-meeting target during setup and report against it, so you can compare it directly with the cost of hiring in-house." },
         { q: "Do you handle the data?", a: "Yes. We build and research the prospect lists using data tools such as Apollo and Clay, our team handles replies, and meetings land on your calendar." },
         { q: "Will outbound time itself to my prospects' hours?", a: "Yes. Sends are timed to your prospects' working hours regardless of where the delivery team sits." },
       ],
@@ -698,6 +698,8 @@ export type Bundle = {
   slug: string;
   name: string;
   tagline: string;
+  // Search-result snippet, kept under ~160 characters.
+  metaDescription?: string;
   components: string[];
   bestFor?: string;
   whyThisBundle?: string;
@@ -719,6 +721,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "lead-catcher",
         name: "Lead Catcher",
         tagline: "Just starting, the simplest way in",
+        metaDescription: "An AI receptionist plus a simple CRM so every call is answered and every lead is captured. The lowest-commitment way to start with AI automation.",
         components: ["Voice Lite", "CRM Foundation"],
         bestFor: "SMBs taking their first step into AI automation with the lowest possible commitment.",
         whyThisBundle:
@@ -733,6 +736,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "inbound-starter",
         name: "Inbound Starter",
         tagline: "Just starting, capture web visitors",
+        metaDescription: "Website chat and online booking that turn site visitors into scheduled appointments instead of contact forms nobody answers.",
         components: ["Chat Starter", "Booking Setup"],
         bestFor: "Businesses with web traffic where inquiries die in a contact form.",
         whyThisBundle:
@@ -747,6 +751,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "reactivation-quick-win",
         name: "Reactivation Quick Win",
         tagline: "Just starting, wake up an old list",
+        metaDescription: "Text and AI voice outreach to past customers and old leads in your CRM, booking the ones who are ready. A fast first win from a list you already own.",
         components: ["Reactivation Sprint", "CRM Foundation"],
         bestFor: "SMBs sitting on a CRM full of past customers and dormant leads.",
         whyThisBundle:
@@ -761,6 +766,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "service-business-core",
         name: "Service Business Core",
         tagline: "Growing, install a real system",
+        metaDescription: "AI call answering, a CRM with automatic follow-up, and no-show recovery for home services, dental, medspa, and other service businesses.",
         components: ["Voice Pro", "CRM Velocity", "Booking + No-Show Recovery"],
         bestFor: "Home services, dental, medspa, and any service business losing leads to missed calls and slow follow-up.",
         whyThisBundle:
@@ -775,20 +781,22 @@ export const bundleGroups: BundleGroup[] = [
         slug: "the-demand-engine",
         name: "The Demand Engine",
         tagline: "Growing, turn on pipeline",
+        metaDescription: "Done-for-you outbound for B2B companies: researched prospect lists, email and text sequences, and qualified meetings booked on your calendar.",
         components: ["Outbound Multi-Channel", "Booking Engine", "Sequence Pack"],
         bestFor: "B2B SMBs with a product but no pipeline.",
         whyThisBundle:
           "Replaces hiring sales reps. Builds the list, runs the sequences, qualifies the replies, and lands qualified meetings on the calendar.",
         outcomes: [
-          "10–30 booked meetings per month at the target tier",
-          "Cold reply rates of 4–8% on personalized outreach",
-          "Cost per booked meeting under $300 once tuned",
+          "A booked-meeting target agreed up front and reported weekly",
+          "Outreach researched and personalized for each prospect",
+          "Cost per booked meeting tracked against an agreed target",
         ],
       },
       {
         slug: "inbound-outbound-combo",
         name: "Inbound + Outbound Combo",
         tagline: "Growing, both sides of the funnel",
+        metaDescription: "Fix inbound leaks and start outbound at once: AI call answering, website chat and booking, and outbound outreach feeding one calendar.",
         components: ["Voice Pro", "Chat + Booking", "Outbound Foundation"],
         bestFor: "Businesses that need to fix inbound leaks and turn on outbound at the same time.",
         whyThisBundle:
@@ -803,6 +811,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "demand-and-convert",
         name: "Demand + Convert",
         tagline: "Scaling, end-to-end coverage",
+        metaDescription: "Outbound lead generation plus AI call answering, CRM, and booking, so new prospects and inbound calls both turn into booked meetings.",
         components: ["Outbound Multi-Channel", "Voice Pro", "CRM Velocity", "Booking Engine"],
         bestFor: "Funded SMBs ready to install the full revenue engine.",
         whyThisBundle:
@@ -817,6 +826,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "brand-and-demand",
         name: "Brand + Demand",
         tagline: "Scaling, air cover plus outbound",
+        metaDescription: "Content, Meta ads, AI search visibility, and outbound working together, so prospects already recognize your brand when you reach out.",
         components: ["Content Standard", "Meta Ads Growth", "Outbound Foundation", "AEO Baseline"],
         bestFor: "Businesses where outbound lands cold because the brand has no surface area.",
         whyThisBundle:
@@ -831,6 +841,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "founder-persona-stack",
         name: "Founder Persona Stack",
         tagline: "Scaling, built around the founder brand",
+        metaDescription: "Voice clone, video avatar, daily content, and LinkedIn outreach in the founder's voice, for founders and agency owners who sell on personal brand.",
         components: ["Full Persona Studio", "Content Pro", "LinkedIn outbound", "Care"],
         bestFor: "Agency owners, coaches, and founders selling on personal brand.",
         whyThisBundle:
@@ -851,6 +862,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "home-services-bundle",
         name: "Home Services",
         tagline: "HVAC, plumbing, electrical, roofing",
+        metaDescription: "AI call answering, CRM follow-up, past-customer reactivation, and Meta ads for HVAC, plumbing, electrical, and roofing companies.",
         components: ["Voice Pro", "CRM Velocity", "Reactivation Multi-Channel", "Meta Ads Starter"],
         bestFor: "Home services operators with steady inbound, a dormant database, and budget for paid acquisition.",
         whyThisBundle: "Catches every emergency call, follows up aggressively, wakes the old list, and funnels paid traffic into the same pipeline.",
@@ -859,6 +871,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "dental-medspa",
         name: "Dental / Medspa",
         tagline: "High-trust local conversion",
+        metaDescription: "AI phone answering, website chat and booking, CRM follow-up, content, and Meta ads for dental practices and medspas competing on trust.",
         components: ["Voice Pro", "Chat + Booking", "CRM Velocity", "Content Standard", "Meta Ads Starter"],
         bestFor: "Dental practices and medspas competing on trust and local visibility.",
         whyThisBundle: "Every channel a new patient might use, call, web, social, wired into one booking flow.",
@@ -867,6 +880,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "law-firms",
         name: "Law Firms",
         tagline: "Inbound qualification + AI search visibility",
+        metaDescription: "AI intake calls, CRM, content, and AI search visibility for law firms where the quality of intake matters as much as the volume.",
         components: ["Voice Enterprise", "CRM Velocity", "AEO Growth", "Content Lite"],
         bestFor: "Law firms where intake quality matters as much as volume.",
         whyThisBundle: "Enterprise-grade voice for sensitive intake, plus the AI search surface that drives buyers in the first place.",
@@ -875,6 +889,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "real-estate",
         name: "Real Estate",
         tagline: "Lead capture + dormant-database revenue",
+        metaDescription: "AI call answering, CRM, past-client reactivation, and content for real estate teams sitting on years of buyer and seller leads.",
         components: ["Voice Pro", "CRM Velocity", "Reactivation Sprint", "Content Pro"],
         bestFor: "Real estate teams sitting on years of past-client and buyer-lead data.",
         whyThisBundle: "Captures the new lead, reactivates the old one, and keeps the brand visible to both.",
@@ -883,6 +898,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "b2b-saas",
         name: "B2B SaaS",
         tagline: "Outbound pipeline + AI discoverability",
+        metaDescription: "Outbound pipeline, meeting booking, content, and AI search visibility for B2B SaaS teams that need meetings now and brand presence later.",
         components: ["Outbound Multi-Channel", "Booking Engine", "AEO Growth", "Content Standard"],
         bestFor: "B2B SaaS teams that need pipeline and presence at the same time.",
         whyThisBundle: "Outbound delivers meetings now; AEO and content compound the brand so future outbound lands warmer.",
@@ -891,6 +907,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "agencies-white-label",
         name: "Agencies (white-label)",
         tagline: "Our automation, delivered under your agency's brand",
+        metaDescription: "Multi-brand CRM, a workflow library, outbound, and managed support that agencies can resell under their own brand.",
         components: ["CRM Multi-Brand", "Workflow Pack (10)", "Outbound Foundation", "Partner Managed"],
         bestFor: "AI and marketing agencies who want to resell production capacity under their own brand.",
         whyThisBundle: "Multi-brand CRM and a workflow library means you onboard new clients in minutes, not weeks.",
@@ -899,6 +916,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "ecommerce-shopify",
         name: "E-commerce / Shopify",
         tagline: "Acquisition + retention engine",
+        metaDescription: "Shopify setup, Meta ads, email and SMS copy, and customer reactivation for e-commerce brands building acquisition and repeat sales.",
         components: ["Shopify Setup", "Meta Ads Growth", "Copy Retainer", "Reactivation Engine"],
         bestFor: "Shopify and DTC brands building both customer acquisition and lifetime value.",
         whyThisBundle: "Paid acquisition feeds the store; the retention engine compounds revenue from every customer acquired.",
@@ -913,6 +931,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "full-stack-burkyflow",
         name: "Full-Stack BurkyFlow",
         tagline: "The complete operating system",
+        metaDescription: "BurkyFlow runs your whole revenue system: AI voice, CRM, outbound, Meta ads, content, booking, and reporting, with one team accountable.",
         components: [
           "Voice Enterprise",
           "CRM Velocity",
@@ -929,6 +948,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "full-stack-plus-reactivation",
         name: "Full-Stack + Reactivation",
         tagline: "Add the dormant-database revenue engine",
+        metaDescription: "The full BurkyFlow system plus ongoing reactivation campaigns that turn years of CRM data into booked revenue month after month.",
         components: ["Everything in Full-Stack BurkyFlow", "Reactivation Engine"],
         bestFor: "Full-Stack clients sitting on years of CRM data.",
         whyThisBundle: "Layers the ongoing reactivation play on top of full-stack so dormant revenue compounds month after month.",
@@ -937,6 +957,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "full-stack-plus-brand",
         name: "Full-Stack + Brand",
         tagline: "Add founder brand and AI discoverability",
+        metaDescription: "The full BurkyFlow system plus founder-brand content and AI search visibility, so every ad and outbound message lands on a known brand.",
         components: ["Everything in Full-Stack BurkyFlow", "Full Persona Studio", "AEO Growth"],
         bestFor: "Founders who want BurkyFlow running the revenue engine and the brand engine.",
         whyThisBundle: "Founder persona content and AEO visibility make every outbound and ad touchpoint land on a warmer brand.",
@@ -945,6 +966,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "the-empire-package",
         name: "The Empire Package",
         tagline: "Everything plus custom dev and strategy",
+        metaDescription: "The full BurkyFlow system plus a custom website or app, a strategy sprint, and partner-level managed services for long-term growth.",
         components: [
           "Everything in Full-Stack BurkyFlow",
           "Custom Web / App build",

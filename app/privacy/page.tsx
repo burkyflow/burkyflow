@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: `Privacy policy for ${site.name}`,
+  description: `How ${site.name} collects, uses, and protects personal information, including SMS consent, call data, and your choices.`,
   path: "/privacy",
 });
 
