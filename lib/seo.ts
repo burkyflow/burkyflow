@@ -15,11 +15,12 @@ export function pageMetadata({
   canonicalPath?: string;
 }): Metadata {
   const url = `${site.url}${path}`;
+  // 1200x630 link-preview card; the square logo was cropped by social platforms.
   const ogImage = {
-    url: "/images/logo.png",
-    width: 502,
-    height: 502,
-    alt: site.name,
+    url: "/images/og.jpg",
+    width: 1200,
+    height: 630,
+    alt: `${site.name}: AI voice receptionists and CRM automation for service businesses`,
   };
   return {
     title: { absolute: path === "/" ? title : `${title} | ${site.name}` },

@@ -2,7 +2,9 @@ import { Hero } from "@/components/Hero";
 import { TrustedBy } from "@/components/TrustedBy";
 import { ProblemFraming } from "@/components/ProblemFraming";
 import { RevenueOps } from "@/components/RevenueOps";
-import { AlternatingFeatureBlock } from "@/components/AlternatingFeatureBlock";
+import { ServiceCardGrid } from "@/components/ServiceCardGrid";
+import { Testimonials } from "@/components/Testimonials";
+import { testimonialsFor } from "@/content/testimonials";
 import { WedgeGrid } from "@/components/WedgeGrid";
 import { ResultsStats } from "@/components/ResultsStats";
 import { IndustryStrip } from "@/components/IndustryStrip";
@@ -54,22 +56,28 @@ export default function HomePage() {
       {/* Revenue operations, how we actually grow the number, not just automate */}
       <RevenueOps />
 
-      {/* Services as alternating M360-style sections */}
+      {/* Services: one compact card each; full detail lives on each service page */}
       <section id="services" className="section">
-        <div className="container-page flex flex-col gap-20 md:gap-28">
-          {services.map((service, i) => (
-            <AlternatingFeatureBlock
-              key={service.slug}
-              id={`service-${service.slug}`}
-              eyebrow={service.eyebrow}
-              heading={service.h2}
-              lead={service.lead}
-              steps={service.steps}
-              whyItMatters={service.whyItMatters}
-              illustration={service.illustration}
-              side={i % 2 === 0 ? "right" : "left"}
-            />
-          ))}
+        <div className="container-page">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="eyebrow">Services</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              Everything we build and run for you
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Each service works on its own or as one connected system.
+            </p>
+          </div>
+          <div className="mt-12">
+            <ServiceCardGrid />
+          </div>
+        </div>
+      </section>
+
+      {/* Client testimonials: new reviews first, then case-study quotes */}
+      <section id="testimonials" className="section bg-surface">
+        <div className="container-page">
+          <Testimonials items={testimonialsFor()} />
         </div>
       </section>
 

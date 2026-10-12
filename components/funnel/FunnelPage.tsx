@@ -33,7 +33,7 @@ import { BookingWidget } from "@/components/BookingWidget";
 import { FunnelNav } from "@/components/funnel/FunnelNav";
 import { UsFlag } from "@/components/UsFlag";
 
-type Testimonial = { text: string; attribution: string; vertical?: string };
+type Testimonial = { text: string; attribution: string; vertical?: string; rating?: number };
 
 const BOOK_ID = "book";
 const FEATURES_ID = "how-it-works";
@@ -358,9 +358,7 @@ export function FunnelPage({
       {testimonials.length > 0 && (
         <section className="bg-white py-16 md:py-24">
           <div className="container-page mx-auto max-w-4xl text-center">
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-              {funnel.testimonialsHeading ?? "Trusted by businesses across the USA"}
-            </h2>
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">What our clients say</h2>
           </div>
           <div className="container-page mx-auto mt-12 grid max-w-6xl gap-x-10 gap-y-12 md:grid-cols-3">
             {testimonials.map((t) => {
@@ -374,11 +372,13 @@ export function FunnelPage({
                 .toUpperCase();
               return (
                 <figure key={t.attribution} className="flex flex-col">
-                  <div className="flex gap-0.5">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="size-4 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
+                  {t.rating ? (
+                    <div className="flex gap-0.5" aria-label={`${t.rating} out of 5 stars`}>
+                      {Array.from({ length: t.rating }).map((_, i) => (
+                        <Star key={i} className="size-4 fill-amber-400 text-amber-400" aria-hidden />
+                      ))}
+                    </div>
+                  ) : null}
                   <blockquote className="mt-3 flex-1 text-sm leading-relaxed text-foreground">
                     “{t.text}”
                   </blockquote>
@@ -578,7 +578,7 @@ export function FunnelPage({
       {/* ── Minimal footer ─────────────────────────────────────── */}
       <footer className="border-t border-border/60 bg-white">
         <div className="container-page flex flex-col items-center gap-4 py-8 text-center sm:flex-row sm:justify-between sm:text-left">
-          <Image src="/images/logo1.png" alt={site.name} width={3136} height={760} className="h-7 w-auto" />
+          <Image src="/images/logo1.webp" alt={site.name} width={528} height={128} className="h-7 w-auto" />
           <p className="text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>

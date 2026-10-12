@@ -39,10 +39,10 @@ export function FunnelNav() {
         {/* logo, same asset, rendered white while transparent over the dark hero */}
         <Link href="#top" className="inline-flex items-center">
           <Image
-            src="/images/logo1.png"
+            src="/images/logo1.webp"
             alt={site.name}
-            width={3136}
-            height={760}
+            width={528}
+            height={128}
             priority
             className={`h-7 w-auto transition duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
           />

@@ -26,7 +26,7 @@ export function WedgeCardImage({ src, alt }: { src?: string; alt: string }) {
       src={src}
       alt={alt}
       onError={() => setFailed(true)}
-      className="h-full min-h-[200px] w-full rounded-2xl object-cover"
+      className="h-56 w-full rounded-2xl object-contain sm:h-full sm:min-h-[200px] sm:object-cover"
     />
   );
 }
