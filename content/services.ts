@@ -38,7 +38,7 @@ export const services: Service[] = [
     h2: "An AI receptionist that answers every call, day or night",
     lead: "Most missed calls go to a competitor who picked up second. A human-sounding AI voice answers on the first ring, qualifies the caller, and books the job straight into your calendar.",
     intro: [
-      "Research across more than a thousand contractors shows the average small service business loses tens of thousands of dollars a year to calls nobody answered. Most of those callers do not leave a voicemail. They simply dial the next business on the list.",
+      "A study by 411 Locals found that 62% of calls to small businesses went unanswered. A caller who cannot get through rarely waits; they dial the next business on the list.",
       "Our AI voice receptionist removes that leak. It answers instantly, every hour of every day, speaks in your tone, handles the back-and-forth a real caller expects, and books qualified jobs directly onto your calendar. When a call genuinely needs a person, it routes to one.",
     ],
     steps: [
@@ -239,7 +239,7 @@ export const services: Service[] = [
       },
     ],
     whyItMatters:
-      "Most leads are won or lost in the first five minutes, long before a busy team can react manually.",
+      "Companies that respond to a lead within an hour are nearly seven times more likely to qualify it than those that wait an hour longer (Harvard Business Review, 2011).",
     relatedIndustries: ["real-estate", "home-services", "professional-firms", "automotive"],
     illustration: "crm-lead-systems",
   },

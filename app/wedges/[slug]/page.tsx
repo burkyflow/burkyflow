@@ -51,7 +51,7 @@ export default async function WedgeDetail({ params }: { params: Promise<Params> 
 
   const crumbs = [
     { name: "Home", path: "/" },
-    { name: "Wedge offers", path: "/services" },
+    { name: "Top offers", path: "/services" },
     { name: w.shortName, path: `/wedges/${w.slug}` },
   ];
 
@@ -88,7 +88,7 @@ export default async function WedgeDetail({ params }: { params: Promise<Params> 
         </div>
       </section>
 
-      {/* Risk reversal banner */}
+      {/* Low-risk start banner */}
       <section className="section pt-6">
         <div className="container-page mx-auto max-w-3xl">
           <div className="flex items-start gap-3 rounded-2xl bg-surface p-5 ring-1 ring-border/60">
@@ -117,7 +117,7 @@ export default async function WedgeDetail({ params }: { params: Promise<Params> 
         <div className="container-page grid gap-10 lg:grid-cols-2">
           <div>
             <p className="eyebrow">Best for</p>
-            <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">Where this wedge lands hardest</h2>
+            <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">Who this works best for</h2>
             <ul className="mt-6 space-y-3">
               {w.bestFor.map((b) => (
                 <li key={b} className="flex items-start gap-3">
@@ -149,7 +149,7 @@ export default async function WedgeDetail({ params }: { params: Promise<Params> 
             <div className="mx-auto max-w-2xl text-center">
               <p className="eyebrow">Under the hood</p>
               <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">
-                The services powering this wedge
+                The services behind this offer
               </h2>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -210,10 +210,10 @@ export default async function WedgeDetail({ params }: { params: Promise<Params> 
         </div>
       </section>
 
-      {/* Other wedges */}
+      {/* Other offers */}
       <section className="section bg-surface">
         <div className="container-page">
-          <h2 className="text-center text-2xl font-semibold sm:text-3xl">Other wedge offers</h2>
+          <h2 className="text-center text-2xl font-semibold sm:text-3xl">Other offers</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {others.map((o) => (
               <Reveal key={o.slug}>

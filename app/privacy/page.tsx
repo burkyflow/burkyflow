@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: `Privacy policy for ${site.name}`,
+  description: `How ${site.name} collects, uses, and protects personal information, including SMS consent, call data, and your choices.`,
   path: "/privacy",
 });
 
@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         <p className="mt-4 text-muted-foreground">Last updated: July 21, 2026</p>
 
         <p className="mt-6">
-          {site.legalName} ("we", "us", "our") operates {site.url} (the "Site"). This Privacy
+          {site.legalName} (“we”, “us”, “our”) operates {site.url} (the “Site”). This Privacy
           Policy explains how we collect, use, disclose, and protect personal information when you
           visit or interact with the Site.
         </p>
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
         <p className="mt-3">
           If you give us your mobile number and opt in to receive text messages, we use it only to
           send the messages you asked for, such as appointment and booking confirmations,
-          reminders, follow-ups, and replies to your enquiries, and to respond when you reply to
+          reminders, follow-ups, and replies to your inquiries, and to respond when you reply to
           us.
         </p>
 

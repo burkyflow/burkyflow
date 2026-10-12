@@ -33,7 +33,7 @@ type Card = {
 };
 
 const cards: Card[] = [
-  { accent: "brand", icon: Users, value: "Capture", label: "Calls and leads", image: "/images/pro1.webp", info: { icon: TrendingUp, title: "Keep enquiries in one pipeline", sub: "Answer, qualify, and route each opportunity" } },
+  { accent: "brand", icon: Users, value: "Capture", label: "Calls and leads", image: "/images/pro1.webp", info: { icon: TrendingUp, title: "Keep inquiries in one pipeline", sub: "Answer, qualify, and route each opportunity" } },
   { accent: "accent", icon: Clock, value: "Connect", label: "Your existing tools", image: "/images/pro2.webp", info: { icon: Clock, title: "Reduce manual handoffs", sub: "Link your CRM, calendar, and follow-up" } },
   { accent: "brand", icon: Zap, value: "Measure", label: "Your business outcomes", image: "/images/pro1.webp", info: { icon: TrendingUp, title: "Report against agreed metrics", sub: "Track booking rate and revenue per lead" } },
 ];
@@ -47,7 +47,6 @@ function StatCard({ card }: { card: Card }) {
     <div className="group relative h-full overflow-hidden rounded-3xl bg-white p-7 shadow-soft ring-1 ring-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30">
       {/* Background chart/progress image slot */}
       {bg ? (
-        // eslint-disable-next-line @next/next/no-img-element
         <div aria-hidden className={`pointer-events-none absolute inset-x-0 -top-2 bg-cover transition-transform duration-500 group-hover:scale-105 ${card.accent === "accent" ? "results-background-accent" : "results-background-brand"}`} />
       ) : null}
 

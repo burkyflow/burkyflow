@@ -21,6 +21,8 @@ export function Footer() {
             {/* Brand + newsletter */}
             <div>
               <Link href="/" className="inline-block">
+                {/* Pre-sized WebP logo; skips the image optimizer on purpose. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/logo1.webp"
                   alt={site.name}
@@ -94,7 +96,7 @@ export function Footer() {
             <p className="mx-auto max-w-4xl text-center text-xs leading-relaxed text-muted-foreground">
               <span className="font-semibold text-foreground">SMS Consent:</span> By providing your
               phone number to {site.legalName}, you agree to receive text messages including
-              appointment confirmations, reminders, follow-ups, and replies to your enquiries.
+              appointment confirmations, reminders, follow-ups, and replies to your inquiries.
               Message frequency varies. Message and data rates may apply. Reply STOP to opt out at
               any time, or HELP for help. See our{" "}
               <Link href="/privacy" className="underline underline-offset-2 hover:text-foreground">

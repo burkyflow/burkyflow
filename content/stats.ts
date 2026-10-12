@@ -1,6 +1,6 @@
 // Service capabilities, rather than unverified aggregate results.
 export const stats = [
-  { value: "Capture", label: "Calls and enquiries into your CRM" },
+  { value: "Capture", label: "Calls and inquiries into your CRM" },
   { value: "Connect", label: "Booking, follow-up, and workflows" },
   { value: "Measure", label: "Bookings and revenue per lead" },
 ] as const;

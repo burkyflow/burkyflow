@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { ArrowRight, Wrench, Megaphone } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Reveal } from "@/components/Reveal";
-import { services } from "@/content/services";
 import { branches } from "@/content/catalogue";
 import { WedgeGrid } from "@/components/WedgeGrid";
+import { ServiceCardGrid } from "@/components/ServiceCardGrid";
 import { pageMetadata } from "@/lib/seo";
 
 const branchIcons = {
@@ -34,24 +33,24 @@ export default function ServicesIndex() {
         </div>
       </section>
 
-      {/* Top 4 wedge offers, surface first */}
+      {/* Top 4 offers, surfaced first */}
       <section className="section">
         <div className="container-page">
           <WedgeGrid />
         </div>
       </section>
 
-      {/* Two branches */}
+      {/* Two service areas */}
       <section className="section bg-surface">
         <div className="container-page">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">Two branches, one system</p>
+            <p className="eyebrow">Two service areas, one system</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-              Demand fills the pipe. Ops processes it.
+              Sales generation brings in leads. Automation handles them.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Pick one wedge or run the full stack. Every offer is deployable on its own and
-              plugs cleanly into the next.
+              Start with one service or run the full system. Every offer works on its own and
+              connects cleanly to the next.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -103,41 +102,18 @@ export default function ServicesIndex() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow">Featured services</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-              Most popular wedges
+              Most popular services
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              The standalone offers most clients enter through before expanding.
+              The services most clients start with before expanding.
             </p>
           </div>
         </div>
       </section>
 
       <section className="section pt-0">
-        <div className="container-page grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, i) => {
-            const Icon = service.icon;
-            return (
-              <Reveal key={service.slug} delay={(i % 3) * 0.06}>
-                <Link href={`/services/${service.slug}`} className="group block h-full">
-                  <Card className="h-full transition-shadow duration-200 hover:shadow-soft-lg">
-                    <CardHeader>
-                      <span className="flex size-11 items-center justify-center rounded-2xl bg-brand/10 text-brand">
-                        <Icon className="size-5" />
-                      </span>
-                      <CardTitle className="mt-3">{service.name}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">{service.lead}</p>
-                      <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand">
-                        Learn more
-                        <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-                      </span>
-                    </CardContent>
-                  </Card>
-                </Link>
-              </Reveal>
-            );
-          })}
+        <div className="container-page">
+          <ServiceCardGrid />
         </div>
       </section>
 

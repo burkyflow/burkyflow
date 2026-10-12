@@ -1,5 +1,4 @@
-// Service Catalogue data, Branch A (Automation & Infrastructure) and Branch B
-// (Sales Generation & GTM). Pricing intentionally omitted from public pages;
+// Service Catalogue data: Automation & Infrastructure and Sales Generation. Pricing intentionally omitted from public pages;
 // only tier names + scope + deliverables surface here.
 
 export type Package = {
@@ -30,16 +29,16 @@ export type Branch = {
   faqs: { q: string; a: string }[];
 };
 
-// ── Branch A ──────────────────────────────────────────────────────────────
+// ── Automation & Infrastructure ──────────────────────────────────────────────────────────────
 
 export const automationBranch: Branch = {
   slug: "automation-infrastructure",
-  eyebrow: "Branch A, Ops",
+  eyebrow: "Automation & Infrastructure",
   name: "Automation & Infrastructure",
   h1: "The systems that handle every lead, customer, and internal hand-off",
-  lead: "Voice, chat, CRM, workflows, booking, and the managed layer that keeps it all running. Pick one wedge or run the whole stack.",
+  lead: "Voice, chat, CRM, workflows, booking, and the managed layer that keeps it all running. Start with one service or run the full system.",
   intro:
-    "Branch A is the operating layer of your business. Every offer below is deployable on its own, plugs cleanly into the next, and comes with a managed-services tail so it keeps working after launch.",
+    "These are the systems that run your business day to day. Every offer below works on its own, connects cleanly to the next, and comes with ongoing managed support so it keeps working after launch.",
   offers: [
     {
       slug: "ai-voice-receptionist",
@@ -63,7 +62,7 @@ export const automationBranch: Branch = {
           scope: "Full intake, booking, emergency routing, and CRM sync.",
           deliverables: [
             "Everything in Voice Lite",
-            "GHL or CRM integration",
+            "GoHighLevel or CRM integration",
             "Hot / warm / cold routing",
             "Live-tech transfer",
             "Conversation logging and intent tagging",
@@ -92,7 +91,7 @@ export const automationBranch: Branch = {
         { q: "Will the AI voice sound robotic?", a: "No. It is configured to match how your business talks, handles real back-and-forth, and hands off to a human when a call needs one." },
         { q: "What happens with an emergency call?", a: "Urgency cues such as no heat, burst pipe, or lockout are detected and the call is routed to your on-call person immediately." },
         { q: "Does it work with my phone setup?", a: "Yes. We route your existing number, or just your after-hours and overflow line, to the AI voice. No new hardware." },
-        { q: "What are the performance standards?", a: "Sub-60-second response time, 20–40% booking rate on qualified leads, 30%+ missed-call recovery, and 99.5% uptime." },
+        { q: "What are the performance standards?", a: "Calls are answered within seconds, 24 hours a day, against a 99.5% uptime target. Booking and recovery targets are set from your own call data during setup and reported to you. In client deployments, average answer time fell from 45 seconds to 2 (Troy Plumbing) and call capture rose from 55% to 100% (EZ Cribs)." },
       ],
     },
     {
@@ -118,7 +117,7 @@ export const automationBranch: Branch = {
           scope: "Multi-channel chat with appointment booking and CRM sync.",
           deliverables: [
             "Everything in Multi-Channel",
-            "Calendly or GHL integration",
+            "Calendly or GoHighLevel integration",
             "Qualification logic",
             "Human hand-off fallback",
           ],
@@ -135,11 +134,11 @@ export const automationBranch: Branch = {
       slug: "crm-lead-systems",
       name: "CRM & Lead Systems (GoHighLevel build-outs)",
       bestFit: "Sales Directors and SMB owners whose leads go cold in 5 minutes.",
-      pitch: "A standardised, templated CRM environment built for rapid deployment with an aggressive 5-day follow-up cadence.",
+      pitch: "A standardized, templated CRM environment built for rapid deployment with an aggressive 5-day follow-up cadence.",
       packages: [
         {
           tier: "CRM Foundation",
-          scope: "GHL sub-account, pipeline, and the basic automations every business needs.",
+          scope: "CRM account setup, pipeline, and the basic automations every business needs.",
           deliverables: ["5-stage pipeline", "Lead capture forms", "Instant SMS and email response", "Calendar sync"],
           timeline: "5–7 days",
         },
@@ -169,7 +168,7 @@ export const automationBranch: Branch = {
         },
       ],
       faqs: [
-        { q: "Do I have to switch to GoHighLevel?", a: "GHL is the default because deployment is fast. Equivalent platforms are accepted when there is a real reason." },
+        { q: "Do I have to switch to GoHighLevel?", a: "GoHighLevel is the default because deployment is fast. Equivalent platforms are accepted when there is a real reason." },
         { q: "What does the standard pipeline look like?", a: "New Lead → Contacted → Qualified → Booked → Closed. We adapt the stage labels to your sales motion." },
         { q: "Can you support multiple brands or locations?", a: "Yes. The Multi-Brand tier is designed for agencies and multi-location operators with sub-account templates and a snapshot library." },
       ],
@@ -178,7 +177,7 @@ export const automationBranch: Branch = {
       slug: "business-process-automation",
       name: "Business Process Automation (n8n / Custom)",
       bestFit: "Operators bleeding hours on manual data entry between tools.",
-      pitch: "Replaces 'Zapier almost works' and manual copy-paste between GHL, Twilio, Supabase, Sheets, and Airtable.",
+      pitch: "Replaces 'Zapier almost works' and manual copy-paste between your CRM, phone system, spreadsheets, and databases.",
       packages: [
         {
           tier: "Automation Audit",
@@ -186,7 +185,7 @@ export const automationBranch: Branch = {
           deliverables: [
             "90-minute discovery",
             "Written audit",
-            "Prioritised automation backlog",
+            "Prioritized automation backlog",
             "ROI estimate per workflow",
           ],
           timeline: "1 week",
@@ -211,11 +210,11 @@ export const automationBranch: Branch = {
         {
           tier: "Custom Build",
           scope: "Bespoke automation, dispatch engines, internal tools, marketplaces, scoped per project.",
-          deliverables: ["Discovery sprint", "Fixed-scope SOW", "Build, test, and hand-over"],
+          deliverables: ["Discovery sprint", "Fixed-scope statement of work", "Build, test, and hand-over"],
         },
       ],
       faqs: [
-        { q: "Which integrations are in scope?", a: "Standard library covers GHL, Twilio, Vapi, Calendly, Slack, Supabase, Sheets, Airtable, Apollo, Clay, Stripe, Shopify, Meta Ads, OpenAI and Anthropic." },
+        { q: "Which integrations are in scope?", a: "Standard library covers GoHighLevel, Twilio, Vapi, Calendly, Slack, Supabase, Sheets, Airtable, Apollo, Clay, Stripe, Shopify, Meta Ads, OpenAI and Anthropic." },
         { q: "What if a workflow breaks?", a: "Every workflow ships with error handling, Slack alerts, and an owner. Failures are caught before they reach a customer." },
         { q: "Can I start with an audit only?", a: "Yes. The Audit fee is credited toward the first build, so there is no waste if you proceed." },
       ],
@@ -230,7 +229,7 @@ export const automationBranch: Branch = {
           tier: "Booking Setup",
           scope: "Calendar integration with reminders and self-service rescheduling.",
           deliverables: [
-            "Google Calendar or GHL Calendar integration",
+            "Google Calendar or GoHighLevel Calendar integration",
             "24-hour and 2-hour reminders",
             "Self-service reschedule and cancel",
           ],
@@ -247,7 +246,7 @@ export const automationBranch: Branch = {
       ],
       faqs: [
         { q: "Will reminders reduce no-shows?", a: "Yes. 24-hour and 2-hour reminders meaningfully cut no-show rates, and the win-back sequence recovers the ones that still slip." },
-        { q: "Does it sit on top of my existing calendar?", a: "Yes. We integrate Google Calendar or GHL Calendar, your existing booking surface stays the source of truth." },
+        { q: "Does it sit on top of my existing calendar?", a: "Yes. We integrate Google Calendar or GoHighLevel Calendar, and your existing calendar stays the source of truth." },
       ],
     },
     {
@@ -311,14 +310,14 @@ export const automationBranch: Branch = {
       ],
       faqs: [
         { q: "Do I own the clone?", a: "Yes. Your voice, likeness, and the underlying assets remain yours. We operate the studio on your behalf." },
-        { q: "How is it used in sales?", a: "Voice clones power outbound voice and personalised follow-up; avatar clones power outreach video and inbound content." },
+        { q: "How is it used in sales?", a: "Voice clones power outbound voice and personalized follow-up; avatar clones power outreach video and inbound content." },
       ],
     },
     {
       slug: "web-app-saas-shopify",
       name: "Web / App / SaaS / Shopify Development",
       bestFit: "Agency owners and SMBs that cannot build in-house.",
-      pitch: "Custom funnels, mobile apps, SaaS builds, and Shopify, delivered against a fixed-scope SOW.",
+      pitch: "Custom funnels, mobile apps, SaaS builds, and Shopify, delivered against a fixed-scope statement of work.",
       packages: [
         {
           tier: "Conversion Funnel",
@@ -352,15 +351,15 @@ export const automationBranch: Branch = {
         },
       ],
       faqs: [
-        { q: "How are dev engagements scoped?", a: "Every dev engagement starts with a discovery sprint and lands on a fixed-scope SOW before the build begins." },
+        { q: "How are dev engagements scoped?", a: "Every dev engagement starts with a discovery sprint and lands on a fixed-scope statement of work before the build begins." },
         { q: "Do you handle design as well as build?", a: "Yes. Copy, design, and build are part of every package, you do not need to source separate vendors." },
       ],
     },
     {
       slug: "managed-services",
       name: "Managed Services (Retainer Layer)",
-      bestFit: "Every Branch A client at the point of build hand-off. Default attach: Care.",
-      pitch: "Monitoring, optimisation, and ongoing support, the MRR layer that sits on top of every build.",
+      bestFit: "Every automation client at build hand-off. Most start with Care.",
+      pitch: "Monitoring, optimization, and ongoing support that keeps every build working after launch.",
       packages: [
         {
           tier: "Care",
@@ -368,19 +367,19 @@ export const automationBranch: Branch = {
           deliverables: ["Uptime monitoring", "Incident response", "Monthly health report"],
         },
         {
-          tier: "Optimise",
-          scope: "Care plus monthly optimisation pass on flows and copy, and a quarterly strategy call.",
+          tier: "Optimize",
+          scope: "Care plus monthly optimization pass on flows and copy, and a quarterly strategy call.",
           deliverables: [
             "Everything in Care",
-            "Monthly optimisation pass",
+            "Monthly optimization pass",
             "Quarterly strategy call",
           ],
         },
         {
           tier: "Partner",
-          scope: "Optimise plus dedicated Slack channel, 4-hour incident SLA, and unlimited minor changes.",
+          scope: "Optimize plus dedicated Slack channel, 4-hour incident SLA, and unlimited minor changes.",
           deliverables: [
-            "Everything in Optimise",
+            "Everything in Optimize",
             "Dedicated Slack channel",
             "4-hour incident SLA",
             "Unlimited minor changes",
@@ -388,7 +387,7 @@ export const automationBranch: Branch = {
         },
       ],
       faqs: [
-        { q: "Is managed services required?", a: "It is not required, but every Branch A build is offered a Managed Services tier at hand-off. Default attach is Care." },
+        { q: "Is managed services required?", a: "It is not required, but every automation build is offered a Managed Services tier at hand-off. Most clients choose Care." },
         { q: "What does the Partner tier include that the others do not?", a: "A dedicated Slack channel, a 4-hour incident SLA, and unlimited minor changes, for clients who want BurkyFlow embedded in the team." },
       ],
     },
@@ -396,7 +395,7 @@ export const automationBranch: Branch = {
       slug: "ai-consulting",
       name: "AI Consulting",
       bestFit: "Larger SMBs and professional firms not yet ready for a full build.",
-      pitch: "Strategy, automation audits, stack evaluation, ROI modelling, and roadmap.",
+      pitch: "Strategy, automation audits, stack evaluation, ROI modeling, and roadmap.",
       packages: [
         {
           tier: "Strategy Sprint",
@@ -426,42 +425,42 @@ export const automationBranch: Branch = {
     },
   ],
   faqs: [
-    { q: "Do I have to buy the whole branch?", a: "No. Every offer in Branch A is deployable standalone. Most clients start with one wedge, usually Voice or CRM, then expand." },
-    { q: "Is there a managed-services tail on every build?", a: "Yes. Every Branch A build is offered a Managed Services tier at hand-off. The default attach is Care." },
-    { q: "How fast can you launch?", a: "Most Branch A offers go live within 1–4 weeks. The Workflow Pack (10) and Voice Enterprise are the longest at 4–6 weeks." },
+    { q: "Do I have to buy everything?", a: "No. Every automation service works on its own. Most clients start with one, usually the AI receptionist or CRM, then expand." },
+    { q: "Is ongoing support included with every build?", a: "Every automation build is offered a Managed Services tier at hand-off. Most clients choose Care." },
+    { q: "How fast can you launch?", a: "Most automation services go live within 1–4 weeks. The Workflow Pack (10) and Voice Enterprise are the longest at 4–6 weeks." },
   ],
 };
 
-// ── Branch B ──────────────────────────────────────────────────────────────
+// ── Sales Generation ──────────────────────────────────────────────────────────────
 
 export const demandBranch: Branch = {
   slug: "sales-generation",
-  eyebrow: "Branch B, Demand",
-  name: "Sales Generation & GTM",
+  eyebrow: "Sales Generation",
+  name: "Sales Generation",
   h1: "The engines that fill the pipe with booked meetings",
   lead: "Outbound, ads, content, reactivation, and referral, every offer designed to land qualified meetings on the calendar.",
   intro:
-    "Branch B generates the demand. Branch A handles it. Every offer below is built to land qualified meetings on the calendar, with reporting that maps spend to booked revenue.",
+    "These services bring in new leads and meetings, and our automation services handle them once they arrive. Every offer below is built to put qualified meetings on your calendar, with reporting that ties spend to booked revenue.",
   offers: [
     {
       slug: "gtm-as-a-service",
-      name: "GTM-as-a-Service (Flagship Demand Offer)",
-      bestFit: "SMBs with a product but no pipeline; agencies that want a turnkey outbound engine without hiring SDRs.",
-      pitch: "End-to-end go-to-market engine: ICP → enrichment → outbound playbook → booked meetings.",
+      name: "Done-for-You Outbound (Flagship Offer)",
+      bestFit: "Small businesses with a strong offer but no steady pipeline, and agencies that want outbound without hiring sales reps.",
+      pitch: "We define your ideal customer, build a researched prospect list, run the outreach, and book the meetings.",
       packages: [
         {
-          tier: "GTM Foundation",
-          scope: "ICP definition, data build, and single-channel sequence.",
+          tier: "Outbound Foundation",
+          scope: "Ideal-customer definition, prospect list, and a single-channel sequence.",
           deliverables: [
-            "ICP doc",
-            "2,500-account list (Apollo + Clay enriched)",
+            "Ideal-customer profile",
+            "2,500-company researched prospect list",
             "1-channel sequence (email or SMS)",
             "Reply handling",
           ],
           timeline: "3 weeks setup",
         },
         {
-          tier: "GTM Multi-Channel",
+          tier: "Outbound Multi-Channel",
           scope: "Foundation plus email, SMS, and LinkedIn orchestration.",
           deliverables: [
             "Everything in Foundation",
@@ -473,11 +472,11 @@ export const demandBranch: Branch = {
           timeline: "4 weeks setup",
         },
         {
-          tier: "GTM Full-Stack",
-          scope: "Multi-Channel plus outbound voice and a dedicated SDR layer.",
+          tier: "Outbound Full-Stack",
+          scope: "Multi-Channel plus outbound AI voice and a dedicated sales development rep.",
           deliverables: [
             "Everything in Multi-Channel",
-            "Vapi outbound voice",
+            "Outbound AI voice calls",
             "Qualified-meeting hand-off",
             "Slack alerts",
             "Dedicated account strategist",
@@ -486,17 +485,17 @@ export const demandBranch: Branch = {
         },
       ],
       faqs: [
-        { q: "What reply rates should I expect?", a: "Cold reply rates of 4–8% are typical, with 10–30 booked meetings per month at the Multi-Channel tier." },
-        { q: "What's the cost per booked meeting?", a: "Targeted below $300 per booked meeting once the engine is tuned, which is consistently cheaper than building an in-house SDR team." },
-        { q: "Do you handle the data?", a: "Yes. Lists are built in Apollo, enriched in Clay, and reply handling is run inside our team, meetings land on your calendar." },
+        { q: "What reply rates should I expect?", a: "It depends on your market, offer, and list. We agree reply and meeting targets during setup and report against them every week." },
+        { q: "What's the cost per booked meeting?", a: "We set a cost-per-meeting target during setup and report against it, so you can compare it directly with the cost of hiring in-house." },
+        { q: "Do you handle the data?", a: "Yes. We build and research the prospect lists using data tools such as Apollo and Clay, our team handles replies, and meetings land on your calendar." },
         { q: "Will outbound time itself to my prospects' hours?", a: "Yes. Sends are timed to your prospects' working hours regardless of where the delivery team sits." },
       ],
     },
     {
       slug: "sms-email-copy",
-      name: "SMS & Email Copy (Hyper-Personalised)",
+      name: "SMS & Email Copy (Hyper-Personalized)",
       bestFit: "Clients who already have lists and infrastructure and need the copy that converts them.",
-      pitch: "AI-generated, Clay-enriched SMS and email copy built for 5-minute lead-response windows and 5-day follow-up sequences.",
+      pitch: "AI-assisted SMS and email copy, researched for each prospect, built to respond to new leads within 5 minutes and follow up over 5 days.",
       packages: [
         {
           tier: "Sequence Pack",
@@ -515,7 +514,7 @@ export const demandBranch: Branch = {
         },
       ],
       faqs: [
-        { q: "Will the copy sound like a template?", a: "No. Personalisation is generated per account using Clay enrichment, not just first-name swaps." },
+        { q: "Will the copy sound like a template?", a: "No. Each message is personalized using research on the prospect's company, not just a first-name swap." },
         { q: "How long until I see replies?", a: "First sequences typically begin landing within days, with cadence and copy tuned weekly from there." },
       ],
     },
@@ -530,17 +529,17 @@ export const demandBranch: Branch = {
           scope: "Lead screening logic, calendar routing, Slack alert, and no-show recovery.",
           deliverables: [
             "Screening logic",
-            "Calendar routing (GHL or Calendly)",
+            "Calendar routing (GoHighLevel or Calendly)",
             "Slack alert",
             "No-show recovery flow",
           ],
         },
         {
           tier: "Booking Engine + Dashboard",
-          scope: "Booking Engine plus an Airtable command-centre dashboard with daily digest and reporting.",
+          scope: "Booking Engine plus an Airtable command-center dashboard with daily digest and reporting.",
           deliverables: [
             "Everything in Booking Engine",
-            "Airtable command-centre",
+            "Airtable command-center",
             "Daily digest",
             "Reporting dashboard",
           ],
@@ -575,7 +574,7 @@ export const demandBranch: Branch = {
       ],
       faqs: [
         { q: "What incentive structures work?", a: "Two-sided incentives (giver + receiver) consistently outperform one-sided, and the Engine tier tracks redemptions automatically." },
-        { q: "Does it work without an existing customer base?", a: "Referral is a retention compounding play. If you do not yet have a customer base, start with a Branch B demand offer first." },
+        { q: "Does it work without an existing customer base?", a: "Referrals grow from happy existing customers. If you do not yet have a customer base, start with one of our lead generation services first." },
       ],
     },
     {
@@ -613,8 +612,8 @@ export const demandBranch: Branch = {
     {
       slug: "meta-ads-management",
       name: "Meta Ads (Facebook + Instagram) Management",
-      bestFit: "Clients ready to funnel paid social into the same AI voice + SMS + GHL pipeline Branch A runs.",
-      pitch: "Paid social creative, campaign build, audience targeting, and optimisation, funnelled into your operating system.",
+      bestFit: "Clients ready to send paid social leads into the same AI voice, SMS, and CRM pipeline our automation services run.",
+      pitch: "Paid social creative, campaign build, audience targeting, and optimization, funneled into your operating system.",
       packages: [
         {
           tier: "Ads Starter",
@@ -622,7 +621,7 @@ export const demandBranch: Branch = {
           deliverables: [
             "1 campaign",
             "3 creatives / month",
-            "Weekly optimisation",
+            "Weekly optimization",
             "Monthly report",
           ],
         },
@@ -648,7 +647,7 @@ export const demandBranch: Branch = {
       ],
       faqs: [
         { q: "How is ad spend handled?", a: "Ad spend is invoiced separately, paid directly by the client, and capped to your stated budget." },
-        { q: "Do the ads feed into my CRM and voice agent?", a: "Yes. That is the point, ads funnel into the same AI voice and CRM pipeline Branch A builds, so spend converts to booked jobs." },
+        { q: "Do the ads feed into my CRM and voice agent?", a: "Yes. That is the point, ads feed into the same AI voice and CRM pipeline we build for you, so spend converts to booked jobs." },
       ],
     },
     {
@@ -676,13 +675,13 @@ export const demandBranch: Branch = {
       faqs: [
         { q: "Is it compliant?", a: "Yes. We message in your tone with appropriate consent handling, sensible cadence, and clear opt-out." },
         { q: "How fast do results show?", a: "Reactivation typically produces replies and bookings within the first days of sending, you are contacting people who already know you." },
-        { q: "How is revshare structured?", a: "Performance components are passed through at standard catalogue rates and tracked transparently in the reporting dashboard." },
+        { q: "How do performance fees work?", a: "Any performance-based fees are charged at our standard rates and tracked transparently in the reporting dashboard." },
       ],
     },
   ],
   faqs: [
-    { q: "Do I need Branch A to use Branch B?", a: "No, but it is recommended. Branch B fills the pipe; Branch A processes what comes through it. Without Branch A, qualified leads can still leak." },
-    { q: "Which Branch B offer should I start with?", a: "If you have a dormant list, start with Reactivation. If you have no pipeline, start with GTM Foundation. If you have traffic, start with Ads or Content." },
+    { q: "Do I need your automation services too?", a: "No, but it is recommended. Sales generation brings leads in; automation answers, follows up, and books them. Without it, qualified leads can still slip through." },
+    { q: "Which sales generation service should I start with?", a: "If you have a dormant list, start with Reactivation. If you have no pipeline, start with Outbound Foundation. If you have traffic, start with Ads or Content." },
     { q: "Do you guarantee meetings?", a: "We guarantee the system. Reply and meeting targets are stated up-front and reported against weekly; performance components align incentives where applicable." },
   ],
 };
@@ -699,6 +698,8 @@ export type Bundle = {
   slug: string;
   name: string;
   tagline: string;
+  // Search-result snippet, kept under ~160 characters.
+  metaDescription?: string;
   components: string[];
   bestFor?: string;
   whyThisBundle?: string;
@@ -719,7 +720,8 @@ export const bundleGroups: BundleGroup[] = [
       {
         slug: "lead-catcher",
         name: "Lead Catcher",
-        tagline: "Just starting, smallest viable wedge",
+        tagline: "Just starting, the simplest way in",
+        metaDescription: "An AI receptionist plus a simple CRM so every call is answered and every lead is captured. The lowest-commitment way to start with AI automation.",
         components: ["Voice Lite", "CRM Foundation"],
         bestFor: "SMBs taking their first step into AI automation with the lowest possible commitment.",
         whyThisBundle:
@@ -734,6 +736,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "inbound-starter",
         name: "Inbound Starter",
         tagline: "Just starting, capture web visitors",
+        metaDescription: "Website chat and online booking that turn site visitors into scheduled appointments instead of contact forms nobody answers.",
         components: ["Chat Starter", "Booking Setup"],
         bestFor: "Businesses with web traffic where inquiries die in a contact form.",
         whyThisBundle:
@@ -748,6 +751,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "reactivation-quick-win",
         name: "Reactivation Quick Win",
         tagline: "Just starting, wake up an old list",
+        metaDescription: "Text and AI voice outreach to past customers and old leads in your CRM, booking the ones who are ready. A fast first win from a list you already own.",
         components: ["Reactivation Sprint", "CRM Foundation"],
         bestFor: "SMBs sitting on a CRM full of past customers and dormant leads.",
         whyThisBundle:
@@ -759,9 +763,10 @@ export const bundleGroups: BundleGroup[] = [
         ],
       },
       {
-        slug: "the-wedge-service-business",
-        name: "The Wedge (Service Business)",
+        slug: "service-business-core",
+        name: "Service Business Core",
         tagline: "Growing, install a real system",
+        metaDescription: "AI call answering, a CRM with automatic follow-up, and no-show recovery for home services, dental, medspa, and other service businesses.",
         components: ["Voice Pro", "CRM Velocity", "Booking + No-Show Recovery"],
         bestFor: "Home services, dental, medspa, and any service business losing leads to missed calls and slow follow-up.",
         whyThisBundle:
@@ -776,21 +781,23 @@ export const bundleGroups: BundleGroup[] = [
         slug: "the-demand-engine",
         name: "The Demand Engine",
         tagline: "Growing, turn on pipeline",
-        components: ["GTM Multi-Channel", "Booking Engine", "Sequence Pack"],
+        metaDescription: "Done-for-you outbound for B2B companies: researched prospect lists, email and text sequences, and qualified meetings booked on your calendar.",
+        components: ["Outbound Multi-Channel", "Booking Engine", "Sequence Pack"],
         bestFor: "B2B SMBs with a product but no pipeline.",
         whyThisBundle:
-          "Replaces hiring SDRs. Builds the list, runs the sequences, qualifies the replies, and lands qualified meetings on the calendar.",
+          "Replaces hiring sales reps. Builds the list, runs the sequences, qualifies the replies, and lands qualified meetings on the calendar.",
         outcomes: [
-          "10–30 booked meetings per month at the target tier",
-          "Cold reply rates of 4–8% on personalised outreach",
-          "Cost per booked meeting under $300 once tuned",
+          "A booked-meeting target agreed up front and reported weekly",
+          "Outreach researched and personalized for each prospect",
+          "Cost per booked meeting tracked against an agreed target",
         ],
       },
       {
         slug: "inbound-outbound-combo",
         name: "Inbound + Outbound Combo",
         tagline: "Growing, both sides of the funnel",
-        components: ["Voice Pro", "Chat + Booking", "GTM Foundation"],
+        metaDescription: "Fix inbound leaks and start outbound at once: AI call answering, website chat and booking, and outbound outreach feeding one calendar.",
+        components: ["Voice Pro", "Chat + Booking", "Outbound Foundation"],
         bestFor: "Businesses that need to fix inbound leaks and turn on outbound at the same time.",
         whyThisBundle:
           "Covers both halves of the revenue equation. Every paid lead, organic visitor, and outbound prospect lands in the same booking flow.",
@@ -804,7 +811,8 @@ export const bundleGroups: BundleGroup[] = [
         slug: "demand-and-convert",
         name: "Demand + Convert",
         tagline: "Scaling, end-to-end coverage",
-        components: ["GTM Multi-Channel", "Voice Pro", "CRM Velocity", "Booking Engine"],
+        metaDescription: "Outbound lead generation plus AI call answering, CRM, and booking, so new prospects and inbound calls both turn into booked meetings.",
+        components: ["Outbound Multi-Channel", "Voice Pro", "CRM Velocity", "Booking Engine"],
         bestFor: "Funded SMBs ready to install the full revenue engine.",
         whyThisBundle:
           "The complete demand-to-conversion stack. Outbound fills the pipe; voice and CRM convert it.",
@@ -818,10 +826,11 @@ export const bundleGroups: BundleGroup[] = [
         slug: "brand-and-demand",
         name: "Brand + Demand",
         tagline: "Scaling, air cover plus outbound",
-        components: ["Content Standard", "Meta Ads Growth", "GTM Foundation", "AEO Baseline"],
+        metaDescription: "Content, Meta ads, AI search visibility, and outbound working together, so prospects already recognize your brand when you reach out.",
+        components: ["Content Standard", "Meta Ads Growth", "Outbound Foundation", "AEO Baseline"],
         bestFor: "Businesses where outbound lands cold because the brand has no surface area.",
         whyThisBundle:
-          "Warms the brand before outbound hits. Content, paid social, AI-search visibility, and outbound work together so the prospect already recognises you.",
+          "Warms the brand before outbound hits. Content, paid social, AI-search visibility, and outbound work together so the prospect already recognizes you.",
         outcomes: [
           "Outbound prospects who already know who you are",
           "Paid traffic landing on a credible, populated brand",
@@ -832,13 +841,14 @@ export const bundleGroups: BundleGroup[] = [
         slug: "founder-persona-stack",
         name: "Founder Persona Stack",
         tagline: "Scaling, built around the founder brand",
+        metaDescription: "Voice clone, video avatar, daily content, and LinkedIn outreach in the founder's voice, for founders and agency owners who sell on personal brand.",
         components: ["Full Persona Studio", "Content Pro", "LinkedIn outbound", "Care"],
         bestFor: "Agency owners, coaches, and founders selling on personal brand.",
         whyThisBundle:
-          "Productises the founder. Voice clone, avatar, daily content, and LinkedIn outbound, all in the founder's voice, without the founder being on camera all day.",
+          "Productizes the founder. Voice clone, avatar, daily content, and LinkedIn outbound, all in the founder's voice, without the founder being on camera all day.",
         outcomes: [
           "Daily content drops in the founder's voice and likeness",
-          "Outbound that lands on a warm, recognised brand",
+          "Outbound that lands on a warm, recognized brand",
           "The founder's time freed from production",
         ],
       },
@@ -852,6 +862,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "home-services-bundle",
         name: "Home Services",
         tagline: "HVAC, plumbing, electrical, roofing",
+        metaDescription: "AI call answering, CRM follow-up, past-customer reactivation, and Meta ads for HVAC, plumbing, electrical, and roofing companies.",
         components: ["Voice Pro", "CRM Velocity", "Reactivation Multi-Channel", "Meta Ads Starter"],
         bestFor: "Home services operators with steady inbound, a dormant database, and budget for paid acquisition.",
         whyThisBundle: "Catches every emergency call, follows up aggressively, wakes the old list, and funnels paid traffic into the same pipeline.",
@@ -860,6 +871,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "dental-medspa",
         name: "Dental / Medspa",
         tagline: "High-trust local conversion",
+        metaDescription: "AI phone answering, website chat and booking, CRM follow-up, content, and Meta ads for dental practices and medspas competing on trust.",
         components: ["Voice Pro", "Chat + Booking", "CRM Velocity", "Content Standard", "Meta Ads Starter"],
         bestFor: "Dental practices and medspas competing on trust and local visibility.",
         whyThisBundle: "Every channel a new patient might use, call, web, social, wired into one booking flow.",
@@ -868,6 +880,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "law-firms",
         name: "Law Firms",
         tagline: "Inbound qualification + AI search visibility",
+        metaDescription: "AI intake calls, CRM, content, and AI search visibility for law firms where the quality of intake matters as much as the volume.",
         components: ["Voice Enterprise", "CRM Velocity", "AEO Growth", "Content Lite"],
         bestFor: "Law firms where intake quality matters as much as volume.",
         whyThisBundle: "Enterprise-grade voice for sensitive intake, plus the AI search surface that drives buyers in the first place.",
@@ -876,6 +889,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "real-estate",
         name: "Real Estate",
         tagline: "Lead capture + dormant-database revenue",
+        metaDescription: "AI call answering, CRM, past-client reactivation, and content for real estate teams sitting on years of buyer and seller leads.",
         components: ["Voice Pro", "CRM Velocity", "Reactivation Sprint", "Content Pro"],
         bestFor: "Real estate teams sitting on years of past-client and buyer-lead data.",
         whyThisBundle: "Captures the new lead, reactivates the old one, and keeps the brand visible to both.",
@@ -884,15 +898,17 @@ export const bundleGroups: BundleGroup[] = [
         slug: "b2b-saas",
         name: "B2B SaaS",
         tagline: "Outbound pipeline + AI discoverability",
-        components: ["GTM Multi-Channel", "Booking Engine", "AEO Growth", "Content Standard"],
+        metaDescription: "Outbound pipeline, meeting booking, content, and AI search visibility for B2B SaaS teams that need meetings now and brand presence later.",
+        components: ["Outbound Multi-Channel", "Booking Engine", "AEO Growth", "Content Standard"],
         bestFor: "B2B SaaS teams that need pipeline and presence at the same time.",
         whyThisBundle: "Outbound delivers meetings now; AEO and content compound the brand so future outbound lands warmer.",
       },
       {
         slug: "agencies-white-label",
         name: "Agencies (white-label)",
-        tagline: "AAA backend, your brand on the front",
-        components: ["CRM Multi-Brand", "Workflow Pack (10)", "GTM Foundation", "Partner Managed"],
+        tagline: "Our automation, delivered under your agency's brand",
+        metaDescription: "Multi-brand CRM, a workflow library, outbound, and managed support that agencies can resell under their own brand.",
+        components: ["CRM Multi-Brand", "Workflow Pack (10)", "Outbound Foundation", "Partner Managed"],
         bestFor: "AI and marketing agencies who want to resell production capacity under their own brand.",
         whyThisBundle: "Multi-brand CRM and a workflow library means you onboard new clients in minutes, not weeks.",
       },
@@ -900,6 +916,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "ecommerce-shopify",
         name: "E-commerce / Shopify",
         tagline: "Acquisition + retention engine",
+        metaDescription: "Shopify setup, Meta ads, email and SMS copy, and customer reactivation for e-commerce brands building acquisition and repeat sales.",
         components: ["Shopify Setup", "Meta Ads Growth", "Copy Retainer", "Reactivation Engine"],
         bestFor: "Shopify and DTC brands building both customer acquisition and lifetime value.",
         whyThisBundle: "Paid acquisition feeds the store; the retention engine compounds revenue from every customer acquired.",
@@ -911,13 +928,14 @@ export const bundleGroups: BundleGroup[] = [
     lead: "For clients who want BurkyFlow to run the entire revenue function.",
     bundles: [
       {
-        slug: "full-stack-unitzero",
+        slug: "full-stack-burkyflow",
         name: "Full-Stack BurkyFlow",
         tagline: "The complete operating system",
+        metaDescription: "BurkyFlow runs your whole revenue system: AI voice, CRM, outbound, Meta ads, content, booking, and reporting, with one team accountable.",
         components: [
           "Voice Enterprise",
           "CRM Velocity",
-          "GTM Multi-Channel",
+          "Outbound Multi-Channel",
           "Meta Ads Growth",
           "Content Standard",
           "Booking Engine + Dashboard",
@@ -930,6 +948,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "full-stack-plus-reactivation",
         name: "Full-Stack + Reactivation",
         tagline: "Add the dormant-database revenue engine",
+        metaDescription: "The full BurkyFlow system plus ongoing reactivation campaigns that turn years of CRM data into booked revenue month after month.",
         components: ["Everything in Full-Stack BurkyFlow", "Reactivation Engine"],
         bestFor: "Full-Stack clients sitting on years of CRM data.",
         whyThisBundle: "Layers the ongoing reactivation play on top of full-stack so dormant revenue compounds month after month.",
@@ -938,6 +957,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "full-stack-plus-brand",
         name: "Full-Stack + Brand",
         tagline: "Add founder brand and AI discoverability",
+        metaDescription: "The full BurkyFlow system plus founder-brand content and AI search visibility, so every ad and outbound message lands on a known brand.",
         components: ["Everything in Full-Stack BurkyFlow", "Full Persona Studio", "AEO Growth"],
         bestFor: "Founders who want BurkyFlow running the revenue engine and the brand engine.",
         whyThisBundle: "Founder persona content and AEO visibility make every outbound and ad touchpoint land on a warmer brand.",
@@ -946,6 +966,7 @@ export const bundleGroups: BundleGroup[] = [
         slug: "the-empire-package",
         name: "The Empire Package",
         tagline: "Everything plus custom dev and strategy",
+        metaDescription: "The full BurkyFlow system plus a custom website or app, a strategy sprint, and partner-level managed services for long-term growth.",
         components: [
           "Everything in Full-Stack BurkyFlow",
           "Custom Web / App build",
@@ -976,7 +997,7 @@ export const bundlesFaqs = [
   },
   {
     q: "Can I build my own combo?",
-    a: "Yes. Any combination of offers across Branch A and Branch B can be bundled. Discount tier applies automatically based on the number of services selected.",
+    a: "Yes. Any combination of automation and sales generation services can be bundled. Discount tier applies automatically based on the number of services selected.",
   },
   {
     q: "Are bundles a lock-in?",
@@ -984,6 +1005,6 @@ export const bundlesFaqs = [
   },
   {
     q: "Where does Managed Services fit?",
-    a: "Every Branch A build is offered a Managed Services tier at hand-off (default: Care). Managed Services is excluded from bundle discounts but always available standalone.",
+    a: "Every automation build is offered a Managed Services tier at hand-off (most clients choose Care). Managed Services is excluded from bundle discounts but always available standalone.",
   },
 ];

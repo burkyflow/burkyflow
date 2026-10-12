@@ -231,6 +231,8 @@ export function Navbar() {
         )}
       >
         <Link href="/" className="inline-flex items-center">
+          {/* Pre-sized WebP logo; skips the image optimizer on purpose. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/logo1.webp"
             alt={site.name}
@@ -308,6 +310,7 @@ export function Navbar() {
           {/* header */}
           <div className="flex items-center justify-between border-b border-border/70 px-5 py-4">
             <Link href="/" onClick={() => setOpen(false)} className="inline-flex items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/logo1.webp"
                 alt={site.name}

@@ -33,7 +33,7 @@ export const caseStudies: CaseStudy[] = [
     tags: ["GoHighLevel", "12 Workflows", "Dual Pipeline", "Live April 2026"],
     headline: "Full CRM and automation system for an 8-lender consumer finance brand",
     summary:
-      "A complete GoHighLevel ecosystem, 12 published workflows, dual pipelines, native Facebook Lead Ads, multi-lender routing, automated document collection, and a live operations dashboard. 100% native GHL, no Zapier, no ManyChat, no recurring tool costs.",
+      "A complete GoHighLevel ecosystem, 12 published workflows, dual pipelines, native Facebook Lead Ads, multi-lender routing, automated document collection, and a live operations dashboard. 100% native GoHighLevel, no Zapier, no ManyChat, no recurring tool costs.",
     heroStats: [
       { value: "1,600+", label: "Contacts unified into one source of truth" },
       { value: "3,520+", label: "Automated workflow executions in the first month" },
@@ -64,7 +64,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Operational Command Center",
         detail:
-          "Live 8-widget GHL dashboard giving management 100% visibility into lead sources, pipeline stage distribution, team task load, and lender performance.",
+          "Live 8-widget GoHighLevel dashboard giving management 100% visibility into lead sources, pipeline stage distribution, team task load, and lender performance.",
       },
     ],
     results: [
@@ -101,7 +101,7 @@ export const caseStudies: CaseStudy[] = [
     heroStats: [
       { value: "Instant", label: "Proposal turnaround (was 2–3 days)" },
       { value: "Statewide", label: "Reach (was local consultant)" },
-      { value: "Surgical", label: "Outreach personalised per property" },
+      { value: "Surgical", label: "Outreach personalized per property" },
     ],
     challenge: [
       "Reaching the correct decision-maker, property manager or HOA board president, across thousands of California buildings was a manual nightmare.",
@@ -122,18 +122,18 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "AI Proposal Agent",
         detail:
-          "Custom AI agent that ingests inspection reports, extracts deficiencies, and generates a structured, professional proposal, then syncs the deal value back into the GHL pipeline.",
+          "Custom AI agent that ingests inspection reports, extracts deficiencies, and generates a structured, professional proposal, then syncs the deal value back into the GoHighLevel pipeline.",
       },
     ],
     results: [
       "Proposals delivered in minutes instead of days",
-      "Outreach personalised per account at scale",
+      "Outreach personalized per account at scale",
       "Statewide market position, perfectly placed for the January 2026 compliance surge",
     ],
     resultsTable: [
       { metric: "Lead discovery", before: "Manual / random", after: "Automated (Apollo + Clay)" },
-      { metric: "Email relevance", before: "Generic / ignored", after: "Highly personalised via AI" },
-      { metric: "Intake process", before: "Phone calls + messy emails", after: "Structured GHL funnels" },
+      { metric: "Email relevance", before: "Generic / ignored", after: "Highly personalized via AI" },
+      { metric: "Intake process", before: "Phone calls + messy emails", after: "Structured GoHighLevel funnels" },
       { metric: "Proposal turnaround", before: "2–3 days", after: "Instant (AI generated)" },
       { metric: "Market position", before: "Local consultant", after: "Statewide compliance leader" },
     ],
@@ -222,7 +222,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Unified Multi-Niche AI Receptionist",
         detail:
-          "A single Vapi-powered voice agent dispatching across 13 specialised niches with shared infrastructure, spam database, and notification system.",
+          "A single Vapi-powered voice agent dispatching across 13 specialized niches with shared infrastructure, spam database, and notification system.",
       },
       {
         title: "Intelligent Guardrails",
@@ -360,7 +360,7 @@ export const caseStudies: CaseStudy[] = [
     relatedIndustries: ["home-services"],
   },
   {
-    slug: "dr-shifton-neurology",
+    slug: "specialized-neurology-practice",
     client: "Specialized Neurology Practice",
     vertical: "Medical Front Desk AI",
     location: "New York / East Coast",
@@ -414,7 +414,7 @@ export const caseStudies: CaseStudy[] = [
     resultsTable: [
       { metric: "Emergency escalation speed", before: "2–3 minutes", after: "< 5 seconds" },
       { metric: "Insurance verification", before: "Manual / delayed", after: "Instant & accurate" },
-      { metric: "Hospital / physician referrals", before: "Often lost in voicemail", after: "Prioritised & logged" },
+      { metric: "Hospital / physician referrals", before: "Often lost in voicemail", after: "Prioritized & logged" },
       { metric: "Patient satisfaction", before: "Mixed (hold times)", after: "High (clear & reassuring)" },
     ],
     relatedServices: ["ai-voice-receptionist", "workflow-automation"],
@@ -452,7 +452,7 @@ export const caseStudies: CaseStudy[] = [
           "If a homeowner meets at least 2 of the 4 pillars, Mark instantly shifts into booking mode. Fewer than 2, he wraps politely and logs the outcome.",
       },
       {
-        title: "Live GHL Calendar Sync",
+        title: "Live GoHighLevel Calendar Sync",
         detail:
           "During the call Mark checks live calendar availability, offers up to 3 specific time slots within Mon–Fri 9am–6pm, and books in real time.",
       },
@@ -466,7 +466,7 @@ export const caseStudies: CaseStudy[] = [
       "100% follow-up consistency, every lead re-contacted without a rep dialing",
       "Only high-intent sellers reach the team's calendar",
       "Zero-admin workflow: outbound dial, CRM update, team notification, fully hands-free",
-      "Reduced no-shows via instant personalised SMS confirmation",
+      "Reduced no-shows via instant personalized SMS confirmation",
     ],
     relatedServices: ["crm-lead-systems", "database-reactivation", "ai-voice-receptionist"],
     relatedIndustries: ["real-estate"],
@@ -486,7 +486,7 @@ export const caseStudies: CaseStudy[] = [
       { value: "100%", label: "Verified data accuracy" },
     ],
     challenge: [
-      "Voicemail and generic call centres felt 'budget', making it harder to justify premium pricing.",
+      "Voicemail and generic call centers felt 'budget', making it harder to justify premium pricing.",
       "Owner spent evenings playing phone tag for basic details like zip codes or project type.",
       "45-minute drives to locked-gate properties were costing hundreds of dollars a week in lost labour and fuel.",
     ],

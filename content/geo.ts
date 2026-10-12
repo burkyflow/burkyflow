@@ -41,7 +41,7 @@ export const niches: Niche[] = [
     name: "HVAC",
     plural: "HVAC businesses",
     pains: [
-      "The average shop has roughly 1,800 past customers in its CRM, and most are never contacted again.",
+      "Most shops have years of past customers in their CRM who are never contacted again.",
       "After-hours and overflow calls go to whoever answers second.",
       "Seasonal demand spikes faster than the front desk can book it.",
     ],
@@ -51,7 +51,7 @@ export const niches: Niche[] = [
     name: "Plumbing",
     plural: "plumbing companies",
     pains: [
-      "Eight to fourteen after-hours calls a week go unanswered, and each is a four-figure emergency.",
+      "After-hours emergency calls go unanswered, and each one can be a four-figure job.",
       "Past customers are never texted again after the first job.",
       "Burst-pipe callers give the work to whoever picks up first.",
     ],

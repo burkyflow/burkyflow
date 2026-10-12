@@ -10,15 +10,16 @@ declare global {
   }
 }
 
+const metaPixelOptions = site.metaPixelTestEventCode
+  ? { test_event_code: site.metaPixelTestEventCode }
+  : undefined;
+
 // The base pixel fires PageView on the first load. Next.js route changes are
 // client-side (no reload), so this re-fires PageView on every subsequent
 // navigation. Skips the first render to avoid double-counting the landing view.
 export function MetaPixel() {
   const pathname = usePathname();
   const first = useRef(true);
-  const metaPixelOptions = site.metaPixelTestEventCode
-    ? { test_event_code: site.metaPixelTestEventCode }
-    : undefined;
 
   useEffect(() => {
     if (first.current) {

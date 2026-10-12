@@ -54,13 +54,17 @@ export default function CaseStudiesIndex() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-foreground font-medium">{cs.headline}</p>
-                    <div className="mt-4 grid grid-cols-3 gap-3">
+                    <ul className="mt-4 space-y-2">
                       {cs.heroStats.slice(0, 3).map((s) => (
-                        <div key={s.label} className="rounded-xl bg-surface p-2 text-center">
-                          <p className="text-sm font-semibold text-brand">{s.value}</p>
-                        </div>
+                        <li
+                          key={s.label}
+                          className="flex items-baseline gap-3 rounded-xl bg-surface px-3 py-2"
+                        >
+                          <span className="w-20 shrink-0 text-sm font-semibold text-brand">{s.value}</span>
+                          <span className="text-xs text-muted-foreground">{s.label}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                     <ul className="mt-4 flex flex-wrap gap-1.5">
                       {cs.tags.slice(0, 4).map((t) => (
                         <li

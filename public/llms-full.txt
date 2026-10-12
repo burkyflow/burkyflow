@@ -33,7 +33,7 @@ How it works:
 1. Map your real sales stages, sources, and hand-off points.
 2. Wire up capture from forms, calls, ads, and chats with the source attached.
 3. Automate speed-to-lead texts, reminders, and reactivation.
-Why it matters: Most leads are won or lost in the first five minutes.
+Why it matters: Companies that respond to a lead within an hour are nearly seven times more likely to qualify it than those that wait an hour longer (Harvard Business Review, 2011).
 
 ### Workflow Automation
 URL: https://www.burkyflow.com/services/workflow-automation

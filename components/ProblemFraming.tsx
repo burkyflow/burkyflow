@@ -8,7 +8,7 @@ type Stat = { stat: string; label: string; icon: LucideIcon; accent: Accent; ima
 const stats: Stat[] = [
   {
     stat: "Calls",
-    label: "Capture enquiries while your crews are busy on jobs",
+    label: "Capture inquiries while your crews are busy on jobs",
     icon: PhoneOff,
     accent: "brand",
     image: "/images/c1.webp", // ← card background (full cover)
@@ -41,7 +41,6 @@ function StatCard({ stat, label, icon: Icon, accent, image }: Stat) {
     <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-b from-white to-surface/50 p-8 text-center shadow-soft ring-1 ring-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30">
       {image ? (
         // Full-cover card background
-        // eslint-disable-next-line @next/next/no-img-element
         <div aria-hidden className={`absolute inset-0 bg-cover bg-center ${accent === "accent" ? "problem-background-accent" : "problem-background-brand"}`} />
       ) : (
         /* soft colored wave at the bottom (fallback when no image) */

@@ -7,7 +7,6 @@ import {
   Check,
   DatabaseZap,
   PhoneCall,
-  PhoneOff,
   Sparkles,
   Workflow,
 } from "lucide-react";
@@ -26,9 +25,9 @@ import { faqPageLd, pageMetadata, serviceDetailLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Build Funnel 1, Missed-Call Recovery",
+  title: "Missed-Call Recovery for Service Businesses",
   description:
-    "A missed-call recovery landing page built from BurkyFlow's AI voice, database reactivation, CRM, workflow, industry, case study, and content systems.",
+    "Turn missed calls into booked jobs with an AI voice receptionist that answers every ring, plus reactivation and CRM follow-up for leads that went quiet.",
   path: "/missed-calls",
 });
 
@@ -67,9 +66,9 @@ const faqs = [
       "It is the combination of AI voice reception, fast follow-up, CRM routing, and reactivation that turns unanswered rings into booked work instead of lost revenue.",
   },
   {
-    q: "What powers this funnel?",
+    q: "What systems are involved?",
     a:
-      "The same systems used across the site: AI Voice Receptionist, Database Reactivation, CRM and Lead Systems, and Workflow Automation.",
+      "Four connected services: an AI Voice Receptionist, Database Reactivation, CRM and Lead Systems, and Workflow Automation.",
   },
   {
     q: "Does this replace my front desk?",
@@ -99,9 +98,9 @@ export default function MissedCallsPage() {
       <JsonLd
         data={[
           serviceDetailLd({
-            name: "Missed-Call Recovery Funnel",
+            name: "Missed-Call Recovery",
             description:
-              "BurkyFlow's missed-call recovery landing page. It combines AI voice, database reactivation, CRM routing, and workflow automation to turn missed calls into booked revenue.",
+              "Missed-call recovery for service businesses. BurkyFlow combines AI voice reception, database reactivation, CRM routing, and workflow automation to turn missed calls into booked revenue.",
             url: `${site.url}/missed-calls`,
           }),
           faqPageLd(faqs),
@@ -116,15 +115,15 @@ export default function MissedCallsPage() {
               <div className="max-w-2xl">
                 <p className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-medium text-muted-foreground shadow-soft ring-1 ring-border/60">
                   <Sparkles className="size-4 text-brand" />
-                  Build Funnel 1
+                  Always-on call coverage
                 </p>
                 <h1 className="mt-6 text-4xl font-semibold leading-[1.05] sm:text-5xl md:text-6xl">
                   Missed-call recovery that turns unanswered rings into booked revenue
                 </h1>
                 <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-                  BurkyFlow uses the same AI voice, reactivation, CRM, and workflow systems across
-                  the site to make sure every missed call gets a second chance, every old lead gets
-                  a follow-up, and every booked opportunity lands where your team can close it.
+                  BurkyFlow combines AI voice, reactivation, CRM, and workflow automation so every
+                  missed call gets a second chance, every old lead gets a follow-up, and every
+                  booked opportunity lands where your team can close it.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -135,7 +134,7 @@ export default function MissedCallsPage() {
                     </Link>
                   </Button>
                   <Button asChild variant="secondary" size="lg">
-                    <Link href="#stack">See the funnel stack</Link>
+                    <Link href="#stack">See the four systems</Link>
                   </Button>
                 </div>
 
@@ -226,8 +225,8 @@ export default function MissedCallsPage() {
                     stats[0],
                     stats[2],
                     {
-                      value: "$45K–$120K",
-                      label: "missed-call loss per year in home services",
+                      value: "7×",
+                      label: "more likely to qualify a lead contacted within an hour (HBR)",
                     },
                   ].map((item) => (
                     <div key={item.label} className="rounded-2xl bg-surface p-4 text-center">
@@ -252,8 +251,8 @@ export default function MissedCallsPage() {
               Four systems that keep missed calls from becoming lost jobs
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              This funnel is built from the same core services used across the rest of the site,
-              arranged around one job: respond first, recover fast, and keep the follow-up moving.
+              Four connected services arranged around one job: respond first, recover fast, and
+              keep the follow-up moving.
             </p>
           </div>
 
@@ -293,10 +292,10 @@ export default function MissedCallsPage() {
           <div className="mx-auto max-w-3xl text-center">
             <p className="eyebrow">Why this works</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-              The wedge behind the funnel is the same one the rest of the site leads with
+              Start with the calls, then expand
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Missed-call recovery usually starts with the always-on voice wedge and expands into
+              Missed-call recovery usually starts with always-on voice coverage and expands into
               reactivation and operational automation once the first revenue leak is closed.
             </p>
           </div>
@@ -307,14 +306,14 @@ export default function MissedCallsPage() {
                 <Card className="h-full">
                   <CardHeader>
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Wedge {wedge.letter}
+                      Entry offer
                     </p>
                     <CardTitle className="mt-2 text-2xl">{wedge.shortName}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">{wedge.pitch}</p>
                     <div className="mt-4 rounded-2xl bg-surface p-4">
-                      <p className="text-sm font-semibold text-foreground">Risk reversal</p>
+                      <p className="text-sm font-semibold text-foreground">Low-risk start</p>
                       <p className="mt-1 text-sm text-muted-foreground">{wedge.riskReversal}</p>
                     </div>
                     <ul className="mt-4 space-y-2">
@@ -341,8 +340,8 @@ export default function MissedCallsPage() {
               The industries most likely to feel this leak immediately
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              These are the site's strongest vertical pages, and they all share the same problem:
-              calls come in, nobody answers fast enough, and revenue leaves with the next click.
+              These industries all share the same problem: calls come in, nobody answers fast
+              enough, and revenue leaves with the next click.
             </p>
           </div>
 
@@ -434,11 +433,10 @@ export default function MissedCallsPage() {
           <div className="mx-auto max-w-3xl text-center">
             <p className="eyebrow">Read more</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-              The thinking behind the funnel lives in the blog too
+              The thinking behind missed-call recovery
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              If someone wants to understand the reasoning before they book a call, these are the
-              two best articles to send them to.
+              Want the reasoning before you book a call? Start with these two articles.
             </p>
           </div>
 
@@ -476,7 +474,7 @@ export default function MissedCallsPage() {
           <FAQAccordion
             items={faqs}
             heading="Missed-call recovery: common questions"
-            lead="Straight answers for the part of the funnel most owners underestimate."
+            lead="Straight answers about the revenue leak most owners underestimate."
           />
         </div>
       </section>

@@ -29,7 +29,7 @@ export function Hero() {
 
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
             BurkyFlow provides AI voice receptionists and revenue operations for service businesses. We quantify exactly
-            where your revenue is leaking, capture every call and dormant lead, and optimise the
+            where your revenue is leaking, capture every call and dormant lead, and optimize the
             follow-up that converts them, so you grow revenue without adding headcount.
           </p>
 
@@ -41,7 +41,7 @@ export function Hero() {
               </Link>
             </Button>
             <Button asChild variant="secondary" size="lg">
-              <Link href="#wedges">
+              <Link href="#offers">
                 <Play className="size-4 fill-brand text-brand" />
                 {site.secondaryCtaLabel}
               </Link>

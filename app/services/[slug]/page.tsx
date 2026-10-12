@@ -9,7 +9,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
 import { services, getService } from "@/content/services";
-import { industries, getIndustry } from "@/content/industries";
+import { getIndustry } from "@/content/industries";
 import { caseStudiesForService } from "@/content/case-studies";
 import {
   pageMetadata,

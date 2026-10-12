@@ -3,15 +3,13 @@ export const site = {
   name: "BurkyFlow",
   legalName: "BurkyFlow Inc.",
   tagline:
-    "AI-powered revenue operations for service businesses. We find where your revenue leaks, capture it, and optimise every step that turns a lead into a paid job.",
+    "AI-powered revenue operations for service businesses. We find where your revenue leaks, capture it, and optimize every step that turns a lead into a paid job.",
   url: "https://www.burkyflow.com",
   ctaHref: "/contact",
   ctaLabel: "Book a call",
   secondaryCtaLabel: "See how it works",
   email: "atta@burkyflow.com",
   phone: { display: "+1 (470) 978-3478", href: "tel:+14709783478" },
-  // Calendly scheduler (still used by the ad funnels).
-  calendly: "https://calendly.com/hilalaziz-unitzero/30min",
   // GoHighLevel booking widget. The script auto-resizes the iframe by its id,
   // so `id` must match exactly what the embed code specifies.
   booking: {

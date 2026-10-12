@@ -26,7 +26,6 @@ export type Funnel = {
   features: FunnelFeature[]; // "what we run for you" checklist cards
   pills: string[]; // vertical labels shown beside the phone mockup
   testimonialsHeading?: string; // "Trusted by ... across the USA"
-  testimonials?: { text: string; attribution: string; vertical?: string }[]; // funnel-specific (falls back to case studies)
   faqs?: { q: string; a: string }[]; // funnel-specific FAQ (falls back to the industry FAQ)
   bookingHeading: string;
   bookingLead: string;
@@ -73,20 +72,6 @@ export const funnels: Record<string, Funnel> = {
     featuresLead: "More calls. More bookings. More revenue.",
     pills: ["Plumbing", "HVAC", "Electrical", "Roofing", "Cleaning", "& more"],
     testimonialsHeading: "Trusted by home service businesses across the USA",
-    testimonials: [
-      {
-        text: "BurkyFlow booked 37 extra jobs in our first month. It's like having a 24/7 receptionist!",
-        attribution: "Mike Reynolds, HVAC Contractor, Texas",
-      },
-      {
-        text: "We haven't missed a call since using BurkyFlow. Our business has grown 40%.",
-        attribution: "Sarah Collins, Plumbing Company, Florida",
-      },
-      {
-        text: "Super easy to set up and the AI sounds natural. Highly recommend!",
-        attribution: "Jason Miller, Electrician, California",
-      },
-    ],
     faqs: [
       {
         q: "How quickly can BurkyFlow be set up?",
@@ -154,7 +139,7 @@ export const funnels: Record<string, Funnel> = {
       "Runs 24/7 with zero extra front-desk load",
     ],
     results: [
-      { value: "500–800", label: "Patients on a typical untouched recall list" },
+      { value: "< 5 sec", label: "Emergency escalation at a neurology practice (was 2–3 min)" },
       { value: "100%", label: "Of consult requests answered instantly" },
       { value: "24/7", label: "Booking, insurance capture & intake" },
       { value: "0", label: "Extra front-desk hours added" },
@@ -226,7 +211,7 @@ export const funnels: Record<string, Funnel> = {
       "Runs 24/7 so no lead goes cold again",
     ],
     results: [
-      { value: "~1 in 6", label: "Cold leads still transact, capture yours" },
+      { value: "7×", label: "More likely to qualify a lead contacted within an hour (Harvard Business Review)" },
       { value: "100%", label: "Of new leads get an instant first touch" },
       { value: "< 60s", label: "Speed-to-lead on every inquiry" },
       { value: "24/7", label: "Re-engagement & qualification" },
@@ -298,7 +283,7 @@ export const funnels: Record<string, Funnel> = {
       "Runs 24/7 with no missed calls or busy signals",
     ],
     results: [
-      { value: "~60%", label: "Of customers switch shops in 18 months, keep yours" },
+      { value: "7×", label: "More likely to qualify a lead contacted within an hour (Harvard Business Review)" },
       { value: "100%", label: "Of calls answered during bay hours" },
       { value: "24/7", label: "Booking & service reminders" },
       { value: "< 60s", label: "To answer every inbound call" },
@@ -370,7 +355,7 @@ export const funnels: Record<string, Funnel> = {
       "Holds a slot for next-morning follow-up",
     ],
     results: [
-      { value: "7–11pm", label: "When high-intent intake calls cluster" },
+      { value: "Instant", label: "Proposal turnaround at a compliance consultancy (was 2–3 days)" },
       { value: "100%", label: "Of after-hours calls captured & qualified" },
       { value: "24/7", label: "Compliance-first intake coverage" },
       { value: "0", label: "Inquiries lost to voicemail" },
@@ -477,7 +462,7 @@ export const funnelPricing: {
       features: [
         "Everything in Growth",
         "Multi-channel outbound",
-        "Answer Engine Optimisation",
+        "Answer Engine Optimization",
         "Dedicated support & reporting",
       ],
     },
