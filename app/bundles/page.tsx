@@ -12,7 +12,7 @@ import { site } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "Bundles",
   description:
-    "Pre-configured combinations of Branch A and Branch B offers, by client maturity, by vertical, and full-stack engagements.",
+    "Pre-configured service bundles for service businesses, grouped by growth stage, by industry, and as full-stack engagements, each discounted versus à la carte.",
   path: "/bundles",
 });
 
@@ -35,8 +35,8 @@ export default function BundlesPage() {
             Pre-configured combinations, priced to compound
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-            Most clients don't buy one service, they buy a combination. Every bundle below carries
-            a discount versus à la carte, with the exact terms shared on a short scoping call.
+            Every bundle below combines services that work better together and carries a discount
+            versus à la carte, with the exact terms shared on a short scoping call.
           </p>
           <div className="mt-8">
             <Button asChild size="lg">
