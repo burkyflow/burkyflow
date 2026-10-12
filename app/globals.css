@@ -87,7 +87,16 @@
 
 /* Decorative artwork belongs in CSS, outside the content-image outline. */
 @media (min-width: 1024px) {
-  .hero-dashboard { background: url('/images/image.webp') center / cover no-repeat; }
+  /* Fade only the artwork's empty margins so its background blends into the hero. */
+  .hero-dashboard {
+    background: url('/images/hero-dashboard.webp') center / contain no-repeat;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 9%, #000 95%, transparent),
+      linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent, #000 9%, #000 95%, transparent),
+      linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+    mask-composite: intersect;
+  }
 }
 .problem-background-brand { background-image: url('/images/c1.webp'); }
 .problem-background-accent { background-image: url('/images/c2.webp'); }
