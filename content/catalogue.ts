@@ -911,7 +911,7 @@ export const bundleGroups: BundleGroup[] = [
     lead: "For clients who want BurkyFlow to run the entire revenue function.",
     bundles: [
       {
-        slug: "full-stack-unitzero",
+        slug: "full-stack-burkyflow",
         name: "Full-Stack BurkyFlow",
         tagline: "The complete operating system",
         components: [

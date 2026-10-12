@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         <p className="mt-4 text-muted-foreground">Last updated: July 21, 2026</p>
 
         <p className="mt-6">
-          {site.legalName} ("we", "us", "our") operates {site.url} (the "Site"). This Privacy
+          {site.legalName} (“we”, “us”, “our”) operates {site.url} (the “Site”). This Privacy
           Policy explains how we collect, use, disclose, and protect personal information when you
           visit or interact with the Site.
         </p>

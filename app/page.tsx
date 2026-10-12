@@ -8,7 +8,6 @@ import { ResultsStats } from "@/components/ResultsStats";
 import { IndustryStrip } from "@/components/IndustryStrip";
 import { LogoWall } from "@/components/LogoWall";
 import { FAQAccordion } from "@/components/FAQAccordion";
-import { Reveal } from "@/components/Reveal";
 import { services } from "@/content/services";
 import { homeFaqs } from "@/content/stats";
 import { site } from "@/lib/site";

@@ -15,8 +15,8 @@ export default function TermsPage() {
         <p className="mt-4 text-muted-foreground">Last updated: July 21, 2026</p>
 
         <p className="mt-6">
-          These Terms of Service ("Terms") govern your use of {site.legalName} ("we", "us", "our")
-          website at {site.url} (the "Site"). By accessing or using the Site you agree to be bound
+          These Terms of Service (“Terms”) govern your use of {site.legalName} (“we”, “us”, “our”)
+          website at {site.url} (the “Site”). By accessing or using the Site you agree to be bound
           by these Terms.
         </p>
 
@@ -64,7 +64,7 @@ export default function TermsPage() {
         <p className="mt-3">The Site may contain links to third-party sites. We are not responsible for their content or practices.</p>
 
         <h2 className="mt-6 text-xl font-semibold">Disclaimers</h2>
-        <p className="mt-3">The Site and services are provided "as is" and "as available" without warranties of any kind. We do not guarantee outcomes from using our services.</p>
+        <p className="mt-3">The Site and services are provided “as is” and “as available” without warranties of any kind. We do not guarantee outcomes from using our services.</p>
 
         <h2 className="mt-6 text-xl font-semibold">Limitation of liability</h2>
         <p className="mt-3">To the maximum extent permitted by law, {site.legalName} will not be liable for indirect, incidental, or consequential damages arising from your use of the Site.</p>

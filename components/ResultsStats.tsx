@@ -47,7 +47,6 @@ function StatCard({ card }: { card: Card }) {
     <div className="group relative h-full overflow-hidden rounded-3xl bg-white p-7 shadow-soft ring-1 ring-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30">
       {/* Background chart/progress image slot */}
       {bg ? (
-        // eslint-disable-next-line @next/next/no-img-element
         <div aria-hidden className={`pointer-events-none absolute inset-x-0 -top-2 bg-cover transition-transform duration-500 group-hover:scale-105 ${card.accent === "accent" ? "results-background-accent" : "results-background-brand"}`} />
       ) : null}
 

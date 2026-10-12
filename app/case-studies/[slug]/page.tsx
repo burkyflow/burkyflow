@@ -112,7 +112,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<Para
       <section className="section bg-surface">
         <div className="container-page mx-auto max-w-3xl">
           <p className="eyebrow">The challenge</p>
-          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">What wasn't working</h2>
+          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">What wasn’t working</h2>
           <ul className="mt-8 space-y-4">
             {cs.challenge.map((c, i) => (
               <li key={i} className="flex items-start gap-3 text-lg leading-relaxed text-muted-foreground">
@@ -189,7 +189,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<Para
             <figure className="mt-12 rounded-2xl bg-white p-8 shadow-soft ring-1 ring-border/60">
               <Quote className="size-6 text-brand" />
               <blockquote className="mt-4 text-xl leading-relaxed text-foreground">
-                "{cs.quote.text}"
+                &ldquo;{cs.quote.text}&rdquo;
               </blockquote>
               <figcaption className="mt-4 text-sm font-semibold text-muted-foreground">
                 {cs.quote.attribution}

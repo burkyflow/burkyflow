@@ -360,7 +360,7 @@ export const caseStudies: CaseStudy[] = [
     relatedIndustries: ["home-services"],
   },
   {
-    slug: "dr-shifton-neurology",
+    slug: "specialized-neurology-practice",
     client: "Specialized Neurology Practice",
     vertical: "Medical Front Desk AI",
     location: "New York / East Coast",

@@ -5,7 +5,6 @@ import {
   ArrowRight,
   PhoneOff,
   PhoneCall,
-  CalendarCheck,
   TrendingUp,
   Check,
   Repeat2,

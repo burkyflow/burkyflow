@@ -21,6 +21,8 @@ export function Footer() {
             {/* Brand + newsletter */}
             <div>
               <Link href="/" className="inline-block">
+                {/* Pre-sized WebP logo; skips the image optimizer on purpose. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/logo1.webp"
                   alt={site.name}

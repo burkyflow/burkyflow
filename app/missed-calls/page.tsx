@@ -7,7 +7,6 @@ import {
   Check,
   DatabaseZap,
   PhoneCall,
-  PhoneOff,
   Sparkles,
   Workflow,
 } from "lucide-react";

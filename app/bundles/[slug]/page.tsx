@@ -67,7 +67,7 @@ export default async function BundleDetail({ params }: { params: Promise<Params>
         <div className="container-page grid gap-10 lg:grid-cols-2">
           <div className="rounded-2xl bg-white p-8 shadow-soft ring-1 ring-border/60">
             <p className="text-xs font-semibold uppercase tracking-wide text-brand">
-              What's included
+              What’s included
             </p>
             <h2 className="mt-2 text-2xl font-semibold">The full stack</h2>
             <ul className="mt-6 space-y-3">
