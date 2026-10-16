@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Play, PhoneCall, Repeat2, CalendarDays, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { site } from "@/lib/site";
+import { Typewriter } from "@/components/Typewriter";
 
 const pills = [
   { icon: PhoneCall, label: "AI Voice Agents" },
@@ -11,6 +12,10 @@ const pills = [
 ];
 
 
+// Cycled by the headline typewriter. The first one is what search engines read.
+const headlineLead = "Turn missed calls and dormant leads into";
+const headlinePhrases = ["booked revenue", "booked jobs", "predictable growth", "revenue you already own"];
+
 export function Hero() {
   return (
     // Copy and dashboard share the page container, so both line up with the
@@ -19,9 +24,23 @@ export function Hero() {
       <div className="container-page relative grid items-center gap-10 py-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-12 lg:py-20 xl:py-24">
         <div className="max-w-xl">
           <p className="eyebrow mb-4">AI voice receptionist &amp; revenue automation</p>
-          <h1 className="text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-            Turn missed calls and dormant leads into{" "}
-            <span className="text-gradient-brand">booked revenue</span>
+          {/* Invisible copies of every full headline share one grid cell with the
+              live one, so the heading is always as tall as its longest version and
+              the content below never jumps while phrases type and delete. The
+              copies are CSS-generated text, so the HTML heading reads once. */}
+          <h1 className="grid text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+            {headlinePhrases.map((phrase) => (
+              <span
+                key={phrase}
+                aria-hidden
+                data-text={`${headlineLead} ${phrase}`}
+                className="invisible col-start-1 row-start-1 before:content-[attr(data-text)]"
+              />
+            ))}
+            <span className="col-start-1 row-start-1">
+              {headlineLead}{" "}
+              <Typewriter phrases={headlinePhrases} className="text-gradient-brand" />
+            </span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
