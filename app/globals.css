@@ -72,6 +72,20 @@
   }
 }
 
+/* Typewriter caret (hero heading) */
+@keyframes caret-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.animate-caret {
+  animation: caret-blink 1s step-end infinite;
+}
+
 /* Infinite marquee (used by the mobile "trusted by" strip) */
 @keyframes marquee {
   from {
