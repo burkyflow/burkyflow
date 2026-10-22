@@ -45,6 +45,14 @@ function listFiles(dir: string) {
   }
 }
 
+// Front matter dates arrive as strings ("2026-10-20") or, when written unquoted with a
+// time ("2026-10-22T00:00:00.000-04:00"), as Date objects. Normalize both to YYYY-MM-DD.
+function isoDay(value: unknown, fallback: string) {
+  if (value instanceof Date && !Number.isNaN(value.getTime())) return value.toISOString().slice(0, 10);
+  const text = String(value ?? "").trim();
+  return /^\d{4}-\d{2}-\d{2}/.test(text) ? text.slice(0, 10) : fallback;
+}
+
 function loadPosts(): Post[] {
   const bySlug = new Map<string, Post>();
 
@@ -56,8 +64,8 @@ function loadPosts(): Post[] {
     const title = String(data.title || slug);
     // Accept `excerpt`, `metaDescription`, or `description`, whichever the publisher uses.
     const excerpt = String(data.excerpt || data.metaDescription || data.description || "");
-    const date = String(data.date || "").slice(0, 10) || "1970-01-01";
-    const modified = String(data.updated || date).slice(0, 10);
+    const date = isoDay(data.date, "1970-01-01");
+    const modified = isoDay(data.updated, date);
     const words = content.trim().split(/\s+/).filter(Boolean).length;
     const readMinutes = Number(data.readMinutes) || Math.max(1, Math.round(words / 200));
 
