@@ -11,7 +11,7 @@ import { knownCombos, getNiche, getCity } from "@/content/geo";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url;
 
-  const staticPaths = ["", "/about", "/services", "/bundles", "/case-studies", "/industries", "/blog", "/contact", "/missed-calls", "/privacy", "/terms"];
+  const staticPaths = ["", "/about", "/services", "/bundles", "/case-studies", "/industries", "/blog", "/contact", "/missed-calls", "/privacy", "/terms", "/refund-policy"];
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((path) => ({
     url: `${base}${path}`,

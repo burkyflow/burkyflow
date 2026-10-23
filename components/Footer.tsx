@@ -90,6 +90,7 @@ export function Footer() {
               <FooterColumn title="Legal">
                 <FooterLink href="/privacy">Privacy Policy</FooterLink>
                 <FooterLink href="/terms">Terms &amp; Conditions</FooterLink>
+                <FooterLink href="/refund-policy">Refund Policy</FooterLink>
               </FooterColumn>
             </div>
           </div>

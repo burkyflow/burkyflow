@@ -12,7 +12,7 @@ export default function TermsPage() {
     <section className="section">
       <div className="container-page mx-auto max-w-3xl">
         <h1 className="text-3xl font-semibold">Terms of Service</h1>
-        <p className="mt-4 text-muted-foreground">Last updated: July 21, 2026</p>
+        <p className="mt-4 text-muted-foreground">Last updated: October 23, 2026</p>
 
         <p className="mt-6">
           These Terms of Service (“Terms”) govern your use of {site.legalName} (“we”, “us”, “our”)
@@ -62,6 +62,13 @@ export default function TermsPage() {
 
         <h2 className="mt-6 text-xl font-semibold">Links to third parties</h2>
         <p className="mt-3">The Site may contain links to third-party sites. We are not responsible for their content or practices.</p>
+
+        <h2 className="mt-6 text-xl font-semibold">Payments, refunds, and chargebacks</h2>
+        <p className="mt-3">
+          Fees for our services are non-refundable. Our <a href="/refund-policy">Refund Policy</a>{" "}
+          forms part of these Terms and explains how payments, cancellations, and chargebacks are
+          handled.
+        </p>
 
         <h2 className="mt-6 text-xl font-semibold">Disclaimers</h2>
         <p className="mt-3">The Site and services are provided “as is” and “as available” without warranties of any kind. We do not guarantee outcomes from using our services.</p>
