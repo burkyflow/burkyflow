@@ -96,7 +96,7 @@ export default function TermsPage() {
         <p className="mt-3">To the maximum extent permitted by law, {site.legalName} will not be liable for indirect, incidental, or consequential damages arising from your use of the Site.</p>
 
         <h2 className="mt-6 text-xl font-semibold">Governing law</h2>
-        <p className="mt-3">These Terms are governed by the laws applicable where {site.legalName} is registered. Please consult a lawyer if you need a specific governing jurisdiction clause.</p>
+        <p className="mt-3">These Terms, including our Refund Policy, and any dispute arising from them or from our services are governed by the laws of the State of Wyoming, United States, without regard to its conflict-of-law rules.</p>
 
         <h2 className="mt-6 text-xl font-semibold">Changes</h2>
         <p className="mt-3">We may update these Terms from time to time. Continued use of the Site after changes constitutes acceptance of the updated Terms.</p>
