@@ -589,6 +589,9 @@ export function FunnelPage({
             <Link href="/terms" className="hover:text-foreground">
               Terms &amp; Conditions
             </Link>
+            <Link href="/refund-policy" className="hover:text-foreground">
+              Refund Policy
+            </Link>
           </div>
         </div>
       </footer>
