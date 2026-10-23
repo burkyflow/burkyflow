@@ -18,7 +18,13 @@ export default function RefundPolicyPage() {
           This Refund Policy applies to every service {site.legalName} (“we”, “us”, “our”) sells,
           including setup and build work, monthly and managed services, pay-per-booked-job
           campaigns, pilots, and bundles. It forms part of our{" "}
-          <a href="/terms">Terms of Service</a>. By paying for any service, you agree to this policy.
+          <a href="/terms">Terms of Service</a>.
+        </p>
+        <p className="mt-3">
+          When you sign a proposal, order form, statement of work, or service agreement with us,
+          including by electronic signature, you accept our Terms of Service in full, including
+          this Refund Policy. Paying any invoice or fee, or starting to use our services, has the
+          same effect.
         </p>
 
         <h2 className="mt-6 text-xl font-semibold">All payments are final</h2>

@@ -15,9 +15,28 @@ export default function TermsPage() {
         <p className="mt-4 text-muted-foreground">Last updated: October 23, 2026</p>
 
         <p className="mt-6">
-          These Terms of Service (“Terms”) govern your use of {site.legalName} (“we”, “us”, “our”)
-          website at {site.url} (the “Site”). By accessing or using the Site you agree to be bound
-          by these Terms.
+          These Terms of Service (“Terms”) govern your use of the {site.legalName} (“we”, “us”,
+          “our”) website at {site.url} (the “Site”) and of any services we provide to you. By
+          accessing or using the Site you agree to be bound by these Terms.
+        </p>
+
+        <h2 className="mt-6 text-xl font-semibold">Acceptance of these Terms</h2>
+        <p className="mt-3">
+          You accept these Terms in full, including our <a href="/refund-policy">Refund Policy</a>,
+          when you do any of the following, whichever happens first:
+        </p>
+        <ul className="mt-3 list-disc space-y-2 pl-6">
+          <li>
+            sign a proposal, order form, statement of work, or service agreement with us,
+            including by electronic signature;
+          </li>
+          <li>pay any invoice or fee to us; or</li>
+          <li>start using our services.</li>
+        </ul>
+        <p className="mt-3">
+          If you accept on behalf of a business, you confirm that you have the authority to bind
+          that business. If a signed agreement between you and us conflicts with these Terms, the
+          signed agreement takes precedence for the matters it specifically covers.
         </p>
 
         <h2 className="mt-6 text-xl font-semibold">Use of the Site</h2>
