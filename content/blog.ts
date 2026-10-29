@@ -13,6 +13,7 @@ export type Post = {
   date: string; // ISO (YYYY-MM-DD)
   modified: string;
   readMinutes: number;
+  tags: string[]; // free-form front matter tags, used for the card's topic and cover
   html: string; // rendered Markdown body
 };
 
@@ -76,7 +77,9 @@ function loadPosts(): Post[] {
       .replace(/\bclassName=/g, "class=");
     const html = renderBody(body);
 
-    const post = { slug, title, excerpt, date, modified, readMinutes, html };
+    const tags = Array.isArray(data.tags) ? data.tags.map((t: unknown) => String(t).trim()).filter(Boolean) : [];
+
+    const post = { slug, title, excerpt, date, modified, readMinutes, tags, html };
     const existing = bySlug.get(slug);
     if (!existing || existing.modified < post.modified) bySlug.set(slug, post);
   }

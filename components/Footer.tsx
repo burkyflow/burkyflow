@@ -4,6 +4,7 @@ import { site } from "@/lib/site";
 import { services } from "@/content/services";
 import { industries } from "@/content/industries";
 import { CTABand } from "@/components/CTABand";
+import { HomeLink } from "@/components/HomeLink";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -20,7 +21,7 @@ export function Footer() {
           <div className="grid gap-12 lg:grid-cols-[1.25fr_2fr] lg:gap-16">
             {/* Brand + newsletter */}
             <div>
-              <Link href="/" className="inline-block">
+              <HomeLink className="inline-block">
                 {/* Pre-sized WebP logo; skips the image optimizer on purpose. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -32,7 +33,7 @@ export function Footer() {
                   decoding="async"
                   className="h-8 w-auto"
                 />
-              </Link>
+              </HomeLink>
 
               <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">AI voice receptionists, database reactivation, and CRM automation for service businesses.</p>
               <address className="mt-4 space-y-2 text-sm not-italic text-muted-foreground">

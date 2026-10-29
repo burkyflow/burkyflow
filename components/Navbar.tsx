@@ -6,6 +6,7 @@ import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
 import { Button } from "@/components/ui/button";
+import { HomeLink } from "@/components/HomeLink";
 import { services } from "@/content/services";
 import { branches } from "@/content/catalogue";
 import { industries } from "@/content/industries";
@@ -285,7 +286,7 @@ export function Navbar() {
             : "container-page border border-transparent bg-transparent"
         )}
       >
-        <Link href="/" className="inline-flex items-center rounded-lg">
+        <HomeLink className="inline-flex items-center rounded-lg">
           {/* Pre-sized WebP logo; skips the image optimizer on purpose. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -296,7 +297,7 @@ export function Navbar() {
             decoding="async"
             className="h-8 w-auto"
           />
-        </Link>
+        </HomeLink>
 
         <DesktopNav />
 
@@ -360,7 +361,7 @@ export function Navbar() {
         >
           {/* header */}
           <div className="flex items-center justify-between border-b border-border/70 px-5 py-4">
-            <Link href="/" onClick={() => setOpen(false)} className="inline-flex items-center">
+            <HomeLink onClick={() => setOpen(false)} className="inline-flex items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/logo1.webp"
@@ -370,7 +371,7 @@ export function Navbar() {
                 decoding="async"
                 className="h-8 w-auto"
               />
-            </Link>
+            </HomeLink>
             <button
               type="button"
               aria-label="Close menu"
