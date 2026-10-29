@@ -21,12 +21,12 @@ const logos: BrandLogo[] = [
   { name: "Electrical", sub: "Services", icon: Zap },
   { name: "Roofing", sub: "Services", icon: Home },
   { name: "Construction", sub: "Companies", icon: HardHat },
-  { name: "Automotive", sub: "Services", icon: CarFront },
-  { name: "Auto Finance", sub: "Companies", icon: HandCoins },
-  { name: "Staffing", sub: "Companies", icon: BriefcaseBusiness },
   { name: "Healthcare", sub: "Practices", icon: Stethoscope },
   { name: "Real Estate", sub: "Teams", icon: Building2 },
   { name: "Professional", sub: "Firms", icon: Scale },
+  { name: "Staffing", sub: "Companies", icon: BriefcaseBusiness },
+  { name: "Automotive", sub: "Services", icon: CarFront },
+  { name: "Auto Finance", sub: "Companies", icon: HandCoins },
 ];
 
 function LogoItem({ name, sub, icon: Icon, className = "" }: BrandLogo & { className?: string }) {
