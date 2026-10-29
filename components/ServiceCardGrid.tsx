@@ -3,6 +3,17 @@ import { ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Reveal } from "@/components/Reveal";
 import { services } from "@/content/services";
+import { CoverArt, tones, type CoverTone } from "@/components/CoverArt";
+import { cn } from "@/lib/utils";
+
+const toneFor: Record<string, CoverTone> = {
+  "ai-voice-receptionist": "peach",
+  "database-reactivation": "green",
+  "crm-lead-systems": "blue",
+  "workflow-automation": "blue",
+  "answer-engine-optimization": "peach",
+  "done-for-you": "green",
+};
 
 // One card per service linking to its detail page. Used on Home and /services.
 export function ServiceCardGrid() {
@@ -13,12 +24,13 @@ export function ServiceCardGrid() {
         return (
           <Reveal key={service.slug} delay={(i % 3) * 0.06}>
             <Link href={`/services/${service.slug}`} className="group block h-full">
-              <Card className="h-full transition-shadow duration-200 hover:shadow-soft-lg">
+              <Card className="flex h-full flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30">
+                <CoverArt tone={toneFor[service.slug] ?? "blue"} seed={service.slug} icon={Icon} className="h-36" />
                 <CardHeader>
-                  <span className="flex size-11 items-center justify-center rounded-2xl bg-brand/10 text-brand">
-                    <Icon className="size-5" />
-                  </span>
-                  <CardTitle className="mt-3">{service.name}</CardTitle>
+                  <p className={cn("text-xs font-semibold uppercase tracking-wider", tones[toneFor[service.slug] ?? "blue"].text)}>
+                    {service.eyebrow}
+                  </p>
+                  <CardTitle className="mt-2 transition-colors group-hover:text-brand">{service.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">{service.lead}</p>

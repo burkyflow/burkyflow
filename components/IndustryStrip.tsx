@@ -1,15 +1,17 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Home, HeartPulse, Building2, Car, Briefcase, Layers, type LucideIcon } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Home, HeartPulse, Building2, Car, Briefcase, HandCoins, Users, Layers, type LucideIcon } from "lucide-react";
 import { industries } from "@/content/industries";
 import { site } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 
 // Icon per industry slug (falls back to a generic mark).
-const icons: Record<string, LucideIcon> = {
+export const industryIcons: Record<string, LucideIcon> = {
   "home-services": Home,
   healthcare: HeartPulse,
   "real-estate": Building2,
   automotive: Car,
+  "auto-finance": HandCoins,
+  staffing: Users,
   "professional-firms": Briefcase,
 };
 
@@ -32,7 +34,7 @@ export function IndustryStrip({
   lead?: string;
 }) {
   return (
-    <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="mx-auto grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {/* Intro block, deliberately NOT a card (no box), so it reads as the heading */}
       <div className="flex flex-col justify-center p-2 sm:p-4 lg:pr-8">
         <p className="eyebrow">{eyebrow}</p>
@@ -50,7 +52,7 @@ export function IndustryStrip({
 
       {/* Industry cards */}
       {industries.map((industry, i) => {
-        const Icon = icons[industry.slug] ?? Layers;
+        const Icon = industryIcons[industry.slug] ?? Layers;
         const t = tints[i % tints.length];
         return (
           <Link
