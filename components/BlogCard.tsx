@@ -80,7 +80,7 @@ export function BlogCard({ post }: { post: Post }) {
       className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30"
     >
       {/* Branded cover art, drawn from the post's topic. */}
-      <CoverArt tone={theme.tone} seed={post.slug} icon={icon} satellites={theme.satellites} photo={photo} photoIcon={false} />
+      <CoverArt tone={theme.tone} seed={post.slug} icon={icon} satellites={theme.satellites} photo={photo} />
 
       <div className="flex flex-1 flex-col p-6">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">

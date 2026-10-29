@@ -62,7 +62,6 @@ export function CoverArt({
   className,
   children,
   photo,
-  photoIcon = true,
   sizes = "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw",
 }: {
   tone: CoverTone;
@@ -73,8 +72,6 @@ export function CoverArt({
   children?: ReactNode;
   /** Optional cover photo, layered over the drawn art (which shows if it fails to load). */
   photo?: string;
-  /** Show the small icon badge on the photo. */
-  photoIcon?: boolean;
   sizes?: string;
 }) {
   const t = tones[tone];
@@ -103,11 +100,6 @@ export function CoverArt({
           />
           {/* Light brand-color fade at the bottom keeps photos on-brand. */}
           <div className={cn("absolute inset-0 bg-gradient-to-t via-transparent to-transparent", t.fade)} />
-          {Icon && photoIcon && (
-            <span className="absolute bottom-3 left-3 flex size-10 items-center justify-center rounded-xl bg-white/95 shadow-soft ring-1 ring-black/5">
-              <Icon className={cn("size-5", t.icon)} strokeWidth={1.9} />
-            </span>
-          )}
         </>
       ) : children ? (
         <div className="relative flex h-full items-center justify-center p-6">{children}</div>
