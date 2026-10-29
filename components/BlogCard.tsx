@@ -22,21 +22,24 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Post } from "@/content/blog";
-import { CoverArt, tones, type CoverTone } from "@/components/CoverArt";
+import { CoverArt, type CoverTone } from "@/components/CoverArt";
 import { postPhotos, topicPhotoPools } from "@/content/photos";
 
+export type TopicKey = "ai" | "calls" | "crm";
+
 type Theme = {
-  key: "ai" | "calls" | "crm";
+  key: TopicKey;
   label: string;
   tone: CoverTone;
+  pill: string;
   fallback: LucideIcon;
   satellites: [LucideIcon, LucideIcon];
 };
 
-const themes: Record<"ai" | "calls" | "crm", Theme> = {
-  ai: { key: "ai", label: "AI Agents & n8n", tone: "blue", fallback: Bot, satellites: [Sparkles, Workflow] },
-  calls: { key: "calls", label: "Missed Calls", tone: "peach", fallback: PhoneCall, satellites: [PhoneCall, CalendarCheck] },
-  crm: { key: "crm", label: "CRM & Reactivation", tone: "green", fallback: DatabaseZap, satellites: [Users, MessageSquare] },
+export const themes: Record<TopicKey, Theme> = {
+  ai: { key: "ai", label: "AI Agents & n8n", tone: "blue", pill: "bg-brand", fallback: Bot, satellites: [Sparkles, Workflow] },
+  calls: { key: "calls", label: "Missed Calls", tone: "peach", pill: "bg-accent", fallback: PhoneCall, satellites: [PhoneCall, CalendarCheck] },
+  crm: { key: "crm", label: "CRM & Reactivation", tone: "green", pill: "bg-emerald-600", fallback: DatabaseZap, satellites: [Users, MessageSquare] },
 };
 
 // The main icon follows the post's subject; the first match wins.
@@ -52,7 +55,7 @@ const subjectIcons: [RegExp, LucideIcon][] = [
   [/\bcrm\b|reactivat/, ContactRound],
 ];
 
-function postTopic(post: Post) {
+export function postTopic(post: Post) {
   const text = `${post.title} ${post.slug} ${post.tags.join(" ")}`.toLowerCase();
   const theme =
     /missed[- ]call|receptionist|\bphone\b|\bvoice\b/.test(text)
@@ -79,16 +82,18 @@ export function BlogCard({ post }: { post: Post }) {
       href={`/blog/${post.slug}`}
       className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30"
     >
-      {/* Branded cover art, drawn from the post's topic. */}
-      <CoverArt tone={theme.tone} seed={post.slug} icon={icon} satellites={theme.satellites} photo={photo} />
+      {/* Cover photo with the topic pill on top. */}
+      <div className="relative">
+        <CoverArt tone={theme.tone} seed={post.slug} icon={icon} satellites={theme.satellites} photo={photo} alt={`Cover photo for ${post.title}`} />
+        <span className={cn("absolute left-4 top-4 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-soft", theme.pill)}>
+          {theme.label}
+        </span>
+      </div>
 
       <div className="flex flex-1 flex-col p-6">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">
-          <span className={cn("rounded-full px-2.5 py-1 font-semibold", tones[theme.tone].tag)}>{theme.label}</span>
-          <span className="text-muted-foreground">
-            <time dateTime={post.date}>{fmt(post.date)}</time> &middot; {post.readMinutes} min read
-          </span>
-        </div>
+        <p className="text-xs text-muted-foreground">
+          <time dateTime={post.date}>{fmt(post.date)}</time> &middot; {post.readMinutes} min read
+        </p>
         <h2 className="mt-4 text-lg font-semibold leading-snug transition-colors group-hover:text-brand">
           {post.title}
         </h2>

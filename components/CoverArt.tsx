@@ -62,6 +62,7 @@ export function CoverArt({
   className,
   children,
   photo,
+  alt = "",
   sizes = "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw",
 }: {
   tone: CoverTone;
@@ -72,6 +73,8 @@ export function CoverArt({
   children?: ReactNode;
   /** Optional cover photo, layered over the drawn art (which shows if it fails to load). */
   photo?: string;
+  /** Description of the photo; set it when the photo carries meaning. */
+  alt?: string;
   sizes?: string;
 }) {
   const t = tones[tone];
@@ -79,7 +82,7 @@ export function CoverArt({
   const [SatA, SatB] = satellites;
 
   return (
-    <div aria-hidden={!children} className={cn("relative overflow-hidden", layout.dir, t.cover, className ?? "aspect-[16/9]")}>
+    <div aria-hidden={!children && !(photo && alt)} className={cn("relative overflow-hidden", layout.dir, t.cover, className ?? "aspect-[16/9]")}>
       <div aria-hidden className={cn("absolute size-40 rounded-full blur-2xl", t.blobA, layout.blobA)} />
       <div aria-hidden className={cn("absolute size-32 rounded-full blur-2xl", t.blobB, layout.blobB)} />
       <div
@@ -93,18 +96,13 @@ export function CoverArt({
         <>
           <Image
             src={photoSrc(photo)}
-            alt=""
+            alt={alt}
             fill
             sizes={sizes}
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
           {/* Light brand-color fade at the bottom keeps photos on-brand. */}
           <div className={cn("absolute inset-0 bg-gradient-to-t via-transparent to-transparent", t.fade)} />
-          {Icon && (
-            <span className="absolute bottom-3 left-3 flex size-10 items-center justify-center rounded-xl bg-white/95 shadow-soft ring-1 ring-black/5">
-              <Icon className={cn("size-5", t.icon)} strokeWidth={1.9} />
-            </span>
-          )}
         </>
       ) : children ? (
         <div className="relative flex h-full items-center justify-center p-6">{children}</div>
