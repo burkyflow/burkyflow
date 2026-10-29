@@ -23,8 +23,10 @@ import {
 import { cn } from "@/lib/utils";
 import type { Post } from "@/content/blog";
 import { CoverArt, tones, type CoverTone } from "@/components/CoverArt";
+import { postPhotos, topicPhotoPools } from "@/content/photos";
 
 type Theme = {
+  key: "ai" | "calls" | "crm";
   label: string;
   tone: CoverTone;
   fallback: LucideIcon;
@@ -32,9 +34,9 @@ type Theme = {
 };
 
 const themes: Record<"ai" | "calls" | "crm", Theme> = {
-  ai: { label: "AI Agents & n8n", tone: "blue", fallback: Bot, satellites: [Sparkles, Workflow] },
-  calls: { label: "Missed Calls", tone: "peach", fallback: PhoneCall, satellites: [PhoneCall, CalendarCheck] },
-  crm: { label: "CRM & Reactivation", tone: "green", fallback: DatabaseZap, satellites: [Users, MessageSquare] },
+  ai: { key: "ai", label: "AI Agents & n8n", tone: "blue", fallback: Bot, satellites: [Sparkles, Workflow] },
+  calls: { key: "calls", label: "Missed Calls", tone: "peach", fallback: PhoneCall, satellites: [PhoneCall, CalendarCheck] },
+  crm: { key: "crm", label: "CRM & Reactivation", tone: "green", fallback: DatabaseZap, satellites: [Users, MessageSquare] },
 };
 
 // The main icon follows the post's subject; the first match wins.
@@ -59,14 +61,18 @@ function postTopic(post: Post) {
         ? themes.crm
         : themes.ai;
   const icon = subjectIcons.find(([pattern]) => pattern.test(text))?.[1] ?? theme.fallback;
-  return { theme, icon };
+  // Photo: the post's own, then a hand-picked one, then its topic's rotating set.
+  const pool = topicPhotoPools[theme.key];
+  const seed = [...post.slug].reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
+  const photo = post.image ?? postPhotos[post.slug] ?? pool[seed % pool.length];
+  return { theme, icon, photo };
 }
 
 const fmt = (iso: string) =>
   new Date(iso).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 
 export function BlogCard({ post }: { post: Post }) {
-  const { theme, icon } = postTopic(post);
+  const { theme, icon, photo } = postTopic(post);
 
   return (
     <Link
@@ -74,7 +80,7 @@ export function BlogCard({ post }: { post: Post }) {
       className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30"
     >
       {/* Branded cover art, drawn from the post's topic. */}
-      <CoverArt tone={theme.tone} seed={post.slug} icon={icon} satellites={theme.satellites} />
+      <CoverArt tone={theme.tone} seed={post.slug} icon={icon} satellites={theme.satellites} photo={photo} />
 
       <div className="flex flex-1 flex-col p-6">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">

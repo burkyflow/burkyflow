@@ -39,8 +39,7 @@ export function Footer() {
               <address className="mt-4 space-y-2 text-sm not-italic text-muted-foreground">
                 <p><a href={site.phone.href} className="hover:text-brand">{site.phone.display}</a></p>
                 <p><a href={`mailto:${site.email}`} className="hover:text-brand">{site.email}</a></p>
-                <p>Registered address: {site.address.streetAddress}, {site.address.addressLocality}, {site.address.addressRegion} {site.address.postalCode}, USA</p>
-                <p>Serving US businesses remotely.</p>
+                <p>Address: {site.address.streetAddress}, {site.address.addressLocality}, {site.address.addressRegion} {site.address.postalCode}, USA</p>
               </address>
               <Link href="/blog" className="mt-4 inline-block text-sm font-semibold text-brand">Read our automation guides</Link>
               <div className="mt-6 flex gap-3">
@@ -91,32 +90,12 @@ export function Footer() {
               <FooterColumn title="Legal">
                 <FooterLink href="/privacy">Privacy Policy</FooterLink>
                 <FooterLink href="/terms">Terms &amp; Conditions</FooterLink>
-                <FooterLink href="/refund-policy">Refund Policy</FooterLink>
               </FooterColumn>
             </div>
           </div>
 
-          {/* SMS consent disclosure (A2P 10DLC compliance) */}
-          <div className="mt-12 border-t border-border/60 pt-6">
-            <p className="mx-auto max-w-4xl text-center text-xs leading-relaxed text-muted-foreground">
-              <span className="font-semibold text-foreground">SMS Consent:</span> By providing your
-              phone number to {site.legalName}, you agree to receive text messages including
-              appointment confirmations, reminders, follow-ups, and replies to your inquiries.
-              Message frequency varies. Message and data rates may apply. Reply STOP to opt out at
-              any time, or HELP for help. See our{" "}
-              <Link href="/privacy" className="underline underline-offset-2 hover:text-foreground">
-                Privacy Policy
-              </Link>{" "}
-              and{" "}
-              <Link href="/terms" className="underline underline-offset-2 hover:text-foreground">
-                Terms
-              </Link>
-              .
-            </p>
-          </div>
-
           {/* Bottom bar */}
-          <div className="mt-6 border-t border-border/60 pt-6 text-center text-sm text-muted-foreground">
+          <div className="mt-12 border-t border-border/60 pt-6 text-center text-sm text-muted-foreground">
             &copy; {year} {site.name}. All rights reserved.
           </div>
         </div>

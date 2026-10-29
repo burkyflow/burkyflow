@@ -1,5 +1,7 @@
 import { Sparkles, Workflow, type LucideIcon } from "lucide-react";
+import Image from "next/image";
 import type { ReactNode } from "react";
+import { photoSrc } from "@/content/photos";
 import { cn } from "@/lib/utils";
 
 export type CoverTone = "blue" | "peach" | "green";
@@ -7,7 +9,7 @@ export type CoverTone = "blue" | "peach" | "green";
 // Static class strings so Tailwind keeps them in the build.
 export const tones: Record<
   CoverTone,
-  { tag: string; cover: string; blobA: string; blobB: string; icon: string; dots: string; text: string }
+  { tag: string; cover: string; blobA: string; blobB: string; icon: string; dots: string; text: string; fade: string }
 > = {
   blue: {
     tag: "bg-brand/10 text-brand",
@@ -17,6 +19,7 @@ export const tones: Record<
     icon: "text-brand",
     dots: "text-brand/25",
     text: "text-brand",
+    fade: "from-brand/45",
   },
   peach: {
     tag: "bg-accent/10 text-accent",
@@ -26,6 +29,7 @@ export const tones: Record<
     icon: "text-accent",
     dots: "text-accent/25",
     text: "text-accent",
+    fade: "from-accent/40",
   },
   green: {
     tag: "bg-emerald-600/10 text-emerald-700",
@@ -35,6 +39,7 @@ export const tones: Record<
     icon: "text-emerald-600",
     dots: "text-emerald-600/25",
     text: "text-emerald-700",
+    fade: "from-emerald-800/40",
   },
 };
 
@@ -56,6 +61,8 @@ export function CoverArt({
   satellites = [Sparkles, Workflow],
   className,
   children,
+  photo,
+  sizes = "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw",
 }: {
   tone: CoverTone;
   seed: string;
@@ -63,6 +70,9 @@ export function CoverArt({
   satellites?: [LucideIcon, LucideIcon];
   className?: string;
   children?: ReactNode;
+  /** Optional cover photo, layered over the drawn art (which shows if it fails to load). */
+  photo?: string;
+  sizes?: string;
 }) {
   const t = tones[tone];
   const layout = layouts[seedOf(seed) % layouts.length];
@@ -79,7 +89,24 @@ export function CoverArt({
           t.dots
         )}
       />
-      {children ? (
+      {photo && !children ? (
+        <>
+          <Image
+            src={photoSrc(photo)}
+            alt=""
+            fill
+            sizes={sizes}
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          {/* Light brand-color fade at the bottom keeps photos on-brand. */}
+          <div className={cn("absolute inset-0 bg-gradient-to-t via-transparent to-transparent", t.fade)} />
+          {Icon && (
+            <span className="absolute bottom-3 left-3 flex size-10 items-center justify-center rounded-xl bg-white/95 shadow-soft ring-1 ring-black/5">
+              <Icon className={cn("size-5", t.icon)} strokeWidth={1.9} />
+            </span>
+          )}
+        </>
+      ) : children ? (
         <div className="relative flex h-full items-center justify-center p-6">{children}</div>
       ) : (
         <>
