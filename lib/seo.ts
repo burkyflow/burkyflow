@@ -120,7 +120,7 @@ export function serviceLd({
   };
 }
 
-// BreadcrumbList — reinforces the silo structure for crawlers.
+// BreadcrumbList - reinforces the silo structure for crawlers.
 export function breadcrumbLd(items: { name: string; path: string }[]) {
   return {
     "@context": "https://schema.org",
@@ -134,7 +134,7 @@ export function breadcrumbLd(items: { name: string; path: string }[]) {
   };
 }
 
-// ItemList of the AI services offered for a given industry — lets crawlers see
+// ItemList of the AI services offered for a given industry - lets crawlers see
 // exactly what we provide per industry.
 export function serviceItemListLd({
   name,

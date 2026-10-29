@@ -14,7 +14,7 @@
     --brand-cta-foreground: 0 0% 100%;
     --accent: 11 72% 39%; /* Readable even on peach-tinted cards. */
     --accent-foreground: 0 0% 100%;
-    --accent-soft: 13 80% 80%; /* #F5B5A3 — soft peach (tints) */
+    --accent-soft: 13 80% 80%; /* #F5B5A3 - soft peach (tints) */
 
     /* ── Neutrals ── */
     --background: 0 0% 100%; /* #FEFEFE */
@@ -65,6 +65,76 @@
   }
   .eyebrow {
     @apply text-sm font-semibold uppercase tracking-wider text-brand;
+  }
+  /* Blog post body. :where() keeps these at zero specificity so classes inside a post still win. */
+  .prose-post {
+    @apply text-[1.0625rem] leading-[1.8] text-foreground/80 sm:text-lg;
+  }
+  .prose-post :where(p, ul, ol, pre, table, figure) {
+    @apply mt-6;
+  }
+  .prose-post :where(h2) {
+    @apply mt-14 scroll-mt-28 text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-[1.75rem];
+  }
+  .prose-post :where(h3) {
+    @apply mt-10 scroll-mt-28 text-xl font-semibold leading-snug text-foreground;
+  }
+  .prose-post :where(h2 + p, h3 + p, h2 + ul, h3 + ul, h2 + ol, h3 + ol) {
+    @apply mt-4;
+  }
+  .prose-post :where(ul) {
+    @apply list-disc space-y-2.5 pl-6;
+  }
+  .prose-post :where(ol) {
+    @apply list-decimal space-y-2.5 pl-6;
+  }
+  .prose-post :where(li) {
+    @apply pl-1.5 marker:font-semibold marker:text-brand;
+  }
+  .prose-post :where(li > p) {
+    @apply mt-2;
+  }
+  .prose-post :where(strong) {
+    @apply font-semibold text-foreground;
+  }
+  .prose-post :where(a) {
+    @apply font-medium text-brand underline decoration-brand/30 underline-offset-4 transition-colors hover:decoration-brand;
+  }
+  .prose-post :where(blockquote) {
+    @apply my-8 rounded-r-2xl border-l-4 border-brand bg-brand/5 px-6 py-5 text-foreground/90;
+  }
+  .prose-post :where(blockquote > p:first-child, aside > p:first-child) {
+    @apply mt-0;
+  }
+  .prose-post :where(aside) {
+    @apply my-8 rounded-2xl;
+  }
+  .prose-post :where(aside p + p) {
+    @apply mt-2;
+  }
+  .prose-post :where(hr) {
+    @apply my-12 border-border;
+  }
+  .prose-post :where(img) {
+    @apply my-8 rounded-2xl;
+  }
+  .prose-post :where(code) {
+    @apply rounded-md bg-surface px-1.5 py-0.5 text-[0.9em] text-foreground ring-1 ring-border/60;
+  }
+  .prose-post :where(pre) {
+    @apply overflow-x-auto rounded-2xl bg-foreground p-5 text-sm leading-relaxed text-white;
+  }
+  .prose-post :where(pre code) {
+    @apply bg-transparent p-0 text-inherit ring-0;
+  }
+  .prose-post :where(table) {
+    @apply w-full text-left text-base;
+  }
+  .prose-post :where(th, td) {
+    @apply border-b border-border px-3 py-2;
+  }
+  .prose-post > :first-child {
+    @apply mt-0;
   }
   /* Two-tone brand gradient (blue → orange), echoing the logo mark. */
   .text-gradient-brand {

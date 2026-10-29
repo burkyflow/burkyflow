@@ -19,13 +19,13 @@ export const site = {
   },
   // Google Tag Manager container.
   gtmId: "GTM-TBPZZQBN",
-  // Meta (Facebook) Pixel — for ad attribution & retargeting on the funnels.
+  // Meta (Facebook) Pixel - for ad attribution & retargeting on the funnels.
   metaPixelId: "2518081575289161",
-  // Meta Test Events code. ⚠️ Only for testing — routes real PageViews into
+  // Meta Test Events code. ⚠️ Only for testing - routes real PageViews into
   // Meta's Test Events view. Set back to "" before running live ads so real
   // traffic counts in normal reporting.
   metaPixelTestEventCode: "",
-  // Registered address — used for LocalBusiness/Organization schema + Contact.
+  // Registered address - used for LocalBusiness/Organization schema + Contact.
   address: {
     streetAddress: "30 N Gould St Ste R",
     addressLocality: "Sheridan",

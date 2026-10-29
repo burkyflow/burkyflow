@@ -24,7 +24,7 @@ const config: Config = {
           "cta-hover": "hsl(var(--brand-cta-hover))",
           "cta-fg": "hsl(var(--brand-cta-foreground))",
         },
-        // BurkyFlow coral — the second half of the two-tone brand.
+        // BurkyFlow coral - the second half of the two-tone brand.
         accent: {
           DEFAULT: "hsl(var(--accent))",
           fg: "hsl(var(--accent-foreground))",
