@@ -58,7 +58,7 @@
 
 @layer components {
   .container-page {
-    @apply mx-auto w-full max-w-7xl px-6;
+    @apply mx-auto w-full max-w-7xl px-6 2xl:max-w-[90rem];
   }
   .section {
     @apply py-20 md:py-28;
@@ -70,6 +70,13 @@
   .text-gradient-brand {
     @apply bg-gradient-to-r from-brand to-accent bg-clip-text text-transparent;
   }
+}
+
+/* Keyboard focus: a thin brand ring instead of the browser's default black outline.
+   Mouse clicks don't show it; Tab navigation always does. */
+:focus-visible {
+  outline: 2px solid hsl(var(--brand));
+  outline-offset: 3px;
 }
 
 /* Typewriter caret (hero heading) */

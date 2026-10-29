@@ -107,9 +107,19 @@ const navGroups: NavGroup[] = [
   { label: "Contact", href: "/contact" },
 ];
 
-function DesktopGroup({ group }: { group: NavGroup }) {
-  const [open, setOpen] = useState(false);
-
+function DesktopGroup({
+  group,
+  open,
+  onOpen,
+  onClose,
+  onCloseNow,
+}: {
+  group: NavGroup;
+  open: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+  onCloseNow: () => void;
+}) {
   if (!group.columns) {
     return (
       <Link
@@ -121,14 +131,21 @@ function DesktopGroup({ group }: { group: NavGroup }) {
     );
   }
 
+  const wide = group.columns.length > 1;
+
   return (
     <div
-      className="relative"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-      onFocus={() => setOpen(true)}
+      // Full navbar height, so the pointer never leaves the hover area on its way to the panel.
+      // Two-column panels position against the navbar instead, so they always fit on screen.
+      className={cn("flex items-center self-stretch", !wide && "relative")}
+      onMouseEnter={onOpen}
+      onMouseLeave={onClose}
+      onFocus={onOpen}
       onBlur={(e) => {
-        if (!e.currentTarget.contains(e.relatedTarget as Node)) setOpen(false);
+        if (!e.currentTarget.contains(e.relatedTarget as Node)) onCloseNow();
+      }}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") onCloseNow();
       }}
     >
       <Link
@@ -140,13 +157,13 @@ function DesktopGroup({ group }: { group: NavGroup }) {
       </Link>
 
       {open && (
-        <div className="absolute left-1/2 top-full z-50 mt-2 -translate-x-1/2 pt-2">
-          <div
-            className={cn(
-              "rounded-2xl border border-border bg-white p-4 shadow-soft-lg",
-              group.columns.length > 1 ? "min-w-[640px]" : "min-w-[320px]"
-            )}
-          >
+        <div
+          className={cn(
+            "absolute left-1/2 top-full z-50 -translate-x-1/2 pt-2",
+            wide ? "w-[min(42rem,calc(100vw-2rem))]" : "w-80"
+          )}
+        >
+          <div className="rounded-2xl border border-border bg-white p-4 shadow-soft-lg">
             <div
               className={cn(
                 "grid gap-x-4",
@@ -159,6 +176,7 @@ function DesktopGroup({ group }: { group: NavGroup }) {
                     <li key={item.href}>
                       <Link
                         href={item.href}
+                        onClick={onCloseNow}
                         className="block rounded-xl px-3 py-2 transition-colors hover:bg-surface"
                       >
                         <span className="block text-sm font-semibold text-foreground">
@@ -178,6 +196,43 @@ function DesktopGroup({ group }: { group: NavGroup }) {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+// Hovering away closes the menu after a short pause, so a pointer moving diagonally
+// from a trigger into its panel does not lose it. Only one menu is open at a time.
+function DesktopNav() {
+  const [openLabel, setOpenLabel] = useState<string | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
+  useEffect(() => () => clearTimeout(closeTimer.current), []);
+
+  const open = (label: string) => {
+    clearTimeout(closeTimer.current);
+    setOpenLabel(label);
+  };
+  const close = () => {
+    clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setOpenLabel(null), 200);
+  };
+  const closeNow = () => {
+    clearTimeout(closeTimer.current);
+    setOpenLabel(null);
+  };
+
+  return (
+    <div className="hidden items-center justify-center gap-1 self-stretch lg:gap-2 md:flex">
+      {navGroups.map((g) => (
+        <DesktopGroup
+          key={g.href}
+          group={g}
+          open={openLabel === g.label}
+          onOpen={() => open(g.label)}
+          onClose={close}
+          onCloseNow={closeNow}
+        />
+      ))}
     </div>
   );
 }
@@ -224,13 +279,13 @@ export function Navbar() {
     >
       <nav
         className={cn(
-          "mx-auto grid h-16 grid-cols-[auto_1fr_auto] items-center gap-4 transition-all duration-300 ease-out md:h-[4.75rem]",
+          "relative mx-auto grid h-16 grid-cols-[auto_1fr_auto] items-center gap-4 transition-all duration-300 ease-out md:h-[4.75rem]",
           scrolled
-            ? "max-w-6xl rounded-full border border-border/70 bg-white/80 px-5 shadow-soft-lg backdrop-blur-xl sm:px-6"
-            : "container-page max-w-7xl border border-transparent bg-transparent"
+            ? "max-w-6xl rounded-full border border-border/70 bg-white/80 px-5 shadow-soft-lg backdrop-blur-xl sm:px-6 2xl:max-w-[84rem]"
+            : "container-page border border-transparent bg-transparent"
         )}
       >
-        <Link href="/" className="inline-flex items-center">
+        <Link href="/" className="inline-flex items-center rounded-lg">
           {/* Pre-sized WebP logo; skips the image optimizer on purpose. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -243,11 +298,7 @@ export function Navbar() {
           />
         </Link>
 
-        <div className="hidden items-center justify-center gap-1 lg:gap-2 md:flex">
-          {navGroups.map((g) => (
-            <DesktopGroup key={g.href} group={g} />
-          ))}
-        </div>
+        <DesktopNav />
 
         <div className="flex items-center justify-end gap-3">
           <div className="hidden md:block">
