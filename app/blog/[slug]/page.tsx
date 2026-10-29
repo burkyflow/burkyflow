@@ -80,9 +80,9 @@ export default async function BlogPost({ params }: { params: Promise<Params> }) 
             </span>
           </p>
           <h1 className="mt-2 text-4xl font-semibold leading-tight sm:text-5xl">{post.title}</h1>
-          <p className="mt-5 text-lg text-muted-foreground">{post.excerpt}</p>
+          <p className="mt-6 text-xl leading-relaxed text-foreground/70">{post.excerpt}</p>
           <div
-            className="mt-8 text-lg leading-relaxed text-muted-foreground [&_a]:font-medium [&_a]:text-brand [&_a]:underline [&_h2]:mt-10 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-foreground [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-foreground [&_li]:mt-1.5 [&_ol]:mt-4 [&_ol]:list-decimal [&_ol]:pl-6 [&_p]:mt-4 [&_strong]:text-foreground [&_ul]:mt-4 [&_ul]:list-disc [&_ul]:pl-6"
+            className="prose-post mt-10 border-t border-border/60 pt-10"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>

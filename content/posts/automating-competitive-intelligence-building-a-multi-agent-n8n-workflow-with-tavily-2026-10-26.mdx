@@ -16,7 +16,7 @@ To solve this, forward-thinking executives are moving toward **automated competi
 
 ### Section 1: The Multi-Agent Architecture for Research
 
-Moving beyond simple automation requires a shift in how we use AI. A single-prompt approach often results in "hallucinations" or generic summaries. A **multi-agent system** solves this by assigning specific roles—Researcher, Analyst, and Editor—to different AI agents within your n8n environment.
+Moving beyond simple automation requires a shift in how we use AI. A single-prompt approach often results in "hallucinations" or generic summaries. A **multi-agent system** solves this by assigning specific roles (Researcher, Analyst, and Editor) to different AI agents within your n8n environment.
 
 This modular structure ensures data integrity. The Researcher is tasked only with finding facts; the Analyst interprets those facts against your business goals; and the Editor ensures the final output is concise and executive-ready.
 
@@ -40,7 +40,7 @@ Integrating Tavily into n8n allows your workflow to bypass the noise and extract
 
 ### Section 3: Orchestrating the n8n Workflow
 
-The "brain" of this system is the orchestration within n8n. By connecting an **OpenAI Chat Model node** to the Tavily tool via an **n8n Agent**, you create a reasoning loop. The agent doesn't just search once; it searches, evaluates the relevance of the findings, and—if the information is incomplete—requests more data automatically.
+The "brain" of this system is the orchestration within n8n. By connecting an **OpenAI Chat Model node** to the Tavily tool via an **n8n Agent**, you create a reasoning loop. The agent doesn't just search once; it searches, evaluates the relevance of the findings, and, if the information is incomplete, requests more data automatically.
 
 This "looping" capability allows the AI to dig deeper into complex topics without human intervention.
 

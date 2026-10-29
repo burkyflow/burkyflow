@@ -36,7 +36,7 @@ Implement a **Code Node** or **If Node** immediately following the LLM. This nod
 *   Is the JSON syntax valid and parsable?
 
 ### Step 3: The Feedback Loop
-If validation fails, do not end the execution. Route the error message back to the LLM. Tell the AI exactly what it got wrong—for example, *"Error: Field 'InvoiceDate' was missing"*—and ask for a corrected version based on the original input.
+If validation fails, do not end the execution. Route the error message back to the LLM. Tell the AI exactly what it got wrong (for example, *"Error: Field 'InvoiceDate' was missing"*) and ask for a corrected version based on the original input.
 
 > **Case Study:** A SaaS founder used a linear n8n flow to categorize customer feedback, but 15% of entries were unreadable by their CRM due to formatting issues. By adding a simple validation loop, they achieved 99.5% data accuracy, saving 5 hours of weekly manual CRM maintenance.
 
@@ -44,7 +44,7 @@ If validation fails, do not end the execution. Route the error message back to t
 
 ## Strategic Implementation: Scalability vs. Cost
 
-While self-correction loops increase API token usage, they significantly decrease the cost of expensive human labor. When scaling **automated workflows**, the focus should shift to the "Failure Threshold"—how many retries the system should attempt before alerting a human.
+While self-correction loops increase API token usage, they significantly decrease the cost of expensive human labor. When scaling **automated workflows**, the focus should shift to the "Failure Threshold": how many retries the system should attempt before alerting a human.
 
 *   **Operational Tip: Cap Your Retries.** Limit loops to 2–3 attempts. This prevents infinite loops and protects you from spiraling API costs if the LLM encounters a particularly complex prompt it cannot resolve.
 *   **Delegation Opportunity: The Dead Letter Queue.** Assign your technical lead to build a "Dead Letter Queue" in n8n. Any data that fails the self-correction loop after three tries should be sent here for human review, ensuring no data is ever lost while keeping the main pipeline moving.
