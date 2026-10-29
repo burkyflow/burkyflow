@@ -101,7 +101,7 @@
     @apply font-medium text-brand underline decoration-brand/30 underline-offset-4 transition-colors hover:decoration-brand;
   }
   .prose-post :where(blockquote) {
-    @apply my-8 rounded-r-2xl border-l-4 border-brand bg-brand/5 px-6 py-5 text-foreground/90;
+    @apply my-8 border-l-2 border-border pl-5 text-foreground/80;
   }
   .prose-post :where(blockquote > p:first-child, aside > p:first-child) {
     @apply mt-0;
