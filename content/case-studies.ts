@@ -87,7 +87,7 @@ export const caseStudies: CaseStudy[] = [
     },
     status: "Live & operational, April 2026",
     relatedServices: ["crm-lead-systems", "workflow-automation"],
-    relatedIndustries: ["professional-firms"],
+    relatedIndustries: ["auto-finance"],
   },
   {
     slug: "gordon-construction",
@@ -192,7 +192,7 @@ export const caseStudies: CaseStudy[] = [
       "Total management visibility from first contact to placement",
     ],
     relatedServices: ["workflow-automation", "crm-lead-systems"],
-    relatedIndustries: ["professional-firms"],
+    relatedIndustries: ["staffing"],
   },
   {
     slug: "arik-services",

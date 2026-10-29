@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { branches } from "@/content/catalogue";
 import { WedgeGrid } from "@/components/WedgeGrid";
 import { ServiceCardGrid } from "@/components/ServiceCardGrid";
+import { PageHeader } from "@/components/PageHeader";
 import { pageMetadata } from "@/lib/seo";
 
 const branchIcons = {
@@ -21,17 +22,11 @@ export const metadata = pageMetadata({
 export default function ServicesIndex() {
   return (
     <>
-      <section className="section bg-surface">
-        <div className="container-page mx-auto max-w-3xl text-center">
-          <p className="eyebrow">Services</p>
-          <h1 className="mt-3 text-4xl font-semibold sm:text-5xl">
-            Systems that capture demand and book it
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-            Each service stands alone or works as one connected system we build and run for you.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Services"
+        title={<>Systems that capture demand <span className="text-gradient-brand">and book it</span></>}
+        lead="Each service stands alone or works as one connected system we build and run for you."
+      />
 
       {/* Top 4 offers, surfaced first */}
       <section className="section">

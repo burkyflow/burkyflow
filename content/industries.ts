@@ -247,6 +247,114 @@ export const industries: Industry[] = [
     ],
   },
   {
+    slug: "auto-finance",
+    name: "Auto Finance and Lending",
+    h1: "AI automation for auto finance and lending",
+    lead: "Applications arrive from ads, your website, and dealers at all hours. We answer every lead in seconds, chase the documents, and track every file across your lenders.",
+    intro: [
+      "In consumer finance, the first company to respond usually wins the application. When leads from Facebook and the website land in different inboxes, and documents are chased by hand over WhatsApp, applicants go cold and files stall with no one noticing.",
+      "We put every lead into one pipeline, reply by SMS and email the moment it arrives, follow up automatically for missing documents, and track each submission across your lenders with alerts when a file sits too long.",
+    ],
+    pains: [
+      "Leads from ads and the website arrive in separate places and get missed.",
+      "Documents are chased manually, with no record of what is still outstanding.",
+      "Submissions to several lenders are tracked from memory and spreadsheets.",
+    ],
+    offers: [
+      "Instant SMS and email reply to every new application.",
+      "Automated document follow-up that moves the file forward when documents arrive.",
+      "A lender pipeline with escalation alerts for stalled files.",
+    ],
+    serviceFit: [
+      {
+        service: "crm-lead-systems",
+        why: "Unifies every lead source into one pipeline with clear stages per lender.",
+      },
+      {
+        service: "workflow-automation",
+        why: "Automates document requests, reminders, routing between lenders, and stalled-file alerts.",
+      },
+      {
+        service: "ai-voice-receptionist",
+        why: "Answers inbound calls around the clock and qualifies applicants before a broker calls back.",
+      },
+      {
+        service: "database-reactivation",
+        why: "Re-engages past applicants and customers who are due to refinance or upgrade.",
+      },
+    ],
+    geoNiches: [],
+    stat: { value: "1,600+", label: "contacts unified into one pipeline for an auto finance client" },
+    faqs: [
+      {
+        q: "Can it work with several lenders at once?",
+        a: "Yes. Each submission is tracked by lender in one pipeline, with automatic next steps and alerts when a file has been waiting too long.",
+      },
+      {
+        q: "How do you handle document collection?",
+        a: "Applicants get automated reminders for missing documents, and the file moves to the next stage as soon as they confirm, with no staff input needed.",
+      },
+      {
+        q: "Do we have to change our CRM?",
+        a: "Not necessarily. We usually build on GoHighLevel because it deploys quickly, but we can work with an existing CRM when there is a good reason.",
+      },
+    ],
+  },
+  {
+    slug: "staffing",
+    name: "Staffing and Recruiting",
+    h1: "AI automation for staffing and recruiting firms",
+    lead: "Candidates, clients, and placements live in spreadsheets and inboxes. We bring them into one system and automate the follow-up that keeps placements moving.",
+    intro: [
+      "Staffing teams juggle candidates, client roles, interviews, and placements across spreadsheets, inboxes, and job boards. Follow-ups slip, good candidates go to faster agencies, and nobody has a live view of the pipeline.",
+      "We replace the spreadsheets with one operations system, automate candidate and client follow-up, and give the team live dashboards for every role, so recruiters spend their time placing people instead of updating records.",
+    ],
+    pains: [
+      "Candidate and client data is spread across spreadsheets and inboxes.",
+      "Follow-ups with candidates and hiring managers slip during busy weeks.",
+      "There is no live view of open roles, interviews, and placements.",
+    ],
+    offers: [
+      "One operations system replacing scattered spreadsheets.",
+      "Automated candidate and client follow-up by SMS and email.",
+      "Live dashboards for roles, interviews, and placements.",
+    ],
+    serviceFit: [
+      {
+        service: "crm-lead-systems",
+        why: "Keeps candidates, clients, and roles in one source of truth with clear pipeline stages.",
+      },
+      {
+        service: "workflow-automation",
+        why: "Automates interview scheduling, reminders, status updates, and handoffs between recruiters.",
+      },
+      {
+        service: "database-reactivation",
+        why: "Re-engages past candidates and dormant clients when new roles open.",
+      },
+      {
+        service: "ai-voice-receptionist",
+        why: "Answers candidate and client calls and screens basic requirements before a recruiter steps in.",
+      },
+    ],
+    geoNiches: [],
+    stat: { value: "6 → 1", label: "spreadsheets replaced by one operations system at HELM Recruiting" },
+    faqs: [
+      {
+        q: "Can you replace our spreadsheets without losing data?",
+        a: "Yes. We map your existing sheets into one system, migrate the records, and keep the views your team already relies on.",
+      },
+      {
+        q: "Does it work with our job boards and ad accounts?",
+        a: "Lead and application sources, including ad platforms, can feed straight into the pipeline so nothing is entered twice.",
+      },
+      {
+        q: "Will recruiters need training?",
+        a: "Very little. We build the system around how your team already works and hand over simple, role-based views.",
+      },
+    ],
+  },
+  {
     slug: "professional-firms",
     name: "Professional Firms",
     h1: "AI automation for law firms and professional services",
