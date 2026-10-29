@@ -1,4 +1,15 @@
-import { Wind, Droplets, Zap, Home, SprayCan, Bug, type LucideIcon } from "lucide-react";
+import {
+  Wind,
+  Droplets,
+  Zap,
+  Home,
+  SprayCan,
+  Bug,
+  CarFront,
+  HandCoins,
+  BriefcaseBusiness,
+  type LucideIcon,
+} from "lucide-react";
 
 type BrandLogo = { name: string; sub: string; icon: LucideIcon };
 
@@ -9,6 +20,9 @@ const logos: BrandLogo[] = [
   { name: "Roofing", sub: "Services", icon: Home },
   { name: "Restoration", sub: "Services", icon: SprayCan },
   { name: "Pest Control", sub: "Services", icon: Bug },
+  { name: "Automotive", sub: "Services", icon: CarFront },
+  { name: "Auto Finance", sub: "Companies", icon: HandCoins },
+  { name: "Staffing", sub: "Companies", icon: BriefcaseBusiness },
 ];
 
 function LogoItem({ name, sub, icon: Icon, className = "" }: BrandLogo & { className?: string }) {
@@ -42,20 +56,22 @@ export function TrustedBy({
         </p>
       </div>
 
-      {/* Desktop / tablet: centered wrap */}
-      <div className="container-page hidden sm:block">
-        <div className="mx-auto mt-9 flex max-w-5xl flex-wrap justify-center gap-x-8 gap-y-8">
-          {logos.map((logo) => (
-            <LogoItem key={logo.name} {...logo} className="w-36" />
-          ))}
+      {/* Infinite right-to-left marquee at every width; pauses on hover. */}
+      <div className="container-page mt-9 motion-reduce:hidden">
+        <div className="[mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="flex w-max animate-marquee gap-10 hover:[animation-play-state:paused] md:gap-14">
+            {[...logos, ...logos].map((logo, i) => (
+              <LogoItem key={i} {...logo} />
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Mobile: infinite right-to-left marquee */}
-      <div className="mt-9 sm:hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
-        <div className="flex w-max animate-marquee gap-10">
-          {[...logos, ...logos].map((logo, i) => (
-            <LogoItem key={i} {...logo} />
+      {/* Reduced motion: every industry once, wrapped and still. */}
+      <div className="container-page mt-9 hidden motion-reduce:block">
+        <div className="mx-auto flex max-w-5xl flex-wrap justify-center gap-x-10 gap-y-6">
+          {logos.map((logo) => (
+            <LogoItem key={logo.name} {...logo} />
           ))}
         </div>
       </div>
