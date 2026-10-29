@@ -26,7 +26,7 @@ export function ServiceCardGrid() {
           <Reveal key={service.slug} delay={(i % 3) * 0.06}>
             <Link href={`/services/${service.slug}`} className="group block h-full">
               <Card className="flex h-full flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30">
-                <CoverArt tone={toneFor[service.slug] ?? "blue"} seed={service.slug} icon={Icon} photo={servicePhotos[service.slug]} className="h-44" />
+                <CoverArt tone={toneFor[service.slug] ?? "blue"} seed={service.slug} icon={Icon} photo={servicePhotos[service.slug]} alt={`${service.name} photo`} className="h-44" />
                 <CardHeader>
                   <p className={cn("text-xs font-semibold uppercase tracking-wider", tones[toneFor[service.slug] ?? "blue"].text)}>
                     {service.eyebrow}

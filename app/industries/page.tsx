@@ -51,6 +51,7 @@ export default function IndustriesIndex() {
                     icon={industryIcons[industry.slug] ?? Layers}
                     satellites={look.satellites}
                     photo={industryPhotos[industry.slug]}
+                    alt={`${industry.name} photo`}
                     className="h-48"
                   />
                   <div className="flex flex-1 flex-col p-6">

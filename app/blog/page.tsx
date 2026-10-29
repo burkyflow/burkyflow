@@ -1,6 +1,6 @@
-import { BlogCard } from "@/components/BlogCard";
+import { BlogCard, postTopic, themes } from "@/components/BlogCard";
+import { BlogGrid } from "@/components/BlogGrid";
 import { PageHeader } from "@/components/PageHeader";
-import { Reveal } from "@/components/Reveal";
 import { posts } from "@/content/blog";
 import { pageMetadata } from "@/lib/seo";
 
@@ -11,6 +11,12 @@ export const metadata = pageMetadata({
 });
 
 export default function BlogIndex() {
+  const items = posts.map((post) => ({ slug: post.slug, topic: postTopic(post).theme.key, card: <BlogCard post={post} /> }));
+  // Only offer tabs for topics that have posts.
+  const topics = Object.values(themes)
+    .filter((t) => items.some((item) => item.topic === t.key))
+    .map((t) => ({ key: t.key, label: t.label }));
+
   return (
     <>
       <PageHeader
@@ -20,12 +26,8 @@ export default function BlogIndex() {
       />
 
       <section className="section">
-        <div className="container-page grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post, i) => (
-            <Reveal key={post.slug} delay={(i % 3) * 0.05} className="h-full">
-              <BlogCard post={post} />
-            </Reveal>
-          ))}
+        <div className="container-page">
+          <BlogGrid items={items} topics={topics} />
         </div>
       </section>
     </>
