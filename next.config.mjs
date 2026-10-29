@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: { formats: ["image/avif", "image/webp"] },
+  images: {
+    formats: ["image/avif", "image/webp"],
+    // Card cover photos (see content/photos.ts).
+    remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
+  },
   // Renamed slugs keep their old links working and pass ranking to the new URL.
   async redirects() {
     return [

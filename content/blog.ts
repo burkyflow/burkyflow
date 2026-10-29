@@ -14,6 +14,7 @@ export type Post = {
   modified: string;
   readMinutes: number;
   tags: string[]; // free-form front matter tags, used for the card's topic and cover
+  image?: string; // optional cover photo URL from front matter (`image` or `cover`)
   html: string; // rendered Markdown body
 };
 
@@ -79,7 +80,9 @@ function loadPosts(): Post[] {
 
     const tags = Array.isArray(data.tags) ? data.tags.map((t: unknown) => String(t).trim()).filter(Boolean) : [];
 
-    const post = { slug, title, excerpt, date, modified, readMinutes, tags, html };
+    const image = typeof (data.image ?? data.cover) === "string" ? String(data.image ?? data.cover).trim() || undefined : undefined;
+
+    const post = { slug, title, excerpt, date, modified, readMinutes, tags, image, html };
     const existing = bySlug.get(slug);
     if (!existing || existing.modified < post.modified) bySlug.set(slug, post);
   }

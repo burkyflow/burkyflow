@@ -5,6 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import { services } from "@/content/services";
 import { CoverArt, tones, type CoverTone } from "@/components/CoverArt";
 import { cn } from "@/lib/utils";
+import { servicePhotos } from "@/content/photos";
 
 const toneFor: Record<string, CoverTone> = {
   "ai-voice-receptionist": "peach",
@@ -25,7 +26,7 @@ export function ServiceCardGrid() {
           <Reveal key={service.slug} delay={(i % 3) * 0.06}>
             <Link href={`/services/${service.slug}`} className="group block h-full">
               <Card className="flex h-full flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg hover:ring-brand/30">
-                <CoverArt tone={toneFor[service.slug] ?? "blue"} seed={service.slug} icon={Icon} className="h-36" />
+                <CoverArt tone={toneFor[service.slug] ?? "blue"} seed={service.slug} icon={Icon} photo={servicePhotos[service.slug]} className="h-44" />
                 <CardHeader>
                   <p className={cn("text-xs font-semibold uppercase tracking-wider", tones[toneFor[service.slug] ?? "blue"].text)}>
                     {service.eyebrow}

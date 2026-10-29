@@ -8,6 +8,7 @@ import { industries } from "@/content/industries";
 import { caseStudiesForIndustry } from "@/content/case-studies";
 import { pageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
+import { industryPhotos } from "@/content/photos";
 
 export const metadata = pageMetadata({
   title: "Industries",
@@ -49,7 +50,8 @@ export default function IndustriesIndex() {
                     seed={industry.slug}
                     icon={industryIcons[industry.slug] ?? Layers}
                     satellites={look.satellites}
-                    className="h-40"
+                    photo={industryPhotos[industry.slug]}
+                    className="h-48"
                   />
                   <div className="flex flex-1 flex-col p-6">
                     {proof > 0 && (
