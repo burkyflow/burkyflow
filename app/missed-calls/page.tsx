@@ -25,9 +25,9 @@ import { faqPageLd, pageMetadata, serviceDetailLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Missed-Call Recovery for Service Businesses",
+  title: "Missed Call Recovery for Small Businesses",
   description:
-    "Turn missed calls into booked jobs with an AI voice receptionist that answers every ring, plus reactivation and CRM follow-up for leads that went quiet.",
+    "Missed call recovery for small and service businesses: an AI voice receptionist answers every ring, texts back missed callers, and books the job, plus follow-up for leads that went quiet.",
   path: "/missed-calls",
 });
 
@@ -118,7 +118,7 @@ export default function MissedCallsPage() {
                   Always-on call coverage
                 </p>
                 <h1 className="mt-6 text-4xl font-semibold leading-[1.05] sm:text-5xl md:text-6xl">
-                  Missed-call recovery that turns unanswered rings into booked revenue
+                  Missed call recovery for small businesses: turn unanswered rings into booked jobs
                 </h1>
                 <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
                   BurkyFlow combines AI voice, reactivation, CRM, and workflow automation so every

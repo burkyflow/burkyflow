@@ -21,7 +21,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import type { Post } from "@/content/blog";
+import { posts, type Post } from "@/content/blog";
 import { CoverArt, type CoverTone } from "@/components/CoverArt";
 import { postPhotos, topicPhotoPools } from "@/content/photos";
 
@@ -69,6 +69,21 @@ export function postTopic(post: Post) {
   const seed = [...post.slug].reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
   const photo = post.image ?? postPhotos[post.slug] ?? pool[seed % pool.length];
   return { theme, icon, photo };
+}
+
+// The service page each topic leads to, linked from the end of every post.
+export const topicService: Record<TopicKey, { href: string; name: string }> = {
+  ai: { href: "/services/workflow-automation", name: "Workflow Automation" },
+  calls: { href: "/services/ai-voice-receptionist", name: "AI Voice Receptionist" },
+  crm: { href: "/services/database-reactivation", name: "Database Reactivation" },
+};
+
+// Newest posts on the given topics, in topic order; optionally topped up with other posts.
+export function relatedPosts(topics: TopicKey[], { limit = 3, fill = false, exclude }: { limit?: number; fill?: boolean; exclude?: string } = {}) {
+  const pool = posts.filter((p) => p.slug !== exclude);
+  const picked = topics.flatMap((t) => pool.filter((p) => postTopic(p).theme.key === t));
+  const rest = fill ? pool.filter((p) => !picked.includes(p)) : [];
+  return [...picked, ...rest].slice(0, limit);
 }
 
 const fmt = (iso: string) =>

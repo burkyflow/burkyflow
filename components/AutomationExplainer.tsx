@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, DatabaseZap, MapPin, PhoneCall, Workflow, type LucideIcon } from "lucide-react";
+import { ArrowRight, DatabaseZap, PhoneCall, Workflow, type LucideIcon } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
-import { site } from "@/lib/site";
 
 type Item = { icon: LucideIcon; title: string; body: string; cta: string; href: string };
 
@@ -48,26 +47,6 @@ export function AutomationExplainer() {
             BurkyFlow builds and runs these systems for service businesses so inquiries reach the
             right person, appointments reach the calendar, and results can be measured.
           </p>
-
-          <div className="mt-8 rounded-2xl bg-surface p-5 ring-1 ring-border/60">
-            <p className="flex items-center gap-2 text-sm font-semibold text-foreground">
-              <MapPin className="size-4 text-brand" aria-hidden />
-              We serve US businesses remotely, including:
-            </p>
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {site.serviceAreas.map((city) => (
-                <li
-                  key={city}
-                  className="rounded-full bg-white px-3 py-1 text-sm font-medium text-foreground ring-1 ring-border/70"
-                >
-                  {city}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Scope, integrations, pricing, and human handoff rules are agreed before a build.
-            </p>
-          </div>
         </div>
 
         <ul className="grid gap-4">

@@ -33,8 +33,8 @@ export const site = {
     postalCode: "82801",
     addressCountry: "US",
   },
-  // Metros we serve remotely (declared via Service.areaServed, never as a local presence).
-  serviceAreas: ["Houston", "San Antonio", "Charleston", "Greenville"],
+  // We work remotely with clients anywhere (Service.areaServed; never a local presence).
+  serviceArea: "Worldwide",
   social: {
     linkedin: "https://www.linkedin.com/company/burkyflow",
     instagram: "https://instagram.com/burkyflow",

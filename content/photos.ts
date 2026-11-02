@@ -53,5 +53,8 @@ export const topicPhotoPools: Record<"ai" | "calls" | "crm", string[]> = {
   ],
 };
 
+export const photoShare = (url: string) =>
+  url.includes("images.unsplash.com") && !url.includes("?") ? `${url}?auto=format&fit=crop&w=1200&h=630&q=80` : url;
+
 export const photoSrc = (url: string) =>
   url.includes("images.unsplash.com") && !url.includes("?") ? `${url}?auto=format&fit=crop&w=1200&q=80` : url;

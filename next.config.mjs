@@ -15,6 +15,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/case-studies/auto-finance-company",
+        destination: "/case-studies/go-waka-car-finance",
+        permanent: true,
+      },
+      {
         source: "/bundles/full-stack-unitzero",
         destination: "/bundles/full-stack-burkyflow",
         permanent: true,

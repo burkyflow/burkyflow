@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
-import { BlogCard, postTopic } from "@/components/BlogCard";
-import { photoSrc } from "@/content/photos";
+import { BlogCard, postTopic, topicService } from "@/components/BlogCard";
+import { photoShare, photoSrc } from "@/content/photos";
 import { cn } from "@/lib/utils";
 import { posts, getPost } from "@/content/blog";
 import { pageMetadata, articleLd, breadcrumbLd } from "@/lib/seo";
@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     title: post.title,
     description: post.excerpt,
     path: `/blog/${post.slug}`,
+    image: { url: photoShare(postTopic(post).photo), alt: `Cover photo for ${post.title}` },
   });
   return { ...meta, openGraph: { ...meta.openGraph, type: "article", publishedTime: post.date, modifiedTime: post.modified, authors: [`${site.url}/about`] } };
 }
@@ -46,7 +47,7 @@ export default async function BlogPost({ params }: { params: Promise<Params> }) 
 
   return (
     <>
-      <JsonLd data={[articleLd(post), breadcrumbLd([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: post.title, path: `/blog/${post.slug}` }])]} />
+      <JsonLd data={[articleLd(post, photoShare(photo)), breadcrumbLd([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: post.title, path: `/blog/${post.slug}` }])]} />
       <article className="section">
         <div className="container-page mx-auto max-w-2xl">
           <Link
@@ -85,6 +86,12 @@ export default async function BlogPost({ params }: { params: Promise<Params> }) 
             className="prose-post mt-10 border-t border-border/60 pt-10"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
+          <p className="mt-12 border-t border-border/60 pt-6 text-base text-muted-foreground">
+            Related service:{" "}
+            <Link href={topicService[theme.key].href} className="font-semibold text-brand underline decoration-brand/30 underline-offset-4 hover:decoration-brand">
+              {topicService[theme.key].name}
+            </Link>
+          </p>
         </div>
       </article>
 

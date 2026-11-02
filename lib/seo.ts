@@ -7,20 +7,23 @@ export function pageMetadata({
   path = "/",
   noindex = false,
   canonicalPath = path,
+  image,
 }: {
   title: string;
   description: string;
   path?: string;
   noindex?: boolean;
   canonicalPath?: string;
+  /** Absolute 1200x630 image for link previews; defaults to the site card. */
+  image?: { url: string; alt: string };
 }): Metadata {
   const url = `${site.url}${path}`;
   // 1200x630 link-preview card; the square logo was cropped by social platforms.
   const ogImage = {
-    url: "/images/og.jpg",
+    url: image?.url ?? "/images/og.jpg",
     width: 1200,
     height: 630,
-    alt: `${site.name}: AI voice receptionists and CRM automation for service businesses`,
+    alt: image?.alt ?? `${site.name}: AI voice receptionists and CRM automation for service businesses`,
   };
   return {
     title: { absolute: path === "/" ? title : `${title} | ${site.name}` },
@@ -60,7 +63,7 @@ export function organizationLd() {
     description: site.tagline,
     email: site.email,
     sameAs: Object.values(site.social),
-    areaServed: site.serviceAreas,
+    areaServed: site.serviceArea,
   };
 }
 
@@ -80,7 +83,7 @@ export function localBusinessLd() {
       "@type": "PostalAddress",
       ...site.address,
     },
-    areaServed: site.serviceAreas,
+    areaServed: site.serviceArea,
   };
 }
 
@@ -156,7 +159,7 @@ export function serviceItemListLd({
         description: s.description,
         url: s.url,
         provider: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: site.url },
-        areaServed: site.serviceAreas,
+        areaServed: site.serviceArea,
       },
     })),
   };
@@ -179,7 +182,7 @@ export function serviceDetailLd({
     description,
     serviceType: "AI automation for service businesses",
     provider: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: site.url },
-    areaServed: site.serviceAreas,
+    areaServed: site.serviceArea,
     url,
   };
 }
@@ -208,7 +211,7 @@ export function websiteLd() {
   };
 }
 
-export function articleLd(post: { slug: string; title: string; excerpt: string; date: string; modified: string }) {
+export function articleLd(post: { slug: string; title: string; excerpt: string; date: string; modified: string }, image?: string) {
   const url = `${site.url}/blog/${post.slug}`;
   return {
     "@context": "https://schema.org",
@@ -222,7 +225,7 @@ export function articleLd(post: { slug: string; title: string; excerpt: string; 
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     author: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: `${site.url}/about` },
     publisher: { "@id": `${site.url}/#organization` },
-    image: `${site.url}/images/logo.png`,
+    image: image ?? `${site.url}/images/logo.png`,
     inLanguage: "en-US",
   };
 }

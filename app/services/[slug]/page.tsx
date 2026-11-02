@@ -4,6 +4,8 @@ import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AlternatingFeatureBlock } from "@/components/AlternatingFeatureBlock";
+import { RelatedPosts } from "@/components/RelatedPosts";
+import { relatedPosts, type TopicKey } from "@/components/BlogCard";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
@@ -25,13 +27,23 @@ export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
 }
 
+// Blog topics that fit each service, most relevant first.
+const serviceTopics: Record<string, TopicKey[]> = {
+  "ai-voice-receptionist": ["calls"],
+  "database-reactivation": ["crm"],
+  "crm-lead-systems": ["crm", "calls"],
+  "workflow-automation": ["ai"],
+  "answer-engine-optimization": ["ai"],
+  "done-for-you": ["calls", "crm", "ai"],
+};
+
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) return pageMetadata({ title: "Not found", description: "", path: "/services" });
   return pageMetadata({
-    title: service.name,
-    description: service.lead,
+    title: service.seoTitle ?? service.name,
+    description: service.seoDescription ?? service.lead,
     path: `/services/${service.slug}`,
   });
 }
@@ -188,6 +200,12 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
           </div>
         </section>
       )}
+
+      <RelatedPosts
+        heading={`Guides on ${service.name.toLowerCase()}`}
+        items={relatedPosts(serviceTopics[service.slug] ?? [], { fill: true })}
+        className={relatedCases.length > 0 ? "pt-0 md:pt-0" : undefined}
+      />
 
       {/* FAQ */}
       <section className="section bg-surface">
