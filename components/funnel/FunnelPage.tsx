@@ -174,7 +174,7 @@ export function FunnelPage({
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2.5 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-semibold text-white/90 backdrop-blur">
               <UsFlag className="h-3.5 w-5 shrink-0 rounded-[2px] ring-1 ring-black/10" />
-              {funnel.testimonialsHeading ?? "Trusted by businesses across the USA"}
+              {funnel.testimonialsHeading ?? "Trusted by businesses worldwide"}
             </span>
 
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.06] tracking-tight text-white sm:text-5xl md:text-6xl">

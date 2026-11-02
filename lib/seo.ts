@@ -60,7 +60,7 @@ export function organizationLd() {
     description: site.tagline,
     email: site.email,
     sameAs: Object.values(site.social),
-    areaServed: site.serviceAreas,
+    areaServed: site.serviceArea,
   };
 }
 
@@ -80,7 +80,7 @@ export function localBusinessLd() {
       "@type": "PostalAddress",
       ...site.address,
     },
-    areaServed: site.serviceAreas,
+    areaServed: site.serviceArea,
   };
 }
 
@@ -156,7 +156,7 @@ export function serviceItemListLd({
         description: s.description,
         url: s.url,
         provider: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: site.url },
-        areaServed: site.serviceAreas,
+        areaServed: site.serviceArea,
       },
     })),
   };
@@ -179,7 +179,7 @@ export function serviceDetailLd({
     description,
     serviceType: "AI automation for service businesses",
     provider: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: site.url },
-    areaServed: site.serviceAreas,
+    areaServed: site.serviceArea,
     url,
   };
 }

@@ -25,7 +25,7 @@ export type Funnel = {
   featuresLead: string; // one-line promise under the features heading
   features: FunnelFeature[]; // "what we run for you" checklist cards
   pills: string[]; // vertical labels shown beside the phone mockup
-  testimonialsHeading?: string; // "Trusted by ... across the USA"
+  testimonialsHeading?: string; // "Trusted by ... worldwide"
   faqs?: { q: string; a: string }[]; // funnel-specific FAQ (falls back to the industry FAQ)
   bookingHeading: string;
   bookingLead: string;
@@ -71,7 +71,7 @@ export const funnels: Record<string, Funnel> = {
     featuresHeading: "Powerful AI automation for home service businesses",
     featuresLead: "More calls. More bookings. More revenue.",
     pills: ["Plumbing", "HVAC", "Electrical", "Roofing", "Cleaning", "& more"],
-    testimonialsHeading: "Trusted by home service businesses across the USA",
+    testimonialsHeading: "Trusted by home service businesses worldwide",
     faqs: [
       {
         q: "How quickly can BurkyFlow be set up?",
