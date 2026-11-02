@@ -6,9 +6,9 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Contact",
+  title: "Contact Us: Book an AI Automation Call",
   description:
-    "Book a call with BurkyFlow. Tell us what you run today and we will map where revenue is leaking and what we would automate first.",
+    "Contact BurkyFlow to book a call about AI call answering, missed call recovery, database reactivation, or CRM automation. Phone, email, and calendar booking.",
   path: "/contact",
 });
 

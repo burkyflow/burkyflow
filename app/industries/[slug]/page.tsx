@@ -4,6 +4,8 @@ import Link from "next/link";
 import { ArrowRight, Check, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { RelatedPosts } from "@/components/RelatedPosts";
+import { relatedPosts } from "@/components/BlogCard";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { StatBlock } from "@/components/StatBlock";
@@ -232,6 +234,8 @@ export default async function IndustryDetail({ params }: { params: Promise<Param
           </section>
         );
       })()}
+
+      <RelatedPosts heading="Guides on calls and follow-up" items={relatedPosts(["calls", "crm"])} className="pt-0 md:pt-0" />
 
       {/* FAQ */}
       <section className="section bg-surface">

@@ -1,18 +1,18 @@
 ---
-title: "Missed calls are lost revenue, not lost time"
+title: "Lost revenue from missed calls: how to recover it"
 slug: "missed-calls-are-lost-revenue"
-metaDescription: "Learn how to measure missed-call revenue, set up AI call answering, and track recovered bookings using your own call logs and CRM data."
+metaDescription: "How much revenue do missed calls cost your business? Measure lost revenue from missed calls with your own call logs, then recover it with AI call answering and follow-up."
 date: "2026-05-01"
-updated: "2026-10-03"
+updated: "2026-11-02"
 ---
 
-Missed-call recovery means responding to unanswered inquiries, qualifying the caller, and helping them book a service. An [AI voice receptionist](/services/ai-voice-receptionist) handles overflow and after-hours calls using your service information, booking rules, and human escalation instructions.
+Every unanswered call from a new customer is potential lost revenue. Missed-call recovery means responding to those inquiries, qualifying the caller, and helping them book a service. An [AI voice receptionist](/services/ai-voice-receptionist) handles overflow and after-hours calls using your service information, booking rules, and human escalation instructions.
 
 ## Why it happens
 
 Crews are on jobs, the front desk is busy, and after hours nobody may be available. Some callers leave a message; others contact another business. Your call logs show how often this happens.
 
-## How do you calculate the value of missed calls?
+## How do you calculate lost revenue from missed calls?
 
 Start with unique, qualified inquiries. Exclude spam, repeat dialing, and calls about existing bookings. Then estimate:
 

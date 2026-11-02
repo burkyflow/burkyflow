@@ -17,6 +17,8 @@ export type Service = {
   icon: LucideIcon;
   eyebrow: string;
   name: string; // nav / card label
+  seoTitle?: string; // search result title, if different from name
+  seoDescription?: string; // search result description, if different from lead
   h2: string; // section + detail headline
   lead: string; // short summary (homepage + cards)
   intro: string[]; // longer narrative for the detail page
@@ -106,11 +108,15 @@ export const services: Service[] = [
     icon: DatabaseZap,
     eyebrow: "Revenue you already paid for",
     name: "Database Reactivation",
+    seoTitle: "Database Reactivation for Home Service Businesses",
+    seoDescription:
+      "Database reactivation for HVAC, plumbing, roofing, and other home service businesses: we text past customers and old leads in your voice and book the ones ready for work.",
     h2: "Wake up the customers already sitting in your CRM",
     lead: "You already paid to acquire every past customer and dead lead in your database. We re-engage them by SMS in your tone, and the AI voice books the ones who are ready.",
     intro: [
       "Most service businesses sit on hundreds or thousands of past customers and dead leads. They already trust you, they are already in your system, and almost none of them are being contacted. Meanwhile you keep buying new clicks at a premium.",
       "Database reactivation turns that dormant list into booked revenue. We text the list in your voice, the AI voice handles replies and qualifies intent, and ready customers land on your calendar. You see the reachable-contact count before anything ever sends.",
+      "It works especially well for home service businesses such as HVAC, plumbing, electrical, roofing, and pest control. Past customers come due for seasonal maintenance, repeat repairs, and replacements, and old estimates that never closed are still worth a follow-up.",
     ],
     steps: [
       {
@@ -161,6 +167,10 @@ export const services: Service[] = [
       {
         q: "What if my data is messy?",
         a: "That is normal. Part of the setup is cleaning and de-duplicating the list so the campaign reaches real, reachable people.",
+      },
+      {
+        q: "Does database reactivation work for home service businesses?",
+        a: "Yes. Home service companies usually have years of past jobs and unclosed estimates in their CRM or field service software. Seasonal tune-ups, maintenance plans, and repeat repairs give a natural reason to reach out, so these lists tend to respond well.",
       },
       {
         q: "How fast do results show?",
