@@ -27,6 +27,16 @@ export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
 }
 
+// Where each service's packages, tiers, and timelines are listed.
+const packagesFor: Record<string, string> = {
+  "ai-voice-receptionist": "/services/automation-infrastructure#ai-voice-receptionist",
+  "database-reactivation": "/services/sales-generation#database-reactivation",
+  "crm-lead-systems": "/services/automation-infrastructure#crm-lead-systems",
+  "workflow-automation": "/services/automation-infrastructure#business-process-automation",
+  "answer-engine-optimization": "/services/automation-infrastructure#aeo-geo",
+  "done-for-you": "/services/automation-infrastructure#managed-services",
+};
+
 // Blog topics that fit each service, most relevant first.
 const serviceTopics: Record<string, TopicKey[]> = {
   "ai-voice-receptionist": ["calls"],
@@ -82,13 +92,19 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
           <p className="eyebrow">{service.eyebrow}</p>
           <h1 className="mt-3 text-4xl font-semibold sm:text-5xl">{service.h2}</h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">{service.lead}</p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col items-center gap-4">
             <Button asChild size="lg">
               <Link href={site.ctaHref}>
                 {site.ctaLabel}
                 <ArrowRight className="size-4" />
               </Link>
             </Button>
+            {packagesFor[service.slug] && (
+              <Link href={packagesFor[service.slug]} className="inline-flex items-center gap-1 text-sm font-semibold text-brand">
+                Compare packages and timelines
+                <ArrowRight className="size-4" />
+              </Link>
+            )}
           </div>
         </div>
       </section>

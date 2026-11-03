@@ -25,6 +25,8 @@ export type Branch = {
   h1: string;
   lead: string;
   intro: string;
+  /** Optional "where to start" guide: a common problem and the offer that solves it. */
+  guide?: { heading: string; intro: string; items: { problem: string; offer: string; detail: string }[] };
   offers: Offer[];
   faqs: { q: string; a: string }[];
 };
@@ -39,6 +41,18 @@ export const automationBranch: Branch = {
   lead: "Voice, chat, CRM, workflows, booking, and the managed layer that keeps it all running. Start with one service or run the full system.",
   intro:
     "These are the systems that run your business day to day. Every offer below works on its own, connects cleanly to the next, and comes with ongoing managed support so it keeps working after launch.",
+  guide: {
+    heading: "Where to start",
+    intro: "Most businesses start with the one problem costing them the most work, then connect the next piece once it is running. Find the problem that sounds most like yours:",
+    items: [
+      { problem: "Calls go unanswered when the team is busy or after hours", offer: "ai-voice-receptionist", detail: "An AI receptionist answers every call, qualifies the caller, and books the appointment." },
+      { problem: "Website visitors leave without getting in touch", offer: "ai-chatbot", detail: "A website and messaging chat answers questions and captures the lead while the visitor is still on the page." },
+      { problem: "Leads are scattered across inboxes, spreadsheets, and texts", offer: "crm-lead-systems", detail: "A GoHighLevel CRM puts every lead in one pipeline with automatic follow-up." },
+      { problem: "Staff retype the same information between tools", offer: "business-process-automation", detail: "n8n or custom workflows move the data for you and alert the right person." },
+      { problem: "No-shows and back-and-forth scheduling", offer: "booking-scheduling", detail: "Online booking with reminders and rescheduling built in." },
+      { problem: "Your business does not show up in ChatGPT or Google AI answers", offer: "aeo-geo", detail: "AEO and GEO make your site easy for AI search tools to read, trust, and cite." },
+    ],
+  },
   offers: [
     {
       slug: "ai-voice-receptionist",
