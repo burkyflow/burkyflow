@@ -89,11 +89,11 @@ Voice AI Engagement
 
 5. Case Studies
 Detailed case studies from live client deployments. Each case study below includes a link to the full documentation.
-Case Study 1 — Go Waka Car Finance
+Case Study 1 — [Car finance client]
 Auckland, New Zealand  •  Auto Finance & Lending
-Full Case Study: Go Waka Car Finance — GHL Case Study
+Full Case Study: [Car finance client] — GHL Case Study
 The Challenge
-Despite high demand, Go Waka was losing revenue through massive operational gaps. Leads were scattered across Facebook and emails, documents were chased manually via WhatsApp, and tracking submissions across 8 different lenders was a "memory game" for the staff.
+Despite high demand, [Car finance client] was losing revenue through massive operational gaps. Leads were scattered across Facebook and emails, documents were chased manually via WhatsApp, and tracking submissions across 8 different lenders was a "memory game" for the staff.
 The UNITZERO Solution
 We engineered a customized GoHighLevel ecosystem consisting of 12 modular workflows and a dual-pipeline architecture:
 Speed-to-Lead Engine: First-contact time slashed from days to seconds. Every Facebook lead now receives an automated SMS and email instantly, with a call task assigned within the hour.
@@ -106,7 +106,7 @@ The Results (Live as of April 2026)
 325 real-time admin notifications sent — zero leakage
 214+ applications tracked across 8 lenders with zero spreadsheets
 100% native GHL build — no Zapier, no ManyChat, no extra subscription costs
-“UNITZERO didn't just organize our leads; they gave us an automated infrastructure that scales with us. We went from guessing our numbers to seeing them live, every single day.”  — Go Waka Car Finance
+“UNITZERO didn't just organize our leads; they gave us an automated infrastructure that scales with us. We went from guessing our numbers to seeing them live, every single day.”  — [Car finance client]
 
 Case Study 2 — Gordon Construction Consultancy
 California, USA  •  SB-326 / SB-721 Compliance Specialist
@@ -839,16 +839,16 @@ The Bottom Line
 By automating the "Handshake" (Outreach) and the "Handoff" (Proposal), we allowed Gordon to scale his expertise without scaling his stress. The system finds the leads, the funnel captures the data, and the AI writes the bid. Gordon just has to approve and sign.
 "UNITZERO didn't just build me a website; they built an automated sales force. I can now reach thousands of property managers and send them a professional bid before my competitors have even returned their first phone call."
 
-Go Waka Car Finance - GHL - Case Study
+[Car finance client] - GHL - Case Study
 CASE STUDY
 Full CRM & Automation System Build
-Go Waka Car Finance
+[Car finance client]
 Auckland, New Zealand  ·  GoHighLevel  ·  12 Workflows  ·  Live April 2026
 Client Overview
 Field
 Detail
 Business
-Go Waka Limited
+[Car finance client]
 Industry
 Vehicle Finance / Consumer Lending
 Location
@@ -861,13 +861,13 @@ Live & Operational — April 2026
 
 
 The Problem
-When UNITZERO engaged with Go Waka, the business was running entirely on manual processes with no structured follow-up, no document tracking, and zero visibility into pipeline health. Eight critical operational gaps were identified:
+When UNITZERO engaged with [Car finance client], the business was running entirely on manual processes with no structured follow-up, no document tracking, and zero visibility into pipeline health. Eight critical operational gaps were identified:
 
 No Centralised Lead Management — Leads from Facebook and the website arrived in separate places. Sales reps manually checked Facebook Business Manager and email inboxes. Leads regularly slipped through without follow-up.
 Zero Automated Follow-Up — No immediate SMS or email response to new leads. Average first-contact time was measured in hours, sometimes days. In consumer finance, this directly kills conversion.
 No Admin Visibility — Management had no real-time alert when a new lead entered the system.
 Manual Document Collection — The finance team chased documents via WhatsApp and phone calls with no system to track what was sent, what was missing, or how long a file had been waiting.
-No Multi-Lender Submission Tracking — Go Waka submits to up to 8 lenders in sequence. There was no pipeline, no task system, and no escalation logic.
+No Multi-Lender Submission Tracking — [Car finance client] submits to up to 8 lenders in sequence. There was no pipeline, no task system, and no escalation logic.
 No Lender Decision Automation — When a lender approved or declined, nothing happened automatically. The team manually notified contacts, updated records, and decided next steps — inconsistently.
 No Performance Visibility — No live view of lead volume, source breakdown, pipeline stage distribution, or team task load.
 Disconnected Marketing — Email campaigns were not segmented, tracked, or connected to the CRM.
@@ -895,7 +895,7 @@ Document Confirmation Form + QA Form
 Dual-Pipeline Architecture
 Two custom pipelines were built to separate the lead journey from the lender journey, ensuring each team sees exactly the information relevant to their role.
 
-Pipeline 1 — Go Waka Leads (Sales & Finance View)
+Pipeline 1 — [Car finance client] Leads (Sales & Finance View)
 Stage
 Purpose
 New Lead
@@ -918,7 +918,7 @@ Lost / Dead
 Cold, declined, or unresponsive
 
 
-Pipeline 2 — Go Waka Lenders (Finance Team View)
+Pipeline 2 — [Car finance client] Lenders (Finance Team View)
 Stage
 Purpose
 Submitted to Lender 1–8
@@ -1001,7 +1001,7 @@ Active Workflows
 
 
 Live Operations Dashboard
-A custom Go Waka Operations Dashboard was built inside GHL Reporting as the default view for all team members — giving the full operational picture at a glance.
+A custom [Car finance client] Operations Dashboard was built inside GHL Reporting as the default view for all team members — giving the full operational picture at a glance.
 
 Dashboard Widget
 Live Data

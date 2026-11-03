@@ -400,11 +400,15 @@ export const services: Service[] = [
     icon: PackageCheck,
     eyebrow: "We run it for you",
     name: "Done For You Service Model",
+    seoTitle: "Done-For-You AI Automation Service",
+    seoDescription:
+      "A done-for-you AI automation service: we build, run, and maintain your AI receptionist, reactivation campaigns, CRM, and workflows as one system, with one team and monthly reporting.",
     h2: "One team that owns the whole system, not another tool to manage",
     lead: "You do not want six logins and a learning curve. We build, run, and maintain the entire automation stack so you get the outcome without the operations.",
     intro: [
       "Most automation fails not because the tools are bad, but because nobody has the time to set them up, connect them, and keep them running. You end up with half-configured software and another login to ignore.",
       "Our done-for-you model removes that burden entirely. We scope the outcome you want, build the receptionist, reactivation, CRM, and workflows as one connected system, then operate and report on it. You get a single team, a single dashboard, and a single point of contact.",
+      "It suits owners and managers who want the results of automation but have no operations person to set it up and look after it, and businesses that have bought software before and ended up with tools nobody maintains. Your part is deciding the rules: which calls go to a person, what a qualified lead looks like, and when you are available. We turn those decisions into a working system and keep it working.",
     ],
     steps: [
       {
@@ -455,6 +459,18 @@ export const services: Service[] = [
       {
         q: "Do I keep ownership of my systems and data?",
         a: "Yes. Your accounts, data, and customer relationships remain yours. We operate the system on your behalf.",
+      },
+      {
+        q: "How is this different from buying automation software?",
+        a: "Software gives you tools you still have to configure, connect, and keep up to date. With done-for-you, we do that work: we write the call scripts and message copy, connect your phone, calendar, and CRM, test the whole flow, and monitor it after launch. You approve the rules and see the results.",
+      },
+      {
+        q: "How long does it take to launch?",
+        a: "A single piece, such as an AI receptionist, typically launches in one to two weeks. A full connected system is rolled out in phases so each part is tested before the next one starts. The timeline is agreed during scoping.",
+      },
+      {
+        q: "What happens after launch?",
+        a: "Every build is offered a managed plan at hand-off; it is optional. Care covers uptime monitoring, incident response, and a monthly health report. Optimize adds a monthly optimization pass and a quarterly strategy call. Partner adds a dedicated Slack channel, a 4-hour incident response time, and unlimited minor changes.",
       },
       {
         q: "Can you start with one piece?",

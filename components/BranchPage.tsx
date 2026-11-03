@@ -62,6 +62,36 @@ export function BranchPage({ branch }: { branch: Branch }) {
         </div>
       </section>
 
+      {/* Where to start: problem -> offer */}
+      {branch.guide && (
+        <section className="section pt-0">
+          <div className="container-page mx-auto max-w-4xl">
+            <h2 className="text-2xl font-semibold sm:text-3xl">{branch.guide.heading}</h2>
+            <p className="mt-4 text-lg text-muted-foreground">{branch.guide.intro}</p>
+            <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+              {branch.guide.items.map((item) => {
+                const offer = branch.offers.find((o) => o.slug === item.offer);
+                return (
+                  <li key={item.offer}>
+                    <a
+                      href={`#${item.offer}`}
+                      className="group flex h-full flex-col rounded-2xl bg-white p-6 shadow-soft ring-1 ring-border/60 transition-shadow hover:shadow-soft-lg"
+                    >
+                      <p className="font-semibold text-foreground">{item.problem}</p>
+                      <p className="mt-2 text-sm text-muted-foreground">{item.detail}</p>
+                      <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-semibold text-brand">
+                        {offer?.name ?? "See the offer"}
+                        <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
+      )}
+
       {/* Jump-nav */}
       <section className="border-y border-border bg-surface">
         <div className="container-page flex flex-wrap gap-x-6 gap-y-2 py-4 text-sm">

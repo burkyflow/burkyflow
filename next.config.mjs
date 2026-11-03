@@ -15,8 +15,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/case-studies/auto-finance-company",
-        destination: "/case-studies/go-waka-car-finance",
+        source: "/case-studies/go-waka-car-finance",
+        destination: "/case-studies/auto-finance-company",
         permanent: true,
       },
       {

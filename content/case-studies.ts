@@ -12,6 +12,9 @@ export type CaseStudy = {
   tags: string[]; // e.g. ["VAPI", "GoHighLevel", "Outbound AI"]
   headline: string;
   summary: string;
+  seoTitle?: string; // search title, if "<client> Case Study" is not the best one
+  seoDescription?: string; // search description, if different from summary
+  h1?: string; // page heading, if different from client (e.g. anonymized clients)
   heroStats: Stat[];
   challenge: string[];
   solution: SolutionBlock[];
@@ -26,24 +29,29 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "go-waka-car-finance",
-    client: "Go Waka Car Finance",
+    // Anonymized at the client's request: no name, city, or lender names.
+    slug: "auto-finance-company",
+    client: "Car Finance Broker",
     vertical: "Auto Finance & Lending",
-    location: "Auckland, New Zealand",
+    location: "New Zealand",
     tags: ["GoHighLevel", "12 Workflows", "Dual Pipeline", "Live April 2026"],
-    headline: "Full CRM and automation system for an 8-lender consumer finance brand",
+    headline: "Full CRM and automation system for a multi-lender consumer car finance broker",
+    seoTitle: "Car Finance CRM Case Study: Replies in Seconds",
+    seoDescription:
+      "How a car finance broker cut first response from hours to seconds with GoHighLevel: 12 workflows, multi-lender routing, and 214+ applications tracked.",
+    h1: "How a car finance broker replies to every lead in seconds",
     summary:
       "A complete GoHighLevel ecosystem, 12 published workflows, dual pipelines, native Facebook Lead Ads, multi-lender routing, automated document collection, and a live operations dashboard. 100% native GoHighLevel, no Zapier, no ManyChat, no recurring tool costs.",
     heroStats: [
       { value: "1,600+", label: "Contacts unified into one source of truth" },
       { value: "3,520+", label: "Automated workflow executions in the first month" },
-      { value: "214+", label: "Applications tracked across 8 lenders" },
+      { value: "214+", label: "Applications tracked across the lender panel" },
     ],
     challenge: [
       "Leads from Facebook and the website arrived in separate places. Reps manually checked Business Manager and inboxes. Leads slipped through with no follow-up.",
       "No immediate SMS or email response to new leads. Average first-contact time was measured in hours, sometimes days, and in consumer finance that directly kills conversion.",
       "Documents were chased manually via WhatsApp with no tracking of what was sent, what was missing, or how long a file had been waiting.",
-      "Submissions to up to 8 different lenders were tracked from memory and spreadsheets, with no pipeline, no task system, and no escalation logic.",
+      "Submissions to several different lenders were tracked from memory and spreadsheets, with no pipeline, no task system, and no escalation logic.",
     ],
     solution: [
       {
@@ -59,7 +67,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Intelligent Lender Routing",
         detail:
-          "Tag-based logic system managing sequential submissions across Finance Now, Max Money, CTS Finance, Heart Land, Link Finance, Better Finance, Avanti, and HTF, with automatic pivots and 3-day / 20-day escalation alerts.",
+          "Tag-based logic system managing sequential submissions across the broker's full lender panel, with automatic pivots to the next lender and 3-day / 20-day escalation alerts.",
       },
       {
         title: "Operational Command Center",
@@ -83,7 +91,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     quote: {
       text: "BurkyFlow didn't just organize our leads; they gave us an automated infrastructure that scales with us. We went from guessing our numbers to seeing them live, every single day.",
-      attribution: "Go Waka Car Finance",
+      attribution: "Car finance broker, New Zealand",
     },
     status: "Live & operational, April 2026",
     relatedServices: ["crm-lead-systems", "workflow-automation"],
