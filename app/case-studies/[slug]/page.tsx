@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   if (!cs) return pageMetadata({ title: "Not found", description: "", path: "/case-studies" });
   return pageMetadata({
     // Short enough to show in full in search results (~60 characters with the brand).
-    title: `${cs.client} Case Study`,
-    description: cs.summary,
+    title: cs.seoTitle ?? `${cs.client} Case Study`,
+    description: cs.seoDescription ?? cs.summary,
     path: `/case-studies/${cs.slug}`,
   });
 }
@@ -74,7 +74,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<Para
             <p className="eyebrow">
               {cs.vertical} · {cs.location}
             </p>
-            <h1 className="mt-3 text-4xl font-semibold sm:text-5xl">{cs.client}</h1>
+            <h1 className="mt-3 text-4xl font-semibold sm:text-5xl">{cs.h1 ?? cs.client}</h1>
             <p className="mx-auto mt-5 max-w-3xl text-xl text-foreground">{cs.headline}</p>
             <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">{cs.summary}</p>
             <ul className="mt-6 flex flex-wrap justify-center gap-2">
