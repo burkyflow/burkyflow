@@ -4,7 +4,7 @@ import { stats } from "@/content/stats";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "About",
+  title: "About: AI Automation for Service Businesses",
   description:
     "BurkyFlow is an AI automation agency that builds and runs the systems service businesses use to capture every call and book more revenue.",
   path: "/about",

@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 import { industryPhotos } from "@/content/photos";
 
 export const metadata = pageMetadata({
-  title: "Industries",
+  title: "Industries: Home Services, Healthcare and More",
   description:
     "AI automation built for home services, healthcare practices, real estate teams, automotive shops, auto finance, staffing firms, and professional firms.",
   path: "/industries",

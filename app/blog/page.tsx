@@ -5,7 +5,7 @@ import { posts } from "@/content/blog";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Blog",
+  title: "Blog: AI Call Answering and Automation Guides",
   description: "Practical guides on AI call answering, missed-call recovery, and CRM follow-up for service businesses, from the BurkyFlow team.",
   path: "/blog",
 });

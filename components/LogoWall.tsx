@@ -7,12 +7,12 @@ type Logo = { name: string; logo: string };
 // ── Paste each app's icon URL here (a /images/... path or a full URL). ──
 // Optional brand artwork.
 const logos: Logo[] = [
-  { name: "HubSpot", logo: "/images/hubspot.png" },
+  { name: "HubSpot", logo: "/images/hubspot.webp" },
   { name: "Salesforce", logo: "/images/salesforce.webp" },
-  { name: "Twilio", logo: "/images/twilio.png" },
-  { name: "Zapier", logo: "/images/zapier.png" },
-  { name: "Google", logo: "/images/google.png" },
-  { name: "Slack", logo: "/images/slack.png" },
+  { name: "Twilio", logo: "/images/twilio.webp" },
+  { name: "Zapier", logo: "/images/zapier.webp" },
+  { name: "Google", logo: "/images/google.webp" },
+  { name: "Slack", logo: "/images/slack.webp" },
 ];
 
 export function LogoWall({

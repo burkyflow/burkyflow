@@ -6,6 +6,22 @@ const nextConfig = {
     // Card cover photos (see content/photos.ts).
     remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
   },
+  // Security headers on every response. CSP is report-only until every
+  // third-party host (GTM, Meta Pixel, Stape gateway, booking widget) is listed.
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+          { key: "Content-Security-Policy-Report-Only", value: "frame-ancestors 'self'; object-src 'none'; base-uri 'self'" },
+        ],
+      },
+    ];
+  },
   // Renamed slugs keep their old links working and pass ranking to the new URL.
   async redirects() {
     return [

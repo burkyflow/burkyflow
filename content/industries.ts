@@ -4,6 +4,7 @@ export type IndustryFAQ = { q: string; a: string };
 export type Industry = {
   slug: string;
   name: string;
+  seoTitle?: string; // search-result title, if the name alone is too short
   h1: string;
   lead: string;
   intro: string[];
@@ -137,6 +138,7 @@ export const industries: Industry[] = [
   {
     slug: "real-estate",
     name: "Real Estate Teams",
+    seoTitle: "AI Lead Follow-Up for Real Estate Teams",
     h1: "AI automation for real estate teams",
     lead: "Most teams sit on hundreds of cold buyer leads. We re-engage them, qualify the warm ones, and put the appointment on your team calendar.",
     intro: [
