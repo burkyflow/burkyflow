@@ -21,9 +21,9 @@ export function CTABand({
 }) {
   return (
     <div className="mx-auto max-w-2xl text-center">
-      <h2 className="text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-5xl">
+      <p className="text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-5xl">
         {heading}
-      </h2>
+      </p>
       <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">{lead}</p>
       <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
         <Button asChild size="lg">

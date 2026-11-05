@@ -51,12 +51,12 @@ const WAVE = [34, 60, 82, 46, 68, 92, 52, 72, 40, 86, 58, 36, 78, 50, 94, 56, 42
 
 // Integrations we actually have logos for. Matches the "works with your stack" pitch.
 const INTEGRATIONS = [
-  { src: "/images/hubspot.png", alt: "HubSpot" },
-  { src: "/images/twilio.png", alt: "Twilio" },
-  { src: "/images/google.png", alt: "Google Calendar" },
-  { src: "/images/zapier.png", alt: "Zapier" },
+  { src: "/images/hubspot.webp", alt: "HubSpot" },
+  { src: "/images/twilio.webp", alt: "Twilio" },
+  { src: "/images/google.webp", alt: "Google Calendar" },
+  { src: "/images/zapier.webp", alt: "Zapier" },
   { src: "/images/salesforce.webp", alt: "Salesforce" },
-  { src: "/images/slack.png", alt: "Slack" },
+  { src: "/images/slack.webp", alt: "Slack" },
 ];
 
 function PrimaryCTA({ label = "Book your free demo", className = "" }: { label?: string; className?: string }) {
@@ -411,6 +411,10 @@ export function FunnelPage({
                 key={logo.alt}
                 src={logo.src}
                 alt={logo.alt}
+                width={160}
+                height={160}
+                loading="lazy"
+                decoding="async"
                 className="mx-auto h-5 w-auto max-w-full object-contain opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0 sm:h-7"
               />
             ))}

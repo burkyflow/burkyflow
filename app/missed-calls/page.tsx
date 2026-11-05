@@ -118,7 +118,7 @@ export default function MissedCallsPage() {
                   Always-on call coverage
                 </p>
                 <h1 className="mt-6 text-4xl font-semibold leading-[1.05] sm:text-5xl md:text-6xl">
-                  Missed call recovery for small businesses: turn unanswered rings into booked jobs
+                  Missed call recovery for small businesses
                 </h1>
                 <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
                   BurkyFlow combines AI voice, reactivation, CRM, and workflow automation so every

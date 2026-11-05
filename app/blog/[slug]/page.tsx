@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const post = getPost(slug);
   if (!post) return pageMetadata({ title: "Not found", description: "", path: "/blog" });
   const meta = pageMetadata({
-    title: post.title,
+    title: post.seoTitle ?? post.title,
     description: post.excerpt,
     path: `/blog/${post.slug}`,
     image: { url: photoShare(postTopic(post).photo), alt: `Cover photo for ${post.title}` },

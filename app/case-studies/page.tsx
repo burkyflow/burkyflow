@@ -11,7 +11,7 @@ import { pageMetadata, breadcrumbLd } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 export const metadata = pageMetadata({
-  title: "Case Studies",
+  title: "Case Studies: AI Receptionist and CRM Results",
   description:
     "Live client deployments from BurkyFlow, AI voice receptionists, GoHighLevel automation, outbound AI, and unified operations systems shipping real results.",
   path: "/case-studies",
