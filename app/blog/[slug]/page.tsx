@@ -76,7 +76,7 @@ export default async function BlogPost({ params }: { params: Promise<Params> }) 
               {theme.label}
             </span>
             <span>
-              <time dateTime={post.date}>{fmt(post.date)}</time> &middot; {post.readMinutes} min read &middot; By <Link href="/about" className="text-brand underline">BurkyFlow</Link>
+              <time dateTime={post.date}>{fmt(post.date)}</time> &middot; {post.readMinutes} min read
               {post.modified !== post.date && <> &middot; Updated <time dateTime={post.modified}>{fmt(post.modified)}</time></>}
             </span>
           </p>
