@@ -32,6 +32,7 @@ export const postPhotos: Record<string, string> = {
   "n8n-3-0-breaking-changes-ai-agent-migration": "https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5",
   "scale-n8n-ai-agents-nodes-as-tools": "https://images.unsplash.com/photo-1646617747563-4f080bddf282",
   "n8n-mcp-server-trigger-claude-cursor": "https://images.unsplash.com/photo-1573164574472-797cdf4a583a",
+  "estimate-follow-up-crm-unanswered-quotes": "https://images.unsplash.com/photo-1742112125635-6f8201c6ee3f",
 };
 
 // New posts without their own photo rotate through their topic's set.

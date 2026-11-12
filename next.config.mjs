@@ -45,6 +45,12 @@ const nextConfig = {
         destination: "/bundles/service-business-core",
         permanent: true,
       },
+      // Unpublished Nov 12, 2026 post; its link was already shared on LinkedIn.
+      {
+        source: "/blog/automate-linkedin-lead-qualification-n8n-openai",
+        destination: "/blog/estimate-follow-up-crm-unanswered-quotes",
+        statusCode: 301,
+      },
     ];
   },
 };
