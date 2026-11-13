@@ -33,24 +33,43 @@ export const postPhotos: Record<string, string> = {
   "scale-n8n-ai-agents-nodes-as-tools": "https://images.unsplash.com/photo-1646617747563-4f080bddf282",
   "n8n-mcp-server-trigger-claude-cursor": "https://images.unsplash.com/photo-1573164574472-797cdf4a583a",
   "estimate-follow-up-crm-unanswered-quotes": "https://images.unsplash.com/photo-1742112125635-6f8201c6ee3f",
+  "pest-control-missed-calls-peak-season": "https://images.unsplash.com/photo-1581578017093-cd30fce4eeb7",
+  // Pinned from the topic sets so adding photos to a set never changes these covers.
+  "ai-receptionist-vs-answering-service": "https://images.unsplash.com/photo-1753164597612-5e71b83fda91",
+  "building-self-healing-n8n-workflows-ai-agents": "https://images.unsplash.com/photo-1545665277-5937489579f2",
+  "automate-gohighlevel-noshow-recovery-n8n": "https://images.unsplash.com/photo-1758519289074-9de36003622b",
+  "automated-lead-triage-n8n-voice-ai": "https://images.unsplash.com/photo-1758873272222-ccd8c4296864",
+  "automated-employee-onboarding-n8n-ai-notion": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
 };
 
-// New posts without their own photo rotate through their topic's set.
+// New posts without their own photo take the first photo in their topic's set that no
+// other post uses yet (see `postTopic` in components/BlogCard.tsx). Add photos here to
+// keep covers unique as the blog grows; the build log warns when a set runs out.
 export const topicPhotoPools: Record<"ai" | "calls" | "crm", string[]> = {
   ai: [
     "https://images.unsplash.com/photo-1655393001768-d946c97d6fd1",
     "https://images.unsplash.com/photo-1545665277-5937489579f2",
     "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    "https://images.unsplash.com/photo-1787839227786-17f3149942a5",
+    "https://images.unsplash.com/photo-1759752393975-7ca7b302fcc6",
+    "https://images.unsplash.com/photo-1781246435700-afec19012b45",
   ],
   calls: [
     "https://images.unsplash.com/photo-1758873272222-ccd8c4296864",
     "https://images.unsplash.com/photo-1663767117072-a97deef95956",
     "https://images.unsplash.com/photo-1753164597612-5e71b83fda91",
+    "https://images.unsplash.com/photo-1758873268528-af4613d099b6",
+    "https://images.unsplash.com/photo-1758611974917-f7f7a58b74b0",
+    "https://images.unsplash.com/photo-1758876018582-e7573baf5306",
+    "https://images.unsplash.com/photo-1758519288445-5847dd89f313",
   ],
   crm: [
     "https://images.unsplash.com/photo-1758519289074-9de36003622b",
     "https://images.unsplash.com/photo-1560250056-07ba64664864",
     "https://images.unsplash.com/photo-1527689368864-3a821dbccc34",
+    "https://images.unsplash.com/photo-1771054243991-e7b2d194ac96",
+    "https://images.unsplash.com/photo-1759143545924-beb85b33c0f1",
+    "https://images.unsplash.com/photo-1758874573286-c65c3d749a39",
   ],
 };
 

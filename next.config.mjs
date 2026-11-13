@@ -51,6 +51,12 @@ const nextConfig = {
         destination: "/blog/estimate-follow-up-crm-unanswered-quotes",
         statusCode: 301,
       },
+      // Unpublished Nov 13, 2026 post.
+      {
+        source: "/blog/automate-multi-channel-lead-sync-ai-qualification",
+        destination: "/blog/pest-control-missed-calls-peak-season",
+        statusCode: 301,
+      },
     ];
   },
 };

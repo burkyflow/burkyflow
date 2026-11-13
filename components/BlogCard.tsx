@@ -55,19 +55,44 @@ const subjectIcons: [RegExp, LucideIcon][] = [
   [/\bcrm\b|reactivat/, ContactRound],
 ];
 
+const postText = (post: Post) => `${post.title} ${post.slug} ${post.tags.join(" ")}`.toLowerCase();
+
+// A front matter `category` that exactly names a topic ("AI Agents & n8n", "Missed Calls",
+// "CRM & Reactivation") decides it; otherwise the topic is guessed from keywords.
+function topicKey(post: Post): TopicKey {
+  const named = Object.values(themes).find((t) => t.label === post.category);
+  if (named) return named.key;
+  const text = postText(post);
+  return /missed[- ]call|receptionist|\bphone\b|\bvoice\b/.test(text) ? "calls" : /\bcrm\b|reactivat|dormant/.test(text) ? "crm" : "ai";
+}
+
+// Covers are unique: oldest post first, each takes the first photo no older post uses from
+// its own `image`, its hand-picked photo, its topic's set, then the other topics' sets.
+// A new post therefore never repeats a cover or changes an older post's cover.
+const covers = (() => {
+  const chosen = new Map<string, string>();
+  const used = new Set<string>();
+  const oldestFirst = [...posts].sort((a, b) => (a.date === b.date ? a.slug.localeCompare(b.slug) : a.date < b.date ? -1 : 1));
+  for (const post of oldestFirst) {
+    const key = topicKey(post);
+    const otherSets = (Object.keys(topicPhotoPools) as TopicKey[]).filter((k) => k !== key).flatMap((k) => topicPhotoPools[k]);
+    const candidates = [post.image, postPhotos[post.slug], ...topicPhotoPools[key], ...otherSets].filter((p): p is string => Boolean(p));
+    let photo = candidates.find((p) => !used.has(p));
+    if (!photo) {
+      console.warn(`[blog] No unused cover photo left for "${post.slug}"; add photos to topicPhotoPools in content/photos.ts.`);
+      photo = candidates[0];
+    }
+    chosen.set(post.slug, photo);
+    used.add(photo);
+  }
+  return chosen;
+})();
+
 export function postTopic(post: Post) {
-  const text = `${post.title} ${post.slug} ${post.tags.join(" ")}`.toLowerCase();
-  const theme =
-    /missed[- ]call|receptionist|\bphone\b|\bvoice\b/.test(text)
-      ? themes.calls
-      : /\bcrm\b|reactivat|dormant/.test(text)
-        ? themes.crm
-        : themes.ai;
+  const theme = themes[topicKey(post)];
+  const text = postText(post);
   const icon = subjectIcons.find(([pattern]) => pattern.test(text))?.[1] ?? theme.fallback;
-  // Photo: the post's own, then a hand-picked one, then its topic's rotating set.
-  const pool = topicPhotoPools[theme.key];
-  const seed = [...post.slug].reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
-  const photo = post.image ?? postPhotos[post.slug] ?? pool[seed % pool.length];
+  const photo = covers.get(post.slug) ?? post.image ?? postPhotos[post.slug] ?? topicPhotoPools[theme.key][0];
   return { theme, icon, photo };
 }
 

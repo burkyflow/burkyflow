@@ -16,6 +16,7 @@ export type Post = {
   tags: string[]; // free-form front matter tags, used for the card's topic and cover
   image?: string; // optional cover photo URL from front matter (`image` or `cover`)
   seoTitle?: string; // optional short search-result title; the page heading stays `title`
+  category?: string; // front matter `category`; picks the blog topic when it names one exactly
   html: string; // rendered Markdown body
 };
 
@@ -85,7 +86,9 @@ function loadPosts(): Post[] {
 
     const seoTitle = typeof data.seoTitle === "string" && data.seoTitle.trim() ? data.seoTitle.trim() : undefined;
 
-    const post = { slug, title, excerpt, date, modified, readMinutes, tags, image, seoTitle, html };
+    const category = typeof data.category === "string" && data.category.trim() ? data.category.trim() : undefined;
+
+    const post = { slug, title, excerpt, date, modified, readMinutes, tags, image, seoTitle, category, html };
     const existing = bySlug.get(slug);
     if (!existing || existing.modified < post.modified) bySlug.set(slug, post);
   }
