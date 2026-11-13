@@ -33,7 +33,7 @@ export const postPhotos: Record<string, string> = {
   "scale-n8n-ai-agents-nodes-as-tools": "https://images.unsplash.com/photo-1646617747563-4f080bddf282",
   "n8n-mcp-server-trigger-claude-cursor": "https://images.unsplash.com/photo-1573164574472-797cdf4a583a",
   "estimate-follow-up-crm-unanswered-quotes": "https://images.unsplash.com/photo-1742112125635-6f8201c6ee3f",
-  "pest-control-missed-calls-peak-season": "https://images.unsplash.com/photo-1581578017093-cd30fce4eeb7",
+  "get-recommended-by-chatgpt-google-ai-overviews": "https://images.unsplash.com/photo-1745674684408-59f9def201d2",
   // Pinned from the topic sets so adding photos to a set never changes these covers.
   "ai-receptionist-vs-answering-service": "https://images.unsplash.com/photo-1753164597612-5e71b83fda91",
   "building-self-healing-n8n-workflows-ai-agents": "https://images.unsplash.com/photo-1545665277-5937489579f2",
@@ -45,7 +45,7 @@ export const postPhotos: Record<string, string> = {
 // New posts without their own photo take the first photo in their topic's set that no
 // other post uses yet (see `postTopic` in components/BlogCard.tsx). Add photos here to
 // keep covers unique as the blog grows; the build log warns when a set runs out.
-export const topicPhotoPools: Record<"ai" | "calls" | "crm", string[]> = {
+export const topicPhotoPools: Record<"ai" | "calls" | "crm" | "search", string[]> = {
   ai: [
     "https://images.unsplash.com/photo-1655393001768-d946c97d6fd1",
     "https://images.unsplash.com/photo-1545665277-5937489579f2",
@@ -70,6 +70,11 @@ export const topicPhotoPools: Record<"ai" | "calls" | "crm", string[]> = {
     "https://images.unsplash.com/photo-1771054243991-e7b2d194ac96",
     "https://images.unsplash.com/photo-1759143545924-beb85b33c0f1",
     "https://images.unsplash.com/photo-1758874573286-c65c3d749a39",
+  ],
+  search: [
+    "https://images.unsplash.com/photo-1745674684539-d90293d659a9",
+    "https://images.unsplash.com/photo-1559989899-f0743fa80152",
+    "https://images.unsplash.com/photo-1682941664177-7920d0e59418",
   ],
 };
 

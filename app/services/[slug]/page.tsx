@@ -43,7 +43,7 @@ const serviceTopics: Record<string, TopicKey[]> = {
   "database-reactivation": ["crm"],
   "crm-lead-systems": ["crm", "calls"],
   "workflow-automation": ["ai"],
-  "answer-engine-optimization": ["ai"],
+  "answer-engine-optimization": ["search"],
   "done-for-you": ["calls", "crm", "ai"],
 };
 

@@ -51,10 +51,15 @@ const nextConfig = {
         destination: "/blog/estimate-follow-up-crm-unanswered-quotes",
         statusCode: 301,
       },
-      // Unpublished Nov 13, 2026 post.
+      // Unpublished Nov 13, 2026 posts; both now point at the post that replaced them.
       {
         source: "/blog/automate-multi-channel-lead-sync-ai-qualification",
-        destination: "/blog/pest-control-missed-calls-peak-season",
+        destination: "/blog/get-recommended-by-chatgpt-google-ai-overviews",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/pest-control-missed-calls-peak-season",
+        destination: "/blog/get-recommended-by-chatgpt-google-ai-overviews",
         statusCode: 301,
       },
     ];

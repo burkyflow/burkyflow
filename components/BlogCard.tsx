@@ -7,13 +7,16 @@ import {
   CalendarCheck,
   ContactRound,
   DatabaseZap,
+  MapPin,
   MessageSquare,
   PhoneCall,
   PhoneMissed,
   Plug,
   Radar,
+  Search,
   Shuffle,
   Sparkles,
+  Star,
   TriangleAlert,
   Users,
   Workflow,
@@ -25,7 +28,7 @@ import { posts, type Post } from "@/content/blog";
 import { CoverArt, type CoverTone } from "@/components/CoverArt";
 import { postPhotos, topicPhotoPools } from "@/content/photos";
 
-export type TopicKey = "ai" | "calls" | "crm";
+export type TopicKey = "ai" | "calls" | "crm" | "search";
 
 type Theme = {
   key: TopicKey;
@@ -40,6 +43,8 @@ export const themes: Record<TopicKey, Theme> = {
   ai: { key: "ai", label: "AI Agents & n8n", tone: "blue", pill: "bg-brand", fallback: Bot, satellites: [Sparkles, Workflow] },
   calls: { key: "calls", label: "Missed Calls", tone: "peach", pill: "bg-accent", fallback: PhoneCall, satellites: [PhoneCall, CalendarCheck] },
   crm: { key: "crm", label: "CRM & Reactivation", tone: "green", pill: "bg-emerald-600", fallback: DatabaseZap, satellites: [Users, MessageSquare] },
+  // Category-only topic: posts join it by setting `category: "Search Visibility"`.
+  search: { key: "search", label: "Search Visibility", tone: "violet", pill: "bg-violet-600", fallback: Search, satellites: [MapPin, Star] },
 };
 
 // The main icon follows the post's subject; the first match wins.
@@ -58,7 +63,8 @@ const subjectIcons: [RegExp, LucideIcon][] = [
 const postText = (post: Post) => `${post.title} ${post.slug} ${post.tags.join(" ")}`.toLowerCase();
 
 // A front matter `category` that exactly names a topic ("AI Agents & n8n", "Missed Calls",
-// "CRM & Reactivation") decides it; otherwise the topic is guessed from keywords.
+// "CRM & Reactivation", "Search Visibility") decides it; otherwise the topic is guessed
+// from keywords.
 function topicKey(post: Post): TopicKey {
   const named = Object.values(themes).find((t) => t.label === post.category);
   if (named) return named.key;
@@ -101,6 +107,7 @@ export const topicService: Record<TopicKey, { href: string; name: string }> = {
   ai: { href: "/services/workflow-automation", name: "Workflow Automation" },
   calls: { href: "/services/ai-voice-receptionist", name: "AI Voice Receptionist" },
   crm: { href: "/services/database-reactivation", name: "Database Reactivation" },
+  search: { href: "/services/answer-engine-optimization", name: "Answer Engine Optimization" },
 };
 
 // Newest posts on the given topics, in topic order; optionally topped up with other posts.
