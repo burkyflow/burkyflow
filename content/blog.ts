@@ -97,7 +97,11 @@ function loadPosts(): Post[] {
   return [...bySlug.values()].sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export const posts: Post[] = loadPosts();
+// Blogs dated after today are not published yet: they stay out of the list, the
+// sitemap, and the page until a build runs on or after their date. The daily
+// blog automation's commit triggers that build.
+const today = new Date().toISOString().slice(0, 10);
+export const posts: Post[] = loadPosts().filter((p) => p.date <= today);
 
 export function getPost(slug: string) {
   return posts.find((p) => p.slug === slug);

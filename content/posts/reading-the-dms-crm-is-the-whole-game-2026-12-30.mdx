@@ -1,0 +1,69 @@
+---
+title: "Reading the DMS and CRM Is the Whole Game: Why Data Access Decides Automation Results"
+seoTitle: "DMS and CRM Integration Decides Automation Results"
+date: 2026-12-30
+description: "Every dealership automation depends on one thing: whether the system can read the DMS and CRM. Without that access, triggers are guesses. What data to pull, how integration actually works, and what to ask a vendor."
+keywords: ["DMS integration", "dealership CRM integration", "DMS data access", "automotive data integration", "CRM DMS sync", "dealership automation data"]
+tags: ["Integration", "DMS", "System Design"]
+slug: "reading-the-dms-crm-is-the-whole-game"
+category: "CRM & Reactivation"
+---
+
+Dealership automation vendors talk about AI, messaging, and dashboards. The part that decides whether any of it works is less exciting: can the system read the dealer management system and the CRM? Every trigger worth firing, warranty end, equity crossover, declined repair, lease maturity, lives in that data. If the automation cannot see it, it is guessing, and guessing produces generic campaigns that customers ignore.
+
+## What the data actually contains
+
+The DMS holds the facts:
+
+- **Sales records.** Vehicle, deal date, financing terms, products sold and declined.
+- **Service records.** Repair orders, recommended and declined work, mileage at each visit.
+- **Customer records.** Contact details, consent flags, household vehicles.
+- **Inventory.** What is on the lot, what is in demand.
+
+The CRM holds the relationship: every lead, call, message, appointment, and outcome. The loan servicing system, where separate, holds payoff balances and payment history.
+
+A trigger like "customer has positive equity, a high rate, and is due for service" needs all three. No single export gives it to you.
+
+## How integration really works
+
+There is a range of access, and vendors are not always clear about which one they offer:
+
+1. **Certified DMS integration.** Direct, two-way access through the DMS provider's program. Reliable, current, and usually the most expensive.
+2. **Scheduled exports.** Nightly files from the DMS to the automation platform. Fine for most lifecycle triggers; a day old is acceptable when the trigger is a warranty ending next month.
+3. **CRM-only.** The automation reads the CRM but not the DMS. It can work leads but cannot see service history or deal details unless someone types them in.
+4. **Manual uploads.** Someone exports a spreadsheet monthly. Works for a pilot, fails in production.
+
+Match the access level to the triggers you need. Equity and lifecycle triggers need DMS data at least nightly. Lead routing can run on the CRM alone.
+
+## The fields that matter most
+
+Ask for these first; everything else can wait:
+
+- In-service date, warranty terms, and mileage at last visit
+- Deal date, amount financed, rate, term, and products sold or declined
+- Repair orders with recommended work and declined flags
+- Lease maturity date and mileage allowance
+- Consent status for text, email, and phone
+- Last contact date and outcome
+
+With those, you can build the whole trigger library described across this series.
+
+## Writing back
+
+Reading is half the job. The automation should also write back: the message sent, the reply, the appointment, the outcome. Otherwise the DMS and CRM slowly diverge from reality, and the next person who looks at the customer record sees nothing of what happened. A [CRM and lead system built for this](/services/crm-lead-systems) treats the DMS as the source of truth for vehicles and deals, and itself as the source of truth for conversations, and keeps the two in sync.
+
+## Questions to ask any vendor
+
+- Which DMS providers do you integrate with, and at what level?
+- How often does data refresh?
+- Which fields can you read, and which can you write?
+- What happens when the DMS changes a record after you have acted on it?
+- Where does consent live, and how do you honor an opt-out recorded in the DMS?
+
+Vague answers to these mean the triggers will be vague too.
+
+## The home-services parallel
+
+Field service platforms are the DMS of an HVAC or plumbing company. The same questions apply: can the automation read equipment records, job history, and declined estimates, and can it write back the outreach and the booking? Integration decides results there as well.
+
+See how we connect DMS, CRM, and loan data for [auto finance](/industries/auto-finance) and [dealership service](/industries/automotive) businesses, or [book a call](/contact) to review which fields your systems can expose today.

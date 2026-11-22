@@ -45,7 +45,7 @@ export const postPhotos: Record<string, string> = {
 // New posts without their own photo take the first photo in their topic's set that no
 // other post uses yet (see `postTopic` in components/BlogCard.tsx). Add photos here to
 // keep covers unique as the blog grows; the build log warns when a set runs out.
-export const topicPhotoPools: Record<"ai" | "calls" | "crm" | "search", string[]> = {
+export const topicPhotoPools: Record<"ai" | "calls" | "crm" | "search" | "auto", string[]> = {
   ai: [
     "https://images.unsplash.com/photo-1655393001768-d946c97d6fd1",
     "https://images.unsplash.com/photo-1545665277-5937489579f2",
@@ -70,6 +70,39 @@ export const topicPhotoPools: Record<"ai" | "calls" | "crm" | "search", string[]
     "https://images.unsplash.com/photo-1771054243991-e7b2d194ac96",
     "https://images.unsplash.com/photo-1759143545924-beb85b33c0f1",
     "https://images.unsplash.com/photo-1758874573286-c65c3d749a39",
+  ],
+  // Dealership and Auto Finance series: showroom, service bay, finance desk.
+  auto: [
+    "https://images.unsplash.com/photo-1615563868638-98253a7dc33b",
+    "https://images.unsplash.com/photo-1676831571161-99f46de9fd21",
+    "https://images.unsplash.com/photo-1792792963003-e45290c28443",
+    "https://images.unsplash.com/photo-1599474151975-1f978922fa02",
+    "https://images.unsplash.com/photo-1791508725103-c0c3c4185721",
+    "https://images.unsplash.com/photo-1771979788419-84487b12e3a0",
+    "https://images.unsplash.com/photo-1681505504714-4ded1bc247e7",
+    "https://images.unsplash.com/photo-1775163024488-e88e4a71179f",
+    "https://images.unsplash.com/photo-1642909780742-2c5a8711ab00",
+    "https://images.unsplash.com/photo-1562003596-a5827707367d",
+    "https://images.unsplash.com/photo-1772440503427-fe71cec89d9b",
+    "https://images.unsplash.com/photo-1621929747188-0b4dc28498d2",
+    "https://images.unsplash.com/photo-1623682783900-fea916dcba74",
+    "https://images.unsplash.com/photo-1700727448575-6f1680cd7d75",
+    "https://images.unsplash.com/photo-1780643828897-38d8da4887d2",
+    "https://images.unsplash.com/photo-1516906158245-7fafb29df119",
+    "https://images.unsplash.com/photo-1792799881226-e841c0f9c125",
+    "https://images.unsplash.com/photo-1705579605238-24a90c8799c5",
+    "https://images.unsplash.com/photo-1664575198263-269a022d6e14",
+    "https://images.unsplash.com/photo-1681826291722-70bd7e9e6fc3",
+    "https://images.unsplash.com/photo-1664463760781-f159dfe3af30",
+    "https://images.unsplash.com/photo-1759197761283-882699970b3d",
+    "https://images.unsplash.com/photo-1657524241529-dc4835de4049",
+    "https://images.unsplash.com/photo-1794208710074-d19d018dd0d1",
+    "https://images.unsplash.com/photo-1620707044570-c0dc1576bedd",
+    "https://images.unsplash.com/photo-1759419281480-bacc913c9606",
+    "https://images.unsplash.com/photo-1707902665498-a202981fb5ac",
+    "https://images.unsplash.com/photo-1621905251189-08b45d6a269e",
+    "https://images.unsplash.com/photo-1766066014237-00645c74e9c6",
+    "https://images.unsplash.com/photo-1630406144797-821be1f35d75",
   ],
   search: [
     "https://images.unsplash.com/photo-1745674684539-d90293d659a9",

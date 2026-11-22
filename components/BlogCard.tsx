@@ -5,6 +5,8 @@ import {
   Bot,
   Braces,
   CalendarCheck,
+  CarFront,
+  HandCoins,
   ContactRound,
   DatabaseZap,
   MapPin,
@@ -28,7 +30,7 @@ import { posts, type Post } from "@/content/blog";
 import { CoverArt, type CoverTone } from "@/components/CoverArt";
 import { postPhotos, topicPhotoPools } from "@/content/photos";
 
-export type TopicKey = "ai" | "calls" | "crm" | "search";
+export type TopicKey = "ai" | "calls" | "crm" | "search" | "auto";
 
 type Theme = {
   key: TopicKey;
@@ -45,6 +47,8 @@ export const themes: Record<TopicKey, Theme> = {
   crm: { key: "crm", label: "CRM & Reactivation", tone: "green", pill: "bg-emerald-600", fallback: DatabaseZap, satellites: [Users, MessageSquare] },
   // Category-only topic: posts join it by setting `category: "Search Visibility"`.
   search: { key: "search", label: "Search Visibility", tone: "violet", pill: "bg-violet-600", fallback: Search, satellites: [MapPin, Star] },
+  // Category-only topic for the dealership / F&I series: `category: "Dealership and Auto Finance"`.
+  auto: { key: "auto", label: "Dealership and Auto Finance", tone: "amber", pill: "bg-amber-600", fallback: CarFront, satellites: [HandCoins, Wrench] },
 };
 
 // The main icon follows the post's subject; the first match wins.
@@ -108,6 +112,7 @@ export const topicService: Record<TopicKey, { href: string; name: string }> = {
   calls: { href: "/services/ai-voice-receptionist", name: "AI Voice Receptionist" },
   crm: { href: "/services/database-reactivation", name: "Database Reactivation" },
   search: { href: "/services/answer-engine-optimization", name: "Answer Engine Optimization" },
+  auto: { href: "/industries/auto-finance", name: "AI Automation for Auto Finance" },
 };
 
 // Newest posts on the given topics, in topic order; optionally topped up with other posts.
