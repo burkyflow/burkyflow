@@ -24,10 +24,11 @@ For example, 40 qualified missed inquiries, a hypothetical 25% recovery-to-booki
 
 1. Review call logs and establish your answer rate, booking rate, and response time.
 2. Decide whether the AI handles overflow, after-hours calls, or a dedicated line.
-3. Define qualification questions, service areas, calendar availability, and human handoff rules.
-4. Connect summaries and bookings to your [CRM and lead pipeline](/services/crm-lead-systems).
-5. Test urgent calls, unavailable slots, and out-of-scope requests before launch.
-6. Review completed bookings and call quality, then adjust the rules.
+3. Turn on missed call text back, so any caller who still reaches voicemail gets a text within seconds offering to book.
+4. Define qualification questions, service areas, calendar availability, and human handoff rules.
+5. Connect summaries and bookings to your [CRM and lead pipeline](/services/crm-lead-systems).
+6. Test urgent calls, unavailable slots, and out-of-scope requests before launch.
+7. Review completed bookings and call quality, then adjust the rules.
 
 ## Does AI call answering replace the front desk?
 

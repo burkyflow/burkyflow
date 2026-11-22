@@ -1,5 +1,6 @@
 ---
 title: "AI receptionist vs. answering service: how to choose"
+seoTitle: "AI Receptionist vs Answering Service"
 slug: "ai-receptionist-vs-answering-service"
 metaDescription: "Compare an AI receptionist with a live answering service: what each handles well, where each falls short, how pricing works, and when a mix of both makes sense."
 date: "2026-11-01"

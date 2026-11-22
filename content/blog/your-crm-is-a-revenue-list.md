@@ -1,5 +1,6 @@
 ---
 title: "Your CRM is a revenue list you forgot to use"
+seoTitle: "Old Leads in Your CRM Are a Revenue List"
 slug: "your-crm-is-a-revenue-list"
 metaDescription: "Learn how CRM database reactivation works: segment eligible contacts, send relevant reminders, handle replies, and measure completed bookings."
 date: "2026-10-26"
