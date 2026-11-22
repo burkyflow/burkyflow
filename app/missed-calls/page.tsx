@@ -287,6 +287,34 @@ export default function MissedCallsPage() {
         </div>
       </section>
 
+      {/* Plain-language explainer, written around the phrases owners search for */}
+      <section id="system" className="section bg-surface">
+        <div className="container-page mx-auto max-w-3xl">
+          <p className="eyebrow">How it fits together</p>
+          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+            A missed call recovery system for small businesses
+          </h2>
+          <div className="mt-6 space-y-4 text-lg text-muted-foreground">
+            <p>
+              Missed call recovery for a small business is not one tool. It is a short chain: answer the call,
+              text back anyone who slipped through, follow up until they book, and write every step into the CRM
+              so nothing depends on memory.
+            </p>
+            <p>
+              <span className="font-semibold text-foreground">Missed call text back</span> is the simplest piece and
+              the fastest to switch on. Any caller who reaches voicemail gets a text within seconds: who you are,
+              that you saw the call, and a link or a reply option to book. Most callers who were about to dial the
+              next business reply instead.
+            </p>
+            <p>
+              The AI receptionist removes most missed calls in the first place, the text-back catches the rest, and
+              the follow-up automation keeps working the lead for days. Each piece is useful alone; together they
+              are a system, and the system is what recovers the revenue.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="proof" className="section bg-surface">
         <div className="container-page">
           <div className="mx-auto max-w-3xl text-center">
