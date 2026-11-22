@@ -61,7 +61,18 @@ def internal(href, current):
 def main():
     status,xml,_=fetch("/sitemap.xml")
     if status != 200: raise SystemExit("Sitemap unavailable: "+xml)
-    paths={urllib.parse.urlsplit(n.text).path or "/" for n in ET.fromstring(xml).iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")}
+    NS="{http://www.sitemaps.org/schemas/sitemap/0.9}"
+    root=ET.fromstring(xml)
+    # A sitemap index points at section sitemaps; collect every page URL from all of them.
+    if root.tag == NS+"sitemapindex":
+        locs=[]
+        for n in root.iter(NS+"loc"):
+            st,child,_=fetch(urllib.parse.urlsplit(n.text).path)
+            if st != 200: raise SystemExit("Child sitemap unavailable: "+n.text)
+            locs+=[c.text for c in ET.fromstring(child).iter(NS+"loc")]
+    else:
+        locs=[n.text for n in root.iter(NS+"loc")]
+    paths={urllib.parse.urlsplit(l).path or "/" for l in locs}
     errors=[]; pages={}; assets=set(); anchors=[]; external=set()
     paid={f"/for/{industry}" for industry in ("home-services", "healthcare", "real-estate", "automotive", "professional-firms")}
     aliases={f"/lp/{city}/{niche}" for niche,city in (("hvac","houston"),("plumbing","san-antonio"),("real-estate","charleston"),("dental","greenville"),("roofing","houston"))}

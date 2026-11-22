@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/lastmod.mjs",
     "build": "next build",
+    "lastmod": "node scripts/lastmod.mjs",
     "start": "next start",
     "lint": "eslint ."
   },
@@ -17,7 +19,7 @@
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.417.0",
     "marked": "^18.0.9",
-    "next": "^16.4.2",
+    "next": "^16.4.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.4.0",
