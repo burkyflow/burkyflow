@@ -45,7 +45,7 @@ export const postPhotos: Record<string, string> = {
 // New posts without their own photo take the first photo in their topic's set that no
 // other post uses yet (see `postTopic` in components/BlogCard.tsx). Add photos here to
 // keep covers unique as the blog grows; the build log warns when a set runs out.
-export const topicPhotoPools: Record<"ai" | "calls" | "crm" | "search", string[]> = {
+export const topicPhotoPools: Record<"ai" | "calls" | "crm" | "search" | "auto", string[]> = {
   ai: [
     "https://images.unsplash.com/photo-1655393001768-d946c97d6fd1",
     "https://images.unsplash.com/photo-1545665277-5937489579f2",
@@ -71,6 +71,8 @@ export const topicPhotoPools: Record<"ai" | "calls" | "crm" | "search", string[]
     "https://images.unsplash.com/photo-1759143545924-beb85b33c0f1",
     "https://images.unsplash.com/photo-1758874573286-c65c3d749a39",
   ],
+  // Dealership and Auto Finance series: showroom, service bay, finance desk.
+  auto: [],
   search: [
     "https://images.unsplash.com/photo-1745674684539-d90293d659a9",
     "https://images.unsplash.com/photo-1559989899-f0743fa80152",
