@@ -9,6 +9,8 @@ export const metadata = pageMetadata({
   description: "Practical guides on AI call answering, missed-call recovery, and CRM follow-up for service businesses, from the BurkyFlow team.",
   path: "/blog",
 });
+// Advertise the RSS feed to browsers, readers and crawlers.
+metadata.alternates = { ...metadata.alternates, types: { "application/rss+xml": "/blog/feed.xml" } };
 
 export default function BlogIndex() {
   const items = posts.map((post) => ({ slug: post.slug, topic: postTopic(post).theme.key, card: <BlogCard post={post} /> }));

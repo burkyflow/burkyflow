@@ -235,6 +235,44 @@ export default async function IndustryDetail({ params }: { params: Promise<Param
         );
       })()}
 
+      {/* Trade-by-trade breakdown, for industries that span several trades */}
+      {industry.trades && industry.trades.length > 0 && (
+        <section className="section bg-surface">
+          <div className="container-page">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow">By trade</p>
+              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">How it works in each trade</h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                The mechanics are shared. The call patterns, the triggers, and the follow-up are set up for your trade.
+              </p>
+            </div>
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {industry.trades.map((t) => (
+                <Card key={t.name} className="flex h-full flex-col">
+                  <CardHeader>
+                    <CardTitle className="text-xl">{t.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex flex-1 flex-col gap-4 text-sm">
+                    <div>
+                      <p className="font-semibold text-foreground">The calls</p>
+                      <p className="mt-1 text-muted-foreground">{t.calls}</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">What we automate</p>
+                      <p className="mt-1 text-muted-foreground">{t.automate}</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">The trigger</p>
+                      <p className="mt-1 text-muted-foreground">{t.trigger}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <RelatedPosts heading="Guides on calls and follow-up" items={relatedPosts(["calls", "crm"])} className="pt-0 md:pt-0" />
 
       {/* FAQ */}

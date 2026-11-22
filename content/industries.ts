@@ -5,6 +5,8 @@ export type Industry = {
   slug: string;
   name: string;
   seoTitle?: string; // search-result title, if the name alone is too short
+  /** Optional trade-by-trade breakdown, for industries that span several trades. */
+  trades?: { name: string; calls: string; automate: string; trigger: string }[];
   h1: string;
   lead: string;
   intro: string[];
@@ -22,6 +24,7 @@ export const industries: Industry[] = [
   {
     slug: "home-services",
     name: "Home and Property Services",
+    seoTitle: "AI Automation for HVAC, Plumbing, Roofing and Home Services",
     h1: "AI automation for home and property service businesses",
     lead: "HVAC, plumbing, roofing, and lawn care live and die by who answers first and who follows up. We make sure that is always you.",
     intro: [
@@ -57,6 +60,44 @@ export const industries: Industry[] = [
       },
     ],
     geoNiches: ["hvac", "plumbing", "roofing"],
+    trades: [
+      {
+        name: "HVAC",
+        calls: "No-heat and no-cool calls cluster in the first cold snap and the first heat wave, mostly outside office hours. Tune-up season is predictable months in advance.",
+        automate: "After-hours answering that books emergency calls against the on-call schedule, seasonal tune-up reminders to the install base, and maintenance plan offers at job completion.",
+        trigger: "System age and install date: filters, tune-ups, warranty end, and the repair-versus-replace conversation at the right year.",
+      },
+      {
+        name: "Plumbing",
+        calls: "Burst pipes, blocked drains, and water heater failures are same-day jobs. The caller hires whoever answers first, and voicemail loses the job.",
+        automate: "Instant answer and urgency detection, dispatch-board booking with the call summary attached, and text follow-up on quoted work that was not approved on the spot.",
+        trigger: "Declined estimates and water heater age: a repair quote that was not approved gets one follow-up with a monthly payment option.",
+      },
+      {
+        name: "Electrical",
+        calls: "Panel upgrades, EV charger installs, and safety inspections are planned work with quotes that sit for weeks. Emergency calls are rarer but urgent.",
+        automate: "Quote follow-up sequences that reopen stalled estimates, booking for inspections, and reminders tied to permit and inspection dates.",
+        trigger: "Open quotes older than seven days, and homes with an EV or solar install that have not been offered a panel review.",
+      },
+      {
+        name: "Roofing",
+        calls: "Storm damage produces hundreds of calls in a day, then silence for weeks. Insurance claims add paperwork and long follow-up chains.",
+        automate: "Overflow answering during storm surges, inspection booking, and automated status updates through the claim and build process.",
+        trigger: "Storm events by zip code, inspection reports without a signed contract, and roofs past the age where an inspection is worth offering.",
+      },
+      {
+        name: "Construction and remodeling",
+        calls: "Leads arrive as estimate requests with a long decision cycle. Proposals take hours to write and days to chase.",
+        automate: "Lead qualification before the site visit, proposal follow-up on a schedule, and progress updates to the client during the build.",
+        trigger: "Proposal sent without a reply, and completed projects reaching the point where a related project (deck, kitchen, addition) is usually considered.",
+      },
+      {
+        name: "Landscaping and lawn care",
+        calls: "Spring brings a rush of new-service calls; the rest of the year is recurring visits and seasonal add-ons.",
+        automate: "Seasonal reactivation of past customers, recurring-service scheduling and reminders, and upsell offers for cleanups, aeration, and irrigation.",
+        trigger: "Season changes and last-service date: a customer who had a spring cleanup gets the fall offer without anyone remembering.",
+      },
+    ],
     stat: { value: "2 sec", label: "average answer time at Troy Plumbing, down from 45 seconds" },
     faqs: [
       {
@@ -70,6 +111,14 @@ export const industries: Industry[] = [
       {
         q: "Will bookings reach my dispatch board?",
         a: "Yes. Qualified jobs are written into your scheduler or dispatch board with the call summary attached, so your team has full context.",
+      },
+      {
+        q: "Which home service trades do you work with?",
+        a: "HVAC, plumbing, electrical, roofing, construction and remodeling, and landscaping, among others. The call patterns differ by trade, so the answering rules, the reminders, and the follow-up triggers are set up for how your trade actually runs.",
+      },
+      {
+        q: "Do you integrate with field service software?",
+        a: "Yes. Bookings, call summaries, and follow-up outcomes are written into the scheduler or field service platform you already use, and the triggers read job history and equipment records from it.",
       },
       {
         q: "Do you work with seasonal demand spikes?",
