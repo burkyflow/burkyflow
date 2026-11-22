@@ -36,6 +36,51 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/bundles/dental-medspa",
+        destination: "/bundles/healthcare",
+        permanent: true,
+      },
+      {
+        source: "/bundles/law-firms",
+        destination: "/bundles/professional-firms",
+        permanent: true,
+      },
+      {
+        source: "/bundles/full-stack-plus-reactivation",
+        destination: "/bundles/full-stack-burkyflow",
+        permanent: true,
+      },
+      {
+        source: "/bundles/full-stack-plus-brand",
+        destination: "/bundles/full-stack-burkyflow",
+        permanent: true,
+      },
+      {
+        source: "/bundles/brand-and-demand",
+        destination: "/bundles",
+        permanent: true,
+      },
+      {
+        source: "/bundles/founder-persona-stack",
+        destination: "/bundles",
+        permanent: true,
+      },
+      {
+        source: "/bundles/b2b-saas",
+        destination: "/bundles",
+        permanent: true,
+      },
+      {
+        source: "/bundles/agencies-white-label",
+        destination: "/bundles",
+        permanent: true,
+      },
+      {
+        source: "/bundles/ecommerce-shopify",
+        destination: "/bundles",
+        permanent: true,
+      },
+      {
         source: "/bundles/full-stack-unitzero",
         destination: "/bundles/full-stack-burkyflow",
         permanent: true,

@@ -23,7 +23,7 @@ export function pageMetadata({
     url: image?.url ?? "/images/og.jpg",
     width: 1200,
     height: 630,
-    alt: image?.alt ?? `${site.name}: AI voice receptionists and CRM automation for service businesses`,
+    alt: image?.alt ?? `${site.name}: AI receptionists and CRM automation for service businesses`,
   };
   return {
     title: { absolute: path === "/" ? title : `${title} | ${site.name}` },

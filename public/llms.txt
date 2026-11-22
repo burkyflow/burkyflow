@@ -1,11 +1,11 @@
  # BurkyFlow
 
-> AI automation agency for service businesses. We build and run AI voice receptionists, database reactivation, CRM and lead systems, workflow automation, and answer engine optimization, so businesses capture every call and turn dormant leads into booked revenue.
+> AI automation agency for service businesses. We build and run AI receptionists, database reactivation, CRM and lead systems, workflow automation, and answer engine optimization, so businesses capture every call and turn dormant leads into booked revenue.
 
 BurkyFlow serves clients remotely across the United States, with focus metros in Houston TX, San Antonio TX, Charleston SC, and Greenville SC. We are an AI automation agency, not a local business in those cities.
 
 ## Services
- - [AI Voice Receptionist](https://www.burkyflow.com/services/ai-voice-receptionist): Answers every call, qualifies, and books, day or night.
+ - [AI Receptionist](https://www.burkyflow.com/services/ai-voice-receptionist): Answers every call, qualifies, and books, day or night.
  - [Database Reactivation](https://www.burkyflow.com/services/database-reactivation): Re-engage past customers and dead leads already in your CRM.
  - [CRM and Lead Systems](https://www.burkyflow.com/services/crm-lead-systems): One pipeline that captures, routes, and follows up automatically.
  - [Workflow Automation](https://www.burkyflow.com/services/workflow-automation): Connect your tools into reliable automated workflows.

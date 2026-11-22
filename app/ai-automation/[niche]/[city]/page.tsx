@@ -44,7 +44,7 @@ export default async function GeoPage({ params }: { params: Promise<Params> }) {
         data={[
           serviceLd({
             serviceName: `AI Automation for ${niche.name} Businesses in ${city.name}`,
-            description: `AI voice receptionist, database reactivation, and after-hours call capture for ${city.name} ${niche.plural}.`,
+            description: `AI receptionist, database reactivation, and after-hours call capture for ${city.name} ${niche.plural}.`,
             cityName: city.name,
             state: city.state,
             url,

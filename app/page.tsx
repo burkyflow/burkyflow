@@ -18,8 +18,8 @@ import { pageMetadata, faqPageLd, serviceItemListLd, localBusinessLd } from "@/l
 import { JsonLd } from "@/components/JsonLd";
 
 export const metadata = pageMetadata({
-  title: "AI Voice Receptionist & CRM Automation Services | BurkyFlow",
-  description: "Capture missed calls and reactivate dormant leads with BurkyFlow's AI voice receptionist, CRM automation, and managed revenue operations for service businesses.",
+  title: "AI Receptionist & CRM Automation Services | BurkyFlow",
+  description: "Capture missed calls and reactivate dormant leads with BurkyFlow's AI receptionist, CRM automation, and managed revenue operations for service businesses.",
   path: "/",
 });
 

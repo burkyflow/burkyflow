@@ -69,4 +69,4 @@ Many businesses do not need to pick one. A common setup is to let the AI recepti
 
 Your answers will usually point clearly to one option or a mix of both.
 
-If you want help working through them, see how our [AI voice receptionist](/services/ai-voice-receptionist) works or [book a call](/contact) and we will look at your call setup with you.
+If you want help working through them, see how our [AI receptionist](/services/ai-voice-receptionist) works or [book a call](/contact) and we will look at your call setup with you.

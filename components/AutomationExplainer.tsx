@@ -7,7 +7,7 @@ type Item = { icon: LucideIcon; title: string; body: string; cta: string; href: 
 const items: Item[] = [
   {
     icon: PhoneCall,
-    title: "AI voice receptionist",
+    title: "AI receptionist",
     body: "Answers calls, gathers service details, follows booking rules, and escalates calls that need a person.",
     cta: "Explore AI call answering",
     href: "/services/ai-voice-receptionist",
@@ -40,7 +40,7 @@ export function AutomationExplainer() {
             id="automation-overview"
             className="mt-3 text-3xl font-bold leading-tight tracking-tight sm:text-4xl"
           >
-            How do AI voice receptionists help service businesses?
+            How do AI receptionists help service businesses?
           </h2>
           <p className="mt-5 text-lg text-muted-foreground">
             AI automation connects call answering, lead follow-up, scheduling, and CRM updates.

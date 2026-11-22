@@ -75,7 +75,7 @@ export const wedges: Wedge[] = [
       "Paid leads go cold fast when nobody answers or booking is clumsy. We close that leak with an AI voice and a booking page built behind the ad, starting with a 14-day pilot against a target you set.",
     pitchLong: [
       "Ads agencies fill the top of the funnel and then walk away. The leak is below the ad, leads come in, the front desk can't answer fast enough, the booking flow is broken, and much of that paid traffic is lost before it becomes a consult.",
-      "We run the ads, build the funnel, and put the AI voice receptionist on the inbound number so every lead is answered, qualified, and booked. It starts as a 14-day pilot with a defined target, consults, inspections, or installs, so you can measure the difference before committing.",
+      "We run the ads, build the funnel, and put the AI receptionist on the inbound number so every lead is answered, qualified, and booked. It starts as a 14-day pilot with a defined target, consults, inspections, or installs, so you can measure the difference before committing.",
     ],
     riskReversal: "14-day pilot with a defined target. If the numbers don't land, no commitment to continue.",
     bestFor: [

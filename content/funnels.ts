@@ -302,7 +302,7 @@ export const funnels: Record<string, Funnel> = {
         ],
       },
       {
-        title: "AI Voice Receptionist",
+        title: "AI Receptionist",
         points: [
           "Answers calls during busy bay hours",
           "Books the service slot",
@@ -433,7 +433,7 @@ export const funnelPricing: {
       setup: "+ one-time setup",
       tagline: "One system, live fast",
       features: [
-        "24/7 AI Voice Receptionist",
+        "24/7 AI Receptionist",
         "Bookings into your calendar",
         "Call summaries & smart routing",
         "Live in ~2 weeks",

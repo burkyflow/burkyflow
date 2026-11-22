@@ -8,7 +8,7 @@ BurkyFlow is an AI automation agency. We operate remotely and serve clients acro
 
 ## Services (full descriptions)
 
-### AI Voice Receptionist
+### AI Receptionist
 URL: https://www.burkyflow.com/services/ai-voice-receptionist
 Most missed calls go to a competitor who picked up second. A human-sounding AI voice answers on the first ring, qualifies the caller, and books the job straight into your calendar.
 How it works:

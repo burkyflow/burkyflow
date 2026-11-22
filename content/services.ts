@@ -36,12 +36,16 @@ export const services: Service[] = [
     slug: "ai-voice-receptionist",
     icon: PhoneCall,
     eyebrow: "Never miss a call",
-    name: "AI Voice Receptionist",
+    name: "AI Receptionist",
+    seoTitle: "AI Receptionist for Small Businesses",
+    seoDescription:
+      "An AI receptionist and AI phone answering service for small businesses. Answers every call 24/7, qualifies the caller, books the job, and transfers to a person when needed.",
     h2: "An AI receptionist that answers every call, day or night",
     lead: "Most missed calls go to a competitor who picked up second. A human-sounding AI voice answers on the first ring, qualifies the caller, and books the job straight into your calendar.",
     intro: [
       "A study by 411 Locals found that 62% of calls to small businesses went unanswered. A caller who cannot get through rarely waits; they dial the next business on the list.",
-      "Our AI voice receptionist removes that leak. It answers instantly, every hour of every day, speaks in your tone, handles the back-and-forth a real caller expects, and books qualified jobs directly onto your calendar. When a call genuinely needs a person, it routes to one.",
+      "Our AI receptionist removes that leak. It answers instantly, every hour of every day, speaks in your tone, handles the back-and-forth a real caller expects, and books qualified jobs directly onto your calendar. When a call genuinely needs a person, it routes to one.",
+      "Think of it as an AI answering service that does more than take messages: it is an AI virtual receptionist that qualifies, books, and follows up, built for HVAC, plumbing, dental, legal, automotive, and other businesses that live on the phone.",
     ],
     steps: [
       {
@@ -81,6 +85,14 @@ export const services: Service[] = [
       "More booked jobs from the same call volume you already get",
     ],
     faqs: [
+      {
+        q: "How much does an AI receptionist cost?",
+        a: "Far less than a full-time receptionist, and it works nights and weekends. Pricing is a setup fee plus a monthly fee that depends on call volume and what the receptionist does for you: answering only, or answering plus booking, CRM updates, and multiple locations. We quote it on a short call after looking at your call logs.",
+      },
+      {
+        q: "Is an AI receptionist the same as an AI answering service?",
+        a: "An answering service takes a message for you to return. An AI receptionist answers the call, asks your qualifying questions, books the appointment against your real calendar, writes the details into your CRM, and transfers to a person when your rules say so. It ends the call with a booking, not a message.",
+      },
       {
         q: "Will the AI voice sound robotic?",
         a: "No. It is configured to match how your business talks, handles real back-and-forth, and hands off to a human when a call needs one.",

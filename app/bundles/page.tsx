@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Check, Layers, Rocket, Building2, Sparkles, Workflow, Users, Megaphone, Target, MessageSquare, HeartPulse, Scale, Cloud, ShoppingBag, Crown, UserRound, Home, DatabaseZap, PhoneCall, type LucideIcon } from "lucide-react";
+import { ArrowRight, Check, Layers, Rocket, Building2, Sparkles, Workflow, Users, Megaphone, Target, MessageSquare, HeartPulse, Scale, Crown, Home, DatabaseZap, PhoneCall, CarFront, HandCoins, type LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -15,14 +15,13 @@ import { CoverArt, tones, type CoverTone } from "@/components/CoverArt";
 // Main icon per bundle, by what it is built around; the first match wins.
 const bundleIcons: [RegExp, LucideIcon][] = [
   [/empire/, Crown],
-  [/brand|persona|founder/, UserRound],
   [/home-services/, Home],
-  [/dental|medspa/, HeartPulse],
-  [/law/, Scale],
+  [/healthcare/, HeartPulse],
+  [/professional/, Scale],
   [/real-estate/, Building2],
-  [/saas/, Cloud],
-  [/agenc/, Users],
-  [/ecommerce|shopify/, ShoppingBag],
+  [/automotive/, CarFront],
+  [/auto-finance/, HandCoins],
+  [/staffing/, Users],
   [/reactivation/, DatabaseZap],
   [/inbound-starter/, MessageSquare],
   [/convert/, Rocket],
@@ -96,6 +95,7 @@ export default function BundlesPage() {
                     </span>
                     <h3 className="mt-3 text-lg font-semibold transition-colors group-hover:text-brand">{b.name}</h3>
                     <p className="mt-2 text-sm text-muted-foreground">{b.tagline}</p>
+                    {b.setupTime && <p className="mt-2 text-xs font-semibold text-brand">Typical launch: {b.setupTime}</p>}
                     <ul className="mt-5 space-y-2 text-sm">
                       {b.components.map((c) => (
                         <li key={c} className="flex items-start gap-2">

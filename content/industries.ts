@@ -24,12 +24,12 @@ export const industries: Industry[] = [
   {
     slug: "home-services",
     name: "Home and Property Services",
-    seoTitle: "AI Automation for HVAC, Plumbing, Roofing and Home Services",
+    seoTitle: "AI Receptionist for HVAC, Plumbing and Roofing",
     h1: "AI automation for home and property service businesses",
     lead: "HVAC, plumbing, roofing, and lawn care live and die by who answers first and who follows up. We make sure that is always you.",
     intro: [
       "Home service businesses run on the phone. When a homeowner has no heat, a burst pipe, or storm damage, they call until someone picks up, and they hire whoever answers first. Every unanswered call is a job that can go to a competitor.",
-      "We close that gap. An AI voice receptionist answers every call around the clock, reactivation campaigns bring back past maintenance customers, and automated workflows keep dispatch, reminders, and follow-up running without adding office staff.",
+      "We close that gap. An AI receptionist answers every call around the clock, reactivation campaigns bring back past maintenance customers, and automated workflows keep dispatch, reminders, and follow-up running without adding office staff.",
     ],
     pains: [
       "Emergency calls missed after hours go straight to a competitor.",
@@ -129,6 +129,7 @@ export const industries: Industry[] = [
   {
     slug: "healthcare",
     name: "Healthcare and Practices",
+    seoTitle: "AI Medical and Dental Receptionist for Practices",
     h1: "AI automation for dental, medspa, and healthcare practices",
     lead: "Recall lists and consult requests are revenue you already earned. We re-engage patients and book the chair without adding front-desk load.",
     intro: [
@@ -246,6 +247,7 @@ export const industries: Industry[] = [
   {
     slug: "automotive",
     name: "Automotive and Repair",
+    seoTitle: "AI Receptionist for Auto Repair and Service Shops",
     h1: "AI automation for auto repair and service shops",
     lead: "Most customers drift to another shop within eighteen months. We text the ones overdue for service and book them back in before they do.",
     intro: [
@@ -300,6 +302,7 @@ export const industries: Industry[] = [
   {
     slug: "auto-finance",
     name: "Auto Finance and Lending",
+    seoTitle: "Auto Finance Lead Automation and AI Receptionist",
     h1: "AI automation for auto finance and lending",
     lead: "Applications arrive from ads, your website, and dealers at all hours. We answer every lead in seconds, chase the documents, and track every file across your lenders.",
     intro: [
@@ -354,6 +357,7 @@ export const industries: Industry[] = [
   {
     slug: "staffing",
     name: "Staffing and Recruiting",
+    seoTitle: "AI Automation for Staffing and Recruiting Firms",
     h1: "AI automation for staffing and recruiting firms",
     lead: "Candidates, clients, and placements live in spreadsheets and inboxes. We bring them into one system and automate the follow-up that keeps placements moving.",
     intro: [
@@ -408,6 +412,7 @@ export const industries: Industry[] = [
   {
     slug: "professional-firms",
     name: "Professional Firms",
+    seoTitle: "AI Receptionist for Law and Professional Firms",
     h1: "AI automation for law firms and professional services",
     lead: "Intake calls cluster at night, exactly when the office line rolls to voicemail. We capture them, qualify them, and protect every inquiry.",
     intro: [

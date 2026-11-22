@@ -6,7 +6,7 @@ date: "2026-10-22"
 updated: "2026-11-02"
 ---
 
-Every unanswered call from a new customer is potential lost revenue. Missed-call recovery means responding to those inquiries, qualifying the caller, and helping them book a service. An [AI voice receptionist](/services/ai-voice-receptionist) handles overflow and after-hours calls using your service information, booking rules, and human escalation instructions.
+Every unanswered call from a new customer is potential lost revenue. Missed-call recovery means responding to those inquiries, qualifying the caller, and helping them book a service. An [AI receptionist](/services/ai-voice-receptionist) handles overflow and after-hours calls using your service information, booking rules, and human escalation instructions.
 
 ## Why it happens
 

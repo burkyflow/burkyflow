@@ -9,7 +9,7 @@ export const stats = [
 export const homeFaqs = [
   {
     q: "What does BurkyFlow actually do?",
-    a: "We run revenue operations for service businesses. We quantify where revenue is leaking out of your business, then build and operate the AI systems that close those gaps: an AI voice receptionist, database reactivation, CRM and lead systems, and the workflows that connect them. The deliverable is more booked revenue, not another tool to manage.",
+    a: "We run revenue operations for service businesses. We quantify where revenue is leaking out of your business, then build and operate the AI systems that close those gaps: an AI receptionist, database reactivation, CRM and lead systems, and the workflows that connect them. The deliverable is more booked revenue, not another tool to manage.",
   },
   {
     q: "How do you actually increase our revenue?",

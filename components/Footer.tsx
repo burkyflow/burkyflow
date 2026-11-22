@@ -35,7 +35,7 @@ export function Footer() {
                 />
               </HomeLink>
 
-              <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">AI voice receptionists, database reactivation, and CRM automation for service businesses.</p>
+              <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">AI receptionists, database reactivation, and CRM automation for service businesses.</p>
               <address className="mt-4 space-y-2 text-sm not-italic text-muted-foreground">
                 <p><a href={site.phone.href} className="hover:text-brand">{site.phone.display}</a></p>
                 <p><a href={`mailto:${site.email}`} className="hover:text-brand">{site.email}</a></p>

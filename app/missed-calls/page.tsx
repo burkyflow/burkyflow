@@ -27,7 +27,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Missed Call Recovery for Small Businesses",
   description:
-    "Missed call recovery for small and service businesses: an AI voice receptionist answers every ring, texts back missed callers, and books the job, plus follow-up for leads that went quiet.",
+    "Missed call recovery for small and service businesses: an AI receptionist answers every ring, texts back missed callers, and books the job, plus follow-up for leads that went quiet.",
   path: "/missed-calls",
 });
 
@@ -68,7 +68,7 @@ const faqs = [
   {
     q: "What systems are involved?",
     a:
-      "Four connected services: an AI Voice Receptionist, Database Reactivation, CRM and Lead Systems, and Workflow Automation.",
+      "Four connected services: an AI Receptionist, Database Reactivation, CRM and Lead Systems, and Workflow Automation.",
   },
   {
     q: "Does this replace my front desk?",
@@ -186,7 +186,7 @@ export default function MissedCallsPage() {
                     {
                       title: "Answer the call",
                       detail:
-                        "An AI voice receptionist catches the first ring, qualifies the caller, and pushes the lead into the right flow.",
+                        "An AI receptionist catches the first ring, qualifies the caller, and pushes the lead into the right flow.",
                       icon: PhoneCall,
                     },
                     {
