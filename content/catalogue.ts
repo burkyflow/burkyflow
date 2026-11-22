@@ -56,7 +56,7 @@ export const automationBranch: Branch = {
   offers: [
     {
       slug: "ai-voice-receptionist",
-      name: "AI Voice Receptionist",
+      name: "AI Receptionist",
       bestFit: "Home services, dental, medspa, law firms, real estate, anyone losing leads to missed calls or after-hours inquiries.",
       pitch: "You will never lose a lead to a missed call again, and you will book appointments while you sleep.",
       packages: [
