@@ -5,7 +5,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { JsonLd } from "@/components/JsonLd";
-import { allBundles, getBundle } from "@/content/catalogue";
+import { allBundles, getBundle, findPackage } from "@/content/catalogue";
 import { pageMetadata, breadcrumbLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -51,6 +51,9 @@ export default async function BundleDetail({ params }: { params: Promise<Params>
           <p className="eyebrow">{group.heading}</p>
           <h1 className="mt-3 text-4xl font-semibold sm:text-5xl">{bundle.name}</h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">{bundle.tagline}</p>
+          {bundle.setupTime && (
+            <p className="mt-4 text-sm font-semibold text-brand">Typical launch: {bundle.setupTime}</p>
+          )}
           <div className="mt-8">
             <Button asChild size="lg">
               <Link href={site.ctaHref}>
@@ -71,12 +74,26 @@ export default async function BundleDetail({ params }: { params: Promise<Params>
             </p>
             <h2 className="mt-2 text-2xl font-semibold">The full stack</h2>
             <ul className="mt-6 space-y-3">
-              {bundle.components.map((c) => (
-                <li key={c} className="flex items-start gap-3">
-                  <Check className="mt-1 size-5 shrink-0 text-brand" />
-                  <span className="text-foreground">{c}</span>
-                </li>
-              ))}
+              {bundle.components.map((c) => {
+                const found = findPackage(c);
+                return (
+                  <li key={c} className="flex items-start gap-3">
+                    <Check className="mt-1 size-5 shrink-0 text-brand" />
+                    <div>
+                      <p className="font-semibold text-foreground">
+                        {c}
+                        {found && <span className="font-normal text-muted-foreground"> · {found.offer.name}</span>}
+                      </p>
+                      {found && (
+                        <p className="mt-0.5 text-sm text-muted-foreground">
+                          {found.pkg.scope}
+                          {found.pkg.timeline && <> Timeline: {found.pkg.timeline}.</>}
+                        </p>
+                      )}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

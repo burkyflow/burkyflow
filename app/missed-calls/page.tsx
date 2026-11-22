@@ -27,7 +27,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Missed Call Recovery for Small Businesses",
   description:
-    "Missed call recovery for small and service businesses: an AI voice receptionist answers every ring, texts back missed callers, and books the job, plus follow-up for leads that went quiet.",
+    "Missed call recovery for small and service businesses: an AI receptionist answers every ring, texts back missed callers, and books the job, plus follow-up for leads that went quiet.",
   path: "/missed-calls",
 });
 
@@ -68,7 +68,7 @@ const faqs = [
   {
     q: "What systems are involved?",
     a:
-      "Four connected services: an AI Voice Receptionist, Database Reactivation, CRM and Lead Systems, and Workflow Automation.",
+      "Four connected services: an AI Receptionist, Database Reactivation, CRM and Lead Systems, and Workflow Automation.",
   },
   {
     q: "Does this replace my front desk?",
@@ -186,7 +186,7 @@ export default function MissedCallsPage() {
                     {
                       title: "Answer the call",
                       detail:
-                        "An AI voice receptionist catches the first ring, qualifies the caller, and pushes the lead into the right flow.",
+                        "An AI receptionist catches the first ring, qualifies the caller, and pushes the lead into the right flow.",
                       icon: PhoneCall,
                     },
                     {
@@ -283,6 +283,34 @@ export default function MissedCallsPage() {
                 </Reveal>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Plain-language explainer, written around the phrases owners search for */}
+      <section id="system" className="section bg-surface">
+        <div className="container-page mx-auto max-w-3xl">
+          <p className="eyebrow">How it fits together</p>
+          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+            A missed call recovery system for small businesses
+          </h2>
+          <div className="mt-6 space-y-4 text-lg text-muted-foreground">
+            <p>
+              Missed call recovery for a small business is not one tool. It is a short chain: answer the call,
+              text back anyone who slipped through, follow up until they book, and write every step into the CRM
+              so nothing depends on memory.
+            </p>
+            <p>
+              <span className="font-semibold text-foreground">Missed call text back</span> is the simplest piece and
+              the fastest to switch on. Any caller who reaches voicemail gets a text within seconds: who you are,
+              that you saw the call, and a link or a reply option to book. Most callers who were about to dial the
+              next business reply instead.
+            </p>
+            <p>
+              The AI receptionist removes most missed calls in the first place, the text-back catches the rest, and
+              the follow-up automation keeps working the lead for days. Each piece is useful alone; together they
+              are a system, and the system is what recovers the revenue.
+            </p>
           </div>
         </div>
       </section>

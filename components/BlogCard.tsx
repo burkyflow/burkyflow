@@ -109,7 +109,7 @@ export function postTopic(post: Post) {
 // The service page each topic leads to, linked from the end of every post.
 export const topicService: Record<TopicKey, { href: string; name: string }> = {
   ai: { href: "/services/workflow-automation", name: "Workflow Automation" },
-  calls: { href: "/services/ai-voice-receptionist", name: "AI Voice Receptionist" },
+  calls: { href: "/services/ai-voice-receptionist", name: "AI Receptionist" },
   crm: { href: "/services/database-reactivation", name: "Database Reactivation" },
   search: { href: "/services/answer-engine-optimization", name: "Answer Engine Optimization" },
   auto: { href: "/industries/auto-finance", name: "AI Automation for Auto Finance" },

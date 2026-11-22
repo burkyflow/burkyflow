@@ -23,7 +23,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-[#fbfbfe]">
       <div className="container-page relative grid items-center gap-10 py-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-12 lg:py-20 xl:py-24">
         <div className="max-w-xl">
-          <p className="eyebrow mb-4">AI voice receptionist &amp; revenue automation</p>
+          <p className="eyebrow mb-4">AI receptionist &amp; revenue automation</p>
           {/* Invisible copies of every full headline share one grid cell with the
               live one, so the heading is always as tall as its longest version and
               the content below never jumps while phrases type and delete. The
@@ -44,7 +44,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            BurkyFlow provides AI voice receptionists and revenue operations for service businesses. We quantify exactly
+            BurkyFlow provides AI receptionists and revenue operations for service businesses. We quantify exactly
             where your revenue is leaking, capture every call and dormant lead, and optimize the
             follow-up that converts them, so you grow revenue without adding headcount.
           </p>

@@ -56,7 +56,7 @@ export const automationBranch: Branch = {
   offers: [
     {
       slug: "ai-voice-receptionist",
-      name: "AI Voice Receptionist",
+      name: "AI Receptionist",
       bestFit: "Home services, dental, medspa, law firms, real estate, anyone losing leads to missed calls or after-hours inquiries.",
       pitch: "You will never lose a lead to a missed call again, and you will book appointments while you sleep.",
       packages: [
@@ -297,79 +297,6 @@ export const automationBranch: Branch = {
       ],
     },
     {
-      slug: "digital-clone-studio",
-      name: "Digital Clone Studio",
-      bestFit: "Agency owners, founders, and personal brands.",
-      pitch: "Founder voice and likeness cloned for content production, outreach video, and inbound coverage.",
-      packages: [
-        {
-          tier: "Voice Clone",
-          scope: "ElevenLabs voice clone, training, and integration into Vapi and outbound.",
-          deliverables: ["Trained ElevenLabs voice", "Integration into Vapi", "Outbound voice ready"],
-        },
-        {
-          tier: "Avatar Clone",
-          scope: "HeyGen or Synthesia avatar with five starter scripts.",
-          deliverables: ["Trained avatar", "5 starter scripts produced"],
-        },
-        {
-          tier: "Full Persona Studio",
-          scope: "Voice plus avatar plus scripted content engine with monthly drops.",
-          deliverables: [
-            "Voice and avatar clones",
-            "Scripted content engine",
-            "Monthly content drops",
-          ],
-        },
-      ],
-      faqs: [
-        { q: "Do I own the clone?", a: "Yes. Your voice, likeness, and the underlying assets remain yours. We operate the studio on your behalf." },
-        { q: "How is it used in sales?", a: "Voice clones power outbound voice and personalized follow-up; avatar clones power outreach video and inbound content." },
-      ],
-    },
-    {
-      slug: "web-app-saas-shopify",
-      name: "Web / App / SaaS / Shopify Development",
-      bestFit: "Agency owners and SMBs that cannot build in-house.",
-      pitch: "Custom funnels, mobile apps, SaaS builds, and Shopify, delivered against a fixed-scope statement of work.",
-      packages: [
-        {
-          tier: "Conversion Funnel",
-          scope: "1–3 page funnel with copy, design, build, and A/B-ready setup.",
-          deliverables: ["Copy", "Design", "Build", "A/B-ready instrumentation"],
-        },
-        {
-          tier: "Marketing Site",
-          scope: "5–8 page site with CMS and integrations.",
-          deliverables: ["Design system", "CMS setup", "Integrations"],
-        },
-        {
-          tier: "Shopify Store Setup",
-          scope: "Theme build, products loaded, payments, and email flows.",
-          deliverables: ["Theme build", "Products", "Payments", "Email flows"],
-        },
-        {
-          tier: "Custom Shopify Dev",
-          scope: "Bespoke apps, checkout extensions, and headless builds.",
-          deliverables: ["Discovery", "Build", "QA and launch"],
-        },
-        {
-          tier: "Mobile App (MVP)",
-          scope: "iOS and Android via React Native or Flutter, scoped to MVP.",
-          deliverables: ["Scoped MVP feature set", "Cross-platform build", "Launch support"],
-        },
-        {
-          tier: "SaaS Build (MVP)",
-          scope: "Full-stack web app with auth, billing, and core feature set.",
-          deliverables: ["Auth and billing", "Core features", "Deployment"],
-        },
-      ],
-      faqs: [
-        { q: "How are dev engagements scoped?", a: "Every dev engagement starts with a discovery sprint and lands on a fixed-scope statement of work before the build begins." },
-        { q: "Do you handle design as well as build?", a: "Yes. Copy, design, and build are part of every package, you do not need to source separate vendors." },
-      ],
-    },
-    {
       slug: "managed-services",
       name: "Managed Services (Retainer Layer)",
       bestFit: "Every automation client at build hand-off. Most start with Care.",
@@ -452,7 +379,7 @@ export const demandBranch: Branch = {
   eyebrow: "Sales Generation",
   name: "Sales Generation",
   h1: "The engines that fill the pipe with booked meetings",
-  lead: "Outbound, ads, content, reactivation, and referral, every offer designed to land qualified meetings on the calendar.",
+  lead: "Outbound, reactivation, booking, and referral, every offer designed to land qualified meetings on the calendar.",
   intro:
     "These services bring in new leads and meetings, and our automation services handle them once they arrive. Every offer below is built to put qualified meetings on your calendar, with reporting that ties spend to booked revenue.",
   offers: [
@@ -503,33 +430,6 @@ export const demandBranch: Branch = {
         { q: "What's the cost per booked meeting?", a: "We set a cost-per-meeting target during setup and report against it, so you can compare it directly with the cost of hiring in-house." },
         { q: "Do you handle the data?", a: "Yes. We build and research the prospect lists using data tools such as Apollo and Clay, our team handles replies, and meetings land on your calendar." },
         { q: "Will outbound time itself to my prospects' hours?", a: "Yes. Sends are timed to your prospects' working hours regardless of where the delivery team sits." },
-      ],
-    },
-    {
-      slug: "sms-email-copy",
-      name: "SMS & Email Copy (Hyper-Personalized)",
-      bestFit: "Clients who already have lists and infrastructure and need the copy that converts them.",
-      pitch: "AI-assisted SMS and email copy, researched for each prospect, built to respond to new leads within 5 minutes and follow up over 5 days.",
-      packages: [
-        {
-          tier: "Sequence Pack",
-          scope: "One sequence, 5–7 touches, on one channel, fully written and loaded.",
-          deliverables: ["5–7 touch sequence", "Single channel", "Loaded into your stack"],
-        },
-        {
-          tier: "Multi-Channel Pack",
-          scope: "Three sequences across email, SMS, and LinkedIn.",
-          deliverables: ["3 sequences", "Email + SMS + LinkedIn", "Loaded and tested"],
-        },
-        {
-          tier: "Copy Retainer",
-          scope: "Ongoing copy production, four sequences per month plus iteration.",
-          deliverables: ["4 sequences / month", "Iteration on performance", "Reporting"],
-        },
-      ],
-      faqs: [
-        { q: "Will the copy sound like a template?", a: "No. Each message is personalized using research on the prospect's company, not just a first-name swap." },
-        { q: "How long until I see replies?", a: "First sequences typically begin landing within days, with cadence and copy tuned weekly from there." },
       ],
     },
     {
@@ -592,79 +492,6 @@ export const demandBranch: Branch = {
       ],
     },
     {
-      slug: "social-content-autopilot",
-      name: "Social Content Autopilot",
-      bestFit: "Top-of-funnel air cover so outbound lands on a warm brand.",
-      pitch: "Automated branded content generation and posting across LinkedIn, Instagram, TikTok, and Facebook.",
-      packages: [
-        {
-          tier: "Content Lite",
-          scope: "3 posts per week on 1 channel.",
-          deliverables: ["3 posts / week", "1 channel", "AI-assisted + human editorial"],
-        },
-        {
-          tier: "Content Standard",
-          scope: "5 posts per week on 2 channels.",
-          deliverables: ["5 posts / week", "2 channels", "AI-assisted + human editorial"],
-        },
-        {
-          tier: "Content Pro",
-          scope: "Daily posting across 4 channels with reels and shorts repurposing.",
-          deliverables: [
-            "Daily posts",
-            "4 channels",
-            "Reels / shorts repurposing",
-            "AI-assisted + human editorial",
-          ],
-        },
-      ],
-      faqs: [
-        { q: "Is it just AI slop?", a: "No. Generation is AI-assisted but every post is reviewed against your brand guidelines by a human editor before it goes live." },
-        { q: "Will it create the content for me from scratch?", a: "Yes. You provide brand inputs and target topics; we handle production, scheduling, and reporting." },
-      ],
-    },
-    {
-      slug: "meta-ads-management",
-      name: "Meta Ads (Facebook + Instagram) Management",
-      bestFit: "Clients ready to send paid social leads into the same AI voice, SMS, and CRM pipeline our automation services run.",
-      pitch: "Paid social creative, campaign build, audience targeting, and optimization, funneled into your operating system.",
-      packages: [
-        {
-          tier: "Ads Starter",
-          scope: "Up to $3K/month ad spend, 1 campaign, 3 creatives per month.",
-          deliverables: [
-            "1 campaign",
-            "3 creatives / month",
-            "Weekly optimization",
-            "Monthly report",
-          ],
-        },
-        {
-          tier: "Ads Growth",
-          scope: "$3K–$15K/month ad spend, 3 campaigns, 8 creatives per month.",
-          deliverables: [
-            "3 campaigns",
-            "8 creatives / month",
-            "A/B testing",
-            "Landing-page integration",
-          ],
-        },
-        {
-          tier: "Ads Scale",
-          scope: "$15K+ /month ad spend, full-funnel campaigns with a dedicated strategist.",
-          deliverables: [
-            "Full-funnel campaigns",
-            "Dedicated strategist",
-            "Weekly reporting calls",
-          ],
-        },
-      ],
-      faqs: [
-        { q: "How is ad spend handled?", a: "Ad spend is invoiced separately, paid directly by the client, and capped to your stated budget." },
-        { q: "Do the ads feed into my CRM and voice agent?", a: "Yes. That is the point, ads feed into the same AI voice and CRM pipeline we build for you, so spend converts to booked jobs." },
-      ],
-    },
-    {
       slug: "database-reactivation",
       name: "Database Reactivation",
       bestFit: "SMBs sitting on thousands of old leads. The fastest ROI proof-offer.",
@@ -695,7 +522,7 @@ export const demandBranch: Branch = {
   ],
   faqs: [
     { q: "Do I need your automation services too?", a: "No, but it is recommended. Sales generation brings leads in; automation answers, follows up, and books them. Without it, qualified leads can still slip through." },
-    { q: "Which sales generation service should I start with?", a: "If you have a dormant list, start with Reactivation. If you have no pipeline, start with Outbound Foundation. If you have traffic, start with Ads or Content." },
+    { q: "Which sales generation service should I start with?", a: "If you have a dormant list, start with Reactivation. If you have no pipeline, start with Outbound Foundation. If leads already arrive but do not book, start with the Booking Engine." },
     { q: "Do you guarantee meetings?", a: "We guarantee the system. Reply and meeting targets are stated up-front and reported against weekly; performance components align incentives where applicable." },
   ],
 };
@@ -715,6 +542,8 @@ export type Bundle = {
   // Search-result snippet, kept under ~160 characters.
   metaDescription?: string;
   components: string[];
+  /** Typical time from kickoff to live, from the longest package timeline in the bundle. */
+  setupTime?: string;
   bestFor?: string;
   whyThisBundle?: string;
   outcomes?: string[];
@@ -735,260 +564,189 @@ export const bundleGroups: BundleGroup[] = [
         slug: "lead-catcher",
         name: "Lead Catcher",
         tagline: "Just starting, the simplest way in",
-        metaDescription: "An AI receptionist plus a simple CRM so every call is answered and every lead is captured. The lowest-commitment way to start with AI automation.",
+        metaDescription: "The Lead Catcher bundle: an AI receptionist on one number plus a CRM pipeline, so every call is answered and every lead is logged. Live in about a week.",
         components: ["Voice Lite", "CRM Foundation"],
-        bestFor: "SMBs taking their first step into AI automation with the lowest possible commitment.",
-        whyThisBundle:
-          "Catches the call, captures the lead. The two most expensive leaks in any service business, closed for less than the cost of a part-time receptionist.",
-        outcomes: [
-          "Every inbound call answered, 24/7",
-          "Every lead in one pipeline with source attached",
-          "A real system you can build on, not a stack of disconnected tools",
-        ],
+        setupTime: "About 1 week",
+        bestFor: "A business whose calls roll to voicemail and whose leads live in a notebook or an inbox. One phone number, one pipeline, no extra staff.",
+        whyThisBundle: "Answering the phone and writing the lead down are the two things that stop revenue leaking on day one. Voice Lite answers every call and texts back missed ones; CRM Foundation gives those calls a pipeline so nothing is forgotten.",
+        outcomes: ["Every call answered, with missed-call text-back", "Every caller logged as a lead with the call summary", "A pipeline your team can work from the first week"],
       },
       {
         slug: "inbound-starter",
         name: "Inbound Starter",
         tagline: "Just starting, capture web visitors",
-        metaDescription: "Website chat and online booking that turn site visitors into scheduled appointments instead of contact forms nobody answers.",
+        metaDescription: "The Inbound Starter bundle: a website chat widget that captures leads plus calendar booking with reminders, so visitors book instead of leaving.",
         components: ["Chat Starter", "Booking Setup"],
-        bestFor: "Businesses with web traffic where inquiries die in a contact form.",
-        whyThisBundle:
-          "Site visitors are already on the page, they shouldn't bounce because the form is too slow. Chat + booking turns intent into a scheduled appointment.",
-        outcomes: [
-          "Web visitors converted to qualified inquiries on-page",
-          "Appointments booked into the calendar without staff back-and-forth",
-          "Reminders and rescheduling automated end-to-end",
-        ],
+        setupTime: "About 1 week",
+        bestFor: "A business with website traffic that does not turn into appointments, and no front desk to answer chat.",
+        whyThisBundle: "Visitors who have a question and nowhere to ask it leave. Chat Starter answers common questions and captures the lead; Booking Setup lets the visitor pick a time, with reminders and self-service rescheduling built in.",
+        outcomes: ["Website questions answered and captured as leads", "Appointments booked from the site without a call", "Fewer no-shows from automatic reminders"],
       },
       {
         slug: "reactivation-quick-win",
         name: "Reactivation Quick Win",
         tagline: "Just starting, wake up an old list",
-        metaDescription: "Text and AI voice outreach to past customers and old leads in your CRM, booking the ones who are ready. A fast first win from a list you already own.",
+        metaDescription: "The Reactivation Quick Win bundle: an SMS and email reactivation campaign to up to 2,500 past customers, plus a CRM pipeline to book the replies.",
         components: ["Reactivation Sprint", "CRM Foundation"],
-        bestFor: "SMBs sitting on a CRM full of past customers and dormant leads.",
-        whyThisBundle:
-          "The fastest proof-of-value engagement we run. The list is already paid for, we just need to talk to it again.",
-        outcomes: [
-          "Booked revenue from contacts that were sitting idle",
-          "A clean, segmented CRM ready for the next play",
-          "A repeatable reactivation campaign you can run each quarter",
-        ],
+        setupTime: "1 to 2 weeks",
+        bestFor: "A business with a list of past customers or old leads that nobody has contacted in a year or more.",
+        whyThisBundle: "The cheapest revenue is from people who already know you. The Reactivation Sprint texts and emails up to 2,500 contacts in your voice; CRM Foundation gives the replies a pipeline so each one is booked, not lost.",
+        outcomes: ["Replies and bookings within the first days of sending", "A clean, segmented list you can run again next quarter", "Revenue from contacts you already paid to acquire"],
       },
       {
         slug: "service-business-core",
         name: "Service Business Core",
         tagline: "Growing, install a real system",
-        metaDescription: "AI call answering, a CRM with automatic follow-up, and no-show recovery for home services, dental, medspa, and other service businesses.",
+        metaDescription: "The Service Business Core bundle: AI receptionist with booking and emergency routing, a CRM with 5-day follow-up, and no-show recovery. Live in 2 to 3 weeks.",
         components: ["Voice Pro", "CRM Velocity", "Booking + No-Show Recovery"],
-        bestFor: "Home services, dental, medspa, and any service business losing leads to missed calls and slow follow-up.",
-        whyThisBundle:
-          "The standard kit for service businesses that want to stop losing money to operations. Captures every call, follows up aggressively, and recovers no-shows automatically.",
-        outcomes: [
-          "Zero unanswered calls during peak and after hours",
-          "5-day aggressive follow-up cadence on every lead",
-          "No-show rate cut sharply via automated win-back",
-        ],
+        setupTime: "2 to 3 weeks",
+        bestFor: "A service business past the startup stage that is losing jobs to slow follow-up and no-shows, and wants one connected system instead of three tools.",
+        whyThisBundle: "Voice Pro answers, qualifies, routes emergencies, and books. CRM Velocity follows up every lead for five days and texts back missed calls. No-Show Recovery wins back the appointments that fall through. Together they cover the whole path from ring to completed job.",
+        outcomes: ["Calls answered and booked around the clock", "Every lead followed up automatically for five days", "No-shows recovered and show rate reported"],
       },
       {
         slug: "the-demand-engine",
         name: "The Demand Engine",
         tagline: "Growing, turn on pipeline",
-        metaDescription: "Done-for-you outbound for B2B companies: researched prospect lists, email and text sequences, and qualified meetings booked on your calendar.",
-        components: ["Outbound Multi-Channel", "Booking Engine", "Sequence Pack"],
-        bestFor: "B2B SMBs with a product but no pipeline.",
-        whyThisBundle:
-          "Replaces hiring sales reps. Builds the list, runs the sequences, qualifies the replies, and lands qualified meetings on the calendar.",
-        outcomes: [
-          "A booked-meeting target agreed up front and reported weekly",
-          "Outreach researched and personalized for each prospect",
-          "Cost per booked meeting tracked against an agreed target",
-        ],
+        metaDescription: "The Demand Engine bundle: multi-channel outbound to a researched prospect list, a booking engine that screens and schedules replies, and a CRM to work them.",
+        components: ["Outbound Multi-Channel", "Booking Engine", "CRM Velocity"],
+        setupTime: "About 4 weeks",
+        bestFor: "A business with a strong offer and no steady source of new conversations, ready to run outbound without hiring sales reps.",
+        whyThisBundle: "Outbound Multi-Channel builds the prospect list and runs email, SMS, and LinkedIn outreach. The Booking Engine screens replies and puts meetings on the calendar. CRM Velocity keeps every conversation moving after the meeting is set.",
+        outcomes: ["A researched prospect list and live outreach across three channels", "Replies screened and booked without manual back-and-forth", "Weekly reporting on replies, meetings, and pipeline"],
       },
       {
         slug: "inbound-outbound-combo",
         name: "Inbound + Outbound Combo",
         tagline: "Growing, both sides of the funnel",
-        metaDescription: "Fix inbound leaks and start outbound at once: AI call answering, website chat and booking, and outbound outreach feeding one calendar.",
+        metaDescription: "The Inbound + Outbound Combo bundle: an AI receptionist and multi-channel chat for the leads you get, plus outbound outreach for the ones you don't.",
         components: ["Voice Pro", "Chat + Booking", "Outbound Foundation"],
-        bestFor: "Businesses that need to fix inbound leaks and turn on outbound at the same time.",
-        whyThisBundle:
-          "Covers both halves of the revenue equation. Every paid lead, organic visitor, and outbound prospect lands in the same booking flow.",
-        outcomes: [
-          "One booking pipeline for inbound and outbound",
-          "Consistent qualification across every source",
-          "Reporting that maps spend to booked revenue",
-        ],
+        setupTime: "About 3 weeks",
+        bestFor: "A business that wants to capture every inbound lead and start generating outbound ones in the same engagement.",
+        whyThisBundle: "Voice Pro and Chat + Booking make sure nothing inbound is lost, by phone or by message. Outbound Foundation adds a single-channel outreach sequence to a researched list, so the pipeline no longer depends on who happens to call.",
+        outcomes: ["Every call and chat answered and booked", "A first outbound sequence running to a defined ideal customer", "One pipeline for inbound and outbound leads"],
       },
       {
         slug: "demand-and-convert",
         name: "Demand + Convert",
         tagline: "Scaling, end-to-end coverage",
-        metaDescription: "Outbound lead generation plus AI call answering, CRM, and booking, so new prospects and inbound calls both turn into booked meetings.",
+        metaDescription: "The Demand + Convert bundle: multi-channel outbound, an AI receptionist, a CRM with aggressive follow-up, and a booking engine, covering demand through to booked work.",
         components: ["Outbound Multi-Channel", "Voice Pro", "CRM Velocity", "Booking Engine"],
-        bestFor: "Funded SMBs ready to install the full revenue engine.",
-        whyThisBundle:
-          "The complete demand-to-conversion stack. Outbound fills the pipe; voice and CRM convert it.",
-        outcomes: [
-          "End-to-end visibility from prospect to booked meeting",
-          "Booked meetings sourced by BurkyFlow, qualified by BurkyFlow",
-          "A single accountable team across demand and conversion",
-        ],
-      },
-      {
-        slug: "brand-and-demand",
-        name: "Brand + Demand",
-        tagline: "Scaling, air cover plus outbound",
-        metaDescription: "Content, Meta ads, AI search visibility, and outbound working together, so prospects already recognize your brand when you reach out.",
-        components: ["Content Standard", "Meta Ads Growth", "Outbound Foundation", "AEO Baseline"],
-        bestFor: "Businesses where outbound lands cold because the brand has no surface area.",
-        whyThisBundle:
-          "Warms the brand before outbound hits. Content, paid social, AI-search visibility, and outbound work together so the prospect already recognizes you.",
-        outcomes: [
-          "Outbound prospects who already know who you are",
-          "Paid traffic landing on a credible, populated brand",
-          "Compounding visibility across social, paid, and AI search",
-        ],
-      },
-      {
-        slug: "founder-persona-stack",
-        name: "Founder Persona Stack",
-        tagline: "Scaling, built around the founder brand",
-        metaDescription: "Voice clone, video avatar, daily content, and LinkedIn outreach in the founder's voice, for founders and agency owners who sell on personal brand.",
-        components: ["Full Persona Studio", "Content Pro", "LinkedIn outbound", "Care"],
-        bestFor: "Agency owners, coaches, and founders selling on personal brand.",
-        whyThisBundle:
-          "Productizes the founder. Voice clone, avatar, daily content, and LinkedIn outbound, all in the founder's voice, without the founder being on camera all day.",
-        outcomes: [
-          "Daily content drops in the founder's voice and likeness",
-          "Outbound that lands on a warm, recognized brand",
-          "The founder's time freed from production",
-        ],
+        setupTime: "About 4 weeks",
+        bestFor: "A scaling business that wants pipeline generation and conversion handled as one system, with reporting that ties outreach to booked revenue.",
+        whyThisBundle: "Outbound creates the conversations. Voice Pro answers the calls that follow. CRM Velocity follows up everything for five days. The Booking Engine turns replies into scheduled meetings. Each piece feeds the next, and the reporting shows the whole chain.",
+        outcomes: ["Outbound, inbound, and follow-up on one system", "Meetings booked from replies without manual scheduling", "Reporting from first touch to booked revenue"],
       },
     ],
   },
   {
-    heading: "By vertical",
-    lead: "Industry-specific bundles, pre-scoped so the conversation goes straight to scope.",
+    heading: "By industry",
+    lead: "Industry bundles, pre-scoped around how your trade actually works, so the conversation goes straight to scope.",
     bundles: [
       {
         slug: "home-services-bundle",
         name: "Home Services",
         tagline: "HVAC, plumbing, electrical, roofing",
-        metaDescription: "AI call answering, CRM follow-up, past-customer reactivation, and Meta ads for HVAC, plumbing, electrical, and roofing companies.",
-        components: ["Voice Pro", "CRM Velocity", "Reactivation Multi-Channel", "Meta Ads Starter"],
-        bestFor: "Home services operators with steady inbound, a dormant database, and budget for paid acquisition.",
-        whyThisBundle: "Catches every emergency call, follows up aggressively, wakes the old list, and funnels paid traffic into the same pipeline.",
+        metaDescription: "The Home Services bundle: an AI receptionist for emergency and after-hours calls, CRM follow-up, reactivation of past customers, and no-show recovery for HVAC, plumbing, electrical, and roofing companies.",
+        components: ["Voice Pro", "CRM Velocity", "Reactivation Multi-Channel", "Booking + No-Show Recovery"],
+        setupTime: "2 to 3 weeks",
+        bestFor: "Home service companies with steady inbound calls, a database of past customers, and a dispatch board that needs bookings written into it.",
+        whyThisBundle: "Catches every emergency call and routes it to the on-call tech, follows up every quote, wakes the install base with seasonal reactivation across SMS, email, and voice, and recovers the appointments that fall through.",
+        outcomes: ["After-hours and overflow calls answered and booked", "Past customers reactivated each season", "Quotes followed up and no-shows recovered"],
       },
       {
-        slug: "dental-medspa",
-        name: "Dental / Medspa",
-        tagline: "High-trust local conversion",
-        metaDescription: "AI phone answering, website chat and booking, CRM follow-up, content, and Meta ads for dental practices and medspas competing on trust.",
-        components: ["Voice Pro", "Chat + Booking", "CRM Velocity", "Content Standard", "Meta Ads Starter"],
-        bestFor: "Dental practices and medspas competing on trust and local visibility.",
-        whyThisBundle: "Every channel a new patient might use, call, web, social, wired into one booking flow.",
-      },
-      {
-        slug: "law-firms",
-        name: "Law Firms",
-        tagline: "Inbound qualification + AI search visibility",
-        metaDescription: "AI intake calls, CRM, content, and AI search visibility for law firms where the quality of intake matters as much as the volume.",
-        components: ["Voice Enterprise", "CRM Velocity", "AEO Growth", "Content Lite"],
-        bestFor: "Law firms where intake quality matters as much as volume.",
-        whyThisBundle: "Enterprise-grade voice for sensitive intake, plus the AI search surface that drives buyers in the first place.",
+        slug: "healthcare",
+        name: "Healthcare and Practices",
+        tagline: "Dental, medspa, and clinics",
+        metaDescription: "The Healthcare bundle: an AI receptionist and multi-channel chat for patient calls and messages, a CRM with follow-up, and recall reactivation for dental, medspa, and medical practices.",
+        components: ["Voice Pro", "Chat + Booking", "CRM Velocity", "Reactivation Sprint"],
+        setupTime: "2 to 3 weeks",
+        bestFor: "Practices where the front desk cannot answer every call and message, and where recall lists and consult requests sit unworked.",
+        whyThisBundle: "Voice Pro and Chat + Booking answer patient calls and messages and book the chair. CRM Velocity follows up consult requests. The Reactivation Sprint re-engages overdue recall patients. Handoff rules send clinical questions to staff.",
+        outcomes: ["Patient calls and messages answered and booked", "Consult requests followed up automatically", "Overdue recall patients re-engaged and rebooked"],
       },
       {
         slug: "real-estate",
         name: "Real Estate",
         tagline: "Lead capture + dormant-database revenue",
-        metaDescription: "AI call answering, CRM, past-client reactivation, and content for real estate teams sitting on years of buyer and seller leads.",
-        components: ["Voice Pro", "CRM Velocity", "Reactivation Sprint", "Content Pro"],
-        bestFor: "Real estate teams sitting on years of past-client and buyer-lead data.",
-        whyThisBundle: "Captures the new lead, reactivates the old one, and keeps the brand visible to both.",
+        metaDescription: "The Real Estate bundle: an AI receptionist for inquiries, a CRM with 5-day follow-up, reactivation of cold buyer and seller leads, and AI search visibility for the team.",
+        components: ["Voice Pro", "CRM Velocity", "Reactivation Sprint", "AEO Baseline"],
+        setupTime: "2 to 3 weeks",
+        bestFor: "Teams sitting on hundreds of cold buyer and seller leads, with agents too busy to follow up and a brand that should show up in AI search answers.",
+        whyThisBundle: "Voice Pro captures and qualifies inquiries. CRM Velocity follows up every lead for five days. The Reactivation Sprint re-engages the cold database and books the warm ones. AEO Baseline builds the entity and schema foundation so the team is cited in AI answers.",
+        outcomes: ["Inquiries answered and qualified at any hour", "Cold leads re-engaged and appointments set", "A foundation for AI search visibility"],
       },
       {
-        slug: "b2b-saas",
-        name: "B2B SaaS",
-        tagline: "Outbound pipeline + AI discoverability",
-        metaDescription: "Outbound pipeline, meeting booking, content, and AI search visibility for B2B SaaS teams that need meetings now and brand presence later.",
-        components: ["Outbound Multi-Channel", "Booking Engine", "AEO Growth", "Content Standard"],
-        bestFor: "B2B SaaS teams that need pipeline and presence at the same time.",
-        whyThisBundle: "Outbound delivers meetings now; AEO and content compound the brand so future outbound lands warmer.",
+        slug: "automotive",
+        name: "Automotive and Repair",
+        tagline: "Service calls, declined work, overdue customers",
+        metaDescription: "The Automotive bundle: an AI receptionist for service calls, CRM follow-up on declined estimates, reactivation of overdue customers, and no-show recovery for repair shops and dealership service departments.",
+        components: ["Voice Pro", "CRM Velocity", "Reactivation Multi-Channel", "Booking + No-Show Recovery"],
+        setupTime: "2 to 3 weeks",
+        bestFor: "Repair shops and service departments where advisors cannot answer the phone at the write-up counter, and where overdue customers drift to other shops.",
+        whyThisBundle: "Voice Pro answers service calls and books against the shop schedule. CRM Velocity follows up declined estimates. Reactivation Multi-Channel texts, emails, and calls customers overdue for service. No-Show Recovery keeps the bays full.",
+        outcomes: ["Service calls answered and booked at every hour", "Declined estimates followed up with a payment option", "Overdue customers brought back before they switch shops"],
       },
       {
-        slug: "agencies-white-label",
-        name: "Agencies (white-label)",
-        tagline: "Our automation, delivered under your agency's brand",
-        metaDescription: "Multi-brand CRM, a workflow library, outbound, and managed support that agencies can resell under their own brand.",
-        components: ["CRM Multi-Brand", "Workflow Pack (10)", "Outbound Foundation", "Partner Managed"],
-        bestFor: "AI and marketing agencies who want to resell production capacity under their own brand.",
-        whyThisBundle: "Multi-brand CRM and a workflow library means you onboard new clients in minutes, not weeks.",
+        slug: "auto-finance",
+        name: "Auto Finance and Lending",
+        tagline: "Speed to lead, documents, and portfolio triggers",
+        metaDescription: "The Auto Finance bundle: an AI receptionist for applicant calls, a CRM with 5-day follow-up, three custom workflows for document collection and lender routing, and portfolio reactivation.",
+        components: ["Voice Pro", "CRM Velocity", "Workflow Pack (3)", "Reactivation Sprint"],
+        setupTime: "2 to 3 weeks",
+        bestFor: "Lenders, brokers, and dealership finance teams where applications arrive at all hours, documents are chased by hand, and the portfolio is never re-marketed.",
+        whyThisBundle: "Voice Pro answers applicant calls in seconds. CRM Velocity follows up every application. The Workflow Pack automates document collection, lender submission tracking, and escalation alerts. The Reactivation Sprint runs refinance and equity triggers against the existing portfolio.",
+        outcomes: ["First response to every application in seconds", "Documents collected and lender submissions tracked automatically", "Refinance-ready customers contacted from your own portfolio"],
       },
       {
-        slug: "ecommerce-shopify",
-        name: "E-commerce / Shopify",
-        tagline: "Acquisition + retention engine",
-        metaDescription: "Shopify setup, Meta ads, email and SMS copy, and customer reactivation for e-commerce brands building acquisition and repeat sales.",
-        components: ["Shopify Setup", "Meta Ads Growth", "Copy Retainer", "Reactivation Engine"],
-        bestFor: "Shopify and DTC brands building both customer acquisition and lifetime value.",
-        whyThisBundle: "Paid acquisition feeds the store; the retention engine compounds revenue from every customer acquired.",
+        slug: "staffing",
+        name: "Staffing and Recruiting",
+        tagline: "Candidates, clients, and placements in one system",
+        metaDescription: "The Staffing bundle: an AI receptionist for candidate and client calls, a CRM with follow-up, outbound outreach to target employers, and a booking engine for interviews and client meetings.",
+        components: ["Voice Pro", "CRM Velocity", "Outbound Foundation", "Booking Engine"],
+        setupTime: "About 3 weeks",
+        bestFor: "Staffing and recruiting firms juggling candidate screening, client development, and interview scheduling across spreadsheets and inboxes.",
+        whyThisBundle: "Voice Pro screens candidate calls and takes client inquiries. CRM Velocity keeps candidates and clients moving through one pipeline. Outbound Foundation runs outreach to target employers. The Booking Engine schedules interviews and client meetings without the back-and-forth.",
+        outcomes: ["Candidate and client calls answered and logged", "A steady outreach sequence to target employers", "Interviews and meetings booked automatically"],
+      },
+      {
+        slug: "professional-firms",
+        name: "Professional Firms",
+        tagline: "Intake, follow-up, and AI search visibility",
+        metaDescription: "The Professional Firms bundle: a multi-location AI receptionist for intake calls, multi-channel chat with booking, a CRM with follow-up, and ongoing AI search visibility for law, accounting, and consulting firms.",
+        components: ["Voice Enterprise", "CRM Velocity", "Chat + Booking", "AEO Growth"],
+        setupTime: "3 to 4 weeks",
+        bestFor: "Law, accounting, and consulting firms where intake calls cluster after hours, every inquiry is valuable, and being cited in AI search answers matters.",
+        whyThisBundle: "Voice Enterprise handles intake across offices and practice areas with custom routing. Chat + Booking captures web inquiries and books consultations. CRM Velocity follows up every inquiry. AEO Growth keeps the firm visible in ChatGPT, Gemini, and Google AI answers.",
+        outcomes: ["Intake calls qualified and routed at any hour", "Consultations booked from the website", "Ongoing citations in AI search answers"],
       },
     ],
   },
   {
     heading: "Full-stack",
-    lead: "For clients who want BurkyFlow to run the entire revenue function.",
+    lead: "For businesses that want the whole system built, run, and reported on by one team.",
     bundles: [
       {
         slug: "full-stack-burkyflow",
         name: "Full-Stack BurkyFlow",
         tagline: "The complete operating system",
-        metaDescription: "BurkyFlow runs your whole revenue system: AI voice, CRM, outbound, Meta ads, content, booking, and reporting, with one team accountable.",
-        components: [
-          "Voice Enterprise",
-          "CRM Velocity",
-          "Outbound Multi-Channel",
-          "Meta Ads Growth",
-          "Content Standard",
-          "Booking Engine + Dashboard",
-          "Care",
-        ],
-        bestFor: "Funded SMBs and agencies that want BurkyFlow running the entire revenue function.",
-        whyThisBundle: "One team, one dashboard, one accountability line, across demand generation, inbound capture, conversion, and reporting.",
-      },
-      {
-        slug: "full-stack-plus-reactivation",
-        name: "Full-Stack + Reactivation",
-        tagline: "Add the dormant-database revenue engine",
-        metaDescription: "The full BurkyFlow system plus ongoing reactivation campaigns that turn years of CRM data into booked revenue month after month.",
-        components: ["Everything in Full-Stack BurkyFlow", "Reactivation Engine"],
-        bestFor: "Full-Stack clients sitting on years of CRM data.",
-        whyThisBundle: "Layers the ongoing reactivation play on top of full-stack so dormant revenue compounds month after month.",
-      },
-      {
-        slug: "full-stack-plus-brand",
-        name: "Full-Stack + Brand",
-        tagline: "Add founder brand and AI discoverability",
-        metaDescription: "The full BurkyFlow system plus founder-brand content and AI search visibility, so every ad and outbound message lands on a known brand.",
-        components: ["Everything in Full-Stack BurkyFlow", "Full Persona Studio", "AEO Growth"],
-        bestFor: "Founders who want BurkyFlow running the revenue engine and the brand engine.",
-        whyThisBundle: "Founder persona content and AEO visibility make every outbound and ad touchpoint land on a warmer brand.",
+        metaDescription: "The Full-Stack BurkyFlow bundle: multi-location AI receptionist, CRM with follow-up, multi-channel outbound, booking engine with dashboard, ongoing reactivation, and managed care. One team runs it all.",
+        components: ["Voice Enterprise", "CRM Velocity", "Outbound Multi-Channel", "Booking Engine + Dashboard", "Reactivation Engine", "Care"],
+        setupTime: "4 to 6 weeks, in phases",
+        bestFor: "An established business that wants inbound, outbound, follow-up, reactivation, and reporting handled as one system with one accountable partner.",
+        whyThisBundle: "Every revenue path is covered: calls answered by Voice Enterprise, leads followed up by CRM Velocity, new pipeline from Outbound Multi-Channel, meetings scheduled by the Booking Engine with a live dashboard, the database worked monthly by the Reactivation Engine, and Care keeping it all running after launch. Rolled out in phases so each part is tested before the next starts.",
+        outcomes: ["One connected system from first call to booked revenue", "A live dashboard the owner actually reads", "Monitoring, incident response, and a monthly health report"],
       },
       {
         slug: "the-empire-package",
         name: "The Empire Package",
-        tagline: "Everything plus custom dev and strategy",
-        metaDescription: "The full BurkyFlow system plus a custom website or app, a strategy sprint, and partner-level managed services for long-term growth.",
-        components: [
-          "Everything in Full-Stack BurkyFlow",
-          "Custom Web / App build",
-          "Strategy Sprint",
-          "Partner Managed Services",
-        ],
-        bestFor: "Operators building a defensible, technology-led business with BurkyFlow as the long-term partner.",
-        whyThisBundle: "Full revenue engine, custom product surface, ongoing strategy, and the Partner-tier SLA. The whole company on one team.",
+        tagline: "Full-stack plus strategy and a partner-level team",
+        metaDescription: "The Empire Package: everything in Full-Stack BurkyFlow plus a strategy sprint, ongoing AI search visibility, and partner-level managed services with a dedicated Slack channel and 4-hour incident response.",
+        components: ["Everything in Full-Stack BurkyFlow", "Strategy Sprint", "AEO Growth", "Partner Managed Services"],
+        setupTime: "6 to 8 weeks, in phases",
+        bestFor: "Multi-location or multi-brand operators who want a roadmap first, the full system second, and BurkyFlow embedded in the team afterwards.",
+        whyThisBundle: "The Strategy Sprint audits the stack and sets a 12-month roadmap before anything is built. The full system follows. AEO Growth keeps the brand visible in AI search. Partner Managed Services adds a dedicated Slack channel, a 4-hour incident SLA, and unlimited minor changes.",
+        outcomes: ["A 12-month automation roadmap and ROI model before the build", "The complete system, built in phases against the roadmap", "A dedicated channel and 4-hour response for the life of the engagement"],
       },
     ],
   },
@@ -1003,6 +761,17 @@ export function getBundle(slug: string) {
 }
 
 export const allBundles = bundleGroups.flatMap((g) => g.bundles);
+
+// Finds the package a bundle component refers to, by tier name, across both branches.
+export function findPackage(tier: string) {
+  for (const branch of branches) {
+    for (const offer of branch.offers) {
+      const pkg = offer.packages.find((p) => p.tier === tier);
+      if (pkg) return { offer, pkg, branch };
+    }
+  }
+  return undefined;
+}
 
 export const bundlesFaqs = [
   {

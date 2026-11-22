@@ -1,0 +1,35 @@
+name: IndexNow
+
+# Tells Bing, DuckDuckGo and other IndexNow engines which pages changed, right after
+# a deploy. Google does not use IndexNow; it reads the sitemap and feed instead.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for the Vercel deploy
+        if: github.event_name == 'push'
+        run: sleep 240
+      - name: Submit pages changed in the last two days
+        env:
+          HOST: www.burkyflow.com
+          KEY: 154e90fe43e78ad9e4546b1de05b3fe8
+        run: |
+          set -e
+          since=$(date -u -d '2 days ago' +%Y-%m-%d)
+          urls=$(curl -sf "https://$HOST/sitemap.xml" | grep -o '<loc>[^<]*' | sed 's/<loc>//' | while read sm; do
+            curl -sf "$sm" | tr -d '\n' | sed 's#</url>#</url>\n#g' | grep -o '<loc>[^<]*</loc>.*<lastmod>[^<]*' \
+              | sed 's#<loc>\([^<]*\)</loc>.*<lastmod>\([^<]*\)#\2 \1#' | awk -v s="$since" '$1 >= s {print $2}'
+          done | sort -u)
+          if [ -z "$urls" ]; then echo "Nothing changed since $since"; exit 0; fi
+          echo "$urls"
+          list=$(printf '%s\n' "$urls" | sed 's/.*/"&"/' | paste -sd, -)
+          curl -sS -o /dev/null -w "IndexNow HTTP %{http_code}\n" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"$HOST\",\"key\":\"$KEY\",\"keyLocation\":\"https://$HOST/$KEY.txt\",\"urlList\":[$list]}"

@@ -5,6 +5,8 @@ export type Industry = {
   slug: string;
   name: string;
   seoTitle?: string; // search-result title, if the name alone is too short
+  /** Optional trade-by-trade breakdown, for industries that span several trades. */
+  trades?: { name: string; calls: string; automate: string; trigger: string }[];
   h1: string;
   lead: string;
   intro: string[];
@@ -22,11 +24,12 @@ export const industries: Industry[] = [
   {
     slug: "home-services",
     name: "Home and Property Services",
+    seoTitle: "AI Receptionist for HVAC, Plumbing and Roofing",
     h1: "AI automation for home and property service businesses",
     lead: "HVAC, plumbing, roofing, and lawn care live and die by who answers first and who follows up. We make sure that is always you.",
     intro: [
       "Home service businesses run on the phone. When a homeowner has no heat, a burst pipe, or storm damage, they call until someone picks up, and they hire whoever answers first. Every unanswered call is a job that can go to a competitor.",
-      "We close that gap. An AI voice receptionist answers every call around the clock, reactivation campaigns bring back past maintenance customers, and automated workflows keep dispatch, reminders, and follow-up running without adding office staff.",
+      "We close that gap. An AI receptionist answers every call around the clock, reactivation campaigns bring back past maintenance customers, and automated workflows keep dispatch, reminders, and follow-up running without adding office staff.",
     ],
     pains: [
       "Emergency calls missed after hours go straight to a competitor.",
@@ -57,6 +60,44 @@ export const industries: Industry[] = [
       },
     ],
     geoNiches: ["hvac", "plumbing", "roofing"],
+    trades: [
+      {
+        name: "HVAC",
+        calls: "No-heat and no-cool calls cluster in the first cold snap and the first heat wave, mostly outside office hours. Tune-up season is predictable months in advance.",
+        automate: "After-hours answering that books emergency calls against the on-call schedule, seasonal tune-up reminders to the install base, and maintenance plan offers at job completion.",
+        trigger: "System age and install date: filters, tune-ups, warranty end, and the repair-versus-replace conversation at the right year.",
+      },
+      {
+        name: "Plumbing",
+        calls: "Burst pipes, blocked drains, and water heater failures are same-day jobs. The caller hires whoever answers first, and voicemail loses the job.",
+        automate: "Instant answer and urgency detection, dispatch-board booking with the call summary attached, and text follow-up on quoted work that was not approved on the spot.",
+        trigger: "Declined estimates and water heater age: a repair quote that was not approved gets one follow-up with a monthly payment option.",
+      },
+      {
+        name: "Electrical",
+        calls: "Panel upgrades, EV charger installs, and safety inspections are planned work with quotes that sit for weeks. Emergency calls are rarer but urgent.",
+        automate: "Quote follow-up sequences that reopen stalled estimates, booking for inspections, and reminders tied to permit and inspection dates.",
+        trigger: "Open quotes older than seven days, and homes with an EV or solar install that have not been offered a panel review.",
+      },
+      {
+        name: "Roofing",
+        calls: "Storm damage produces hundreds of calls in a day, then silence for weeks. Insurance claims add paperwork and long follow-up chains.",
+        automate: "Overflow answering during storm surges, inspection booking, and automated status updates through the claim and build process.",
+        trigger: "Storm events by zip code, inspection reports without a signed contract, and roofs past the age where an inspection is worth offering.",
+      },
+      {
+        name: "Construction and remodeling",
+        calls: "Leads arrive as estimate requests with a long decision cycle. Proposals take hours to write and days to chase.",
+        automate: "Lead qualification before the site visit, proposal follow-up on a schedule, and progress updates to the client during the build.",
+        trigger: "Proposal sent without a reply, and completed projects reaching the point where a related project (deck, kitchen, addition) is usually considered.",
+      },
+      {
+        name: "Landscaping and lawn care",
+        calls: "Spring brings a rush of new-service calls; the rest of the year is recurring visits and seasonal add-ons.",
+        automate: "Seasonal reactivation of past customers, recurring-service scheduling and reminders, and upsell offers for cleanups, aeration, and irrigation.",
+        trigger: "Season changes and last-service date: a customer who had a spring cleanup gets the fall offer without anyone remembering.",
+      },
+    ],
     stat: { value: "2 sec", label: "average answer time at Troy Plumbing, down from 45 seconds" },
     faqs: [
       {
@@ -72,6 +113,14 @@ export const industries: Industry[] = [
         a: "Yes. Qualified jobs are written into your scheduler or dispatch board with the call summary attached, so your team has full context.",
       },
       {
+        q: "Which home service trades do you work with?",
+        a: "HVAC, plumbing, electrical, roofing, construction and remodeling, and landscaping, among others. The call patterns differ by trade, so the answering rules, the reminders, and the follow-up triggers are set up for how your trade actually runs.",
+      },
+      {
+        q: "Do you integrate with field service software?",
+        a: "Yes. Bookings, call summaries, and follow-up outcomes are written into the scheduler or field service platform you already use, and the triggers read job history and equipment records from it.",
+      },
+      {
         q: "Do you work with seasonal demand spikes?",
         a: "That is exactly when this matters most. The AI voice scales instantly when call volume spikes after a storm or during a heat wave, with no extra staffing.",
       },
@@ -80,6 +129,7 @@ export const industries: Industry[] = [
   {
     slug: "healthcare",
     name: "Healthcare and Practices",
+    seoTitle: "AI Medical and Dental Receptionist for Practices",
     h1: "AI automation for dental, medspa, and healthcare practices",
     lead: "Recall lists and consult requests are revenue you already earned. We re-engage patients and book the chair without adding front-desk load.",
     intro: [
@@ -197,6 +247,7 @@ export const industries: Industry[] = [
   {
     slug: "automotive",
     name: "Automotive and Repair",
+    seoTitle: "AI Receptionist for Auto Repair and Service Shops",
     h1: "AI automation for auto repair and service shops",
     lead: "Most customers drift to another shop within eighteen months. We text the ones overdue for service and book them back in before they do.",
     intro: [
@@ -251,6 +302,7 @@ export const industries: Industry[] = [
   {
     slug: "auto-finance",
     name: "Auto Finance and Lending",
+    seoTitle: "Auto Finance Lead Automation and AI Receptionist",
     h1: "AI automation for auto finance and lending",
     lead: "Applications arrive from ads, your website, and dealers at all hours. We answer every lead in seconds, chase the documents, and track every file across your lenders.",
     intro: [
@@ -305,6 +357,7 @@ export const industries: Industry[] = [
   {
     slug: "staffing",
     name: "Staffing and Recruiting",
+    seoTitle: "AI Automation for Staffing and Recruiting Firms",
     h1: "AI automation for staffing and recruiting firms",
     lead: "Candidates, clients, and placements live in spreadsheets and inboxes. We bring them into one system and automate the follow-up that keeps placements moving.",
     intro: [
@@ -359,6 +412,7 @@ export const industries: Industry[] = [
   {
     slug: "professional-firms",
     name: "Professional Firms",
+    seoTitle: "AI Receptionist for Law and Professional Firms",
     h1: "AI automation for law firms and professional services",
     lead: "Intake calls cluster at night, exactly when the office line rolls to voicemail. We capture them, qualify them, and protect every inquiry.",
     intro: [

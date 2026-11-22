@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 export const metadata = pageMetadata({
   title: "Case Studies: AI Receptionist and CRM Results",
   description:
-    "Live client deployments from BurkyFlow, AI voice receptionists, GoHighLevel automation, outbound AI, and unified operations systems shipping real results.",
+    "Live client deployments from BurkyFlow, AI receptionists, GoHighLevel automation, outbound AI, and unified operations systems shipping real results.",
   path: "/case-studies",
 });
 

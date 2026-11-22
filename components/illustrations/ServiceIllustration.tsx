@@ -124,7 +124,7 @@ function Pill({ x, y, w, label, color }: { x: number; y: number; w: number; labe
 const waveform = [10, 18, 28, 16, 34, 22, 40, 26, 14, 30, 20, 36, 24, 12, 28, 18, 32, 16, 24, 10, 20, 14];
 
 const scenes: Record<string, JSX.Element> = {
-  // AI Voice Receptionist: a live after-hours call that ends in a booked job.
+  // AI Receptionist: a live after-hours call that ends in a booked job.
   "ai-voice-receptionist": (
     <g>
       <Panel x={36} y={34} w={228} h={232} />
