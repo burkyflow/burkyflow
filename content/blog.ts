@@ -17,8 +17,26 @@ export type Post = {
   image?: string; // optional cover photo URL from front matter (`image` or `cover`)
   seoTitle?: string; // optional short search-result title; the page heading stays `title`
   category?: string; // front matter `category`; picks the blog topic when it names one exactly
+  faqs?: PostFaq[]; // optional front matter `faqs`: list of { question, answer }
   html: string; // rendered Markdown body
 };
+
+export type PostFaq = { question: string; answer: string };
+
+// Reads front matter `faqs` ([{ question, answer }], also accepting q/a) and drops incomplete entries.
+function readFaqs(value: unknown): PostFaq[] | undefined {
+  if (!Array.isArray(value)) return undefined;
+  const faqs = value
+    .map((item) => {
+      if (!item || typeof item !== "object") return null;
+      const o = item as Record<string, unknown>;
+      const question = String(o.question ?? o.q ?? "").trim();
+      const answer = String(o.answer ?? o.a ?? "").trim();
+      return question && answer ? { question, answer } : null;
+    })
+    .filter((f): f is PostFaq => f !== null);
+  return faqs.length ? faqs : undefined;
+}
 
 const BLOG_DIRS = ["blog", "posts"].map((dir) => path.join(process.cwd(), "content", dir));
 
@@ -88,7 +106,9 @@ function loadPosts(): Post[] {
 
     const category = typeof data.category === "string" && data.category.trim() ? data.category.trim() : undefined;
 
-    const post = { slug, title, excerpt, date, modified, readMinutes, tags, image, seoTitle, category, html };
+    const faqs = readFaqs(data.faqs);
+
+    const post = { slug, title, excerpt, date, modified, readMinutes, tags, image, seoTitle, category, faqs, html };
     const existing = bySlug.get(slug);
     if (!existing || existing.modified < post.modified) bySlug.set(slug, post);
   }

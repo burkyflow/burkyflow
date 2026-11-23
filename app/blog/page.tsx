@@ -13,7 +13,19 @@ export const metadata = pageMetadata({
 metadata.alternates = { ...metadata.alternates, types: { "application/rss+xml": "/blog/feed.xml" } };
 
 export default function BlogIndex() {
-  const items = posts.map((post) => ({ slug: post.slug, topic: postTopic(post).theme.key, card: <BlogCard post={post} /> }));
+  // "All posts" rotates through the topics (newest of each, then the next of each) so the
+  // list is not a run of one subject. Each tab still shows its own blogs newest first.
+  const byTopic = new Map<string, typeof posts>();
+  for (const post of posts) {
+    const key = postTopic(post).theme.key;
+    byTopic.set(key, [...(byTopic.get(key) ?? []), post]);
+  }
+  const queues = [...byTopic.values()].sort((a, b) => (a[0].date < b[0].date ? 1 : -1));
+  const rotated: typeof posts = [];
+  for (let i = 0; rotated.length < posts.length; i++) {
+    for (const q of queues) if (q[i]) rotated.push(q[i]);
+  }
+  const items = rotated.map((post) => ({ slug: post.slug, topic: postTopic(post).theme.key, card: <BlogCard post={post} /> }));
   // Only offer tabs for topics that have posts.
   const topics = Object.values(themes)
     .filter((t) => items.some((item) => item.topic === t.key))

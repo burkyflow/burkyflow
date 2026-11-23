@@ -30,6 +30,7 @@ export const industries: Industry[] = [
     intro: [
       "Home service businesses run on the phone. When a homeowner has no heat, a burst pipe, or storm damage, they call until someone picks up, and they hire whoever answers first. Every unanswered call is a job that can go to a competitor.",
       "We close that gap. An AI receptionist answers every call around the clock, reactivation campaigns bring back past maintenance customers, and automated workflows keep dispatch, reminders, and follow-up running without adding office staff.",
+      "If you have searched for an HVAC answering service, a plumber answering service, or an answering service for contractors, this is the modern version: an AI receptionist that answers like a person, books into your dispatch board, and costs a fraction of a live service. HVAC lead generation and plumbing lead generation start with answering the calls you already get.",
     ],
     pains: [
       "Emergency calls missed after hours go straight to a competitor.",
@@ -129,12 +130,13 @@ export const industries: Industry[] = [
   {
     slug: "healthcare",
     name: "Healthcare and Practices",
-    seoTitle: "AI Medical and Dental Receptionist for Practices",
+    seoTitle: "AI Medical Answering Service and Receptionist",
     h1: "AI automation for dental, medspa, and healthcare practices",
     lead: "Recall lists and consult requests are revenue you already earned. We re-engage patients and book the chair without adding front-desk load.",
     intro: [
       "Practices spend heavily to acquire new patients while the recall list, full of patients who already trust them, sits untouched. At the same time, high-intent consult requests die in a contact form that someone means to call back tomorrow.",
       "We help practices recover both. Reactivation campaigns re-engage the hygiene and recall list with insurance handled on the call, and an AI voice books consults the moment a lead comes in, writing everything into your practice software.",
+      "For practices comparing a medical answering service or a dental answering service, the AI receptionist covers the same after-hours and overflow calls, books appointments and recall visits directly, sends appointment confirmation texts, and routes clinical questions to staff instead of guessing.",
     ],
     pains: [
       "Hygiene and recall lists sit untouched while you buy new-patient clicks.",
@@ -253,6 +255,7 @@ export const industries: Industry[] = [
     intro: [
       "Roughly six in ten past customers are at a different shop within eighteen months, usually because nobody reminded them it was time to come back. The phones also go unanswered during busy bay hours, sending new callers elsewhere.",
       "We text overdue customers to book them back in, and an AI voice answers the calls your team cannot, scheduling the slot and logging it into your shop software.",
+      "Automotive AI, in practice, means the service phone answered at every hour, declined estimates followed up, and overdue customers brought back. The same system runs for dealership service departments and independent shops, and connects to the DMS or shop management software you already use.",
     ],
     pains: [
       "Past customers quietly switch to a competitor between visits.",
@@ -308,6 +311,7 @@ export const industries: Industry[] = [
     intro: [
       "In consumer finance, the first company to respond usually wins the application. When leads from Facebook and the website land in different inboxes, and documents are chased by hand over WhatsApp, applicants go cold and files stall with no one noticing.",
       "We put every lead into one pipeline, reply by SMS and email the moment it arrives, follow up automatically for missing documents, and track each submission across your lenders with alerts when a file sits too long.",
+      "AI for car dealerships and lenders is a speed-to-lead and follow-up system: applicant calls answered in seconds, documents chased automatically, and refinance-ready customers contacted from your own portfolio.",
     ],
     pains: [
       "Leads from ads and the website arrive in separate places and get missed.",
@@ -363,6 +367,7 @@ export const industries: Industry[] = [
     intro: [
       "Staffing teams juggle candidates, client roles, interviews, and placements across spreadsheets, inboxes, and job boards. Follow-ups slip, good candidates go to faster agencies, and nobody has a live view of the pipeline.",
       "We replace the spreadsheets with one operations system, automate candidate and client follow-up, and give the team live dashboards for every role, so recruiters spend their time placing people instead of updating records.",
+      "Recruiting automation here means a recruiting CRM that screens candidate calls, keeps candidates and clients in one pipeline, books interviews, and runs outreach to target employers without adding coordinators.",
     ],
     pains: [
       "Candidate and client data is spread across spreadsheets and inboxes.",
@@ -418,6 +423,7 @@ export const industries: Industry[] = [
     intro: [
       "For many professional firms, the highest-intent inquiries arrive in the evening, the moment a prospect is motivated enough to call but the office line has already rolled to voicemail. Those callers rarely call back the next morning.",
       "We put a compliance-first AI voice on the after-hours line to capture matter type and urgency, deliver a secure summary to the partner, and hold a calendar slot for next-morning follow-up, so no inquiry is lost.",
+      "AI for law firms starts with intake. The AI receptionist for law firms qualifies callers by practice area, books consultations, and follows up on unsigned engagements, while anything that needs judgment or a conflict check goes to a person.",
     ],
     pains: [
       "After-hours intake calls go to voicemail and never call back.",

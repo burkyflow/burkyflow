@@ -6,6 +6,15 @@ metaDescription: "AI receptionist pricing explained: setup fees, monthly fees, u
 date: "2026-11-21"
 category: "Missed Calls"
 tags: ["AI Receptionist", "Pricing", "Small Business"]
+faqs:
+  - question: "How is AI receptionist pricing usually structured?"
+    answer: "In three parts: a one-time setup fee for the script, phone, calendar, and CRM connections and testing; a monthly fee for running and supporting the service; and in some cases usage billed per minute or per call above an included amount. A quote that shows only one part is leaving out the others."
+  - question: "What makes one AI receptionist quote higher than another?"
+    answer: "Call volume, what the receptionist does on the call (answering only, or qualifying, booking, CRM updates, and transfers), the number of lines and locations, the integrations involved, and extra languages or custom after-hours rules. More done on the call means more setup and more saved afterwards."
+  - question: "Is an AI receptionist cheaper than hiring a receptionist?"
+    answer: "It costs a setup fee and a monthly fee instead of a salary and benefits, and it works every shift and answers several calls at once. The fair comparison is cost per booked job, including the after-hours calls a one-shift receptionist misses."
+  - question: "What information do I need to get an accurate AI receptionist quote?"
+    answer: "Your weekly call count and how many go unanswered, which calls should be booked versus sent to a person, the calendar or CRM bookings should land in, the number of numbers and locations, and any language needs. With those, a provider can give a real number instead of a range."
 ---
 
 "How much does an AI receptionist cost?" is the first question most owners ask, and the honest answer is "it depends on what you ask it to do." That is not a dodge. An AI receptionist that answers and takes messages is a different product from one that qualifies callers, books into your dispatch board, updates your CRM, and transfers emergencies to the on-call technician. This post explains how the pricing is built, what moves it, and how to compare it with the alternatives.

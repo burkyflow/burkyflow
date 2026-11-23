@@ -7,6 +7,15 @@ keywords: ["automation trigger timing", "workflow trigger design", "CRM automati
 tags: ["Automation", "Workflow Design", "Triggers"]
 slug: "fire-on-first-yes-second-yes-or-no"
 category: "AI Agents & n8n"
+faqs:
+  - question: "What should an automation do when a customer first agrees to a diagnosis?"
+    answer: "Make the next step easy: send the estimate in writing with the financed monthly figure, offer two appointment slots, and set a short timer so silence after 48 hours moves to the no path. It should not send reviews, offers, or surveys yet."
+  - question: "What should fire after a customer books or approves work?"
+    answer: "Protect the commitment: a confirmation with date and amount, a reminder the day before with a reply-to-reschedule option, and after completion the thank-you, the review request, and the next lifecycle event. Not more selling."
+  - question: "How should automation handle a customer who says not now?"
+    answer: "Set a re-check date based on the item, such as a week for brakes or a month for a timing belt, and send one message then. A no gets a dated re-check, never a drip sequence."
+  - question: "What early warning shows a trigger is firing at the wrong moment?"
+    answer: "Opt-outs by trigger. A trigger that produces opt-outs is contacting people at a time that feels wrong to them."
 ---
 
 Every automated follow-up starts with a question: what event fires it? The answer is usually chosen by whoever built the workflow, based on what was easy to detect. It should be chosen based on what the customer is actually deciding at that moment. The same message, fired on the first yes, the second yes, or the no, produces three different results.

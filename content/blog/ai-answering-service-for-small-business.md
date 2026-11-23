@@ -6,6 +6,15 @@ metaDescription: "What an AI answering service does for a small business, how it
 date: "2026-11-23"
 category: "Missed Calls"
 tags: ["AI Answering Service", "AI Receptionist", "Small Business"]
+faqs:
+  - question: "What does an AI answering service do that voicemail cannot?"
+    answer: "It answers on the first ring at any hour, asks your qualifying questions, books the job against your calendar, texts the caller a confirmation, and writes the call into your CRM. Voicemail only records a message that most callers never leave."
+  - question: "How long does it take to set up an AI answering service?"
+    answer: "A single phone line typically takes a week or two: you provide your services, hours, booking rules, and the situations that must reach a person, and the agent is configured and tested on real call scenarios. Multi-location setups with custom routing take longer."
+  - question: "What decides what an AI answering service costs each month?"
+    answer: "Call volume, how much the agent does on each call, the number of lines and locations, and the integrations to your calendar or CRM. Pricing is usually a one-time setup fee plus a monthly fee, with usage sometimes billed separately."
+  - question: "How can I tell a real AI answering service from a message-taker?"
+    answer: "Ask whether it books into your actual calendar, whether it can transfer a live call, and where the call details end up. If bookings are not real and the details only arrive by email, it is taking messages, not handling calls."
 ---
 
 An AI answering service answers your business phone with a trained voice agent instead of a person or a voicemail greeting. The good ones do far more than take a message: they ask your qualifying questions, book the appointment against your real calendar, text the caller a confirmation, and write the details into your CRM. For a small business that misses calls when the team is busy or the office is closed, that is the difference between a lead and a lost one.

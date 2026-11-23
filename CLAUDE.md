@@ -55,4 +55,5 @@ Marketing site for BurkyFlow (burkyflow.com). Next.js 16 App Router, React 18, T
 - Search Console (indexing requests, sitemap and feed submission, removals) is done through Claude in Chrome with a prompt from the session; this environment cannot reach google.com or burkyflow.com.
 - Keyword research uses the OpenSEO connector (project "Burkyflow.com"); it spends credits, so ask before research.
 - Keyword targets already researched are in `docs/keywords.md`: check it before researching again, and update it when titles change.
+- New blogs come from `docs/blog-queue.md`: take the next row, follow its target phrase and points, then move the row to Done.
 - The GitHub repository should be private; the owner handles that.

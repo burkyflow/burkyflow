@@ -6,6 +6,15 @@ metaDescription: "An AI receptionist answers calls. An AI agent follows up, book
 date: "2026-11-22"
 category: "Missed Calls"
 tags: ["AI Receptionist", "AI Agents", "Follow-Up"]
+faqs:
+  - question: "What is the difference between an AI receptionist and an AI agent for a service business?"
+    answer: "The AI receptionist handles the phone conversation when a customer calls: it answers, qualifies, books, and transfers. The AI agent works around the call, following up leads who did not book, sending reminders, reactivating past customers, and routing replies."
+  - question: "If my leads go cold after we talk to them, which do I need first?"
+    answer: "The agent. If calls are being answered but quotes are not chased and web forms wait hours for a callback, the gap is follow-up, not answering. Automation that watches the CRM and acts on every lead fixes that."
+  - question: "Why do an AI receptionist and an AI agent work better together?"
+    answer: "The receptionist answers the call and logs the lead; the agent follows up anyone who did not book, books from the reply, and schedules the next reminder or reactivation. When that message produces a call, the receptionist answers it and the loop continues."
+  - question: "What should I ask a vendor who sells AI for my phone and follow-up?"
+    answer: "Ask whether the receptionist writes calls into your CRM, what follows up when a caller does not book and how soon, whether the follow-up can read replies and book, and who decides when a person takes over. A vendor who sells only one half leaves you to build the other."
 ---
 
 Service business owners ask a version of this question every week: "I don't just need calls answered. I need the follow-up done. Do I want an AI receptionist or an AI agent?" The two terms get used loosely by vendors, so the honest answer starts with what each one actually does.

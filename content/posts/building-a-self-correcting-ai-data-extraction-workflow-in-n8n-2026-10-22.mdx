@@ -7,6 +7,15 @@ keywords: [n8n, AI data extraction, self-correcting AI, LLM validation, automati
 tags: [n8n, Artificial Intelligence, Automation, Data Engineering, Workflow Optimization]
 slug: self-correcting-ai-data-extraction-n8n
 category: Automation Strategy
+faqs:
+  - question: "How do I make an n8n workflow fix bad AI output automatically?"
+    answer: "Define a strict JSON schema for the LLM, add a Code or If node that validates the output for required fields, types, and valid syntax, and route failures back to the model with the specific error so it returns a corrected version. That loop replaces manual review."
+  - question: "What should a validation node check after an AI extraction step?"
+    answer: "Whether mandatory fields are present, whether numeric fields such as totals are valid numbers, and whether the JSON parses. Anything that fails goes back to the model instead of into your CRM or ERP."
+  - question: "How many times should an n8n self-correction loop retry?"
+    answer: "Cap it at two or three attempts to prevent infinite loops and runaway API costs. Records that still fail after the cap should go to a dead letter queue for human review so nothing is lost and the main pipeline keeps moving."
+  - question: "Does a self-correcting workflow cost more to run?"
+    answer: "Retries increase token usage, but they remove the human time spent auditing and fixing malformed data, which is the larger cost. Set the failure threshold deliberately so the trade-off is controlled."
 ---
 
 # Building a Self-Correcting AI Data Extraction Workflow in n8n

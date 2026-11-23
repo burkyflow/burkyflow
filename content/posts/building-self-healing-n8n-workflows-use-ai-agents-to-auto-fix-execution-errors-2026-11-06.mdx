@@ -7,6 +7,15 @@ keywords: ["n8n", "AI Agents", "Self-Healing Workflows", "Automation", "Error Ha
 tags: ["n8n", "AI", "Automation", "DevOps", "Workflow-Optimization"]
 slug: "building-self-healing-n8n-workflows-ai-agents"
 category: "Automation Strategy"
+faqs:
+  - question: "What is a self-healing n8n workflow?"
+    answer: "A setup where failed executions are routed automatically to a diagnostic workflow that analyzes the error and attempts a fix or retry, instead of waiting for a developer to read logs and rerun the job. The production logic stays separate from the recovery logic."
+  - question: "How does the n8n Error Trigger help with workflow failures?"
+    answer: "Setting a global Error Workflow in the workflow settings makes n8n send every failed execution, including the error message and the node that failed, to a dedicated workflow. That workflow becomes the central place for diagnosis and recovery."
+  - question: "Where does an AI agent fit into n8n error handling?"
+    answer: "Rigid if-else rules fail on unexpected errors. An AI Agent node reading the error message can identify the root cause, such as a missing field, a type mismatch, or an expired credential, and propose a specific fix for the healer workflow to apply or escalate."
+  - question: "Which workflow errors should I automate first?"
+    answer: "Transient issues such as gateway timeouts and minor API schema changes, which are frequent and cheap to retry, and which otherwise consume senior engineering time. Start with the small set of recurring errors that cause most of the manual work."
 ---
 
 # Building Self-Healing n8n Workflows: Use AI Agents to Auto-Fix Execution Errors

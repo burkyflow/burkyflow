@@ -7,7 +7,7 @@ import { BlogCard, postTopic, topicService } from "@/components/BlogCard";
 import { photoShare, photoSrc } from "@/content/photos";
 import { cn } from "@/lib/utils";
 import { posts, getPost } from "@/content/blog";
-import { pageMetadata, articleLd, breadcrumbLd } from "@/lib/seo";
+import { pageMetadata, articleLd, breadcrumbLd, faqPageLd } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 
@@ -47,6 +47,7 @@ export default async function BlogPost({ params }: { params: Promise<Params> }) 
 
   return (
     <>
+      {post.faqs && <JsonLd data={faqPageLd(post.faqs.map((f) => ({ q: f.question, a: f.answer })))} />}
       <JsonLd data={[articleLd(post, photoShare(photo)), breadcrumbLd([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: post.title, path: `/blog/${post.slug}` }])]} />
       <article className="section">
         <div className="container-page mx-auto max-w-2xl">
@@ -86,6 +87,21 @@ export default async function BlogPost({ params }: { params: Promise<Params> }) 
             className="prose-post mt-10 border-t border-border/60 pt-10"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
+          {post.faqs && post.faqs.length > 0 && (
+            <section aria-labelledby="post-faq" className="mt-12 border-t border-border/60 pt-10">
+              <h2 id="post-faq" className="text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-[1.75rem]">
+                Frequently asked questions
+              </h2>
+              <div className="mt-6 divide-y divide-border/60">
+                {post.faqs.map((f) => (
+                  <div key={f.question} className="py-5">
+                    <h3 className="text-lg font-semibold leading-snug text-foreground">{f.question}</h3>
+                    <p className="mt-2 text-[1.0625rem] leading-[1.8] text-foreground/80 sm:text-lg">{f.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
           <p className="mt-12 border-t border-border/60 pt-6 text-base text-muted-foreground">
             Related service:{" "}
             <Link href={topicService[theme.key].href} className="font-semibold text-brand underline decoration-brand/30 underline-offset-4 hover:decoration-brand">

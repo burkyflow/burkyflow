@@ -7,6 +7,15 @@ keywords: ["n8n", "Voice AI", "lead triage", "CRM automation", "missed call auto
 tags: ["Automation", "n8n", "Voice AI", "CRM", "Lead Management"]
 slug: automated-lead-triage-n8n-voice-ai
 category: Missed Calls
+faqs:
+  - question: "How can I sort missed calls by urgency automatically?"
+    answer: "Transcribe each voicemail with a voice AI tool, send the text to an n8n workflow that passes it to an LLM, and have the model assign an urgency tier based on criteria you define, such as emergency, quote request, or general. The result routes without anyone listening to recordings."
+  - question: "What urgency tiers should a service business define for call triage?"
+    answer: "At minimum an Emergency tier for immediate service needs, a Quote Request tier for new prospects, and a General or Spam tier for vendor calls and admin inquiries. Clear tiers are what let the AI route calls consistently."
+  - question: "What happens after a missed call is categorized by the AI?"
+    answer: "n8n tags the lead and updates its status in your CRM, and can send a high-priority alert by Slack, Teams, or SMS to the right person for urgent tiers. The categorization only pays off when it triggers action."
+  - question: "Does call triage work with a CRM like HubSpot or Pipedrive?"
+    answer: "Yes. n8n connects to common CRMs so the triage result can tag the contact and change its stage in real time, whichever system your team already uses."
 ---
 
 Missed calls represent a significant revenue leak for most businesses. However, the usual solution, manual triage, is often a drain on executive and managerial time. Every minute a high-level employee spends listening to a voicemail to determine its importance is a minute lost to high-level strategy. Automated lead triage using n8n and Voice AI identifies high-priority requests instantly, ensuring your team prioritizes high-value opportunities over general inquiries without manual intervention.

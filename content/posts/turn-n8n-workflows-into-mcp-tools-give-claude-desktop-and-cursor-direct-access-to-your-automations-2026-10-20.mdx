@@ -7,6 +7,15 @@ keywords: ["n8n MCP Server Trigger", "Model Context Protocol n8n", "Claude Deskt
 tags: ["n8n", "MCP", "Claude Desktop", "Cursor", "AI Automation", "No-Code"]
 slug: "n8n-mcp-server-trigger-claude-cursor"
 category: "AI Automation"
+faqs:
+  - question: "How do I expose an n8n workflow as a tool for Claude Desktop or Cursor?"
+    answer: "Add the MCP Server Trigger node to the workflow, define the tool name, description, and input schema, configure Bearer authentication, and copy the generated endpoint into the client's configuration. No custom server or new infrastructure is needed."
+  - question: "What is the Model Context Protocol and why does it matter for n8n?"
+    answer: "MCP is a standard way for AI applications such as Claude and Cursor to call external tools. Exposing a workflow once through MCP lets any compatible client call it, which removes the need to build a separate integration for each AI assistant."
+  - question: "Which n8n workflows are good candidates to become MCP tools?"
+    answer: "Workflows that are repetitive, have well-defined inputs and outputs, and are already used across teams. Anything with ambiguous logic or unpredictable output should wait, because the AI decides when to call a tool based on the description you write."
+  - question: "How is an n8n MCP server secured?"
+    answer: "Bearer token authentication is built into the MCP Server Trigger and acts as the gatekeeper for the endpoint. Scope each exposed workflow to the least data access its job needs rather than exposing a workflow's full capability."
 ---
 
 Your team built 50+ n8n workflows. None of them talk to Claude Desktop or Cursor without custom API glue code. Every AI integration request becomes a developer ticket. The MCP Server Trigger node eliminates that bottleneck, turning existing workflows into callable AI tools in minutes, not sprints.

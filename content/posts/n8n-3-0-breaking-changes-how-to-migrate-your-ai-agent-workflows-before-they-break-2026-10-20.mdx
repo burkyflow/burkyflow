@@ -18,6 +18,15 @@ tags:
   - "Migration Guide"
 slug: "n8n-3-0-breaking-changes-ai-agent-migration"
 category: "Automation & DevOps"
+faqs:
+  - question: "What breaks in n8n 3.0 for AI agent workflows?"
+    answer: "n8n 3.0 removes the legacy AI Agent node with no compatibility layer, and deprecates the ReAct, Plan and Execute, SQL, and legacy Conversational execution modes. Workflows that still reference them either fail silently or throw execution errors after the upgrade."
+  - question: "How do I find which of my n8n workflows use the legacy AI Agent node?"
+    answer: "Export your workflows as JSON and search for the old node type references, which catches instances that are not obvious on the canvas. Then check each workflow's execution mode against the deprecated list and tag workflows by business criticality to set the migration order."
+  - question: "What changes when I move an n8n workflow to the Tools Agent?"
+    answer: "Tools, chat, and memory become distinct connection points rather than bundled settings, so inputs often need rewiring. The reasoning loop also behaves differently from the old modes, so prompts should be re-tested, and model credentials may need re-authentication."
+  - question: "Should I migrate all my n8n workflows at once before upgrading?"
+    answer: "No. Migrate in batches by risk tier, highest-risk and customer-facing workflows first, and test each batch in a staging environment with parallel runs before cutting over. Define rollback criteria before you deploy, not while watching a dashboard."
 ---
 
 # n8n 3.0 Breaking Changes: How to Migrate Your AI Agent Workflows Before They Break
