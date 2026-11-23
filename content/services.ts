@@ -46,6 +46,7 @@ export const services: Service[] = [
       "A study by 411 Locals found that 62% of calls to small businesses went unanswered. A caller who cannot get through rarely waits; they dial the next business on the list.",
       "Our AI receptionist removes that leak. It answers instantly, every hour of every day, speaks in your tone, handles the back-and-forth a real caller expects, and books qualified jobs directly onto your calendar. When a call genuinely needs a person, it routes to one.",
       "Think of it as an AI answering service that does more than take messages: it is an AI virtual receptionist that qualifies, books, and follows up, built for HVAC, plumbing, dental, legal, automotive, and other businesses that live on the phone.",
+      "Vendors call this an AI voice agent, an AI phone agent, or AI receptionist software. The label matters less than the setup: we configure it to your rules, connect it to your calendar and CRM, and keep it working after launch, so you get a managed service rather than another tool to run.",
     ],
     steps: [
       {
@@ -199,11 +200,15 @@ export const services: Service[] = [
     icon: Users,
     eyebrow: "One source of truth",
     name: "CRM and Lead Systems",
+    seoTitle: "GoHighLevel CRM for Service Businesses",
+    seoDescription:
+      "A lead management system built on GoHighLevel (HighLevel CRM) for service businesses: every call, form and text in one pipeline, with automated lead follow up and reporting you can trust.",
     h2: "A CRM and lead system that actually gets used",
     lead: "Leads leak when they live across a phone, an inbox, and three apps. We build one pipeline where every lead is captured, routed, and followed up automatically.",
     intro: [
       "When leads are scattered across a phone, an inbox, sticky notes, and three different apps, follow-up depends on someone remembering. That is how good leads go cold and why most teams cannot tell which source actually drives revenue.",
       "We build one pipeline that captures every lead from every source, attaches where it came from, routes it to the right person, and triggers fast, automatic follow-up. You get a system your team will actually use and reporting you can trust.",
+      "The result is a lead management system, not just a contact list: a GoHighLevel CRM set up for how a service business works, with automated lead follow up by text and email, missed call text back, and the dispatch, calendar and field service connections your team already relies on.",
     ],
     steps: [
       {
@@ -243,6 +248,10 @@ export const services: Service[] = [
       "Clear visibility into cost per booked job by source",
     ],
     faqs: [
+      {
+        q: "Is this a GoHighLevel CRM?",
+        a: "Usually, yes. We build most lead systems on GoHighLevel (HighLevel CRM) because it combines the pipeline, texting, calling, calendars and automation in one place, and it connects to field service, dental, dealership and practice software. If you already run another CRM, we can connect to it instead.",
+      },
       {
         q: "Do I have to switch CRMs?",
         a: "Not necessarily. We work with the common service-business CRMs. If your current tool fits, we build on it; if it is holding you back, we will tell you.",

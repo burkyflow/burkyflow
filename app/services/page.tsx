@@ -15,7 +15,7 @@ const branchIcons = {
 export const metadata = pageMetadata({
   title: "AI Receptionist and Automation Services",
   description:
-    "AI receptionist, database reactivation, CRM and lead systems, workflow automation, answer engine optimization, and a done-for-you service model.",
+    "Business automation services for service businesses: an AI receptionist, GoHighLevel CRM and lead systems, database reactivation, workflow automation, AI search visibility, and a done-for-you model that runs it all.",
   path: "/services",
 });
 
