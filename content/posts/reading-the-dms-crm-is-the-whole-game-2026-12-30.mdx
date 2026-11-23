@@ -7,6 +7,15 @@ keywords: ["DMS integration", "dealership CRM integration", "DMS data access", "
 tags: ["Integration", "DMS", "System Design"]
 slug: "reading-the-dms-crm-is-the-whole-game"
 category: "CRM & Reactivation"
+faqs:
+  - question: "Why does dealership automation depend on reading the DMS?"
+    answer: "Every trigger worth firing, such as warranty end, equity crossover, declined repairs, and lease maturity, lives in DMS, CRM, and loan data. Automation that cannot read it is guessing, which produces generic campaigns."
+  - question: "What levels of DMS integration do vendors offer?"
+    answer: "Certified two-way integration through the DMS provider's program, scheduled nightly exports, CRM-only access that cannot see service history or deal details, and manual spreadsheet uploads. Match the level to the triggers you need."
+  - question: "Which DMS fields matter most for lifecycle automation?"
+    answer: "In-service date, warranty terms, and mileage; deal date, amount financed, rate, term, and products sold or declined; repair orders with declined work; lease maturity date and allowance; consent status; and last contact and outcome."
+  - question: "Should automation write data back to the DMS and CRM?"
+    answer: "Yes. If messages, replies, appointments, and outcomes are not written back, the systems drift from reality and the next person looking at the record sees none of what happened."
 ---
 
 Dealership automation vendors talk about AI, messaging, and dashboards. The part that decides whether any of it works is less exciting: can the system read the dealer management system and the CRM? Every trigger worth firing, warranty end, equity crossover, declined repair, lease maturity, lives in that data. If the automation cannot see it, it is guessing, and guessing produces generic campaigns that customers ignore.

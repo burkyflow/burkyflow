@@ -7,6 +7,15 @@ keywords: ["n8n", "AI Agent", "Competitor Intelligence", "Serper API", "Web Scra
 tags: ["Automation", "Artificial Intelligence", "Business Strategy", "n8n Tutorial"]
 slug: "building-multi-tool-ai-agent-n8n-competitor-intelligence"
 category: "AI & Automation"
+faqs:
+  - question: "What tools does an n8n agent need to track competitor prices?"
+    answer: "A schedule trigger, a search tool such as the Serper API to find relevant pages, a scraping tool such as Firecrawl to read them, and a destination such as Google Sheets or Airtable to store the results. The AI Agent node orchestrates the tools through an LLM."
+  - question: "Why use the Serper API instead of manual Google searches for competitor research?"
+    answer: "Serper returns structured JSON that the agent can parse immediately to find new URLs, and its search parameters can be filtered to news or shopping results to catch price changes and product announcements as they are indexed."
+  - question: "How do I avoid being flooded with competitor alerts from n8n?"
+    answer: "Add a change-detection filter so the workflow only sends a Slack or email alert when a competitor's price moves beyond a threshold you set, and have the agent summarize the differences rather than dumping raw text into the sheet."
+  - question: "What keeps a competitor-tracking workflow from breaking when a site changes?"
+    answer: "Use n8n's Error Trigger and error-handling nodes so a failed page does not stop the whole run, and move from a single search to a recursive loop over a list of URLs only once the basic workflow is stable."
 ---
 
 Manual competitor tracking is a significant drain on executive resources, often consuming 10 or more hours every week. Between searching for new product launches and manually recording pricing changes, the process is traditionally reactive rather than strategic. 

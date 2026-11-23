@@ -7,6 +7,15 @@ keywords: ["n8n AI agent reliability", "n8n Fallback Model", "GPT to Gemini swit
 tags: ["n8n", "AI Agents", "LLM", "Workflow Automation", "GPT", "Gemini"]
 slug: "n8n-ai-agent-fallback-gpt-gemini"
 category: "AI Automation"
+faqs:
+  - question: "What does the Fallback Model setting in n8n actually do?"
+    answer: "It is a parameter on the AI Agent node that attaches a secondary chat model alongside the primary one. When the primary model times out, hits a rate limit, or returns an API error, n8n retries the request on the fallback inside the same node, so downstream logic does not change."
+  - question: "How do I choose a fallback model for an n8n AI agent?"
+    answer: "Match it on cost tier, context window, and response format rather than picking the cheapest option. A fallback that is far more expensive, truncates long prompts, or cannot reproduce the JSON your downstream nodes expect creates new problems during an outage."
+  - question: "What timeout should I set before an n8n agent falls back to the second model?"
+    answer: "For chat-facing or customer-facing workflows, a threshold between 15 and 30 seconds with a retry cap of one or two attempts works better than the default. Longer retry chains do not improve reliability; they extend the time a user waits on a stalled response."
+  - question: "How do I know how often my n8n workflow is running on the fallback model?"
+    answer: "Log which model answered each request and review the logs weekly. A fallback rate above a few percent of requests is a signal to investigate the primary provider or your rate limits, not a reason to let the fallback absorb the load indefinitely."
 ---
 
 Your AI agent workflow fails at 2 AM because GPT-4 timed out, and no one notices until a client complains. n8n's Fallback Model feature can switch to Gemini automatically, but most teams never configure it correctly. Here's the exact setup that stops silent workflow failures.

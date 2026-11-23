@@ -7,6 +7,15 @@ keywords: [n8n workflow, competitive intelligence, Tavily AI search, multi-agent
 tags: [n8n, AI, Automation, Competitive Intelligence, Tavily, OpenAI]
 slug: "automating-competitive-intelligence-n8n-tavily"
 category: "Automation & AI"
+faqs:
+  - question: "Why use several AI agents instead of one prompt for competitor research?"
+    answer: "A single prompt tends to produce generic summaries or invented details. Splitting the job into a Researcher that finds facts, an Analyst that interprets them, and an Editor that produces a concise brief keeps each step focused and the output more reliable."
+  - question: "What is Tavily and why pair it with n8n for market research?"
+    answer: "Tavily is an AI-native search engine that returns clean, structured content meant for language models rather than pages full of ads and SEO noise. Its domain filter lets a workflow watch specific competitor assets such as pricing pages, engineering blogs, or careers pages."
+  - question: "How do I keep an n8n research agent from running up costs?"
+    answer: "Set a Max Iterations limit on the agent node so its search-and-evaluate loop stops after a reasonable number of passes. The loop is what lets it dig deeper, so the cap keeps that useful without letting it run indefinitely."
+  - question: "How should automated competitor reports be delivered to leadership?"
+    answer: "Push them into the tools the team already reads, such as Slack, email, or Notion, in a consistent template so each report can be scanned quickly. Standard sections make the briefs comparable from week to week."
 ---
 
 Manual competitor tracking is a silent productivity killer, often draining six or more hours weekly from leadership teams. When data is fragmented across various news sites, press releases, and social feeds, decision-making becomes reactive rather than proactive. This delay doesn't just cost time; it leads to missed market shifts and lost opportunities.

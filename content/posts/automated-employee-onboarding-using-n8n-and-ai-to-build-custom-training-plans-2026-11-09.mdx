@@ -7,6 +7,15 @@ keywords: ["n8n", "AI onboarding", "automated training plans", "Notion automatio
 tags: ["Automation", "Artificial Intelligence", "HR Tech", "n8n", "Productivity"]
 slug: "automated-employee-onboarding-n8n-ai-notion"
 category: "Operations & Automation"
+faqs:
+  - question: "How can n8n create a personalized onboarding plan for a new hire?"
+    answer: "The workflow triggers when the contract is signed, sends the hire's resume and the job description to an LLM for a skill-gap analysis, and formats the result into a structured 30-day training table in a private Notion page, with Slack used for delivery."
+  - question: "What systems does an automated onboarding workflow connect to?"
+    answer: "An HR system such as HiBob or BambooHR, or a simple form, on the intake side; an LLM for the analysis; and Notion and Slack for the output. n8n orchestrates between them without replacing any of them."
+  - question: "Why not use one standard onboarding checklist for everyone?"
+    answer: "A fixed checklist is built for compliance, not performance, so senior hires sit through training they do not need and junior hires miss context. Mapping skills to the role gives each person a plan for their actual gaps."
+  - question: "Who maintains an onboarding workflow once it is built?"
+    answer: "Once the mapping rules and templates are set, the workflow runs on each new contract without manual drafting. Managers review the generated plan rather than writing one from scratch."
 ---
 
 ### **Introduction**

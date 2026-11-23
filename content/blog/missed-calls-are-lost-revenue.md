@@ -4,6 +4,15 @@ slug: "missed-calls-are-lost-revenue"
 metaDescription: "How much revenue do missed calls cost your business? Measure lost revenue from missed calls with your own call logs, then recover it with AI call answering and follow-up."
 date: "2026-10-22"
 updated: "2026-11-02"
+faqs:
+  - question: "How do I calculate how much revenue my business loses from missed calls?"
+    answer: "Start with the number of unique, qualified inquiries that went unanswered, and leave out spam, repeat dials, and calls about existing bookings. Multiply that by the share you could realistically book and by your average completed job value. Your own call logs and CRM give you those inputs, so the figure is specific to your business rather than an industry guess."
+  - question: "Does an AI receptionist replace my front desk?"
+    answer: "No, it covers the calls your front desk cannot take: overflow during busy hours and anything after closing. Calls that need judgment or an exception follow the human handoff rules you agree before launch, so a person still handles them."
+  - question: "What should I measure after turning on missed call recovery?"
+    answer: "Track qualified inquiries, booked appointments, completed jobs, and the revenue attributed to recovered calls. Completed work is a better basis for return than bookings alone, because cancellations and no-shows drop out before the money arrives."
+  - question: "What is missed call text back and do I need it if calls are already answered?"
+    answer: "Missed call text back sends a text within seconds to any caller who still reaches voicemail, offering to book. It is a safety net for the calls that slip through when every line is busy, and it is the fastest piece of a recovery system to switch on."
 ---
 
 Every unanswered call from a new customer is potential lost revenue. Missed-call recovery means responding to those inquiries, qualifying the caller, and helping them book a service. An [AI receptionist](/services/ai-voice-receptionist) handles overflow and after-hours calls using your service information, booking rules, and human escalation instructions.
