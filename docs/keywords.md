@@ -29,6 +29,7 @@ Rules: one primary phrase per page, used in the search title, the H1 or first pa
 | after hours answering service | 1,600 | 0 | Primary for the after-hours blog. Done. |
 | 24/7 answering service | 1,300 | 37 | Secondary in the after-hours blog. |
 | call triage | 260 | 0 | Primary for the lead-triage blog. Done. |
+| overflow call answering | – | – | Primary for the overflow and simultaneous calls blog (`/blog/stop-every-simultaneous-missed-call-answering`). Done. Volume and difficulty not researched yet. |
 
 ## Comparison blogs (the "AI receptionist vs answering service" blog ranks 6–15 for these)
 
