@@ -33,6 +33,25 @@ export default function IndustriesIndex() {
         lead="The mechanics are the same across industries: answer first, follow up fast, never let a lead go cold. We tune the system to how your trade actually works."
       />
 
+      <section className="section pb-0">
+        <div className="container-page mx-auto max-w-3xl">
+          <h2 className="text-2xl font-semibold sm:text-3xl">The same system, tuned to each trade</h2>
+          <p className="mt-4 text-muted-foreground">
+            Every industry here loses revenue in the same three places: calls that ring out, leads that
+            nobody follows up, and past customers nobody contacts. What changes is the detail. An HVAC
+            company needs emergency routing at 2 a.m. and seasonal tune-up reminders. A dental practice
+            needs recall reactivation and a receptionist that knows which calls go to staff. A dealership
+            needs declined-estimate follow-up and service reminders tied to mileage. A law firm needs
+            intake by practice area and a conflict check before anything is booked.
+          </p>
+          <p className="mt-4 text-muted-foreground">
+            Each industry page below shows which services fit, the triggers we automate, the questions
+            we hear most, and the case studies from that field. Pick yours to see how the AI receptionist,
+            CRM follow-up, and reactivation are configured for the way you actually work.
+          </p>
+        </div>
+      </section>
+
       <section className="section">
         {/* A lone last card is centered on desktop. */}
         <div className="container-page grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:[&>*:last-child:nth-child(3n+1)]:col-start-2">

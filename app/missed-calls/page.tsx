@@ -27,7 +27,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Missed Call Recovery for Small Businesses",
   description:
-    "Missed call recovery for small and service businesses: an AI receptionist answers every ring, texts back missed callers, and books the job, plus follow-up for leads that went quiet.",
+    "Missed call recovery for small businesses: an AI receptionist answers every ring, texts back missed callers, books the job, and follows up quiet leads.",
   path: "/missed-calls",
 });
 

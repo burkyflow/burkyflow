@@ -5,6 +5,7 @@ export type Industry = {
   slug: string;
   name: string;
   seoTitle?: string; // search-result title, if the name alone is too short
+  seoDescription?: string; // search-result description, if the lead is too long
   /** Optional trade-by-trade breakdown, for industries that span several trades. */
   trades?: { name: string; calls: string; automate: string; trigger: string }[];
   h1: string;
@@ -249,7 +250,7 @@ export const industries: Industry[] = [
   {
     slug: "automotive",
     name: "Automotive and Repair",
-    seoTitle: "AI Receptionist for Auto Repair and Service Shops",
+    seoTitle: "AI Receptionist for Auto Repair Shops",
     h1: "AI automation for auto repair and service shops",
     lead: "Most customers drift to another shop within eighteen months. We text the ones overdue for service and book them back in before they do.",
     intro: [
@@ -307,6 +308,8 @@ export const industries: Industry[] = [
     name: "Auto Finance and Lending",
     seoTitle: "Auto Finance Lead Automation and AI Receptionist",
     h1: "AI automation for auto finance and lending",
+    seoDescription:
+      "Auto finance lead automation: we answer every application in seconds, chase the documents, and track each file across your lenders, around the clock.",
     lead: "Applications arrive from ads, your website, and dealers at all hours. We answer every lead in seconds, chase the documents, and track every file across your lenders.",
     intro: [
       "In consumer finance, the first company to respond usually wins the application. When leads from Facebook and the website land in different inboxes, and documents are chased by hand over WhatsApp, applicants go cold and files stall with no one noticing.",
@@ -363,6 +366,8 @@ export const industries: Industry[] = [
     name: "Staffing and Recruiting",
     seoTitle: "AI Automation for Staffing and Recruiting Firms",
     h1: "AI automation for staffing and recruiting firms",
+    seoDescription:
+      "AI automation for staffing and recruiting firms: candidates, clients, and placements in one system, with automated follow-up that keeps placements moving.",
     lead: "Candidates, clients, and placements live in spreadsheets and inboxes. We bring them into one system and automate the follow-up that keeps placements moving.",
     intro: [
       "Staffing teams juggle candidates, client roles, interviews, and placements across spreadsheets, inboxes, and job boards. Follow-ups slip, good candidates go to faster agencies, and nobody has a live view of the pipeline.",

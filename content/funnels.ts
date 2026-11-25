@@ -39,7 +39,7 @@ export const funnels: Record<string, Funnel> = {
     headlineAccent: "missed call.",
     subheadline:
       "An AI voice agent answers every call 24/7, books the job onto your dispatch board, and wakes up the past customers already in your CRM, so no lead ever goes to the contractor who picked up second.",
-    heroImage: "/plumbing_hero.png",
+    heroImage: "/plumbing_hero.webp",
     heroPoints: [
       "Every after-hours & overflow call answered",
       "Jobs booked straight to your dispatch board",

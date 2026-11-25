@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     return pageMetadata({ title: "Not found", description: "", path: "/industries" });
   return pageMetadata({
     title: industry.seoTitle ?? industry.name,
-    description: industry.lead,
+    description: industry.seoDescription ?? industry.lead,
     path: `/industries/${industry.slug}`,
   });
 }

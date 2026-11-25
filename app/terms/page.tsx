@@ -2,7 +2,7 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Terms of Service",
+  title: "Terms of Service for BurkyFlow Clients",
   description: `The terms for using the ${site.name} website and services, including SMS messaging, disclaimers, and limitations of liability.`,
   path: "/terms",
 });

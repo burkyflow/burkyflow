@@ -12,6 +12,7 @@ export type Wedge = {
   image?: string;
   tagline: string;
   pitch: string;
+  seoDescription?: string; // search-result description, if the pitch is too long
   pitchLong: string[];
   riskReversal: string;
   bestFor: string[];
@@ -73,6 +74,8 @@ export const wedges: Wedge[] = [
     tagline: "Facebook and Instagram ads, an AI voice that answers every lead, and a booking page, run by one team.",
     pitch:
       "Paid leads go cold fast when nobody answers or booking is clumsy. We close that leak with an AI voice and a booking page built behind the ad, starting with a 14-day pilot against a target you set.",
+    seoDescription:
+      "Paid acquisition without the leak: an AI voice and a booking page behind every ad, starting with a 14-day pilot against a target you set.",
     pitchLong: [
       "Ads agencies fill the top of the funnel and then walk away. The leak is below the ad, leads come in, the front desk can't answer fast enough, the booking flow is broken, and much of that paid traffic is lost before it becomes a consult.",
       "We run the ads, build the funnel, and put the AI receptionist on the inbound number so every lead is answered, qualified, and booked. It starts as a 14-day pilot with a defined target, consults, inspections, or installs, so you can measure the difference before committing.",
@@ -157,6 +160,8 @@ export const wedges: Wedge[] = [
     tagline: "An AI receptionist on your main line that answers missed and after-hours calls from Google ads, search, and referrals.",
     pitch:
       "You already paid for the click that drove the call. Missing the call is the most expensive line item in the business. We start by auditing your missed calls, then move to ongoing coverage.",
+    seoDescription:
+      "Always-on voice: an AI receptionist that answers the calls your ads already paid for, starting with a missed-call audit and moving to ongoing coverage.",
     pitchLong: [
       "Every missed call to a business that paid for it, through Local Services Ads, Google Ads, search, or referrals, is the most expensive line item in the business. The acquisition cost is paid; the conversion is lost to whoever answers second.",
       "We put an AI voice on the inbound line, overflow, after-hours, or full coverage, and you stop paying twice. Start with an audit of your missed-call log, then move to ongoing coverage with bookings landing in your CRM.",

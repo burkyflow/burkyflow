@@ -104,6 +104,8 @@ export const caseStudies: CaseStudy[] = [
     location: "California, USA",
     tags: ["Apollo", "Clay", "GoHighLevel", "AI Proposal Agent"],
     headline: "A high-velocity lead engine for California balcony compliance",
+    seoDescription:
+      "Gordon Construction case study: a marketing and operations engine that runs cold outreach through final proposals for owners facing a 2026 deadline.",
     summary:
       "Gordon was sitting on a goldmine, thousands of California properties facing a hard 2026 legal deadline, but spending 10 hours a day on admin and proposal writing. We built a triple-threat marketing and operations engine that handles everything from cold touch to final proposal.",
     heroStats: [
@@ -159,6 +161,8 @@ export const caseStudies: CaseStudy[] = [
     location: "United States",
     tags: ["Airtable", "n8n", "Slack", "Meta Lead Ads"],
     headline: "Unified operations system, six spreadsheets retired, one source of truth",
+    seoDescription:
+      "Helm Recruiting case study: a centralized Airtable, n8n, and Slack system that replaced six spreadsheets and a custom dashboard for a growing agency.",
     summary:
       "Josh was running a high-growth recruiting agency held back by tool sprawl across six Google Sheets and a custom Vercel dashboard. We engineered a centralised Airtable + n8n + Slack ecosystem that replaced all of it.",
     heroStats: [
@@ -209,6 +213,8 @@ export const caseStudies: CaseStudy[] = [
     location: "United States",
     tags: ["VAPI", "Multi-niche", "Spam Blocking", "Custom Database"],
     headline: "One AI receptionist + custom spam shield across 13 service lines",
+    seoDescription:
+      "Arik Services case study: one AI receptionist for 13 service niches plus a self-growing spam database that blocks junk calls before they connect.",
     summary:
       "The client was drowning in 3,000+ spam calls per day and operating 13 service niches with no unified booking system. We built a single Vapi-powered receptionist plus a proprietary self-growing spam database that blocks calls before they connect.",
     heroStats: [
@@ -263,6 +269,8 @@ export const caseStudies: CaseStudy[] = [
     location: "Valencia, Spain",
     tags: ["VAPI", "n8n", "GoHighLevel", "Cal.com"],
     headline: "An autonomous revenue engine for a renovation business",
+    seoDescription:
+      "EZ Cribs case study: an autonomous lead-to-booking pipeline that replaced pen and paper, answers after-hours calls, and cuts no-show site visits.",
     summary:
       "EZ Cribs was losing 45% of calls after-hours and burning ~€1,200/month on no-show site visits. We replaced their pen-and-paper workflow with a fully autonomous Lead-to-Booking pipeline.",
     heroStats: [
@@ -318,6 +326,8 @@ export const caseStudies: CaseStudy[] = [
     location: "Culver City, CA, serving LA County",
     tags: ["VAPI", "Caller ID", "24/7 Intake"],
     headline: "Zero missed leads across LA County, day or night",
+    seoDescription:
+      "Troy Plumbing case study: an AI receptionist modeled on their best front-desk staff that answers evening and weekend calls in LA County and books jobs.",
     summary:
       "Serving LA County meant the phone never stopped ringing. Troy was losing 30% of evening and weekend inquiries because callers wouldn't leave voicemail. We designed a professional AI receptionist as the digital twin of their best front-desk staff.",
     heroStats: [
@@ -374,6 +384,8 @@ export const caseStudies: CaseStudy[] = [
     location: "New York / East Coast",
     tags: ["VAPI", "HIPAA-aware", "Emergency Triage", "Insurance Intelligence"],
     headline: "A 6-layer protocol for a high-stakes neurology reception desk",
+    seoDescription:
+      "Neurology practice case study: an AI assistant built constraint-first around HIPAA, with stroke and seizure emergency detection and insurance routing.",
     summary:
       "Neurology practices face challenges standard AI receptionists cannot handle: HIPAA liability, emergency stroke and seizure detection, and complex insurance routing. We engineered a Vapi-powered assistant on a constraint-first architecture.",
     heroStats: [
@@ -435,6 +447,8 @@ export const caseStudies: CaseStudy[] = [
     location: "United States",
     tags: ["VAPI", "GoHighLevel", "Outbound AI", "Four-Pillar Qualification"],
     headline: "'Mark', an outbound AI follow-up specialist that booked appointments hands-free",
+    seoDescription:
+      "Sabra Home Buyers case study: an outbound AI follow-up specialist in GoHighLevel that qualifies warm leads on four pillars and books in real time.",
     summary:
       "Sabra had a pipeline overflowing with warm leads and reps losing hours to manual dialing. We deployed Mark, a high-performance outbound AI Follow-Up Specialist integrated into GoHighLevel that qualifies on four pillars and books in real time.",
     heroStats: [
@@ -486,6 +500,8 @@ export const caseStudies: CaseStudy[] = [
     location: "United States",
     tags: ["VAPI", "Southern Gentleman persona", "Hospitality Intake"],
     headline: "'Elliot', a white-glove AI coordinator for a boutique landscaping firm",
+    seoDescription:
+      "ITS Landscape Design case study: an AI phone coordinator that answers every call and pre-sells the brand so five-figure projects stop going to voicemail.",
     summary:
       "The owner was stuck in a success trap: the more projects he won, the less time he had to answer the phone. Five-figure contracts were lost to voicemail. We deployed Elliot, a warm Southern-Gentleman AI coordinator who pre-sells the brand before the first stone is laid.",
     heroStats: [

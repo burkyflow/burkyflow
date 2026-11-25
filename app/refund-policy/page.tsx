@@ -2,7 +2,7 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Refund Policy",
+  title: "Refund Policy for BurkyFlow Services",
   description: `${site.name} fees are non-refundable. How setup fees, monthly services, pay-per-booking fees, pilots, cancellations, and chargebacks are handled.`,
   path: "/refund-policy",
 });

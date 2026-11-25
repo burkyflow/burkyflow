@@ -3,9 +3,9 @@ import { demandBranch } from "@/content/catalogue";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Sales Generation: Outbound, Reactivation and Booking",
+  title: "Sales Generation: Outbound and Booking",
   description:
-    "Done-for-you outbound to a researched prospect list, a meeting booking engine, referral systems, and database reactivation, each built to put qualified meetings on your calendar.",
+    "Sales generation done for you: outbound to a researched prospect list, a meeting booking engine, referral systems, and database reactivation.",
   path: "/services/sales-generation",
 });
 
