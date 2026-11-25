@@ -1,8 +1,8 @@
 ---
-title: "AI Answering Service for Small Business: How It Works and What It Costs"
+title: "AI Answering Service for Small Business: How It Works, What It Costs"
 seoTitle: "AI Answering Service for Small Business"
 slug: "ai-answering-service-for-small-business"
-metaDescription: "What an AI answering service does for a small business, how it answers and books calls 24/7, how it is priced, and how to tell a good one from a message-taker."
+metaDescription: "An AI answering service for small business answers and books calls 24/7. How it works, how it is priced, and how to tell a real one from a message-taker."
 date: "2026-11-23"
 category: "Missed Calls"
 tags: ["AI Answering Service", "AI Receptionist", "Small Business"]

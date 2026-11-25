@@ -19,7 +19,7 @@ import { JsonLd } from "@/components/JsonLd";
 
 export const metadata = pageMetadata({
   title: "AI Receptionist & CRM Automation Services | BurkyFlow",
-  description: "BurkyFlow is an AI automation agency for service businesses: an AI receptionist that answers every call, CRM automation that follows up, and reactivation that brings customers back.",
+  description: "AI receptionist and CRM automation for service businesses: BurkyFlow answers every call, follows up every lead, and reactivates past customers.",
   path: "/",
 });
 

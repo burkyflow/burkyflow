@@ -2,7 +2,7 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Privacy Policy",
+  title: "Privacy Policy: How BurkyFlow Handles Data",
   description: `How ${site.name} collects, uses, and protects personal information, including SMS consent, call data, and your choices.`,
   path: "/privacy",
 });

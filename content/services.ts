@@ -39,7 +39,7 @@ export const services: Service[] = [
     name: "AI Receptionist",
     seoTitle: "AI Receptionist for Small Businesses",
     seoDescription:
-      "An AI receptionist and AI phone answering service for small businesses. Answers every call 24/7, qualifies the caller, books the job, and transfers to a person when needed.",
+      "AI receptionist and phone answering service for small businesses: answers every call 24/7, qualifies callers, books the job, and transfers when needed.",
     h2: "An AI receptionist that answers every call, day or night",
     lead: "Most missed calls go to a competitor who picked up second. A human-sounding AI voice answers on the first ring, qualifies the caller, and books the job straight into your calendar.",
     intro: [
@@ -121,9 +121,9 @@ export const services: Service[] = [
     icon: DatabaseZap,
     eyebrow: "Revenue you already paid for",
     name: "Database Reactivation",
-    seoTitle: "Database Reactivation for Home Service Businesses",
+    seoTitle: "Database Reactivation for Home Services",
     seoDescription:
-      "Database reactivation for HVAC, plumbing, roofing, and other home service businesses: we text past customers and old leads in your voice and book the ones ready for work.",
+      "Database reactivation for HVAC, plumbing, roofing, and home service businesses: we text past customers and old leads in your voice and book the ready ones.",
     h2: "Wake up the customers already sitting in your CRM",
     lead: "You already paid to acquire every past customer and dead lead in your database. We re-engage them by SMS in your tone, and the AI voice books the ones who are ready.",
     intro: [
@@ -202,7 +202,7 @@ export const services: Service[] = [
     name: "CRM and Lead Systems",
     seoTitle: "GoHighLevel CRM for Service Businesses",
     seoDescription:
-      "A lead management system built on GoHighLevel (HighLevel CRM) for service businesses: every call, form and text in one pipeline, with automated lead follow up and reporting you can trust.",
+      "A lead management system on GoHighLevel for service businesses: every call, form, and text in one pipeline with automated follow-up and honest reporting.",
     h2: "A CRM and lead system that actually gets used",
     lead: "Leads leak when they live across a phone, an inbox, and three apps. We build one pipeline where every lead is captured, routed, and followed up automatically.",
     intro: [
@@ -281,6 +281,8 @@ export const services: Service[] = [
     name: "Workflow Automation",
     h2: "Automate the busywork between your tools",
     lead: "The repetitive copy-paste between your booking app, CRM, invoicing, and inbox is where hours and accuracy disappear. We connect them into reliable workflows.",
+    seoDescription:
+      "Workflow automation for service businesses: we connect your booking app, CRM, invoicing, and inbox so the copy-paste between them stops costing hours.",
     intro: [
       "Every service business has a set of small manual steps that repeat all day: copying a booking into the CRM, sending the reminder, raising the invoice, updating the spreadsheet. Each one is minor on its own. Together they cost hours and quietly drop customers who fall between two systems.",
       "We document those handoffs, connect your tools into reliable automated workflows, and monitor them so failures get caught early. The result is fewer manual steps, fewer mistakes, and a business that runs the same whether you are watching it or not.",
@@ -352,6 +354,8 @@ export const services: Service[] = [
     name: "Answer Engine Optimization",
     h2: "Get recommended by AI search, not just ranked on Google",
     lead: "Buyers now ask ChatGPT, Gemini, and AI search for a recommendation. We structure your site and content so answer engines cite you as the trusted local choice.",
+    seoDescription:
+      "Answer engine optimization: we structure your site and content so ChatGPT, Gemini, and AI search cite your business as the trusted local choice.",
     intro: [
       "Search behavior is shifting. More buyers ask an AI assistant for a recommendation than ever before, and the assistant answers with a short list of named providers. If you are not on that list, you are invisible, no matter how you rank on a traditional results page.",
       "Answer engine optimization makes your business easy for AI to understand, trust, and cite. We structure your site with clean schema and entity data, shape content into the answers these engines look for, and build consistent factual coverage so you become the recommended choice.",
@@ -423,7 +427,7 @@ export const services: Service[] = [
     name: "Done For You Service Model",
     seoTitle: "Done-For-You AI Automation Service",
     seoDescription:
-      "A done-for-you AI automation service: we build, run, and maintain your AI receptionist, reactivation campaigns, CRM, and workflows as one system, with one team and monthly reporting.",
+      "Done-for-you AI automation: we build, run, and maintain your AI receptionist, reactivation, CRM, and workflows as one system with monthly reporting.",
     h2: "One team that owns the whole system, not another tool to manage",
     lead: "You do not want six logins and a learning curve. We build, run, and maintain the entire automation stack so you get the outcome without the operations.",
     intro: [

@@ -1,8 +1,8 @@
 ---
-title: "AI Receptionist or AI Agent: Which One Handles Follow-Up, Not Just Calls?"
+title: "AI Receptionist or AI Agent: Which One Handles Your Follow-Up?"
 seoTitle: "AI Receptionist or AI Agent: Which Do You Need?"
 slug: "ai-receptionist-or-ai-agent"
-metaDescription: "An AI receptionist answers calls. An AI agent follows up, books, and updates your CRM. Which one a service business needs, how they differ, and why most need both working together."
+metaDescription: "AI receptionist or AI agent: one answers calls, the other follows up, books, and updates your CRM. How they differ and why most businesses need both."
 date: "2026-11-22"
 category: "Missed Calls"
 tags: ["AI Receptionist", "AI Agents", "Follow-Up"]

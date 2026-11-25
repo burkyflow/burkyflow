@@ -2,7 +2,7 @@
 title: "How Much Does an AI Receptionist Cost? What Decides the Price"
 seoTitle: "How Much Does an AI Receptionist Cost?"
 slug: "how-much-does-an-ai-receptionist-cost"
-metaDescription: "AI receptionist pricing explained: setup fees, monthly fees, usage charges, and the five factors that move the price. How to compare it with a live receptionist or an answering service."
+metaDescription: "How much does an AI receptionist cost? Setup fees, monthly fees, usage charges, the five factors that move the price, and how to compare quotes."
 date: "2026-11-21"
 category: "Missed Calls"
 tags: ["AI Receptionist", "Pricing", "Small Business"]

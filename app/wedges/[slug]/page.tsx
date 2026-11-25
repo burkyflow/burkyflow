@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   if (!w) return pageMetadata({ title: "Not found", description: "", path: "/wedges" });
   return pageMetadata({
     title: w.name,
-    description: w.pitch,
+    description: w.seoDescription ?? w.pitch,
     path: `/wedges/${w.slug}`,
   });
 }

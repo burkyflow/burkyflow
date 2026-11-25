@@ -40,7 +40,7 @@ const groupLooks: { tone: CoverTone; icon: LucideIcon; satellites: [LucideIcon, 
 export const metadata = pageMetadata({
   title: "Service Bundles: AI Voice, CRM and Reactivation",
   description:
-    "Pre-configured service bundles for service businesses, grouped by growth stage, by industry, and as full-stack engagements, each discounted versus à la carte.",
+    "Service bundles by growth stage, industry, and full stack: AI receptionist, CRM, reactivation and outbound packages, discounted versus à la carte.",
   path: "/bundles",
 });
 

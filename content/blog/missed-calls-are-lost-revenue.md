@@ -1,7 +1,8 @@
 ---
 title: "Lost revenue from missed calls: how to recover it"
+seoTitle: "Lost Revenue From Missed Calls: How to Recover"
 slug: "missed-calls-are-lost-revenue"
-metaDescription: "How much revenue do missed calls cost your business? Measure lost revenue from missed calls with your own call logs, then recover it with AI call answering and follow-up."
+metaDescription: "Lost revenue from missed calls: measure it with your own call logs, then recover it with AI call answering, missed call text back, and follow-up."
 date: "2026-10-22"
 updated: "2026-11-02"
 faqs:

@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const { niche, city } = geo;
   return pageMetadata({
     title: `AI Automation for ${niche.name} in ${city.name}, ${city.stateAbbr}`,
-    description: `BurkyFlow helps ${city.name} ${niche.plural} capture every call, reactivate dormant leads, and book more jobs with AI automation. Serving ${city.name} and ${city.state} remotely.`,
+    description: `AI automation for ${city.name} ${niche.plural}: BurkyFlow answers every call, reactivates dormant leads, and books more jobs around the clock.`,
     path: `/ai-automation/${niche.slug}/${city.slug}`,
   });
 }

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { JsonLd } from "@/components/JsonLd";
 import { allBundles, getBundle, findPackage } from "@/content/catalogue";
-import { pageMetadata, breadcrumbLd } from "@/lib/seo";
+import { pageMetadata, breadcrumbLd, faqPageLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 type Params = { slug: string };
@@ -42,7 +42,7 @@ export default async function BundleDetail({ params }: { params: Promise<Params>
 
   return (
     <>
-      <JsonLd data={[breadcrumbLd(crumbs)]} />
+      <JsonLd data={bundle.faqs?.length ? [breadcrumbLd(crumbs), faqPageLd(bundle.faqs)] : [breadcrumbLd(crumbs)]} />
       <Breadcrumb items={crumbs} />
 
       {/* Hero */}
@@ -132,6 +132,42 @@ export default async function BundleDetail({ params }: { params: Promise<Params>
           </div>
         </div>
       </section>
+
+      {/* How setup works + FAQs */}
+      {(bundle.howItWorks?.length || bundle.faqs?.length) && (
+        <section className="section pt-0">
+          <div className="container-page grid gap-10 lg:grid-cols-2">
+            {bundle.howItWorks && bundle.howItWorks.length > 0 && (
+              <div>
+                <p className="eyebrow">How setup works</p>
+                <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">From kickoff to live</h2>
+                <ol className="mt-6 space-y-4">
+                  {bundle.howItWorks.map((step, i) => (
+                    <li key={step} className="flex gap-4">
+                      <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-brand/10 text-sm font-bold text-brand">{i + 1}</span>
+                      <p className="text-foreground/80">{step}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+            {bundle.faqs && bundle.faqs.length > 0 && (
+              <div>
+                <p className="eyebrow">Questions</p>
+                <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">About this bundle</h2>
+                <div className="mt-6 divide-y divide-border/60">
+                  {bundle.faqs.map((f) => (
+                    <div key={f.q} className="py-4">
+                      <h3 className="font-semibold text-foreground">{f.q}</h3>
+                      <p className="mt-2 text-foreground/80">{f.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Pricing context */}
       <section className="section bg-surface">
