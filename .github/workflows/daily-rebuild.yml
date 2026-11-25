@@ -1,0 +1,39 @@
+name: Daily rebuild
+
+# Posts dated after today stay unpublished until a build runs on or after their date
+# (see content/blog.ts, which uses UTC dates). This pushes an empty commit to main
+# just after midnight UTC so Vercel rebuilds and that day's scheduled post goes live.
+# Pushes made with GITHUB_TOKEN do not start other workflows, so this cannot loop.
+on:
+  schedule:
+    - cron: "15 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-rebuild
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Push an empty commit to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Try again from the newest main if someone else pushed in the meantime.
+          for attempt in 1 2 3; do
+            git fetch --depth=1 origin main
+            git reset --hard FETCH_HEAD
+            git commit --allow-empty -m "Daily rebuild for scheduled posts"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 10
+          done
+          echo "Could not push to main after 3 attempts"
+          exit 1
