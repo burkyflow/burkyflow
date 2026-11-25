@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { photoSrc } from "@/content/photos";
 import { cn } from "@/lib/utils";
 
-export type CoverTone = "blue" | "peach" | "green" | "violet" | "amber";
+export type CoverTone = "blue" | "peach" | "green" | "violet" | "amber" | "teal";
 
 // Static class strings so Tailwind keeps them in the build.
 export const tones: Record<
@@ -50,6 +50,16 @@ export const tones: Record<
     dots: "text-amber-600/25",
     text: "text-amber-700",
     fade: "from-amber-800/40",
+  },
+  teal: {
+    tag: "bg-teal-600/10 text-teal-700",
+    cover: "from-teal-100 via-white to-brand/10",
+    blobA: "bg-teal-400/25",
+    blobB: "bg-brand/15",
+    icon: "text-teal-600",
+    dots: "text-teal-600/25",
+    text: "text-teal-700",
+    fade: "from-teal-800/40",
   },
   violet: {
     tag: "bg-violet-600/10 text-violet-700",

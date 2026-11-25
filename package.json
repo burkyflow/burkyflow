@@ -7,6 +7,7 @@
     "prebuild": "node scripts/lastmod.mjs",
     "build": "next build",
     "lastmod": "node scripts/lastmod.mjs",
+    "blog:schedule": "node scripts/blog-schedule.mjs",
     "start": "next start",
     "lint": "eslint ."
   },

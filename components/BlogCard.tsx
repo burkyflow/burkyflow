@@ -15,6 +15,7 @@ import {
   PhoneMissed,
   Plug,
   Radar,
+  Repeat,
   Search,
   Shuffle,
   Sparkles,
@@ -23,6 +24,7 @@ import {
   Users,
   Workflow,
   Wrench,
+  Zap,
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -30,7 +32,7 @@ import { posts, type Post } from "@/content/blog";
 import { CoverArt, type CoverTone } from "@/components/CoverArt";
 import { postPhotos, topicPhotoPools } from "@/content/photos";
 
-export type TopicKey = "ai" | "calls" | "crm" | "search" | "auto";
+export type TopicKey = "ai" | "calls" | "crm" | "search" | "auto" | "automation";
 
 type Theme = {
   key: TopicKey;
@@ -49,6 +51,8 @@ export const themes: Record<TopicKey, Theme> = {
   search: { key: "search", label: "Search Visibility", tone: "violet", pill: "bg-violet-600", fallback: Search, satellites: [MapPin, Star] },
   // Category-only topic for the dealership / F&I series: `category: "Dealership and Auto Finance"`.
   auto: { key: "auto", label: "Dealership and Auto Finance", tone: "amber", pill: "bg-amber-600", fallback: CarFront, satellites: [HandCoins, Wrench] },
+  // Category-only topic for the Wednesday n8n posts and general automation guides: `category: "Workflow Automation"`.
+  automation: { key: "automation", label: "Workflow Automation", tone: "teal", pill: "bg-teal-600", fallback: Workflow, satellites: [Zap, Repeat] },
 };
 
 // The main icon follows the post's subject; the first match wins.
@@ -67,8 +71,8 @@ const subjectIcons: [RegExp, LucideIcon][] = [
 const postText = (post: Post) => `${post.title} ${post.slug} ${post.tags.join(" ")}`.toLowerCase();
 
 // A front matter `category` that exactly names a topic ("AI Agents & n8n", "Missed Calls",
-// "CRM & Reactivation", "Search Visibility") decides it; otherwise the topic is guessed
-// from keywords.
+// "CRM & Reactivation", "Search Visibility", "Dealership and Auto Finance", "Workflow Automation")
+// decides it; otherwise the topic is guessed from keywords.
 function topicKey(post: Post): TopicKey {
   const named = Object.values(themes).find((t) => t.label === post.category);
   if (named) return named.key;
@@ -113,6 +117,7 @@ export const topicService: Record<TopicKey, { href: string; name: string }> = {
   crm: { href: "/services/database-reactivation", name: "Database Reactivation" },
   search: { href: "/services/answer-engine-optimization", name: "Answer Engine Optimization" },
   auto: { href: "/industries/auto-finance", name: "AI Automation for Auto Finance" },
+  automation: { href: "/services/workflow-automation", name: "Workflow Automation" },
 };
 
 // Newest posts on the given topics, in topic order; optionally topped up with other posts.
