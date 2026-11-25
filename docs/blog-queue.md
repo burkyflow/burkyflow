@@ -9,7 +9,7 @@ Blogs to write next, ordered by search volume of the target phrase (US monthly s
 - **Secondary phrases:** use each at least once where it reads naturally (an H2 or a sentence). They are the highest-volume phrases related to the topic; they are listed so the blog picks them up without forcing them.
 - 700 to 1,000 words. Plain explanation, short sections, H2 headings, one list of questions to ask or steps to take, and a closing paragraph that links to the service page and to `/contact`.
 - Front matter: `title`, `seoTitle`, `date`, `description` (about 150 characters, using the primary phrase), `slug`, `category` (exact topic label), `tags`.
-- One blog per date. Do not use a date already taken in `content/posts` or `content/blog`. The Dealership and Auto Finance series occupies even dates from 2026-11-24 to 2027-02-10, so new blogs go on odd dates.
+- One blog per date. The automation publishes on Wednesdays; pre-written repo posts take Mondays and Fridays (see `content/BLOG_SCHEDULE.md`). Do not use a date already taken in `content/posts` or `content/blog`.
 - Link to the related pages listed in the row.
 
 ## Queue

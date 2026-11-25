@@ -42,9 +42,9 @@ const serviceTopics: Record<string, TopicKey[]> = {
   "ai-voice-receptionist": ["calls"],
   "database-reactivation": ["crm"],
   "crm-lead-systems": ["crm", "calls"],
-  "workflow-automation": ["ai"],
+  "workflow-automation": ["automation", "ai"],
   "answer-engine-optimization": ["search"],
-  "done-for-you": ["calls", "crm", "ai"],
+  "done-for-you": ["calls", "crm", "automation", "ai"],
 };
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {

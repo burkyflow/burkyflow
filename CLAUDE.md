@@ -35,11 +35,11 @@ Marketing site for BurkyFlow (burkyflow.com). Next.js 16 App Router, React 18, T
 
 ## Blog
 
-- Posts live in `content/posts/*.mdx` (the daily automation writes here) and `content/blog/*.md`. Front matter: `title`, `date`, `description`, `slug`, `category`, optional `seoTitle`, `image`, `tags`, `keywords`, `updated`.
+- Posts live in `content/posts/*.mdx` (the Wednesday n8n automation writes here) and `content/blog/*.md`. Front matter: `title`, `date`, `description`, `slug`, `category`, optional `seoTitle`, `image`, `tags`, `keywords`, `updated`.
 - A post dated after today is not published: it stays out of the list, sitemap, and feed until a build on or after its date. Builds happen on each push to `main`, so a scheduled post appears at the next deploy on or after its date.
-- `category` must exactly match a topic label to get its tab and colour: "AI Agents & n8n", "Missed Calls", "CRM & Reactivation", "Search Visibility", "Dealership and Auto Finance". Topics are defined in `components/BlogCard.tsx`.
+- `category` must exactly match a topic label to get its tab and colour: "AI Agents & n8n", "Missed Calls", "CRM & Reactivation", "Search Visibility", "Dealership and Auto Finance", "Workflow Automation" (the n8n automation's category). Topics are defined in `components/BlogCard.tsx`.
 - Covers are unique per post: each post takes the next unused photo from its topic pool in `content/photos.ts`. When a pool runs out the build logs a warning; add photos rather than reusing.
-- Keep one post per date. The daily automation and any scheduled series should not land on the same day.
+- Schedule (see `content/BLOG_SCHEDULE.md`): repo posts are dated on Mondays and Fridays only, Wednesdays belong to the n8n automation, never two posts on one date. `npm run blog:schedule` lists upcoming posts and fails on a violation; run it before committing a dated post.
 - Quotes in a quoted YAML string must be escaped (`\"`); an unescaped quote breaks the build at the sitemap step.
 - The RSS feed is `/blog/feed.xml` (30 newest). IndexNow submission runs from `.github/workflows/indexnow.yml` after each deploy; its key file is in `public/`.
 

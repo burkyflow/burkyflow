@@ -45,7 +45,7 @@ export const postPhotos: Record<string, string> = {
 // New posts without their own photo take the first photo in their topic's set that no
 // other post uses yet (see `postTopic` in components/BlogCard.tsx). Add photos here to
 // keep covers unique as the blog grows; the build log warns when a set runs out.
-export const topicPhotoPools: Record<"ai" | "calls" | "crm" | "search" | "auto", string[]> = {
+export const topicPhotoPools: Record<"ai" | "calls" | "crm" | "search" | "auto" | "automation", string[]> = {
   ai: [
     "https://images.unsplash.com/photo-1655393001768-d946c97d6fd1",
     "https://images.unsplash.com/photo-1545665277-5937489579f2",
@@ -62,6 +62,10 @@ export const topicPhotoPools: Record<"ai" | "calls" | "crm" | "search" | "auto",
     "https://images.unsplash.com/photo-1758611974917-f7f7a58b74b0",
     "https://images.unsplash.com/photo-1758876018582-e7573baf5306",
     "https://images.unsplash.com/photo-1758519288445-5847dd89f313",
+    "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a",
+    "https://images.unsplash.com/photo-1587560699334-cc4ff634909a",
+    "https://images.unsplash.com/photo-1598257006458-087169a1f08d",
+    "https://images.unsplash.com/photo-1616587226157-48e49175ee20",
   ],
   crm: [
     "https://images.unsplash.com/photo-1758519289074-9de36003622b",
@@ -70,6 +74,15 @@ export const topicPhotoPools: Record<"ai" | "calls" | "crm" | "search" | "auto",
     "https://images.unsplash.com/photo-1771054243991-e7b2d194ac96",
     "https://images.unsplash.com/photo-1759143545924-beb85b33c0f1",
     "https://images.unsplash.com/photo-1758874573286-c65c3d749a39",
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+    "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    "https://images.unsplash.com/photo-1551836022-d5d88e9218df",
+    "https://images.unsplash.com/photo-1553877522-43269d4ea984",
+    "https://images.unsplash.com/photo-1434030216411-0b793f4b4173",
+    "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc",
+    "https://images.unsplash.com/photo-1551135049-8a33b5883817",
+    "https://images.unsplash.com/photo-1573497491208-6b1acb260507",
+    "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd",
   ],
   // Dealership and Auto Finance series: showroom, service bay, finance desk.
   auto: [
@@ -103,6 +116,31 @@ export const topicPhotoPools: Record<"ai" | "calls" | "crm" | "search" | "auto",
     "https://images.unsplash.com/photo-1621905251189-08b45d6a269e",
     "https://images.unsplash.com/photo-1766066014237-00645c74e9c6",
     "https://images.unsplash.com/photo-1630406144797-821be1f35d75",
+  ],
+  // Workflow Automation: people at work, laptops with dashboards, team planning.
+  automation: [
+    "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+    "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3",
+    "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
+    "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    "https://images.unsplash.com/photo-1531482615713-2afd69097998",
+    "https://images.unsplash.com/photo-1542744173-8e7e53415bb0",
+    "https://images.unsplash.com/photo-1543269865-cbf427effbad",
+    "https://images.unsplash.com/photo-1552581234-26160f608093",
+    "https://images.unsplash.com/photo-1552664730-d307ca884978",
+    "https://images.unsplash.com/photo-1553028826-f4804a6dba3b",
+    "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
+    "https://images.unsplash.com/photo-1556761175-b413da4baf72",
+    "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d",
+    "https://images.unsplash.com/photo-1558403194-611308249627",
+    "https://images.unsplash.com/photo-1559136555-9303baea8ebd",
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    "https://images.unsplash.com/photo-1556155092-490a1ba16284",
+    "https://images.unsplash.com/photo-1600880292203-757bb62b4baf",
+    "https://images.unsplash.com/photo-1560264280-88b68371db39",
+    "https://images.unsplash.com/photo-1573496130407-57329f01f769",
   ],
   search: [
     "https://images.unsplash.com/photo-1745674684539-d90293d659a9",
