@@ -1,12 +1,15 @@
 name: Daily rebuild
 
 # Posts dated after today stay unpublished until a build runs on or after their date
-# (see content/blog.ts, which uses UTC dates). This pushes an empty commit to main
-# just after midnight UTC so Vercel rebuilds and that day's scheduled post goes live.
+# (see content/blog.ts, which uses UTC dates). This pushes an empty commit to main three
+# times a day, because GitHub can start scheduled runs hours late, so Vercel rebuilds and
+# that day's scheduled post goes live early.
 # Pushes made with GITHUB_TOKEN do not start other workflows, so this cannot loop.
 on:
   schedule:
     - cron: "15 0 * * *"
+    - cron: "15 4 * * *"
+    - cron: "15 8 * * *"
   workflow_dispatch:
 
 permissions:
